@@ -2,9 +2,9 @@
 
 # Integrantes
   ```
-  * Nicolás Cárdenas Chaparro
-  * David Antonio Diaz Duarte
-  * Pedro Jose Mayorga Navarrete
+  - Nicolás Cárdenas Chaparro
+  - David Antonio Diaz Duarte
+  - Pedro Jose Mayorga Navarrete
   ```
 # Resumen
 
