@@ -8,7 +8,7 @@
   ```
 # Resumen
 `
-En este proyecto se va a desarrollar un juego basado en juegos de plataformas existentes, con el agregado de que este sera multijugador y se cambiaran algunas tematicas y elementos con respecto a los juegos originales, de esta forma le añadimos valor y distincion.
+En este proyecto se va a desarrollar un juego de plataformas y peleas, basado en otros juegos existentes que tienen una tematica similar, sin embargo ademas de multijugador se encontrara valor agregado (con respecto a los juegos antecedentes) en la jugabilidad, las tematicas y los elementos en general. El fin general del proyecto es entretenimiento, aunque tambien tiene un ligero enfoque a la estrategia y a la resolucion de problemas en tiempo real. 
 
 `
 # Descripcion
