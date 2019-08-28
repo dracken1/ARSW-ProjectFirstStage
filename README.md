@@ -9,6 +9,7 @@
 # Resumen
 `
 En este proyecto se va a desarrollar un juego basado en juegos de plataformas existentes, con el agregado de que este sera multijugador y se cambiaran algunas tematicas y elementos con respecto a los juegos originales, de esta forma le añadimos valor y distincion.
+
 `
 # Descripcion
 
