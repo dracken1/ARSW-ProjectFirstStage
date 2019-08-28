@@ -16,12 +16,15 @@ En este proyecto se va a desarrollar un juego basado en juegos de plataformas ex
   
     1. Give Up
   
-  
+      ![Imagenes](https://github.com/dracken1/ARSW-ProjectFirstStage/blob/master/Imagenes/MoveOrDie.jpg)
   
     2. Move or Die
   
+     ![Imagenes](https://github.com/dracken1/ARSW-ProjectFirstStage/blob/master/Imagenes/Stick-Fight-1.png)
   
-    3. Stick Fight    
+    3. Stick Fight   
+    
+      ![Imagenes](https://github.com/dracken1/ARSW-ProjectFirstStage/blob/master/Imagenes/give-up.jpg)
 
 # Historias de usuario
 
