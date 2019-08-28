@@ -1,4 +1,4 @@
-# ARSW-ProjectFirstStage
+# Stop fighting!(in construction)
 
 # Integrantes
   ```
@@ -13,11 +13,16 @@ En este proyecto se va a desarrollar un juego basado en juegos de plataformas ex
 # Descripcion
 
 `El juego esta basado en la idea principal de los siguientes juegos, esto es sobrevivir y superar obstaculos en un entorno tipo plataformas, la dificultad del juego aumenta a medida que se superan los niveles.`
-  ```
+  
     1. Give Up
+  
+  
+  
     2. Move or Die
+  
+  
     3. Stick Fight    
-```
+
 # Historias de usuario
 
 https://tree.taiga.io/project/dracken1-arsw-project/backlog
