@@ -89,7 +89,7 @@ Una partida consta de un mapa, un asesino y a lo sumo 4 supervivientes (puede ca
 
   - El jugador se moverá con las teclas "W", "A", "S" y "D" (Arriba, Izquierda, Abajo, Derecha).
   - Los objetos especiales serán activados mediante la tecla "F".
-  - El asesino roba automáticamente la moneda de un Superviviente que se encuentre en estado agonizante.
+  - El asesino roba automáticamente máximo una moneda de un Superviviente que se encuentre en estado agonizante.
   - El número de monedas que hay en el mapa es igual al número de supervivientes de la partida. Cada vez que un Superviviente coge una moneda, reaparecerá una nueva a los 30 segundos. De esta manera, no pueden haber más monedas que Supervivientes pero si pueden haber 0 monedas al mismo tiempo.
   
 ## Requerimientos
@@ -107,7 +107,7 @@ Una partida consta de un mapa, un asesino y a lo sumo 4 supervivientes (puede ca
   
 ### Orientación en Tiempo Real
 
-  Todos los jugadores de la partida se encuentran compartiendo al mismo tiempo el mapa de juego donde a su vez comparten recursos, elementos de la partida, monedas e información general del estado de la partida.
+  Todos los jugadores de la partida se encuentran compartiendo al mismo tiempo el mapa de juego, recursos, elementos de la partida, monedas e información general del estado de la partida.
   
 ### Alta Concurrencia
 
