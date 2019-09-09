@@ -12,11 +12,13 @@
 En este proyecto se va a desarrollar un juego 2d de tipo supervivencia, donde un jugador es un asesino/cazador y los demas jugadores son supervivientes. Solo un jugador gana (todos juegan de forma individual), independientemente de si es superviviente o asesino, la forma de ganar varia dependiendo del tipo de jugador. Para ganar, un superviviente deben recolectar una cantidad determinada de monedas que se encuentran distribuidas de forma aleatoria a lo largo y ancho del mapa para poder abrir las puertas de escape,y posteriormente salir por una de ellas, por otro lado el asesino debe cazar a todos los supervivientes antes de que alguno logre escapar para poder ganar.
 `
 
-## Descripcion
+## Descripcion y Reglas de Juego
+
+  ![Imagenes](https://github.com/dracken1/ARSW-ProjectFirstStage/blob/master/Imagenes/MapaGeneral2soDiseñoProyectoARSW.png)
 
 ### General
 
-Una partida consta de un mapa, un asesino y a lo sumo 4 supervivientes. El mapa esta lleno de obstaculos y/o bloqueos que impiden el paso de los personajes, en los extremos este y oeste del mapa siempre hay dos puertas de escape, adicionalmente dentro del mapa hay monedas, que son objetos de valor tanto para el asesino como para los supervivientes, sin embargo la utilidad para cada personaje es distinta. El asesino usa las monedas para bloquear las puertas o elevar el costo de monedas requerido para que estas se abran, mientras que un superviviente usa las monedas para abrir las puertas. El objetivo del asesino es acabar con todos los supervivientes(el asesino es mas veloz que un superviviente) y asi ganar la partida, para esto debe golpear a cada uno de los supervivientes hasta que queden en un estado agonizante, en este estado un superviviente morira luego de un tiempo determinado a menos que otro superviviente lo salve, el asesino podra robar una moneda del superviviente mientras se encuentre en este estado, a diferencia de los supervivientes el asesino no puede morir. Un superviviente debe escapar del asesino mientras recolecta monedas para poder abrir cualquier puerta. Existen diferentes formas de conseguir monedas para un superviviente, la forma natural es recolectandolas del suelo, la forma alternativa es ayudando a un superviviente que se encuentre en estado agonisante, de esta forma podra conseguir hasta dos monedas de su compañero. Cada superviviente posee dos inyecciones de adrenalina lo que les da dos oportunidades antes de perder, estas inyecciones se aplican automaticamente cuando un superviviente se encuentra en estado de agonia.
+Una partida consta de un mapa, un asesino y a lo sumo 4 supervivientes (puede cambiar a petición del profesor). El mapa esta lleno de obstaculos y/o bloqueos que impiden el paso de los personajes, en los extremos este y oeste del mapa siempre hay dos puertas de escape, adicionalmente dentro del mapa hay monedas, que son objetos de valor tanto para el asesino como para los supervivientes, sin embargo la utilidad para cada personaje es distinta. El asesino usa las monedas para bloquear las puertas o elevar el costo de monedas requerido para que estas se abran, mientras que un superviviente usa las monedas para abrir las puertas. El objetivo del asesino es acabar con todos los supervivientes(el asesino es mas veloz que un superviviente) y asi ganar la partida, para esto debe golpear a cada uno de los supervivientes hasta que queden en un estado agonizante, en este estado un superviviente morira luego de un tiempo determinado a menos que otro superviviente lo salve, el asesino podra robar una moneda del superviviente mientras se encuentre en este estado, a diferencia de los supervivientes el asesino no puede morir. Un superviviente debe escapar del asesino mientras recolecta monedas para poder abrir cualquier puerta. Existen diferentes formas de conseguir monedas para un superviviente, la forma natural es recolectandolas del suelo, la forma alternativa es ayudando a un superviviente que se encuentre en estado agonisante, de esta forma podra conseguir hasta dos monedas de su compañero. Cada superviviente posee dos inyecciones de adrenalina lo que les da dos oportunidades antes de perder, estas inyecciones se aplican automaticamente cuando un superviviente se encuentra en estado de agonia.
 
 ### El Mapa(construyendo)
 
@@ -35,6 +37,7 @@ Una partida consta de un mapa, un asesino y a lo sumo 4 supervivientes. El mapa 
   - Puede robar una moneda de un superviviente que se encuentre agonizando.
   - El asesino puede recolectar monedas con el fin de bloquear las puertas por un tiempo proporcional  a la cantidad de monedas que tenga o podra elevar el costo requerido para que estas se abran.
   - No puede atravesar los obstaculos.
+  - El Asesino no puede coger monedas que estén en el piso, solo se las puede robar a un Superviviente (cuando están en estado de agonía)
   
 ### El Superviviente(construyendo)
 
@@ -82,10 +85,39 @@ Una partida consta de un mapa, un asesino y a lo sumo 4 supervivientes. El mapa 
   - El nickname sera del gusto del jugador y sera unico dentro del juego.
   - No se solicitaran datos personales para el registro.
   
-  
-    
-  ![Imagenes](https://github.com/dracken1/ARSW-ProjectFirstStage/blob/master/Imagenes/MapaGeneral2soDiseñoProyectoARSW.png)
+### Jugabilidad
 
-## Historias de usuario
+  - El jugador se moverá con las teclas "W", "A", "S" y "D" (Arriba, Izquierda, Abajo, Derecha).
+  - Los objetos especiales serán activados mediante la tecla "F".
+  - El asesino roba automáticamente la moneda de un Superviviente que se encuentre en estado agonizante.
+  - El número de monedas que hay en el mapa es igual al número de supervivientes de la partida. Cada vez que un Superviviente coge una moneda, reaparecerá una nueva a los 30 segundos. De esta manera, no pueden haber más monedas que Supervivientes pero si pueden haber 0 monedas al mismo tiempo.
+  
+## Requerimientos
+
+### Idea General
+
+  Bloody Money es un juego multijugador de supervivencia de alta competitividad con un sistema de juego de cámara aérea en el que un jugador representa el rol del asesino desalmado y los 4 jugadores restantes son los supervivientes que intentan escapar de una muerte inevitable. 
+  El juego ofrece una experiencia frenetica y adictiva que mezcla una ambiente de persecución intenso con una jugabilidad estrategica separada por objetivos, donde:
+  - El Asesino busca acabar con la vida de todos los supervivientes
+  - Los Supervivientes buscan escapar del Asesino
+  
+### Bussiness Idea
+  
+### Orientación en Tiempo Real
+
+  - Todos los jugadores de la partida se encuentran compartiendo al mismo tiempo el mapa de juego donde a su vez comparten recursos, elementos de la partida, monedas e información general del estado de la partida.
+  
+### Alta Concurrencia
+
+  - Se implementarán salas de juego que nos permitan integrar Alta Concurrencia al juego con máximo 5 jugadores por sala, para un total de 10 salas de juego usadas con 50 jugadores simultaneos.
+  
+### Requerimientos No Colaborativos
+
+#### Historias de usuario
 
 https://tree.taiga.io/project/dracken1-arsw-project/backlog
+  
+    
+  
+
+
