@@ -98,18 +98,20 @@ Una partida consta de un mapa, un asesino y a lo sumo 4 supervivientes (puede ca
 
   Bloody Money es un juego multijugador de supervivencia de alta competitividad con un sistema de juego de cámara aérea en el que un jugador representa el rol del asesino desalmado y los 4 jugadores restantes son los supervivientes que intentan escapar de una muerte inevitable. 
   El juego ofrece una experiencia frenetica y adictiva que mezcla una ambiente de persecución intenso con una jugabilidad estrategica separada por objetivos, donde:
-  - El Asesino busca acabar con la vida de todos los supervivientes
-  - Los Supervivientes buscan escapar del Asesino
+  - El Asesino busca acabar con la vida de todos los supervivientes.
+  - Los Supervivientes buscan escapar del Asesino.
   
 ### Bussiness Idea
+
+  A futuro se piensa escalar el juego mediante un sistema de microtransacciones que nos permita obtener recursos mediante la venta de artículos in-game como skins o apariencias que no afecten el equilibrio del juego y que le den un toque diferenciador de personalización a cada jugador en sus partidas.
   
 ### Orientación en Tiempo Real
 
-  - Todos los jugadores de la partida se encuentran compartiendo al mismo tiempo el mapa de juego donde a su vez comparten recursos, elementos de la partida, monedas e información general del estado de la partida.
+  Todos los jugadores de la partida se encuentran compartiendo al mismo tiempo el mapa de juego donde a su vez comparten recursos, elementos de la partida, monedas e información general del estado de la partida.
   
 ### Alta Concurrencia
 
-  - Se implementarán salas de juego que nos permitan integrar Alta Concurrencia al juego con máximo 5 jugadores por sala, para un total de 10 salas de juego usadas con 50 jugadores simultaneos.
+  Se implementarán salas de juego que nos permitan integrar Alta Concurrencia al juego con máximo 5 jugadores por sala, para un total de 10 salas de juego, con 50 jugadores simultaneos.
   
 ### Requerimientos No Colaborativos
 
