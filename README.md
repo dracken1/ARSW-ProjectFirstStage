@@ -84,7 +84,7 @@ Una partida consta de un mapa, un asesino y a lo sumo 4 supervivientes. El mapa 
   
   
     
-  ![Imagenes](https://github.com/dracken1/ARSW-ProjectFirstStage/blob/master/Imagenes/give-up.jpg)
+  ![Imagenes](https://github.com/dracken1/ARSW-ProjectFirstStage/blob/master/Imagenes/MapaGeneral2soDiseñoProyectoARSW.png)
 
 ## Historias de usuario
 
