@@ -119,7 +119,7 @@ Una partida consta de un mapa, un asesino y a lo sumo 4 supervivientes (puede ca
 
 https://tree.taiga.io/project/dracken1-arsw-project/backlog
   
-    
+https://stackoverflow.com/questions/11731377/servlet-returns-http-status-404-the-requested-resource-servlet-is-not-availa
   
 
 
