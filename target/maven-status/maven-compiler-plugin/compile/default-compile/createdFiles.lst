@@ -1,0 +1,7 @@
+main\Jugador.class
+com\bloody\app\services\APIs\bloodyAPI.class
+main\Llave.class
+main\Superviviente.class
+com\bloody\services\LRservlet.class
+main\Asesino.class
+com\bloody\services\Bridge.class
