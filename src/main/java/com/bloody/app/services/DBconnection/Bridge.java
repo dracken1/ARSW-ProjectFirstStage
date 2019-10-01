@@ -1,4 +1,4 @@
-package com.bloody.services;
+package com.bloody.app.services.DBconnection;
 
 import java.sql.*;
 

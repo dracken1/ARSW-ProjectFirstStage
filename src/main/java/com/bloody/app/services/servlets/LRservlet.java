@@ -1,5 +1,6 @@
-package com.bloody.services;
+package com.bloody.app.services.servlets;
 
+import com.bloody.app.services.DBconnection.Bridge;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
