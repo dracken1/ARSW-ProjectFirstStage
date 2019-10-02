@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="d68j9ui4h73s36@ec2-23-21-115-109.compute-1.amazonaws.com" uuid="92a25d6a-80da-4ccc-9d8a-7c3f9d7f0d36">
+    <data-source name="bloodymoneyDB" uuid="7088862a-d713-4b69-bb83-e4b88c750266">
       <database-info product="PostgreSQL" version="11.5 (Ubuntu 11.5-1.pgdg16.04+1)" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.5" dbms="POSTGRES" exact-version="11.5" exact-driver-version="42.2">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
