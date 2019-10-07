@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c05142f5-dbb6-49c5-85d4-1a0e3ea95bbb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloody/app/bloodymoney/controllers/SalaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloody/app/bloodymoney/models/Sala.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloody/app/bloodymoney/persistence/SalasPersistence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloody/app/bloodymoney/persistence/SalasPersistenceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloody/app/bloodymoney/persistence/impl/InMemorySalaPersistence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/bloody/app/bloodymoney/services/SalasServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloody/app/bloodymoney/controllers/BloodyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bloody/app/bloodymoney/controllers/BloodyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloody/app/bloodymoney/persistence/models/GameMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bloody/app/bloodymoney/models/GameMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloody/app/bloodymoney/persistence/models/Lobby.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloody/app/bloodymoney/persistence/models/Player.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloody/app/bloodymoney/persistence/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bloody/app/bloodymoney/models/User.java" afterDir="false" />
-    </list>
+    <list default="true" id="c05142f5-dbb6-49c5-85d4-1a0e3ea95bbb" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +151,7 @@
       <updated>1569985899191</updated>
       <workItem from="1569985902602" duration="12046000" />
       <workItem from="1570416987490" duration="4214000" />
-      <workItem from="1570421260631" duration="688000" />
+      <workItem from="1570421260631" duration="953000" />
     </task>
     <servers />
   </component>
