@@ -1,10 +1,10 @@
 
-package com.bloody.app.bloodymoney.controllers;
+package arsw.bloodymoney.controllers;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.bloody.app.DBconnection.Bridge;
+import arsw.bloodymoney.DBconnection.Bridge;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

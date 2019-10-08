@@ -1,7 +1,7 @@
-package com.bloody.app.bloodymoney.persistence.impl;
+package arsw.bloodymoney.services.impl;
 
-import com.bloody.app.bloodymoney.models.Sala;
-import com.bloody.app.bloodymoney.persistence.SalasPersistence;
+import arsw.bloodymoney.entities.Room;
+import arsw.bloodymoney.persistence.dao.SalasPersistence;
 
 @Service
 public class InMemorySalaPersistence implements SalasPersistence{
@@ -11,7 +11,7 @@ public class InMemorySalaPersistence implements SalasPersistence{
     }
 
     @Override
-    public void addSala(Sala s) throws SalasPersistenceException {
-
+    public void addSala(Room s) throws SalasPersistenceException {
+        
     }
 }
