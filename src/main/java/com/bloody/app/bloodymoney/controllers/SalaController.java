@@ -4,6 +4,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import com.bloody.app.DBconnection.Bridge;
+import com.bloody.app.bloodymoney.models.Sala;
+import com.bloody.app.bloodymoney.services.SalasServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,13 +21,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class SalaController{
     @Autowired
-    SalaServices salaServices = null;
+    SalasServices salaServices = null;
 
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<?> addNewSala(@RequestBody Sala newSala){
         try {
-
+            System.out.println("SALA");
+        }catch (Exception ex){
+            System.out.println("SALA");
         }
+        return null;
     }
 
 

@@ -3,9 +3,9 @@ package com.bloody.app.bloodymoney.persistence;
 
 
 @Service
-public class InMemorySalaPersistence  implements SalasPersistence{
+public class SalasPersistence  implements SalasPersistence{
 
-    public InMemorySalaPersistence(){
+    public SalasPersistence(){
 
     }
 

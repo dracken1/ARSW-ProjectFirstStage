@@ -1,4 +1,4 @@
-package com.bloody.app.bloodymoney.persistence.models;
+package com.bloody.app.bloodymoney.models;
 
 public class User{
 
