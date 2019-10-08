@@ -1,5 +1,5 @@
 
-package com.bloody.app.bloodymoney.services;
+package arsw.bloodymoney.services;
 @Service
 
 public class SalasServices{
