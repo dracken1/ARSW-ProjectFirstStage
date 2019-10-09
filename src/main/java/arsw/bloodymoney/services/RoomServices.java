@@ -1,6 +1,8 @@
 package arsw.bloodymoney.services;
 
+import arsw.bloodymoney.entities.Map;
 import arsw.bloodymoney.entities.Room;
+import arsw.bloodymoney.entities.User;
 import java.util.List;
 
 /**
@@ -15,29 +17,35 @@ public interface RoomServices {
     //TO-DO
     //Define functionalities of the rooms
     
-    public int getNumberOfUsers(String id);
+    public int getNumberOfUsers(int id);
+    public void changeName(int id, String newName);
+    public void changeCapacity(int id, String newCapacity);
+    public void changeStages(int id, String newStages);
+    public void banUser(int user_id);
     
     
     
     /*BASIC SERVICES*/
     
     //Add
-    public void addRoom();
+    public void addRoom(String name, int capacity, int stages, int time);
     
     //Search
-    public Room searchRoomByID(String id);
-    public Room searchRoomByUser(String user_id);
-    public Room searchRoomByMap(String map_id);
+    public Room searchRoomByID(int id);
     public List<Room> searchRooms();
+    public List<Map> searchMapsByRoom(int id);
+    public List<User> searchUsersByRoom(int id);
     
     //Update
-    public void updateRoom(String id);
+    public void updateRoom(int id, String name, int capacity, int stages, int time);
     
     //Delete
-    public void deleteRoom(String id);
+    public void deleteRoom(int id);
     
     //Status
-    public boolean checkRoomStatus(String id);
-    public void changeRoomStatus(String id, String newStatus);
+    public boolean checkActiveStatus(int id);
+    public void changeActiveStatus(int id, String newActiveStatus);
+    public boolean checkFullStatus(int id);
+    public void changeFullStatus(int id, String newFullStatus);
     
 }

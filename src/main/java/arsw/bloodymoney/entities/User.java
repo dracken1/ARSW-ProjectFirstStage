@@ -24,6 +24,7 @@ public class User implements Serializable{
     private boolean onlineStatus;
     private boolean ongameStatus;
     
+    //1 Player cazador    1 Player perseguido
     private Player player;
     private Room room;
     //private List<Award> awards;

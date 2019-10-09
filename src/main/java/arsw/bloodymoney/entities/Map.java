@@ -16,6 +16,9 @@ public class Map implements Serializable{
     private String name;
     private String type;
     private String difficulty;
+    //time definir abajo igual que en room, get y set
+    private int time;
+    private String remainingTime;
     //endgame point
     private boolean endgameStatus;
     

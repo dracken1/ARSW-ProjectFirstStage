@@ -1,5 +1,7 @@
 package arsw.bloodymoney.services;
 
+import arsw.bloodymoney.entities.Player;
+import arsw.bloodymoney.entities.Room;
 import arsw.bloodymoney.entities.User;
 import java.util.List;
 
@@ -16,8 +18,16 @@ public interface UserServices {
     //Define functionalities of the users
     
     public boolean checkLogin(String username, String password);
-    public void changeRole(String id, String newRole);
-    //public changeRoom(String room_id);    
+    public void changeUsername(int id, String newUsername);
+    public void changeEmail(int id, String newEmail);
+    public void changePassword(int id, String newPassword);
+    public void changeRole(int id, String newRole);
+    public int getLevel(int id);
+    public int getWins(int id);
+    
+    public void leaveRoom(int id);
+    public void changeRoom(int id, int newRoom_id);
+    //public void changePlayerType(int id, String newType);
     //public changeMap(String map_id);
     
     
@@ -25,22 +35,24 @@ public interface UserServices {
     /*BASIC SERVICES*/
     
     //Add
-    public void addUser();
+    public void addUser(String name, String lastname, String username, String email, String password);
     
     //Search
-    public User searchUserByID(String id);
-    public List<User> searchUsersByRoom(String room_id);
-    public List<User> searchUsersByMap(String map_id);
+    public User searchUserByID(int id);
     public List<User> searchUsers();
+    public Player searchPlayerByUser(int id);
+    public Room searchRoomByUser(int id);
     
     //Update
-    public void updateUser(String id);
+    public void updateUser(int id, String name, String lastname, String username, String email, String password);
     
     //Delete
-    public void deleteUser(String id);
+    public void deleteUser(int id);
     
     //Status
-    public boolean checkUserStatus(String id);
-    public void changeUserStatus(String id, String newStatus);
+    public boolean checkOnlineStatus(int id);
+    public void changeOnlineStatus(int id, boolean newOnlineStatus);
+    public boolean checkOngameStatus(int id);
+    public void changeOngameStatus(int id, boolean newOngameStatus);
     
 }
