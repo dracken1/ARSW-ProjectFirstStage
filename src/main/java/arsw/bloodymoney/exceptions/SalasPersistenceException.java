@@ -1,2 +1,7 @@
-package arsw.bloodymoney.persistence.dao;
+package arsw.bloodymoney.exceptions;
+
+public class SalasPersistenceException extends Exception{
+
+}
+
 

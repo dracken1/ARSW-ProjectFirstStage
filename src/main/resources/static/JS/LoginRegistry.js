@@ -13,9 +13,12 @@ $("#btntoggle").click(function () {
 
 });
 
-class LoginForm{
-    constructor(username,password){
+class User{
+    constructor(name,lastname,username,email,password){
+        this.name = name;
+        this.lastname = lastname;
         this.username = username;
+        this.email = email;
         this.password = password;
     }
 }
@@ -44,26 +47,28 @@ $("#btnlogin").click(function(){
 
 $("#btnregistry").click(function(){
    var firstname = document.getElementById('rfname').value;
-   var lastname = document.getElementById('rfname').value;
-   var username = document.getElementById('loginuser').value;
+   var lastname = document.getElementById('rlname').value;
+   var username = document.getElementById('rusername').value;
    var email = document.getElementById('remail').value;
-   var password = document.getElementById('loginpass').value;
-   var url = 'http://localhost:8080/session/';
+   var password = document.getElementById('rpassword').value;
+   var usertosend = new User(firstname,lastname,username,email,password);
+   var url = 'http://localhost:8080/session/add';
        fetch(url, {
            method: 'POST',
            headers: {
                'Content-Type': 'application/json'
-           }
+           },
+           body:JSON.stringify(usertosend)
        })
-       .then(response => response.json())
-       .then(data => {
-           console.log(data);
-           if(data){
+       .then(response => {
+           if(response.ok){
                window.location.href = "home.html";
            } else {
-               alert("Incorrect username or password")
+               alert("Something went wrong!");
            }
        })
 });
+
+
 
 

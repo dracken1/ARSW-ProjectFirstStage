@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.bloody.app.bloodymoney"})
+@ComponentScan(basePackages = {"arsw.bloodymoney"})
 public class AppApplication {
 
     public static void main(String[] args) {

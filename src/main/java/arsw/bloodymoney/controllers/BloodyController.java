@@ -5,6 +5,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import arsw.bloodymoney.DBconnection.Bridge;
+import arsw.bloodymoney.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -47,11 +48,15 @@ public class BloodyController {
         }
     }
 
-    @RequestMapping(method = RequestMethod.POST , path = "/add/")
-    public ResponseEntity<?> createNewPlayer(@RequestBody ) {
+    @RequestMapping(method = RequestMethod.POST , path = "/add")
+    public ResponseEntity<?> createNewPlayer(@RequestBody User user) {
         try {
             Bridge bg = new Bridge();
-            Boolean res = bg.addUser(firstname,lastname,user,email,password);
+            Boolean res = bg.addUser(user.getName(),
+                                        user.getLastname(),
+                                        user.getUsername(),
+                                        user.getEmail(),
+                                        user.getPassword());
             return new ResponseEntity<>(HttpStatus.CREATED);
         } catch (Exception ex) {
             Logger.getLogger(BloodyController.class.getName()).log(Level.SEVERE, null, ex);
