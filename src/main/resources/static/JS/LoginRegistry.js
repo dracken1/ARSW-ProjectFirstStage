@@ -13,6 +13,8 @@ $("#btntoggle").click(function () {
 
 });
 
+
+
 class User{
     constructor(name,lastname,username,email,password){
         this.name = name;
