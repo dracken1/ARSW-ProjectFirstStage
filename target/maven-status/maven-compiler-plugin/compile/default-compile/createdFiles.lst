@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 arsw\bloodymoney\entities\User.class
 arsw\bloodymoney\services\impl\InMemorySalaPersistence.class
 arsw\bloodymoney\entities\Map.class
@@ -14,3 +15,5 @@ arsw\bloodymoney\controllers\SalaController.class
 arsw\bloodymoney\exceptions\SalasPersistenceException.class
 arsw\bloodymoney\persistence\dao\SalasPersistence.class
 arsw\bloodymoney\services\SalasServices.class
+=======
+>>>>>>> Stashed changes
