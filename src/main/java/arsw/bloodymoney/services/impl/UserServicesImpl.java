@@ -3,6 +3,7 @@ package arsw.bloodymoney.services.impl;
 import arsw.bloodymoney.entities.Player;
 import arsw.bloodymoney.entities.Room;
 import arsw.bloodymoney.entities.User;
+import arsw.bloodymoney.persistence.dao.UserDAO;
 import arsw.bloodymoney.services.UserServices;
 import java.util.List;
 
