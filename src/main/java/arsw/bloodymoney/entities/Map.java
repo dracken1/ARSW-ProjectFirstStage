@@ -10,13 +10,15 @@ import java.util.List;
  * @version 1.0
  * @since 2019-09-23
  */
-public class Map {
+public class Map implements Serializable{
     
     private int id;
     private String name;
     private String type;
     private String difficulty;
     
+    private Room room;
+    private List<Player> players;
     //private List<Obstacle> obstacles;
     //private List<Coin> coins;
     //private List<Door> doors;
@@ -72,13 +74,29 @@ public class Map {
     public void setDifficulty(String difficulty) {
         this.difficulty = difficulty;
     }
+
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
+    }
+
+    public List<Player> getPlayers() {
+        return players;
+    }
+
+    public void setPlayers(List<Player> players) {
+        this.players = players;
+    }
     
     
     //To String
 
     @Override
     public String toString() {
-        return "Map{" + "id=" + id + ", name=" + name + ", type=" + type + ", difficulty=" + difficulty + '}';
-    }    
+        return "Map{" + "id=" + id + ", name=" + name + ", type=" + type + ", difficulty=" + difficulty + ", room=" + room + ", players=" + players + '}';
+    }  
     
 }

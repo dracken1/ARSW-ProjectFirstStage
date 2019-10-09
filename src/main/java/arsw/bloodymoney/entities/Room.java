@@ -27,7 +27,7 @@ public class Room implements Serializable{
     
     public Room() {
     }
-
+    
     public Room(int id) {
         this.id = id;
     }
