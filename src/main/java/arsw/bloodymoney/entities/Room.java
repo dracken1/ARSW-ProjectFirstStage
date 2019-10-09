@@ -17,7 +17,9 @@ public class Room implements Serializable{
     private int capacity;
     private int stages;
     private int time;
-    private String remainingTime;    
+    private String remainingTime;   
+    private boolean activeStatus;
+    private boolean fullStatus;
     
     private List<Map> maps;
     private List<User> users;
@@ -108,6 +110,22 @@ public class Room implements Serializable{
         this.remainingTime = remainingTime;
     }
 
+    public boolean isActiveStatus() {
+        return activeStatus;
+    }
+
+    public void setActiveStatus(boolean activeStatus) {
+        this.activeStatus = activeStatus;
+    }
+
+    public boolean isFullStatus() {
+        return fullStatus;
+    }
+
+    public void setFullStatus(boolean fullStatus) {
+        this.fullStatus = fullStatus;
+    }
+
     public List<Map> getMaps() {
         return maps;
     }
@@ -126,10 +144,10 @@ public class Room implements Serializable{
 
     
     //To String
-    
+
     @Override
     public String toString() {
-        return "Room{" + "id=" + id + ", name=" + name + ", capacity=" + capacity + ", stages=" + stages + ", time=" + time + ", remainingTime=" + remainingTime + ", maps=" + maps + ", users=" + users + '}';
+        return "Room{" + "id=" + id + ", name=" + name + ", capacity=" + capacity + ", stages=" + stages + ", time=" + time + ", remainingTime=" + remainingTime + ", activeStatus=" + activeStatus + ", fullStatus=" + fullStatus + ", maps=" + maps + ", users=" + users + '}';
     }
  
 }
