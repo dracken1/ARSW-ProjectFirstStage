@@ -2,14 +2,13 @@
 package com.bloody.app.bloodymoney.persistence;
 
 
+import com.bloody.app.bloodymoney.models.Sala;
+import org.springframework.stereotype.Service;
+
 @Service
-public class SalasPersistence  implements SalasPersistence{
+public interface SalasPersistence {
 
-    public SalasPersistence(){
 
-    }
-
-    @Override
     public void addSala(Sala s) throws SalasPersistenceException;
 
 }

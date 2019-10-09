@@ -35,17 +35,6 @@ public class BloodyController {
         }
     }
 
-    /*@RequestMapping(method = RequestMethod.GET, path = "{author}")
-    public ResponseEntity<?> manejadorGetRecursoBlueprintsPorAutor(@PathVariable("author") String name) {
-        try {
-
-            return new ResponseEntity<>("", HttpStatus.ACCEPTED);
-        } catch (ResourceNotFoundException ex) {
-            Logger.getLogger(BloodyController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>("Error 404", HttpStatus.NOT_FOUND);
-        }
-    }*/
-
     @RequestMapping(method = RequestMethod.GET, path = "{user}/{password}")
     public ResponseEntity<?> verifyLogin(@PathVariable("user") String user, @PathVariable("password") String password) {
         try {
@@ -58,24 +47,8 @@ public class BloodyController {
         }
     }
 
-    /*@RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<?> editPlayer() {
-        try {
-
-            return new ResponseEntity<>(HttpStatus.CREATED);
-        } catch (Exception ex) {
-            Logger.getLogger(BloodyController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>("ERROR 403", HttpStatus.FORBIDDEN);
-        }
-
-    }*/
-
-    @RequestMapping(method = RequestMethod.POST , path = "/add/{firstname}/{lastname}/{user}/{email}/{password}")
-    public ResponseEntity<?> createNewPlayer(@PathVariable("firstname") String firstname,
-                                             @PathVariable("lastname") String lastname,
-                                             @PathVariable("user") String user,
-                                             @PathVariable("email") String email,
-                                             @PathVariable("password") String password) {
+    @RequestMapping(method = RequestMethod.POST , path = "/add/")
+    public ResponseEntity<?> createNewPlayer(@RequestBody ) {
         try {
             Bridge bg = new Bridge();
             Boolean res = bg.addUser(firstname,lastname,user,email,password);

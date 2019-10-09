@@ -1,0 +1,14 @@
+com\bloody\app\bloodymoney\persistence\SalasPersistenceException.class
+com\bloody\app\bloodymoney\persistence\Dao.class
+com\bloody\app\bloodymoney\services\SalasServices.class
+com\bloody\app\bloodymoney\controllers\SalaController.class
+com\bloody\app\bloodymoney\models\Sala.class
+com\bloody\app\bloodymoney\persistence\impl\InMemorySalaPersistence.class
+com\bloody\app\bloodymoney\models\User.class
+com\bloody\app\bloodymoney\controllers\BloodyController.class
+com\bloody\app\DBconnection\Bridge.class
+com\bloody\app\bloodymoney\persistence\SalasPersistence.class
+com\bloody\app\bloodymoney\models\Player.class
+com\bloody\app\bloodymoney\controllers\ResourceNotFoundException.class
+com\bloody\app\appMain\AppApplication.class
+com\bloody\app\bloodymoney\models\GameMap.class
