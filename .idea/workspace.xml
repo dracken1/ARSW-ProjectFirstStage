@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c05142f5-dbb6-49c5-85d4-1a0e3ea95bbb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/appMain/AppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/appMain/AppApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/controllers/BloodyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/controllers/BloodyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/exceptions/SalasPersistenceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/exceptions/SalasPersistenceException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/persistence/dao/SalasPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/persistence/dao/SalasPersistence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/services/SalasServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/services/SalasServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/services/impl/InMemorySalaPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/services/impl/InMemorySalaPersistence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloody/app/bloodymoney/models/GameMap.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloody/app/bloodymoney/persistence/SalasPersistenceException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bloody/app/bloodymoney/persistence/impl/InMemorySalaPersistence.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/LoginRegistry.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/LoginRegistry.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/home.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,17 +64,12 @@
       <list>
         <option value="Class" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
   </component>
   <component name="ProjectId" id="1Rd92e1fBD2xSUYYfpx2BzdN7F0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -98,17 +80,18 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Documentos\TRABAJOSU\ARSW\Proyecto\BloodyMoneyProject\src\main\resources\templates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\bucar\Documents\ARSW-ProjectFirstStage\src\main\java\com\bloody\app\bloodymoney" />
       <recent name="C:\Users\bucar\Documents\ARSW-ProjectFirstStage\src\main\java\com\bloody\app\bloodymoney\controllers" />
       <recent name="C:\Users\bucar\Documents\ARSW-ProjectFirstStage\src\main\java\com\bloody\app\bloodymoney\models" />
       <recent name="C:\Users\bucar\Documents\ARSW-ProjectFirstStage\src\main\java\com\bloody\app\bloodymoney\persistence\models" />
       <recent name="F:\Documentos\TRABAJOSU\ARSW\Proyecto\BloodyMoneyProject\src\main\resources\static" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Documentos\TRABAJOSU\ARSW\Proyecto\BloodyMoneyProject\src\main\resources\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -136,17 +119,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@10332557" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@10332557" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@3ed1a291" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -165,7 +138,7 @@
       <workItem from="1569985902602" duration="12046000" />
       <workItem from="1570416987490" duration="4214000" />
       <workItem from="1570421260631" duration="953000" />
-      <workItem from="1570583054118" duration="6078000" />
+      <workItem from="1570583054118" duration="18726000" />
     </task>
     <servers />
   </component>
