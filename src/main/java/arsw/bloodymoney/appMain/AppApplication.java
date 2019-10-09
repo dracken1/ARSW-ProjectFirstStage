@@ -1,4 +1,4 @@
-package com.bloody.app.appMain;
+package arsw.bloodymoney.appMain;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

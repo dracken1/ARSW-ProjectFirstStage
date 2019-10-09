@@ -1,5 +1,7 @@
 
-package com.bloody.app.bloodymoney.persistence;
+package arsw.bloodymoney.persistence.dao;
+
+import com.bloody.app.bloodymoney.persistence.SalasPersistenceException;
 
 
 import com.bloody.app.bloodymoney.models.Sala;

@@ -1,4 +1,4 @@
-package com.bloody.app.DBconnection;
+package arsw.bloodymoney.DBconnection;
 import java.sql.*;
 
 public class Bridge{

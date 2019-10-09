@@ -1,11 +1,11 @@
-package com.bloody.app.bloodymoney.controllers;
+package arsw.bloodymoney.controllers;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.bloody.app.DBconnection.Bridge;
-import com.bloody.app.bloodymoney.models.Sala;
-import com.bloody.app.bloodymoney.services.SalasServices;
+import arsw.bloodymoney.DBconnection.Bridge;
+import arsw.bloodymoney.entities.Room;
+import arsw.bloodymoney.services.SalasServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,7 +24,7 @@ public class SalaController{
     SalasServices salaServices = null;
 
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<?> addNewSala(@RequestBody Sala newSala){
+    public ResponseEntity<?> addNewSala(@RequestBody Room newSala){
         try {
             System.out.println("SALA");
         }catch (Exception ex){
