@@ -16,12 +16,15 @@ public class Map implements Serializable{
     private String name;
     private String type;
     private String difficulty;
+    //endgame point
+    private boolean endgameStatus;
     
     private Room room;
     private List<Player> players;
     //private List<Obstacle> obstacles;
     //private List<Coin> coins;
     //private List<Door> doors;
+    //private List<Power> powers;
     
     
     //Constructors
@@ -75,6 +78,14 @@ public class Map implements Serializable{
         this.difficulty = difficulty;
     }
 
+    public boolean isEndgameStatus() {
+        return endgameStatus;
+    }
+
+    public void setEndgameStatus(boolean endgameStatus) {
+        this.endgameStatus = endgameStatus;
+    }
+    
     public Room getRoom() {
         return room;
     }
@@ -96,7 +107,7 @@ public class Map implements Serializable{
 
     @Override
     public String toString() {
-        return "Map{" + "id=" + id + ", name=" + name + ", type=" + type + ", difficulty=" + difficulty + ", room=" + room + ", players=" + players + '}';
-    }  
+        return "Map{" + "id=" + id + ", name=" + name + ", type=" + type + ", difficulty=" + difficulty + ", endgameStatus=" + endgameStatus + ", room=" + room + ", players=" + players + '}';
+    }
     
 }
