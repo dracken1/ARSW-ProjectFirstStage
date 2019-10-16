@@ -48,6 +48,7 @@ public class BloodyController {
         }
     }
 
+    // comentario fake para hacer commit
     @RequestMapping(method = RequestMethod.POST , path = "/add")
     public ResponseEntity<?> createNewPlayer(@RequestBody User user) {
         try {
