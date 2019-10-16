@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c05142f5-dbb6-49c5-85d4-1a0e3ea95bbb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/controllers/BloodyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/controllers/BloodyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/primeraFuncionalidad.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/primeraFuncionalidad.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +145,7 @@
       <workItem from="1570416987490" duration="4214000" />
       <workItem from="1570421260631" duration="953000" />
       <workItem from="1570583054118" duration="18726000" />
-      <workItem from="1571248899548" duration="2347000" />
+      <workItem from="1571248899548" duration="4413000" />
     </task>
     <servers />
   </component>
