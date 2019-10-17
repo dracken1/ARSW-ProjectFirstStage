@@ -82,15 +82,15 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Documentos\TRABAJOSU\ARSW\Proyecto\BloodyMoneyProject\src\main\resources\templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\bucar\Documents\ARSW-ProjectFirstStage\src\main\java\com\bloody\app\bloodymoney" />
       <recent name="C:\Users\bucar\Documents\ARSW-ProjectFirstStage\src\main\java\com\bloody\app\bloodymoney\controllers" />
       <recent name="C:\Users\bucar\Documents\ARSW-ProjectFirstStage\src\main\java\com\bloody\app\bloodymoney\models" />
       <recent name="C:\Users\bucar\Documents\ARSW-ProjectFirstStage\src\main\java\com\bloody\app\bloodymoney\persistence\models" />
       <recent name="F:\Documentos\TRABAJOSU\ARSW\Proyecto\BloodyMoneyProject\src\main\resources\static" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Documentos\TRABAJOSU\ARSW\Proyecto\BloodyMoneyProject\src\main\resources\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -146,6 +146,7 @@
       <workItem from="1570421260631" duration="953000" />
       <workItem from="1570583054118" duration="18726000" />
       <workItem from="1571248899548" duration="6924000" />
+      <workItem from="1571289924090" duration="1049000" />
     </task>
     <servers />
   </component>
