@@ -1,1 +1,1 @@
-web: java -jar wrapper/maven-wrapper.jar
+web: java -jar .mvn/wrapper/maven-wrapper.jar
