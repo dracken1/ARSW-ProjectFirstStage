@@ -1,1 +1,1 @@
-web: java -jar .mvn/wrapper/maven-wrapper.jar
+web: java -war target/app-0.0.1-SNAPSHOT.war
