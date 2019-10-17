@@ -28,7 +28,7 @@ class User{
 $("#btnlogin").click(function(){
        var user = document.getElementById('loginuser').value;
        var password = document.getElementById('loginpass').value;
-       var url = 'http://localhost:8080/session/' + user + '/' + password;
+       var url = '/session/' + user + '/' + password;
            fetch(url, {
                method: 'GET',
                headers: {

@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c05142f5-dbb6-49c5-85d4-1a0e3ea95bbb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/LoginRegistry.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/LoginRegistry.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,32 +27,6 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="bloodymoneyDB" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="bloodymoneyDB" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="bloodymoneyDB" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="d68j9ui4h73s36: database" type="162271b6:PgImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="bloodymoneyDB" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="d68j9ui4h73s36: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="bloodymoneyDB" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="d68j9ui4h73s36: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -147,6 +123,7 @@
       <workItem from="1570583054118" duration="18726000" />
       <workItem from="1571248899548" duration="6924000" />
       <workItem from="1571289924090" duration="1049000" />
+      <workItem from="1571296224114" duration="729000" />
     </task>
     <servers />
   </component>
