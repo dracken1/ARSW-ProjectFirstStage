@@ -54,7 +54,7 @@ $("#btnregistry").click(function(){
    var email = document.getElementById('remail').value;
    var password = document.getElementById('rpassword').value;
    var usertosend = new User(firstname,lastname,username,email,password);
-   var url = 'http://localhost:8080/session/add';
+   var url = '/session/add';
        fetch(url, {
            method: 'POST',
            headers: {
