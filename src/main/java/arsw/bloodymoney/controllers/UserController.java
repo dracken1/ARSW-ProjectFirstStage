@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping(value = "/session")
-public class BloodyController {
+public class UserController {
 
 
     @RequestMapping(method = RequestMethod.GET)
@@ -31,10 +31,35 @@ public class BloodyController {
             String res = "HELLO, WORLD!";
             return new ResponseEntity<>(res, HttpStatus.ACCEPTED);
         } catch (Exception ex) {
-            Logger.getLogger(BloodyController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>("Error", HttpStatus.NOT_FOUND);
         }
     }
+    
+    
+    
+    
+    
+    
+    // GET JUST USER, NOT HTTP CODE
+    @RequestMapping(method = RequestMethod.GET, path = "{user}")
+    public void getUserByEmail(@PathVariable("user") String user) {
+        try {
+            Bridge bg = new Bridge();
+            
+            
+            
+            //Boolean res = bg.authentication(user, password);
+            //return new ResponseEntity<>(res, HttpStatus.ACCEPTED);
+            
+        } catch (Exception ex) {
+            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
+            //return new ResponseEntity<>("ERROR 404", HttpStatus.NOT_FOUND);
+        }
+    }
+    
+    
+    // DAO TERMINA DE CONSULTAR ACA EN CONTROLLER
 
     @RequestMapping(method = RequestMethod.GET, path = "{user}/{password}")
     public ResponseEntity<?> verifyLogin(@PathVariable("user") String user, @PathVariable("password") String password) {
@@ -43,11 +68,17 @@ public class BloodyController {
             Boolean res = bg.authentication(user, password);
             return new ResponseEntity<>(res, HttpStatus.ACCEPTED);
         } catch (Exception ex) {
-            Logger.getLogger(BloodyController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>("ERROR 404", HttpStatus.NOT_FOUND);
         }
     }
-
+    
+    
+    
+    
+    
+    
+    
     // comentario fake para hacer commit
     @RequestMapping(method = RequestMethod.POST , path = "/add")
     public ResponseEntity<?> createNewPlayer(@RequestBody User user) {
@@ -60,7 +91,7 @@ public class BloodyController {
                                         user.getPassword());
             return new ResponseEntity<>(HttpStatus.CREATED);
         } catch (Exception ex) {
-            Logger.getLogger(BloodyController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>("ERROR 403", HttpStatus.FORBIDDEN);
         }
     }

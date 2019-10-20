@@ -1,6 +1,8 @@
 package arsw.bloodymoney.persistence.dao.impl;
 
+import arsw.bloodymoney.controllers.UserController;
 import arsw.bloodymoney.entities.User;
+import arsw.bloodymoney.exceptions.ProjectException;
 import arsw.bloodymoney.persistence.dao.UserDAO;
 import java.util.List;
 
@@ -14,6 +16,7 @@ import java.util.List;
 public class UserDAOImpl implements UserDAO{
 
     //@Inject
+    private UserController userController;
     //Mapper
     
     @Override
@@ -22,13 +25,27 @@ public class UserDAOImpl implements UserDAO{
     }
 
     @Override
-    public User load(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public User load(int id) throws ProjectException{
+        try {
+            //TO-DO
+            User user = new User();
+            return user;
+            //return userController.;
+        } catch (Exception ex) {
+            throw new ProjectException("\nERROR:\nClass: MyBatisUserDAO\n-Method: load()\nNo existe ningun usuario con el id: \n" + id + "\n", ex);
+        }
     }
 
     @Override
-    public User load(String username) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public User load(String email) throws ProjectException{
+        try {
+            //TO-DO
+            User user = new User();
+            return user;
+            //return userController.;
+        } catch (Exception ex) {
+            throw new ProjectException("\nERROR:\nClass: MyBatisUserDAO\n-Method: load()\nNo existe ningun usuario con el email: \n" + email + "\n", ex);
+        }
     }
 
     @Override

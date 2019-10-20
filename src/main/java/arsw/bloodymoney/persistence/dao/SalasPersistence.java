@@ -2,7 +2,7 @@
 package arsw.bloodymoney.persistence.dao;
 
 import arsw.bloodymoney.entities.Room;
-import arsw.bloodymoney.exceptions.SalasPersistenceException;
+import arsw.bloodymoney.exceptions.ProjectException;
 
 import org.springframework.stereotype.Service;
 
@@ -10,6 +10,6 @@ import org.springframework.stereotype.Service;
 public interface SalasPersistence {
 
 
-    public void addSala(Room r) throws SalasPersistenceException;
+    public void addSala(Room r) throws ProjectException;
 
 }

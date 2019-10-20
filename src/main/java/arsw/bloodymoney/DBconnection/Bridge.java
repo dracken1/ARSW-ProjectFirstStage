@@ -32,7 +32,27 @@ public class Bridge{
         }
         return false;
     }
-
+    /*
+    public User getUserByEmail(String email){
+        String SQL = "SELECT nombre, apellido, username, correo, contraseña, rol, nivel FROM usuario WHERE username = ?";
+        try {
+            Connection conn = connection();
+            PreparedStatement pstmt = conn.prepareStatement(SQL,ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
+            pstmt.setString(1, email);
+            ResultSet rs = pstmt.executeQuery();
+            rs.next();
+            if(rs.absolute(1)){
+                conn.close();
+                pstmt.close();
+                rs.close();
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+    */
 
 
     public boolean addUser(String nombre, String apellido, String username, String correo, String contraseña){
