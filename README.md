@@ -14,7 +14,7 @@ En este proyecto se va a desarrollar un juego 2d de tipo supervivencia, donde un
 
 ## Descripcion y Reglas de Juego
 
-  !(https://github.com/dracken1/ARSW-ProjectFirstStage/blob/master/Imagenes/MapaGeneral2soDiseñoProyectoARSW.png)
+  ![Imagenes](https://github.com/dracken1/ARSW-ProjectFirstStage/blob/master/MapaGeneral2soDise%C3%B1oProyectoARSW.png)
 
 ### General
 
