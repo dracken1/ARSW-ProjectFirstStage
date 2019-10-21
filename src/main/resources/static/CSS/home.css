@@ -157,7 +157,7 @@ body {
     padding: 10px;
 }
 .leftbtncont{
-    margin 15px 0 0 0;
+    margin: 15px 0 0 0;
     padding: 0 0 0 0;
 }
 .genercibtnlft{
@@ -203,7 +203,7 @@ body {
     z-index: 1;
     position: relative;
 }
-
+/**
 .accountdisplayable{
     position: absolute;
     background: rgba(66, 64, 60, 0.9);
@@ -223,7 +223,7 @@ body {
 .acciconandbuttons{
     height: 70%
     width:
-}
+}*/
 .accinfo{
 
 }
