@@ -3,6 +3,7 @@ package arsw.bloodymoney.services;
 import arsw.bloodymoney.entities.Player;
 import arsw.bloodymoney.entities.Room;
 import arsw.bloodymoney.entities.User;
+import arsw.bloodymoney.exceptions.ProjectException;
 import java.util.List;
 
 /**
@@ -17,7 +18,8 @@ public interface UserServices {
     //TO-DO
     //Define functionalities of the users
     
-    public boolean checkLogin(String username, String password);
+    public boolean checkLogin(String email, String password) throws ProjectException;
+    public boolean checkSession() throws ProjectException;
     public void changeUsername(int id, String newUsername);
     public void changeEmail(int id, String newEmail);
     public void changePassword(int id, String newPassword);

@@ -1,6 +1,7 @@
 package arsw.bloodymoney.persistence.dao;
 
 import arsw.bloodymoney.entities.User;
+import arsw.bloodymoney.exceptions.ProjectException;
 import java.util.List;
 
 /**
@@ -16,8 +17,8 @@ public interface UserDAO {
     public void save(User user);
     
     //Get
-    public User load(int id);
-    public User load(String username);
+    public User load(int id) throws ProjectException;
+    public User load(String email) throws ProjectException;
     public List<User> loadAll();
     
     //Put

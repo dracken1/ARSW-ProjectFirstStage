@@ -25,12 +25,14 @@ class User{
     }
 }
 
-var usuario;
+
+var usuario = document.cookie;
+
 
 $("#btnlogin").click(function(){
        var user = document.getElementById('loginuser').value;
        var password = document.getElementById('loginpass').value;
-       var url = 'http://localhost:8080/session/' + user + '/' + password;
+       var url = '/session/' + user + '/' + password;
            fetch(url, {
                method: 'GET',
                headers: {
@@ -42,6 +44,7 @@ $("#btnlogin").click(function(){
                console.log(data);
                if(data.name != null){
                    usuario = new User(data.name, data.lastname, data.username, data.email, data.password);
+                   document.cookie = "username=" + data.username;
                    window.location.href = "home.html";
                } else {
                    alert("Incorrect username or password")
@@ -57,7 +60,7 @@ $("#btnregistry").click(function(){
    var email = document.getElementById('remail').value;
    var password = document.getElementById('rpassword').value;
    var usertosend = new User(firstname,lastname,username,email,password);
-   var url = 'http://localhost:8080/session/add';
+   var url = '/session/add';
        fetch(url, {
            method: 'POST',
            headers: {
@@ -74,6 +77,10 @@ $("#btnregistry").click(function(){
        })
 });
 
+$("#genercibtnlftid").click(function(){
+    alert("funca boton");
+    console.log(document.cookie);
+});
 
 
 

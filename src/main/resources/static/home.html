@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/home.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    <script src="JS/session.js"></script>
 </head>
 <body>
     <div class="headerbar row">
@@ -28,7 +28,7 @@
                 <button class="genercibtnlft">Lobbys</button>
             </div>
             <div class="leftbtncont">
-                <button class="genercibtnlft">Create Lobby</button>
+                <button class="genercibtnlft" id="genercibtnlftid">Create Lobby</button>
             </div>
 
         </div >
@@ -52,7 +52,7 @@
                 </div>
                 <div class="menuopts outopts">
                     <div class="outoptstext">Logout</div>
-                    <div class="outoptsicon"></div>
+                    <div class="outoptsicon" id="outoptsiconid"></div>
                 </div>
             </div>
             <div class="allsame accountdisplayable">
@@ -146,5 +146,6 @@
 
     </div>
 </body>
+<script src="JS/LoginRegistry.js"></script>
 <script src="JS/home.js"></script>
 </html>

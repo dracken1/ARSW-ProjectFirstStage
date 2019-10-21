@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c05142f5-dbb6-49c5-85d4-1a0e3ea95bbb" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -12,6 +13,11 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/LoginRegistry.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/LoginRegistry.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/home.html" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/JS/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/primeraFuncionalidad.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/primeraFuncionalidad.html" afterDir="false" />
+>>>>>>> 3524578f4a73e40e2a55f085ccfb2d420e1ecbaf
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,32 +41,6 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="bloodymoneyDB" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="bloodymoneyDB" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="bloodymoneyDB" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="d68j9ui4h73s36: database" type="162271b6:PgImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="bloodymoneyDB" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="d68j9ui4h73s36: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="bloodymoneyDB" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="d68j9ui4h73s36: database" type="162271b6:PgImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -250,18 +230,19 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bucar\Downloads\ARSW-ProjectFirstStage\src\main\resources\static\JS" />
       <recent name="C:\Users\bucar\Documents\ARSW-ProjectFirstStage\src\main\java\com\bloody\app\bloodymoney" />
       <recent name="C:\Users\bucar\Documents\ARSW-ProjectFirstStage\src\main\java\com\bloody\app\bloodymoney\controllers" />
       <recent name="C:\Users\bucar\Documents\ARSW-ProjectFirstStage\src\main\java\com\bloody\app\bloodymoney\models" />
       <recent name="C:\Users\bucar\Documents\ARSW-ProjectFirstStage\src\main\java\com\bloody\app\bloodymoney\persistence\models" />
-      <recent name="F:\Documentos\TRABAJOSU\ARSW\Proyecto\BloodyMoneyProject\src\main\resources\static" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bucar\Downloads\ARSW-ProjectFirstStage\src\main\resources\static" />
       <recent name="F:\Documentos\TRABAJOSU\ARSW\Proyecto\BloodyMoneyProject\src\main\resources\templates" />
     </key>
   </component>
@@ -317,8 +298,15 @@
       <workItem from="1570416987490" duration="4214000" />
       <workItem from="1570421260631" duration="953000" />
       <workItem from="1570583054118" duration="18726000" />
+<<<<<<< HEAD
       <workItem from="1571248899548" duration="4413000" />
       <workItem from="1571281320384" duration="47142000" />
+=======
+      <workItem from="1571248899548" duration="6924000" />
+      <workItem from="1571289924090" duration="1049000" />
+      <workItem from="1571296224114" duration="948000" />
+      <workItem from="1571532046230" duration="1126000" />
+>>>>>>> 3524578f4a73e40e2a55f085ccfb2d420e1ecbaf
     </task>
     <servers />
   </component>

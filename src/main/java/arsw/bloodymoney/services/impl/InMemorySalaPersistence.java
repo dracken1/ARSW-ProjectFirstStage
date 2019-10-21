@@ -1,7 +1,7 @@
 package arsw.bloodymoney.services.impl;
 
 import arsw.bloodymoney.entities.Room;
-import arsw.bloodymoney.exceptions.SalasPersistenceException;
+import arsw.bloodymoney.exceptions.ProjectException;
 import arsw.bloodymoney.persistence.dao.SalasPersistence;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +13,7 @@ public class InMemorySalaPersistence implements SalasPersistence{
     }
 
     @Override
-    public void addSala(Room r) throws SalasPersistenceException {
+    public void addSala(Room r) throws ProjectException {
         
     }
 }

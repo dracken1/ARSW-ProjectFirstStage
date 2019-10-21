@@ -3,6 +3,7 @@ package arsw.bloodymoney.services.impl;
 import arsw.bloodymoney.entities.Player;
 import arsw.bloodymoney.entities.Room;
 import arsw.bloodymoney.entities.User;
+import arsw.bloodymoney.exceptions.ProjectException;
 import arsw.bloodymoney.persistence.dao.UserDAO;
 import arsw.bloodymoney.services.UserServices;
 import java.util.List;
@@ -22,8 +23,34 @@ public class UserServicesImpl implements UserServices{
     }
 
     @Override
-    public boolean checkLogin(String username, String password) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public boolean checkLogin(String email, String password) throws ProjectException{
+        try {
+            User user = userDAO.load(email);
+            boolean loginAccess;
+            if ((user.getEmail().equals(email)) && (user.getPassword().equals(password))) {
+                loginAccess = true;
+            } else {
+                loginAccess = false;
+            }            
+            return loginAccess;
+        } catch (Exception ex) {
+            throw new ProjectException("\nERROR:\nClass: UserServicesImpl\n-Method: checkLogin()\nNo se pudo loggear correctamente\n", ex);   
+        }
+    }
+    
+    @Override
+    public boolean checkSession() throws ProjectException {
+        try {
+            //try to get the user from the session
+            //User user = userDAO.load();
+            
+            
+            boolean sessionAccess = true;
+            
+            return sessionAccess;
+        } catch (Exception ex) {
+            throw new ProjectException("\nERROR:\nClass: UserServicesImpl\n-Method: checkLogin()\nNo se pudo loggear correctamente\n", ex);
+        }
     }
 
     @Override
