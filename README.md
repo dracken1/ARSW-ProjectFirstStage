@@ -114,6 +114,24 @@ Una partida consta de un mapa, un asesino y a lo sumo 4 supervivientes (puede ca
 
   Se implementarán salas de juego que nos permitan integrar Alta Concurrencia al juego con máximo 5 jugadores por sala, para un total de 10 salas de juego, con 50 jugadores simultaneos.
   
+  
+## Casos de uso
+
+![Imagenes](https://github.com/dracken1/ARSW-ProjectFirstStage/blob/master/model/1stUseCaseDiagram.png)
+
+![Imagenes](https://github.com/dracken1/ARSW-ProjectFirstStage/blob/master/model/2ndUseCaseDiagram.png)
+
+![Imagenes](https://github.com/dracken1/ARSW-ProjectFirstStage/blob/master/model/3rdUseCaseDiagram.png)
+
+![Imagenes](https://github.com/dracken1/ARSW-ProjectFirstStage/blob/master/model/4thUseCaseDiagram.png)
+
+![Imagenes](https://github.com/dracken1/ARSW-ProjectFirstStage/blob/master/model/5thUseCaseDiagram.png)
+
+![Imagenes](https://github.com/dracken1/ARSW-ProjectFirstStage/blob/master/model/ComponentDiagram.png)
+
+![Imagenes](https://github.com/dracken1/ARSW-ProjectFirstStage/blob/master/model/DeploymentDiagram.png)
+
+![Imagenes](https://github.com/dracken1/ARSW-ProjectFirstStage/blob/master/model/ModelDiagram.png)
 ### Requerimientos No Colaborativos
 
 #### Historias de usuario
