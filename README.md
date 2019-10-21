@@ -127,9 +127,15 @@ Una partida consta de un mapa, un asesino y a lo sumo 4 supervivientes (puede ca
 
 ![Imagenes](https://github.com/dracken1/ARSW-ProjectFirstStage/blob/master/model/5thUseCaseDiagram.png)
 
+## Diagrama de componentes
+
 ![Imagenes](https://github.com/dracken1/ARSW-ProjectFirstStage/blob/master/model/ComponentDiagram.png)
 
+## Diagrama de despliegue
+
 ![Imagenes](https://github.com/dracken1/ARSW-ProjectFirstStage/blob/master/model/DeploymentDiagram.png)
+
+## Diagrama entidad-relacion
 
 ![Imagenes](https://github.com/dracken1/ARSW-ProjectFirstStage/blob/master/model/ModelDiagram.png)
 ### Requerimientos No Colaborativos
