@@ -35,7 +35,7 @@ public class UserServicesImpl implements UserServices{
             return loginAccess;
         } catch (Exception ex) {
             throw new ProjectException("\nERROR:\nClass: UserServicesImpl\n-Method: checkLogin()\nNo se pudo loggear correctamente\n", ex);   
-        }   
+        }
     }
     
     @Override

@@ -1,4 +1,5 @@
 package arsw.bloodymoney.DBconnection;
+import arsw.bloodymoney.entities.User;
 import java.sql.*;
 
 public class Bridge{
@@ -12,47 +13,62 @@ public class Bridge{
     }
 
 
-    public boolean authentication(String user, String password){
+    public User authentication(String username, String password){
         String SQL = "SELECT username, contraseña FROM usuario WHERE username = ? AND contraseña = ?";
+        User user = new User();
         try {
             Connection conn = connection();
             PreparedStatement pstmt = conn.prepareStatement(SQL,ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
-            pstmt.setString(1,user);
-            pstmt.setString(2,password);
+            pstmt.setString(1, username);
+            pstmt.setString(2, password);
             ResultSet rs = pstmt.executeQuery();
             rs.next();
             if(rs.absolute(1)){
+                user.setName(rs.getString("nombre"));
+                user.setLastname(rs.getString("apellido"));
+                user.setUsername(rs.getString("username"));
+                user.setEmail(rs.getString("correo"));
+                user.setPassword(rs.getString("contraseña"));
+                user.setRole(rs.getString("rol"));
+                user.setLevel(rs.getInt("nivel"));
                 conn.close();
                 pstmt.close();
                 rs.close();
-                return true;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return false;
+        return user;
     }
-    /*
-    public User getUserByEmail(String email){
+    
+    public User getUserByEmail(String username){
         String SQL = "SELECT nombre, apellido, username, correo, contraseña, rol, nivel FROM usuario WHERE username = ?";
+        User user = new User();
         try {
             Connection conn = connection();
             PreparedStatement pstmt = conn.prepareStatement(SQL,ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
-            pstmt.setString(1, email);
-            ResultSet rs = pstmt.executeQuery();
+            pstmt.setString(1, username);           
+            ResultSet rs = pstmt.executeQuery();            
             rs.next();
-            if(rs.absolute(1)){
+            if(rs.absolute(1)){      
+                user.setName(rs.getString("nombre"));
+                user.setLastname(rs.getString("apellido"));
+                user.setUsername(rs.getString("username"));
+                user.setEmail(rs.getString("correo"));
+                user.setPassword(rs.getString("contraseña"));
+                user.setRole(rs.getString("rol"));
+                user.setLevel(rs.getInt("nivel"));
                 conn.close();
                 pstmt.close();
                 rs.close();
-                return true;
+                //return user;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return false;
+        return user;
     }
-    */
+    
 
 
     public boolean addUser(String nombre, String apellido, String username, String correo, String contraseña){

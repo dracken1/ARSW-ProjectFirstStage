@@ -58,14 +58,32 @@ public class UserController {
         }
     }
     
+    @RequestMapping(method = RequestMethod.GET, path = "{user}")
+    public ResponseEntity<?> verifySession(@PathVariable("user") String user) {
+        try {
+            Bridge bg = new Bridge();
+            User res = bg.getUserByEmail(user);
+            if (res.getEmail() == null){
+                return new ResponseEntity<>(res, HttpStatus.ACCEPTED);
+            }else{
+                return new ResponseEntity<>(res, HttpStatus.ACCEPTED);
+            }
+            
+        } catch (Exception ex) {
+            Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>("ERROR 404", HttpStatus.NOT_FOUND);
+        }
+    }
+    
     
     // DAO TERMINA DE CONSULTAR ACA EN CONTROLLER
 
     @RequestMapping(method = RequestMethod.GET, path = "{user}/{password}")
-    public ResponseEntity<?> verifyLogin(@PathVariable("user") String user, @PathVariable("password") String password) {
+    public ResponseEntity<?> verifyLogin(@PathVariable("user") String username, @PathVariable("password") String password) {
+        //User user = new User();
         try {
             Bridge bg = new Bridge();
-            Boolean res = bg.authentication(user, password);
+            User res = bg.authentication(username, password);
             return new ResponseEntity<>(res, HttpStatus.ACCEPTED);
         } catch (Exception ex) {
             Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
