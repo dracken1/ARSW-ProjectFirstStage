@@ -14,6 +14,7 @@ public class Bridge{
 
     public boolean authentication(String user, String password){
         String SQL = "SELECT username, contraseña FROM usuario WHERE username = ? AND contraseña = ?";
+
         try {
             Connection conn = connection();
             PreparedStatement pstmt = conn.prepareStatement(SQL,ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);

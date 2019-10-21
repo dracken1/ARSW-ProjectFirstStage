@@ -25,6 +25,8 @@ class User{
     }
 }
 
+var usuario;
+
 $("#btnlogin").click(function(){
        var user = document.getElementById('loginuser').value;
        var password = document.getElementById('loginpass').value;
@@ -38,7 +40,8 @@ $("#btnlogin").click(function(){
            .then(response => response.json())
            .then(data => {
                console.log(data);
-               if(data){
+               if(data.name != null){
+                   usuario = new User(data.name, data.lastname, data.username, data.email, data.password);
                    window.location.href = "home.html";
                } else {
                    alert("Incorrect username or password")
@@ -70,6 +73,8 @@ $("#btnregistry").click(function(){
            }
        })
 });
+
+
 
 
 

@@ -6,24 +6,19 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/home.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="JS/home.js"></script>
+
 </head>
 <body>
     <div class="headerbar row">
         <div class="h htitle col-md-5">
-            Bloody Money
         </div>
         <div class="h hspace col-md-6">
-
         </div>
-        <div class="h haccount col-md-1">
-            <div class="userlogo">
+        <div class="h haccount col-md-1" id="haccountid" onmouseup="mouseReleased(this)" onmousedown="mousePressed(this)" onmouseover="mouseHover(this)" onmouseout="mouseLeave(this)">
+            <div class="userlogo" id="userlogoid">
                 <div class="licon">
 
                 </div>
-                <div class="ltext">Account</div>
-            </div>
-            <div class="extendeduserlogo">
             </div>
         </div>
     </div>
@@ -35,13 +30,46 @@
             <div class="leftbtncont">
                 <button class="genercibtnlft">Create Lobby</button>
             </div>
+
         </div >
         <div class="mainbar col-md-10">
-            <table class="table table-hover table-dark">
+            <div class="extendeduserlogo" id="extendeduserlogoid">
+                <div class="menuopts accopts">
+                    <div class="accoptstext">Account</div>
+                    <div class="accoptsicon"></div>
+                </div>
+                <div class="menuopts settopts">
+                    <div class="settoptstext">Settings</div>
+                    <div class="settoptsicon"></div>
+                </div>
+                <div class="menuopts insopts">
+                    <div class="insoptstext">Instructions</div>
+                    <div class="insoptsicon"></div>
+                </div>
+                <div class="menuopts aboopts">
+                    <div class="abooptstext">About</div>
+                    <div class="abooptsicon"></div>
+                </div>
+                <div class="menuopts outopts">
+                    <div class="outoptstext">Logout</div>
+                    <div class="outoptsicon"></div>
+                </div>
+            </div>
+            <div class="allsame accountdisplayable">
+                <div class="allsame acciconandbuttons">
+
+                </div>
+                <div class="allsame accinfo">
+
+                </div>
+                <button class="exitbtn">X</button>
+            </div>
+            <table class="mytable table table-hover table-dark">
                 <thead>
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Owner</th>
+                    <th scope="col">Description</th>
                     <th scope="col">Players</th>
                     <th scope="col">Join</th>
                 </tr>
@@ -50,54 +78,63 @@
                 <tr>
                     <th scope="row">1</th>
                     <td>Mark</td>
+                    <td>descripcion</td>
                     <td>4</td>
-                    <td><button class="genericbtn" id="gnrbtnlft" onclick="location.href='primeraFuncionalidad.html';">Join Game</button></td>
+                    <td><button class="genericbtn" id="gnrbtnlft">Join Game</button></td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
                     <td>Jacob</td>
+                    <td>descripcion</td>
                     <td>2</td>
                     <td><button class="genericbtn" onclick="location.href='primeraFuncionalidad.html';">Join Game</button></td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
                     <td>Nicolas</td>
+                    <td>descripcion</td>
                     <td>4</td>
                     <td><button class="genericbtn" onclick="location.href='primeraFuncionalidad.html';">Join Game</button></td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
                     <td>David</td>
+                    <td>descripcion</td>
                     <td>1</td>
                     <td><button class="genericbtn" onclick="location.href='primeraFuncionalidad.html';">Join Game</button></td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
                     <td>Pedro</td>
+                    <td>descripcion</td>
                     <td>2</td>
                     <td><button class="genericbtn" onclick="location.href='primeraFuncionalidad.html';">Join Game</button></td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
                     <td>Larry the Bird</td>
+                    <td>descripcion</td>
                     <td>1</td>
                     <td><button class="genericbtn" onclick="location.href='primeraFuncionalidad.html';">Join Game</button></td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
                     <td>Larry the Pork</td>
+                    <td>descripcion</td>
                     <td>3</td>
                     <td><button class="genericbtn" onclick="location.href='primeraFuncionalidad.html';">Join Game</button></td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
                     <td>Larry the Horse</td>
+                    <td>descripcion</td>
                     <td>4</td>
                     <td><button class="genericbtn" onclick="location.href='primeraFuncionalidad.html';">Join Game</button></td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
                     <td>Larry the Cow</td>
+                    <td>descripcion</td>
                     <td>2</td>
                     <td><button class="genericbtn" onclick="location.href='primeraFuncionalidad.html';">Join Game</button></td>
                 </tr>
@@ -109,4 +146,5 @@
 
     </div>
 </body>
+<script src="JS/home.js"></script>
 </html>
