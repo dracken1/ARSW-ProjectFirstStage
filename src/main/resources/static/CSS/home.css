@@ -203,7 +203,7 @@ body {
     z-index: 1;
     position: relative;
 }
-/**
+
 .accountdisplayable{
     position: absolute;
     background: rgba(66, 64, 60, 0.9);
@@ -211,7 +211,9 @@ body {
     width: 71vw;
     top: 4vh;
     left: 7vw;
+    float: right;
     z-index: 2;
+    display: none;
 }
 .exitbtn{
     position: absolute;
@@ -221,11 +223,20 @@ body {
     height: 4%;
 }
 .acciconandbuttons{
-    height: 70%
-    width:
-}*/
+    position: absolute;
+    height: 50vh;
+    width: 20vw;
+    top: 15%;
+    left: 10%;
+    background: #f9fdff;
+}
 .accinfo{
-
+    position: absolute;
+    height: 50vh;
+    width: 35vw;
+    top: 15%;
+    left: 40%;
+    background: #f9fdff;
 }
 .allsame{
     margin: 0 0 0 0;

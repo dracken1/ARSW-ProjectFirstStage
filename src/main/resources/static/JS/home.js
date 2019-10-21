@@ -31,6 +31,18 @@ function getCookie(name) {
   return (result === null) ? null : result[1];
 }
 
+$("#exitbtnid").click(function(){
+    $("#accountdisplayableid").animate({
+        height: "toggle"
+    },200);
+});
+
+$("#accoptsid").click(function (){
+   $("#accountdisplayableid").animate({
+       height: "toggle"
+   },200);
+});
+
 $("#outoptsiconid").click(function(){
     document.cookie = "username=; expires=Thu, 21 Aug 1970 20:00:00 UTC; path=/;"
     document.cookie = "; expires=Thu, 21 Aug 1970 20:00:00 UTC; path=/;"
