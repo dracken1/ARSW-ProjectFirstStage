@@ -6,7 +6,8 @@
   - David Antonio Diaz Duarte
   - Pedro Jose Mayorga Navarrete
   ```
-  
+## Despliegue en Heroku
+https://bloodymoney-arsw.herokuapp.com/LoginRegistry.html
 ## Resumen
 `
 En este proyecto se va a desarrollar un juego 2d de tipo supervivencia, donde un jugador es un asesino/cazador y los demas jugadores son supervivientes. Solo un jugador gana (todos juegan de forma individual), independientemente de si es superviviente o asesino, la forma de ganar varia dependiendo del tipo de jugador. Para ganar, un superviviente deben recolectar una cantidad determinada de monedas que se encuentran distribuidas de forma aleatoria a lo largo y ancho del mapa para poder abrir las puertas de escape,y posteriormente salir por una de ellas, por otro lado el asesino debe cazar a todos los supervivientes antes de que alguno logre escapar para poder ganar.
