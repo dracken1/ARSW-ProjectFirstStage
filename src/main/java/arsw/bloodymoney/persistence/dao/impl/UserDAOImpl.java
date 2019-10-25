@@ -3,7 +3,7 @@ package arsw.bloodymoney.persistence.dao.impl;
 import arsw.bloodymoney.controllers.UserController;
 import arsw.bloodymoney.entities.User;
 import arsw.bloodymoney.exceptions.ProjectException;
-import arsw.bloodymoney.persistence.dao.UserDAO;
+import arsw.bloodymoney.persistence.dao.GameDAO;
 import java.util.List;
 
 /**
@@ -13,7 +13,7 @@ import java.util.List;
  * @version 1.0
  * @since 2018-11-23
  */
-public class UserDAOImpl implements UserDAO{
+public class UserDAOImpl implements GameDAO {
 
     //@Inject
     private UserController userController;

@@ -1,11 +1,7 @@
 package arsw.bloodymoney.services.impl;
 
-import arsw.bloodymoney.entities.Map;
-import arsw.bloodymoney.entities.Room;
-import arsw.bloodymoney.entities.User;
-import arsw.bloodymoney.persistence.dao.RoomDAO;
-import arsw.bloodymoney.services.RoomServices;
-import java.util.List;
+import arsw.bloodymoney.persistence.dao.GameDAO;
+import arsw.bloodymoney.services.GameServices;
 
 /**
  * Class RoomServicesImpl that defines all the
@@ -14,13 +10,33 @@ import java.util.List;
  * @version 1.0
  * @since 2019-09-20
  */
-public class RoomServicesImpl implements RoomServices{
+public class RoomServicesImpl implements GameServices {
     
-    private RoomDAO roomDAO;
+    private GameDAO roomDAO;
 
     public RoomServicesImpl() {
     }
 
+    @Override
+    public void createElement(Object objeto) {
+    }
+
+    @Override
+    public Object Read() {
+        return null;
+    }
+
+    @Override
+    public Object Update() {
+        return null;
+    }
+
+    @Override
+    public void Delete() {
+
+    }
+
+    /**
     @Override
     public int getNumberOfUsers(int id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -100,6 +116,6 @@ public class RoomServicesImpl implements RoomServices{
     public void changeFullStatus(int id, String newFullStatus) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+    */
     
 }

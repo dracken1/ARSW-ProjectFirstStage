@@ -1,12 +1,10 @@
 package arsw.bloodymoney.services.impl;
 
-import arsw.bloodymoney.entities.Player;
-import arsw.bloodymoney.entities.Room;
+import arsw.bloodymoney.DBconnection.Bridge;
 import arsw.bloodymoney.entities.User;
 import arsw.bloodymoney.exceptions.ProjectException;
-import arsw.bloodymoney.persistence.dao.UserDAO;
-import arsw.bloodymoney.services.UserServices;
-import java.util.List;
+import arsw.bloodymoney.persistence.dao.GameDAO;
+import arsw.bloodymoney.services.GameServices;
 
 /**
  * Class UserServicesImpl that defines all the
@@ -15,14 +13,13 @@ import java.util.List;
  * @version 1.0
  * @since 2019-09-20
  */
-public class UserServicesImpl implements UserServices{
+public class UserServicesImpl implements GameServices {
     
-    private UserDAO userDAO;
+    private GameDAO userDAO;
 
     public UserServicesImpl() {
     }
 
-    @Override
     public boolean checkLogin(String email, String password) throws ProjectException{
         try {
             User user = userDAO.load(email);
@@ -37,22 +34,43 @@ public class UserServicesImpl implements UserServices{
             throw new ProjectException("\nERROR:\nClass: UserServicesImpl\n-Method: checkLogin()\nNo se pudo loggear correctamente\n", ex);   
         }
     }
-    
-    @Override
+
     public boolean checkSession() throws ProjectException {
         try {
-            //try to get the user from the session
-            //User user = userDAO.load();
-            
-            
             boolean sessionAccess = true;
-            
             return sessionAccess;
         } catch (Exception ex) {
             throw new ProjectException("\nERROR:\nClass: UserServicesImpl\n-Method: checkLogin()\nNo se pudo loggear correctamente\n", ex);
         }
     }
 
+    @Override
+    public void createElement(Object objeto) {
+        User user = (User) objeto;
+        Bridge bg = new Bridge();
+        Boolean res = bg.addUser(user.getName(),
+                user.getLastname(),
+                user.getUsername(),
+                user.getEmail(),
+                user.getPassword());
+    }
+
+    @Override
+    public Object Read() {
+        return null;
+    }
+
+    @Override
+    public Object Update() {
+        return null;
+    }
+
+    @Override
+    public void Delete() {
+
+    }
+
+    /**
     @Override
     public void changeUsername(int id, String newUsername) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -147,5 +165,6 @@ public class UserServicesImpl implements UserServices{
     public void changeOngameStatus(int id, boolean newOngameStatus) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    */
         
 }

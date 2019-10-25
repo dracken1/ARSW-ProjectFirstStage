@@ -13,13 +13,22 @@ import java.util.List;
  * @version 1.0
  * @since 2019-09-20
  */
-public interface UserServices {
-    
-    //TO-DO
-    //Define functionalities of the users
-    
-    public boolean checkLogin(String email, String password) throws ProjectException;
-    public boolean checkSession() throws ProjectException;
+public interface GameServices {
+
+    //CRUD
+    //
+    public void createElement(Object elemento);
+
+    //READ
+    public Object Read();
+
+    //UPDATE
+    public Object Update();
+
+    //DELETE
+    public void Delete();
+
+    /**
     public void changeUsername(int id, String newUsername);
     public void changeEmail(int id, String newEmail);
     public void changePassword(int id, String newPassword);
@@ -30,12 +39,12 @@ public interface UserServices {
     public void leaveRoom(int id);
     public void changeRoom(int id, int newRoom_id);
     //public void changePlayerType(int id, String newType);
-    //public changeMap(String map_id);
+    //public changeMap(String map_id);*/
     
     
     
     /*BASIC SERVICES*/
-    
+    /**
     //Add
     public void addUser(String name, String lastname, String username, String email, String password);
     
@@ -56,5 +65,6 @@ public interface UserServices {
     public void changeOnlineStatus(int id, boolean newOnlineStatus);
     public boolean checkOngameStatus(int id);
     public void changeOngameStatus(int id, boolean newOngameStatus);
-    
+    */
+
 }

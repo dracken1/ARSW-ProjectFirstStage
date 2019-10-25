@@ -1,11 +1,7 @@
 package arsw.bloodymoney.services.impl;
 
-import arsw.bloodymoney.entities.Map;
-import arsw.bloodymoney.entities.Player;
-import arsw.bloodymoney.entities.Room;
-import arsw.bloodymoney.persistence.dao.MapDAO;
-import arsw.bloodymoney.services.MapServices;
-import java.util.List;
+import arsw.bloodymoney.persistence.dao.GameDAO;
+import arsw.bloodymoney.services.GameServices;
 
 /**
  * Class MapServicesImpl that defines all the
@@ -14,13 +10,35 @@ import java.util.List;
  * @version 1.0
  * @since 2019-09-20
  */
-public class MapServicesImpl implements MapServices{
+public class MapServicesImpl implements GameServices{
     
-    private MapDAO mapDAO;
+    private GameDAO mapDAO;
 
     public MapServicesImpl() {
     }
 
+    @Override
+    public void createElement(Object objeto) {
+
+    }
+
+    @Override
+    public Object Read() {
+        return null;
+    }
+
+    @Override
+    public Object Update() {
+        return null;
+    }
+
+    @Override
+    public void Delete() {
+
+    }
+
+
+    /**
     @Override
     public int getNumberOfPlayers(int id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -95,6 +113,6 @@ public class MapServicesImpl implements MapServices{
     public void changeEndgameStatus(int id, boolean newEndgameStatus) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+    */
         
 }

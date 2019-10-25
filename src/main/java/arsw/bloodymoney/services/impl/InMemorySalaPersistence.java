@@ -5,11 +5,14 @@ import arsw.bloodymoney.exceptions.ProjectException;
 import arsw.bloodymoney.persistence.dao.SalasPersistence;
 import org.springframework.stereotype.Service;
 
+import java.util.concurrent.ConcurrentHashMap;
+
 @Service
 public class InMemorySalaPersistence implements SalasPersistence{
 
-    public InMemorySalaPersistence(){
+    private ConcurrentHashMap<String,Room> Salas= new ConcurrentHashMap<>();
 
+    public InMemorySalaPersistence(){
     }
 
     @Override

@@ -11,7 +11,7 @@ import java.util.List;
  * @version 1.0
  * @since 2019-09-20
  */
-public interface UserDAO {
+public interface GameDAO {
     
     //Post
     public void save(User user);
