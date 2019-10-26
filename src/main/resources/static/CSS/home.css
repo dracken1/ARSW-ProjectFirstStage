@@ -45,7 +45,7 @@ body {
     position: absolute;
     margin: 0 0 0 0;
     background: url(../images/3bars.png) center no-repeat;
-    background-size: 50px 50px;
+    background-size: 65% 80%;
     width: 40%;
     height: 50px;
     top: 5%;
@@ -54,16 +54,17 @@ body {
 .extendeduserlogo{
     position: absolute;
     margin: 0 0 0 0;
-    padding: 0 0 0 0;
-    width: 285px;
-    height: 320px;
+    padding: 0 0 0 5px;
+    width: 15vw;
+    height: 20vw;
     background-color: #292826;
     top: 5px;
-    left: 65vw;
+    left: 68vw;
     z-index: 10;
     border: none;
     border-left: 1px solid #ab8541;
     border-bottom: 1px solid #ab8541;
+    border-right: 1px solid #ab8541;
     border-radius: 3px;
     display: none;
 }
@@ -76,9 +77,9 @@ body {
     border-bottom: 1px solid #0d1113;
     height: 17%;
     width: 94%;
-    left: 10px;
+    left: 3%;
     text-align: center;
-    font-size: 20px;
+    font-size: 100%;
     transition: all 0.2s ease;
     transition-property: width,height,background-color,top,left,padding-top,margin-bottom;
 }
@@ -125,23 +126,23 @@ body {
 }
 .accoptsicon{
     background: url(../images/usericon.png) no-repeat;
-    background-size: 30px 30px;
+    background-size: 43% 100%;
 }
 .settoptsicon{
     background: url(../images/gear.png) no-repeat;
-    background-size: 30px 30px;
+    background-size: 43% 100%;
 }
 .insoptsicon{
     background: url(../images/instructions.png) no-repeat;
-    background-size: 30px 30px;
+    background-size: 43% 100%;
 }
 .abooptsicon{
     background: url(../images/about.png) no-repeat;
-    background-size: 30px 30px;
+    background-size: 43% 100%;
 }
 .outoptsicon{
     background: url(../images/logout.png) no-repeat;
-    background-size: 30px 30px;
+    background-size: 43% 100%;
 }
 .middlebar{
     margin: 0;
