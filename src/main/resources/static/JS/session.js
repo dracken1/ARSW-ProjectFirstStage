@@ -6,7 +6,7 @@
     if(getCookie("username") === null){
     //alert("entra");
         console.log(document.cookie);
-        window.location.href = "LoginRegistry.html"
+        window.location.href = "index.html"
     }
 })();
 

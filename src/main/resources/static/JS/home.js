@@ -1,6 +1,6 @@
 
-$('#gnrbtnlft').click(function(){
-    window.location.href = "primeraFuncionalidad.html";
+$('.genericbtn').click(function(){
+    window.location.href = "juego.html";
 });
 
 function mousePressed(obj) {
@@ -47,6 +47,6 @@ $("#outoptsiconid").click(function(){
     document.cookie = "username=; expires=Thu, 21 Aug 1970 20:00:00 UTC; path=/;"
     document.cookie = "; expires=Thu, 21 Aug 1970 20:00:00 UTC; path=/;"
     console.log(document.cookie);
-    window.location.href = "LoginRegistry.html"
+    window.location.href = "index.html"
 });
 
