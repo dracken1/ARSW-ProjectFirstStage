@@ -13,10 +13,11 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class Room implements Serializable{
     
-    private int idSala;
+    private String idSala;
 
     //Constructors
-    public Room() {
+    public Room(String idSala) {
+        this.idSala =  idSala;
     }
  
 }

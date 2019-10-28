@@ -14,20 +14,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class SalaController{
     @Autowired
-    SalasServicesImpl salasServices = null;
+    SalasServicesImpl salasServices = new SalasServicesImpl();
 
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<?> addNewSala(@RequestBody Room newSala){
         try {
-            //salaServices.addNewSala();
+            salasServices.createElement(newSala);
             System.out.println("SALA CREADA");
         }catch (Exception ex){
             System.out.println("ERROR, NO SE HA CREADO LA SALA");
         }
         return null;
     }
-
-
-
-
 }

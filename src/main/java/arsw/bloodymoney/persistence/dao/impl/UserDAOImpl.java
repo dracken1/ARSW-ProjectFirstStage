@@ -30,7 +30,6 @@ public class UserDAOImpl implements GameDAO {
             //TO-DO
             User user = new User();
             return user;
-            //return userController.;
         } catch (Exception ex) {
             throw new ProjectException("\nERROR:\nClass: MyBatisUserDAO\n-Method: load()\nNo existe ningun usuario con el id: \n" + id + "\n", ex);
         }

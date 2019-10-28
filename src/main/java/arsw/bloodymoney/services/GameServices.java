@@ -17,7 +17,7 @@ public interface GameServices {
 
     //CRUD
     //
-    public void createElement(Object elemento);
+    public void createElement(Object elemento) throws ProjectException;
 
     //READ
     public Object Read();
