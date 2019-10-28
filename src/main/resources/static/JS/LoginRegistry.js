@@ -75,11 +75,6 @@ $("#btnregistry").click(function(){
        })
 });
 
-$("#genercibtnlftid").click(function(){
-    alert("funca boton");
-    console.log(document.cookie);
-});
-
 
 
 

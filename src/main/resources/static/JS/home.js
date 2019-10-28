@@ -50,3 +50,7 @@ $("#outoptsiconid").click(function(){
     window.location.href = "index.html"
 });
 
+$("#genercibtnlftid").click(function(){
+    alert("Sala Creada");
+    console.log(document.cookie);
+});
