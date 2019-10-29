@@ -5,30 +5,31 @@ import arsw.bloodymoney.exceptions.ProjectException;
 import arsw.bloodymoney.persistence.dao.SalasPersistence;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Service
 public class InMemorySalaPersistence implements SalasPersistence{
 
-    private ConcurrentHashMap<Integer,Room> Salas= new ConcurrentHashMap<>();
+    private ArrayList<Room> Salas= new ArrayList<>();
 
     public InMemorySalaPersistence(){
 
         Room sala1 = new Room(Salas.size());
-        Salas.put(Salas.size(),sala1);
+        Salas.add(sala1);
 
         Room sala2 = new Room(Salas.size());
-        Salas.put(Salas.size(),sala2);
+        Salas.add(sala2);
     }
 
     @Override
     public void addSala() throws ProjectException {
         Room nueva = new Room(Salas.size());
-        Salas.put(Salas.size(),nueva);
+        Salas.add(nueva);
         System.out.println(Salas.size());
     }
 
-    public ConcurrentHashMap<Integer, Room> getSalas() {
+    public ArrayList<Room> getSalas() {
         return Salas;
     }
 }

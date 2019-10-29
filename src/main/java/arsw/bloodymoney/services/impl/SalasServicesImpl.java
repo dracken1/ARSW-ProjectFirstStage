@@ -5,7 +5,11 @@ import arsw.bloodymoney.exceptions.ProjectException;
 import arsw.bloodymoney.persistence.dao.impl.InMemorySalaPersistence;
 import arsw.bloodymoney.services.GameServices;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 import java.util.concurrent.ConcurrentHashMap;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 
 @Service
@@ -18,7 +22,6 @@ public class SalasServicesImpl implements GameServices {
     }
     @Override
     public Object Read() {
-        sp.getSalas();
         return null;
     }
 
@@ -30,5 +33,17 @@ public class SalasServicesImpl implements GameServices {
     @Override
     public void Delete() {
 
+    }
+
+    public JSONArray listaSalas(){
+        JSONArray arregloSalas = new JSONArray();
+        ArrayList <Room> salasGeneral = sp.getSalas();
+        for(Object sala: salasGeneral){
+            Room tempo = (Room) sala;
+            JSONObject jo = new JSONObject();
+            jo.append("descripcion",tempo.getIdSala());
+            arregloSalas.put(jo);
+        }
+        return arregloSalas;
     }
 }

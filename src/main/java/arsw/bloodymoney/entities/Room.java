@@ -19,5 +19,8 @@ public class Room implements Serializable{
     public Room(int idSala) {
         this.idSala =  idSala;
     }
- 
+
+    public int getIdSala() {
+        return idSala;
+    }
 }

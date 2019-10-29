@@ -70,4 +70,39 @@ $("#genercibtnlftid").click(function(){
             alert("Something went wrong!");
         }
     })
+    //alert("alerta atencion despues de la adicion");
+
+
 });
+var cargaPage = function () {
+    var dibujarLobby = function (tabla) {
+        //alert(tabla);
+        $("#tablaSalas tbody").empty(); // limpiar tabla
+
+        tabla.map(function (salaDescripcion){
+            //alert("siiiii");
+            $("#tablaSalas tbody").append("<tr><td>Sala "+ salaDescripcion.descripcion +"</td><td>0</td><td> <button onclick='cargaPage().unirseASala()' class=\"genericbtn\" id=\"gnrbtnlft\">JOIN GAME</button></td></tr>");
+        })
+    }
+    var getSalas = function () {
+        //alert("entro a get salas");
+        var traerSalas = $.get("/Sala/get");
+        traerSalas.then(function(salas) {
+            //alert("antes de dibujar lobby");
+            dibujarLobby(JSON.parse(salas));
+        },function () {
+            //alert("no sabemos si el alert este func");
+        });
+        return traerSalas;
+    };
+    getSalas();
+    return{
+        actualizarTabla: function () {
+            getSalas();
+        },
+        unirseASala: function () {
+            window.location.href = "juego.html";
+        }
+    };
+
+}

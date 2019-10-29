@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3253c33d-2dbb-4229-807c-5cf636a67eec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/app_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/app_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/controllers/SalaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/controllers/SalaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/entities/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/entities/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/persistence/dao/SalasPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/persistence/dao/SalasPersistence.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/persistence/dao/impl/InMemorySalaPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/persistence/dao/impl/InMemorySalaPersistence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/services/GameServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/services/GameServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/services/impl/SalasServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/services/impl/SalasServicesImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/home.html" afterDir="false" />
@@ -101,7 +100,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.AppApplication">
+    <configuration name="AppApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="app" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="arsw.bloodymoney.appMain.AppApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.bloody.app" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -142,7 +148,7 @@
       <workItem from="1571296224114" duration="948000" />
       <workItem from="1571532046230" duration="1126000" />
       <workItem from="1572126487115" duration="3210000" />
-      <workItem from="1572320779656" duration="6920000" />
+      <workItem from="1572320779656" duration="18073000" />
     </task>
     <servers />
   </component>
