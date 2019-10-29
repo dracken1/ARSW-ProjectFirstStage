@@ -1,4 +1,6 @@
 
+
+
 $('.genericbtn').click(function(){
     window.location.href = "juego.html";
 });
@@ -51,6 +53,21 @@ $("#outoptsiconid").click(function(){
 });
 
 $("#genercibtnlftid").click(function(){
-    alert("Sala Creada");
-    console.log(document.cookie);
+    //alert("Sala Creada");
+    //console.log(document.cookie);
+    var url = '/Sala/add';
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body:JSON
+    })
+    .then(response => {
+        if(response.ok){
+            window.location.href = "home.html";
+        } else {
+            alert("Something went wrong!");
+        }
+    })
 });

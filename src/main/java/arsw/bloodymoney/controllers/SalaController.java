@@ -16,10 +16,10 @@ public class SalaController{
     @Autowired
     SalasServicesImpl salasServices = new SalasServicesImpl();
 
-    @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<?> addNewSala(@RequestBody Room newSala){
+    @RequestMapping(method = RequestMethod.POST , path = "/add")
+    public ResponseEntity<?> addNewSala(){
         try {
-            salasServices.createElement(newSala);
+            salasServices.createElement(null);
             System.out.println("SALA CREADA");
         }catch (Exception ex){
             System.out.println("ERROR, NO SE HA CREADO LA SALA");

@@ -9,6 +9,6 @@ import org.springframework.stereotype.Service;
 @Service
 public interface SalasPersistence {
 
-    public void addSala(Room r) throws ProjectException;
+    public void addSala() throws ProjectException;
 
 }

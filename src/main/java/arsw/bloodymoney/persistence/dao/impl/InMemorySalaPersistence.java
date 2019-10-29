@@ -14,15 +14,21 @@ public class InMemorySalaPersistence implements SalasPersistence{
 
     public InMemorySalaPersistence(){
 
-        Room sala1 = new Room("qwertyu");
+        Room sala1 = new Room(Salas.size());
         Salas.put(Salas.size(),sala1);
 
-        Room sala2 = new Room("fsdfsd");
+        Room sala2 = new Room(Salas.size());
         Salas.put(Salas.size(),sala2);
     }
 
     @Override
-    public void addSala(Room r) throws ProjectException {
-        Salas.put(Salas.size(),r);
+    public void addSala() throws ProjectException {
+        Room nueva = new Room(Salas.size());
+        Salas.put(Salas.size(),nueva);
+        System.out.println(Salas.size());
+    }
+
+    public ConcurrentHashMap<Integer, Room> getSalas() {
+        return Salas;
     }
 }
