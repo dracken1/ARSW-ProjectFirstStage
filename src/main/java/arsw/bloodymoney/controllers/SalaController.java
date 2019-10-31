@@ -38,6 +38,4 @@ public class SalaController{
             return null;
         }
     }
-
-
 }

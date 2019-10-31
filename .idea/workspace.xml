@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3253c33d-2dbb-4229-807c-5cf636a67eec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/app_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/app_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/controllers/SessionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/entities/Session.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/persistence/dao/SessionPersistence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/persistence/dao/impl/SessionDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/services/impl/InMemorySessionPersistence.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/controllers/SalaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/controllers/SalaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/entities/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/entities/Room.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/persistence/dao/impl/InMemorySalaPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/persistence/dao/impl/InMemorySalaPersistence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/services/impl/SalasServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/services/impl/SalasServicesImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/home.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,8 +56,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Rd92e1fBD2xSUYYfpx2BzdN7F0" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
@@ -181,5 +181,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
