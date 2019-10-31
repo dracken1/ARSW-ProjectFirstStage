@@ -4,6 +4,7 @@ import arsw.bloodymoney.DBconnection.Bridge;
 import arsw.bloodymoney.entities.User;
 import arsw.bloodymoney.exceptions.ProjectException;
 import arsw.bloodymoney.persistence.dao.GameDAO;
+import arsw.bloodymoney.persistence.dao.impl.UserDAOImpl;
 import arsw.bloodymoney.services.GameServices;
 
 /**
@@ -19,19 +20,15 @@ public class UserServicesImpl implements GameServices {
     
     private GameDAO userDAO;
 
+    private UserDAOImpl userdao = new UserDAOImpl();
+
     public UserServicesImpl() {
+
     }
 
-    public boolean checkLogin(String email, String password) throws ProjectException{
+    public User checkLogin(String username, String password) throws ProjectException{
         try {
-            User user = userDAO.load(email);
-            boolean loginAccess;
-            if ((user.getEmail().equals(email)) && (user.getPassword().equals(password))) {
-                loginAccess = true;
-            } else {
-                loginAccess = false;
-            }            
-            return loginAccess;
+            return userdao.load(username,password);
         } catch (Exception ex) {
             throw new ProjectException("\nERROR:\nClass: UserServicesImpl\n-Method: checkLogin()\nNo se pudo loggear correctamente\n", ex);   
         }

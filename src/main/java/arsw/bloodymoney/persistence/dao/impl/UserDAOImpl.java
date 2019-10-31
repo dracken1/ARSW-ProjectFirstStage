@@ -1,5 +1,6 @@
 package arsw.bloodymoney.persistence.dao.impl;
 
+import arsw.bloodymoney.DBconnection.Bridge;
 import arsw.bloodymoney.controllers.UserController;
 import arsw.bloodymoney.entities.User;
 import arsw.bloodymoney.exceptions.ProjectException;
@@ -15,10 +16,8 @@ import java.util.List;
  */
 public class UserDAOImpl implements GameDAO {
 
-    //@Inject
-    private UserController userController;
-    //Mapper
-    
+    private Bridge bg = new Bridge();
+
     @Override
     public void save(User user) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -32,6 +31,14 @@ public class UserDAOImpl implements GameDAO {
             return user;
         } catch (Exception ex) {
             throw new ProjectException("\nERROR:\nClass: MyBatisUserDAO\n-Method: load()\nNo existe ningun usuario con el id: \n" + id + "\n", ex);
+        }
+    }
+
+    public User load(String username, String password) throws ProjectException{
+        try {
+            return bg.authentication(username,password);
+        } catch (Exception ex){
+            throw new ProjectException("\nERROR:\nClass: MyBatisUserDAO\n-Method: load()\nNo existe ningun usuario con el usuario: \n" + username + "\n", ex);
         }
     }
 

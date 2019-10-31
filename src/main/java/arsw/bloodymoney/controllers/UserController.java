@@ -1,21 +1,17 @@
 
 package arsw.bloodymoney.controllers;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import arsw.bloodymoney.DBconnection.Bridge;
+import arsw.bloodymoney.entities.Session;
 import arsw.bloodymoney.entities.User;
+import arsw.bloodymoney.services.impl.InMemorySessionPersistence;
 import arsw.bloodymoney.services.impl.UserServicesImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 @RestController
@@ -69,12 +65,16 @@ public class UserController {
 
     @RequestMapping(method = RequestMethod.GET, path = "{user}/{password}")
     public ResponseEntity<?> verifyLogin(@PathVariable("user") String username, @PathVariable("password") String password) {
-        //User user = new User();
         try {
-            Bridge bg = new Bridge();
-            User res = bg.authentication(username, password);
+            //Old implementation
+            //Bridge bg = new Bridge();
+            //User res = bg.authentication(username, password);
 
-            return new ResponseEntity<>(res, HttpStatus.ACCEPTED);
+            //New implementation
+            User res2 = usi.checkLogin(username,password);
+            Session session = new Session(res2);
+            InMemorySessionPersistence.sessions.put(res2,session);
+            return new ResponseEntity<>(res2, HttpStatus.ACCEPTED);
         } catch (Exception ex) {
             Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>("ERROR 404", HttpStatus.NOT_FOUND);
