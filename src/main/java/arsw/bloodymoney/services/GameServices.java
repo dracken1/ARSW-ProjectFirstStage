@@ -1,10 +1,6 @@
 package arsw.bloodymoney.services;
 
-import arsw.bloodymoney.entities.Player;
-import arsw.bloodymoney.entities.Room;
-import arsw.bloodymoney.entities.User;
 import arsw.bloodymoney.exceptions.ProjectException;
-import java.util.List;
 
 /**
  * Interface UserServices that defines all the

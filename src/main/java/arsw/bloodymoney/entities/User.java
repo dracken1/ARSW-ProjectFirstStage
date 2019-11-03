@@ -23,9 +23,7 @@ public class User implements Serializable{
     private int wins;
     private boolean onlineStatus;
     private boolean ongameStatus;
-    
-    //1 Player cazador    1 Player perseguido
-    private Player player;
+
     private Room room;
     //private List<Award> awards;
     
@@ -158,14 +156,6 @@ public class User implements Serializable{
         this.ongameStatus = ongameStatus;
     }
 
-    public Player getPlayer() {
-        return player;
-    }
-
-    public void setPlayer(Player player) {
-        this.player = player;
-    }
-
     public Room getRoom() {
         return room;
     }
@@ -179,7 +169,7 @@ public class User implements Serializable{
 
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", name=" + name + ", lastname=" + lastname + ", username=" + username + ", email=" + email + ", password=" + password + ", role=" + role + ", level=" + level + ", wins=" + wins + ", onlineStatus=" + onlineStatus + ", ongameStatus=" + ongameStatus + ", player=" + player + ", room=" + room + '}';
+        return "User{" + "id=" + id + ", name=" + name + ", lastname=" + lastname + ", username=" + username + ", email=" + email + ", password=" + password + ", role=" + role + ", level=" + level + ", wins=" + wins + ", onlineStatus=" + onlineStatus + ", ongameStatus=" + ongameStatus  + ", room=" + room + '}';
     }
    
 }

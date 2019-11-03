@@ -23,7 +23,6 @@ public class Map implements Serializable{
     private boolean endgameStatus;
     
     private Room room;
-    private List<Player> players;
     //private List<Obstacle> obstacles;
     //private List<Coin> coins;
     //private List<Door> doors;
@@ -97,20 +96,21 @@ public class Map implements Serializable{
         this.room = room;
     }
 
-    public List<Player> getPlayers() {
-        return players;
-    }
-
-    public void setPlayers(List<Player> players) {
-        this.players = players;
-    }
-    
     
     //To String
 
+
     @Override
     public String toString() {
-        return "Map{" + "id=" + id + ", name=" + name + ", type=" + type + ", difficulty=" + difficulty + ", endgameStatus=" + endgameStatus + ", room=" + room + ", players=" + players + '}';
+        return "Map{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", difficulty='" + difficulty + '\'' +
+                ", time=" + time +
+                ", remainingTime='" + remainingTime + '\'' +
+                ", endgameStatus=" + endgameStatus +
+                ", room=" + room +
+                '}';
     }
-    
 }
