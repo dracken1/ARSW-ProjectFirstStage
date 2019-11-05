@@ -1,6 +1,7 @@
 package arsw.bloodymoney.persistence.dao.impl;
 
 import arsw.bloodymoney.entities.Room;
+import arsw.bloodymoney.entities.User;
 import arsw.bloodymoney.exceptions.ProjectException;
 import arsw.bloodymoney.persistence.dao.SalasPersistence;
 import org.springframework.stereotype.Service;
@@ -27,6 +28,10 @@ public class InMemorySalaPersistence implements SalasPersistence{
         Room nueva = new Room(Salas.size());
         Salas.add(nueva);
         System.out.println(Salas.size());
+    }
+
+    public void unirUsuarioASala(String username, int salaId){
+        Salas.get(salaId).addUsuarios(username);
     }
 
     public ArrayList<Room> getSalas() {

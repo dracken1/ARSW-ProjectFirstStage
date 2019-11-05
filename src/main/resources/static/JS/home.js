@@ -60,10 +60,13 @@ var cargaPage = function () {
         $("#tablaSalas tbody").empty(); // limpiar tabla
 
         tabla.map(function (salaDescripcion){
-            //alert("siiiii");
             var salaId = salaDescripcion.descripcion;
-            $("#tablaSalas tbody").append("<tr><td>Sala "+ salaId +"</td><td>0</td><td> <button onclick='cargaPage().unirseASala("+salaId+")' class=\"genericbtn\" id=\"gnrbtnlft\">JOIN GAME</button></td></tr>");
-
+            var cantidadJudadores = salaDescripcion.cantidadJugadores;
+            if(cantidadJudadores==2){
+                $("#tablaSalas tbody").append("<tr><td>Lobby "+ salaId +"</td><td>"+cantidadJudadores+"</td><td> <button style='background-color: darkred; color: white' class=\"genericbtn\" id=\"gnrbtnlft\">GAME FULL</button></td></tr>");
+            }else{
+                $("#tablaSalas tbody").append("<tr><td>Lobby "+ salaId +"</td><td>"+cantidadJudadores+"</td><td> <button onclick='cargaPage().unirseASala("+salaId+")' class=\"genericbtn\" id=\"gnrbtnlft\">JOIN GAME</button></td></tr>");
+            }
         })
 
     }
@@ -95,7 +98,13 @@ var cargaPage = function () {
 
         },
         unirseASala: function (salaId) {
-            window.location.href = "juego.html?id="+salaId.toString();
+            var username = getCookie("username");
+            var usuarioJSON = {username: username};
+            stompClient.send("/app/unirseASala."+salaId, {},JSON.stringify(usuarioJSON));
+            stompClient.subscribe('/topic/salas',function (eventbody) {
+                getSalas();
+            });
+
         },
         createLobby: function () {
             stompClient.send("/app/nuevaSala", {},null);

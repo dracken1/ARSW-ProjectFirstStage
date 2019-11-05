@@ -1,6 +1,7 @@
 package arsw.bloodymoney.services.impl;
 
 import arsw.bloodymoney.entities.Room;
+import arsw.bloodymoney.entities.User;
 import arsw.bloodymoney.exceptions.ProjectException;
 import arsw.bloodymoney.persistence.dao.impl.InMemorySalaPersistence;
 import arsw.bloodymoney.services.GameServices;
@@ -42,8 +43,13 @@ public class SalasServicesImpl implements GameServices {
             Room tempo = (Room) sala;
             JSONObject jo = new JSONObject();
             jo.append("descripcion",tempo.getIdSala());
+            jo.append("cantidadJugadores",tempo.getUsuariosEnSala().size());
             arregloSalas.put(jo);
         }
         return arregloSalas;
+    }
+
+    public void unirUsuarioASala(String username, int salaId){
+        sp.unirUsuarioASala(username,salaId);
     }
 }
