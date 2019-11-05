@@ -52,37 +52,20 @@ $("#outoptsiconid").click(function(){
     window.location.href = "index.html"
 });
 
-$("#genercibtnlftid").click(function(){
-    //alert("Sala Creada");
-    //console.log(document.cookie);
-    var url = '/Sala/add';
-    fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body:JSON
-    })
-    .then(response => {
-        if(response.ok){
-            window.location.href = "home.html";
-        } else {
-            alert("Something went wrong!");
-        }
-    })
-    //alert("alerta atencion despues de la adicion");
 
-
-});
 var cargaPage = function () {
+
     var dibujarLobby = function (tabla) {
         //alert(tabla);
         $("#tablaSalas tbody").empty(); // limpiar tabla
 
         tabla.map(function (salaDescripcion){
             //alert("siiiii");
-            $("#tablaSalas tbody").append("<tr><td>Sala "+ salaDescripcion.descripcion +"</td><td>0</td><td> <button onclick='cargaPage().unirseASala()' class=\"genericbtn\" id=\"gnrbtnlft\">JOIN GAME</button></td></tr>");
+            var salaId = salaDescripcion.descripcion;
+            $("#tablaSalas tbody").append("<tr><td>Sala "+ salaId +"</td><td>0</td><td> <button onclick='cargaPage().unirseASala("+salaId+")' class=\"genericbtn\" id=\"gnrbtnlft\">JOIN GAME</button></td></tr>");
+
         })
+
     }
     var getSalas = function () {
         //alert("entro a get salas");
@@ -96,12 +79,26 @@ var cargaPage = function () {
         return traerSalas;
     };
     getSalas();
+
     return{
         actualizarTabla: function () {
-            getSalas();
+            var socket = new SockJS('/stompendpoint');
+            stompClient = Stomp.over(socket);
+
+            //subscribe to /topic/newpoint when connections succeed
+            stompClient.connect({}, function (frame) {
+                console.log('Connected: ' + frame);
+                stompClient.subscribe('/topic/salas',function (eventbody) {
+                    getSalas();
+                });
+            });
+
         },
-        unirseASala: function () {
-            window.location.href = "juego.html";
+        unirseASala: function (salaId) {
+            window.location.href = "juego.html?id="+salaId.toString();
+        },
+        createLobby: function () {
+            stompClient.send("/app/nuevaSala", {},null);
         }
     };
 

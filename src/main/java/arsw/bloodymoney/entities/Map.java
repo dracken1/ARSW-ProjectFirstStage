@@ -17,19 +17,11 @@ public class Map implements Serializable{
     private String name;
     private String type;
     private String difficulty;
-    //time definir abajo igual que en room, get y set
     private int time;
     private String remainingTime;
-    //endgame point
     private boolean endgameStatus;
-    
     private Room room;
-    //private List<Obstacle> obstacles;
-    //private List<Coin> coins;
-    //private List<Door> doors;
-    //private List<Power> powers;
-    
-    
+
     //Constructors
 
     public Map() {
@@ -45,8 +37,7 @@ public class Map implements Serializable{
         this.type = type;
         this.difficulty = difficulty;
     }
-    
-    
+
     //Getters and Setters
 
     public int getId() {
@@ -99,7 +90,6 @@ public class Map implements Serializable{
 
     
     //To String
-
 
     @Override
     public String toString() {

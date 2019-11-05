@@ -106,7 +106,8 @@ var Stats=function(){
     q.fillRect(0,0,a.width,a.height);
     E=q.getImageData(0,0,a.width,a.height);
     return{
-        domElement:g,update:function(){
+
+         domElement:g,update:function(){
             u++;
             j=(new Date).getTime();
             n=j-F;

@@ -50,6 +50,10 @@
           <element id="library" level="project" name="Maven: org.json:json:20190722" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.28" />
           <element id="library" level="project" name="Maven: org.springframework:spring-test:5.2.0.RC2" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-websocket:2.2.0.M6" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-messaging:5.2.0.RC2" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-websocket:5.2.0.RC2" />
+          <element id="library" level="project" name="Maven: org.webjars:stomp-websocket:2.3.3" />
         </element>
       </element>
       <element id="directory" name="META-INF">
