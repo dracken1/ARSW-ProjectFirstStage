@@ -104,6 +104,9 @@ var cargaPage = function () {
             stompClient.subscribe('/topic/salas',function (eventbody) {
                 getSalas();
                 window.location.href = "combat.html?id="+salaId;
+                document.getElementById("Jugador1").innerHTML = "verdolagas";
+
+
             });
 
 
