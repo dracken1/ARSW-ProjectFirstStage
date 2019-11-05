@@ -9,6 +9,16 @@
             "mainClass": "arsw.bloodymoney.appMain.AppApplication",
             "projectName": "app",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-GameApplication<app>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "arsw.tetriscombat.main.GameApplication",
+            "projectName": "app",
+            "args": ""
         }
     ]
 }
