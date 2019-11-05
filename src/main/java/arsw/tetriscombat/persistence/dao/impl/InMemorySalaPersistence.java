@@ -1,8 +1,8 @@
-package arsw.bloodymoney.persistence.dao.impl;
+package arsw.tetriscombat.persistence.dao.impl;
 
-import arsw.bloodymoney.entities.Room;
-import arsw.bloodymoney.exceptions.ProjectException;
-import arsw.bloodymoney.persistence.dao.SalasPersistence;
+import arsw.tetriscombat.entities.Room;
+import arsw.tetriscombat.exceptions.ProjectException;
+import arsw.tetriscombat.persistence.dao.SalasPersistence;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

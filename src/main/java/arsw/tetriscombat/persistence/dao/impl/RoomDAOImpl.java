@@ -1,9 +1,9 @@
-package arsw.bloodymoney.persistence.dao.impl;
+package arsw.tetriscombat.persistence.dao.impl;
 
 //import arsw.bloodymoney.entities.Room;
-import arsw.bloodymoney.entities.User;
-import arsw.bloodymoney.exceptions.ProjectException;
-import arsw.bloodymoney.persistence.dao.GameDAO;
+import arsw.tetriscombat.entities.User;
+import arsw.tetriscombat.exceptions.ProjectException;
+import arsw.tetriscombat.persistence.dao.GameDAO;
 
 import java.util.List;
 

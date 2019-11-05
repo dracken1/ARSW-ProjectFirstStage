@@ -1,16 +1,16 @@
-package arsw.bloodymoney.persistence.dao.impl;
+package arsw.tetriscombat.persistence.dao.impl;
 
-import arsw.bloodymoney.DBconnection.Bridge;
+import arsw.tetriscombat.mappers.Bridge;
 //import arsw.bloodymoney.controllers.UserController;
-import arsw.bloodymoney.entities.User;
-import arsw.bloodymoney.exceptions.ProjectException;
-import arsw.bloodymoney.persistence.dao.GameDAO;
+import arsw.tetriscombat.entities.User;
+import arsw.tetriscombat.exceptions.ProjectException;
+import arsw.tetriscombat.persistence.dao.GameDAO;
 import java.util.List;
 
 /**
  * Interface UserDAOImpl that implements all the
  * functionalities related with a User
- * @author Pedro Mayorga - PeNav
+ * @author Pedro Mayorga
  * @version 1.0
  * @since 2018-11-23
  */

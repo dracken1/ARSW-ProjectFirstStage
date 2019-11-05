@@ -1,4 +1,4 @@
-package arsw.bloodymoney.persistence.dao.impl;
+package arsw.tetriscombat.persistence.dao.impl;
 
 public class SessionDAOImpl {
 
