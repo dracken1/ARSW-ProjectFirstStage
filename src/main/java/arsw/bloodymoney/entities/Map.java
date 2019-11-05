@@ -1,7 +1,7 @@
 package arsw.bloodymoney.entities;
 
 import java.io.Serializable;
-import java.util.List;
+//import java.util.List;
 
 /**
  * Class Map that defines the
@@ -12,6 +12,7 @@ import java.util.List;
  */
 public class Map implements Serializable{
     
+    private static final long serialVersionUID = 1L;
     private int id;
     private String name;
     private String type;

@@ -35,7 +35,8 @@ public class UserController {
     @RequestMapping(method = RequestMethod.GET, path = "{user}")
     public void getUserByEmail(@PathVariable("user") String user) {
         try {
-            Bridge bg = new Bridge();
+            //! Revisar integracion de este con sesión
+            //Bridge bg = new Bridge();
             //Boolean res = bg.authentication(user, password);
             //return new ResponseEntity<>(res, HttpStatus.ACCEPTED);
             

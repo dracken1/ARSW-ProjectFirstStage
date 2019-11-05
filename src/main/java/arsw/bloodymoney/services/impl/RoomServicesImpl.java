@@ -1,6 +1,6 @@
 package arsw.bloodymoney.services.impl;
 
-import arsw.bloodymoney.persistence.dao.GameDAO;
+//import arsw.bloodymoney.persistence.dao.GameDAO;
 import arsw.bloodymoney.services.GameServices;
 
 /**
@@ -12,7 +12,7 @@ import arsw.bloodymoney.services.GameServices;
  */
 public class RoomServicesImpl implements GameServices {
     
-    private GameDAO roomDAO;
+    //private GameDAO roomDAO;
 
     public RoomServicesImpl() {
     }

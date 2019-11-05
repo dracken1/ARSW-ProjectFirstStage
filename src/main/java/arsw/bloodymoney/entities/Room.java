@@ -1,8 +1,8 @@
 package arsw.bloodymoney.entities;
 
 import java.io.Serializable;
-import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
+//import java.util.List;
+//import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Class Room that defines the
@@ -13,6 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class Room implements Serializable{
     
+    private static final long serialVersionUID = 1L;
     private int idSala;
 
     //Constructors

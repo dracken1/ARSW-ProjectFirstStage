@@ -1,7 +1,7 @@
 package arsw.bloodymoney.persistence.dao.impl;
 
 import arsw.bloodymoney.DBconnection.Bridge;
-import arsw.bloodymoney.controllers.UserController;
+//import arsw.bloodymoney.controllers.UserController;
 import arsw.bloodymoney.entities.User;
 import arsw.bloodymoney.exceptions.ProjectException;
 import arsw.bloodymoney.persistence.dao.GameDAO;

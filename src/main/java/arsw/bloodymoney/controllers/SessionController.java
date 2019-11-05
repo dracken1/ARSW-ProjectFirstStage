@@ -1,6 +1,7 @@
 package arsw.bloodymoney.controllers;
 
-
+import arsw.bloodymoney.entities.Session;
+import arsw.bloodymoney.entities.User;
 import arsw.bloodymoney.services.impl.InMemorySessionPersistence;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +21,8 @@ public class SessionController {
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<?> getAllSessions() {
         try {
-            ConcurrentHashMap chm = InMemorySessionPersistence.getSessions();
+            //! Dejar sin parametro el ConcurrentHashMap
+            ConcurrentHashMap<User, Session> chm = InMemorySessionPersistence.getSessions();
             return new ResponseEntity<>(chm, HttpStatus.ACCEPTED);
         } catch (Exception ex) {
             Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);

@@ -6,7 +6,7 @@ import arsw.bloodymoney.persistence.dao.SalasPersistence;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.concurrent.ConcurrentHashMap;
+//import java.util.concurrent.ConcurrentHashMap;
 
 @Service
 public class InMemorySalaPersistence implements SalasPersistence{

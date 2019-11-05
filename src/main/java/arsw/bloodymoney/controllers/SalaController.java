@@ -1,12 +1,12 @@
 package arsw.bloodymoney.controllers;
 
-import arsw.bloodymoney.entities.Room;
+//! import arsw.bloodymoney.entities.Room;
 import arsw.bloodymoney.services.impl.SalasServicesImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
 
-import org.springframework.web.bind.annotation.RequestBody;
+//! import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +18,8 @@ public class SalaController{
     @Autowired
     SalasServicesImpl salasServices = new SalasServicesImpl();
 
+    //dsfsdfsdf
+    int numero = 10;
     @RequestMapping(method = RequestMethod.POST , path = "/add")
     public ResponseEntity<?> addNewSala(){
         try {
