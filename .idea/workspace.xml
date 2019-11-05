@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3253c33d-2dbb-4229-807c-5cf636a67eec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/controllers/socketController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/socketConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/app_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/app_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/controllers/SalaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/controllers/SalaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/entities/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/entities/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/entities/Player.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/persistence/dao/impl/PlayerDAOImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/services/GameServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/services/GameServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/services/impl/PlayerServicesImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/stats.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/stats.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/home.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,9 +51,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -74,16 +77,16 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bucar\Downloads\ARSW-ProjectFirstStage\src\main\resources\static" />
+      <recent name="F:\Documentos\TRABAJOSU\ARSW\Proyecto\BloodyMoneyProject\src\main\resources\templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\bucar\Downloads\ARSW-ProjectFirstStage\src\main\resources\static\JS" />
       <recent name="C:\Users\bucar\Documents\ARSW-ProjectFirstStage\src\main\java\com\bloody\app\bloodymoney" />
       <recent name="C:\Users\bucar\Documents\ARSW-ProjectFirstStage\src\main\java\com\bloody\app\bloodymoney\controllers" />
       <recent name="C:\Users\bucar\Documents\ARSW-ProjectFirstStage\src\main\java\com\bloody\app\bloodymoney\models" />
       <recent name="C:\Users\bucar\Documents\ARSW-ProjectFirstStage\src\main\java\com\bloody\app\bloodymoney\persistence\models" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\bucar\Downloads\ARSW-ProjectFirstStage\src\main\resources\static" />
-      <recent name="F:\Documentos\TRABAJOSU\ARSW\Proyecto\BloodyMoneyProject\src\main\resources\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -153,7 +156,7 @@
       <workItem from="1572126487115" duration="3210000" />
       <workItem from="1572320779656" duration="18073000" />
       <workItem from="1572734860013" duration="224000" />
-      <workItem from="1572735374037" duration="6263000" />
+      <workItem from="1572735374037" duration="25345000" />
     </task>
     <servers />
   </component>
