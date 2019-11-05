@@ -8,12 +8,12 @@
         <version>2.2.0.M6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.bloody</groupId>
-    <artifactId>app</artifactId>
+    <groupId>arsw.tetriscombat</groupId>
+    <artifactId>TetrisCombat-WebGame</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>war</packaging>
-    <name>app</name>
-    <description>BloodyMoney project for ARSW</description>
+    <name>TetrisCombat-WebGame</name>
+    <description>TetrisCombat-WebGame project for ARSW</description>
 
     <properties>
         <java.version>1.8</java.version>
