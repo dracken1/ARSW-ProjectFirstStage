@@ -1,8 +1,7 @@
 package arsw.tetriscombat.controllers;
+
 import org.json.JSONObject;
-
 import arsw.tetriscombat.services.impl.SalasServicesImpl;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;

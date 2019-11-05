@@ -2,44 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3253c33d-2dbb-4229-807c-5cf636a67eec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/SessionPersistence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/impl/SessionDAOImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/app_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/app_war.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/app_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/app_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/DBconnection/Bridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/mappers/Bridge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/appMain/AppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/main/GameApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/controllers/SalaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/SalaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/controllers/SessionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/SessionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/controllers/socketController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/entities/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/entities/Map.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/entities/Room.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/entities/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/entities/Session.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/exceptions/ProjectException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/exceptions/ProjectException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/exceptions/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/exceptions/ResourceNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/persistence/dao/GameDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/GameDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/persistence/dao/SalasPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/SalasPersistence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/persistence/dao/SessionPersistence.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/persistence/dao/impl/InMemorySalaPersistence.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/persistence/dao/impl/MapDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/impl/MapDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/persistence/dao/impl/RoomDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/impl/RoomDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/persistence/dao/impl/SessionDAOImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/persistence/dao/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/impl/UserDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/services/GameServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/GameServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/services/impl/InMemorySessionPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/impl/InMemorySessionPersistence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/services/impl/MapServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/impl/MapServicesImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/services/impl/RoomServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/impl/RoomServicesImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/services/impl/SalasServicesImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/services/impl/UserServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/impl/UserServicesImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/bloodymoney/socketConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/sockets/SocketConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/SalaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/SalaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/SocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/SocketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/entities/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/entities/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/entities/Map.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/entities/Map.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/mappers/Bridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/DBconnection/Bridge.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/impl/InMemorySalaPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/impl/InMemorySalaPersistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/impl/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/impl/RoomServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/impl/RoomServicesImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/impl/SalasServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/impl/SalasServicesImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/bloody/app/AppApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/bloody/app/AppApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/impl/UserServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/impl/UserServicesImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,11 +38,6 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="bloodymoneyDB" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="bloodymoneyDB" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -189,7 +160,8 @@
       <workItem from="1572126487115" duration="3210000" />
       <workItem from="1572320779656" duration="18073000" />
       <workItem from="1572734860013" duration="224000" />
-      <workItem from="1572735374037" duration="35483000" />
+      <workItem from="1572735374037" duration="36625000" />
+      <workItem from="1572928154023" duration="766000" />
     </task>
     <servers />
   </component>

@@ -1,7 +1,6 @@
 package arsw.tetriscombat.entities;
 
 import java.io.Serializable;
-//import java.util.List;
 
 /**
  * Class Map that defines the

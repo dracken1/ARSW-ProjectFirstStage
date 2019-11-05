@@ -1,6 +1,5 @@
 package arsw.tetriscombat.services.impl;
 
-//import arsw.bloodymoney.persistence.dao.GameDAO;
 import arsw.tetriscombat.services.GameServices;
 
 /**

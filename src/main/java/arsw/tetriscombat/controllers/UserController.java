@@ -1,4 +1,3 @@
-
 package arsw.tetriscombat.controllers;
 
 import arsw.tetriscombat.mappers.Bridge;
@@ -9,7 +8,6 @@ import arsw.tetriscombat.services.impl.UserServicesImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
