@@ -104,16 +104,13 @@ var cargaPage = function () {
             stompClient.subscribe('/topic/salas',function (eventbody) {
                 getSalas();
                 window.location.href = "combat.html?id="+salaId;
-                document.getElementById("Jugador1").innerHTML = "verdolagas";
-
-
+                document.getElementById("Jugador1").innerHTML = "ElJugador1";
             });
-
-
         },
         createLobby: function () {
             stompClient.send("/app/nuevaSala", {},null);
-        }
+        },
+        getCookies : getCookie()
     };
 
 }

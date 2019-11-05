@@ -4,6 +4,8 @@ import arsw.tetriscombat.services.impl.SalasServicesImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
+import org.springframework.messaging.handler.annotation.DestinationVariable;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -34,6 +36,16 @@ public class SalaController{
     public ResponseEntity<?> getSalas(){
         try {
             return new ResponseEntity<>(salasServices.listaSalas().toString(),HttpStatus.OK);
+        }catch (Exception ex){
+            System.out.println("ERROR, NO SE HA ENCONTRADO LA SALA");
+            return null;
+        }
+    }
+
+    @RequestMapping(method = RequestMethod.GET , path = "/getById.{salaId}")
+    public ResponseEntity<?> getSalaById(@PathVariable int salaId){
+        try {
+            return new ResponseEntity<>(salasServices.datosSala(salaId).toString(),HttpStatus.OK);
         }catch (Exception ex){
             System.out.println("ERROR, NO SE HA ENCONTRADO LA SALA");
             return null;

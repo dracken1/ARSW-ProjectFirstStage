@@ -36,4 +36,12 @@ public class InMemorySalaPersistence implements SalasPersistence{
     public ArrayList<Room> getSalas() {
         return Salas;
     }
+
+    public ArrayList<Room> getSalaById(int salaId) {
+        ArrayList<Room> salaFake= new ArrayList<>();
+        Room salaSeleccionada = Salas.get(salaId);
+        salaFake.add(salaSeleccionada);
+        return salaFake;
+    }
+
 }

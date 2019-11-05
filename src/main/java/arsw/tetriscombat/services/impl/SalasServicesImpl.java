@@ -48,6 +48,19 @@ public class SalasServicesImpl implements GameServices {
         return arregloSalas;
     }
 
+    public JSONArray datosSala(int salaId){
+        JSONArray arregloSalas = new JSONArray();
+        ArrayList <Room> salasGeneral = sp.getSalaById(salaId);
+        for(Object sala: salasGeneral){
+            Room tempo = (Room) sala;
+            JSONObject jo = new JSONObject();
+            jo.append("descripcion",tempo.getIdSala());
+            jo.append("cantidadJugadores",tempo.getUsuariosEnSala().size());
+            arregloSalas.put(jo);
+        }
+        return arregloSalas;
+    }
+
     public void unirUsuarioASala(String username, int salaId){
         sp.unirUsuarioASala(username,salaId);
     }
