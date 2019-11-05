@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Tetris Combat</title>
-    <link rel="stylesheet" href="CSS/combat.css"></link>
+    <link rel="stylesheet" href="CSS/combat.css">
+    </link>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
@@ -13,46 +15,38 @@
             combatApp().actualizarTetris();
         });
     </script>
-    <link rel="icon" type="image/x-icon" href="images/Logo/Favicon/favicon.ico"/>
+    <link rel="icon" type="image/x-icon" href="images/Logo/Favicon/favicon.ico" />
 </head>
 
 <body>
-<div style="text-align: center">
-    <table border="0" align="center" id="jugadores">
-        <tr>
-            <td>
-                Player1:
-                <label id="Jugador1"></label>
-            </td>
-            <td>
-                Player 2:
-                <label id="Jugador2"></label>
-            </td>
-        </tr>
-        <tr style="text-align: center">
-            <td style="vertical-align: middle">
-                <iframe id="inlineFrameExample"
-                        title="Inline Frame Example"
-                        width="512"
-                        height="512"
-                        frameborder="0"
+    <div class="center">
+        <table id="players">
+            <tr>
+                <td>
+                    <b>Local Player:</b>
+                    <label id="Player"></label>
+                </td>
+                <td>
+                    <b>Online Opponent:</b>
+                    <label id="Opponent"></label>
+                </td>
+            </tr>
+            <tr style="text-align: center">
+                <td style="vertical-align: middle">
+                    <iframe id="framePlayer" title="Player Frame" width="550" height="550" frameborder="0"
                         src="/juego.html">
-                </iframe>
-            </td>
-            <td>
-                <iframe id="inlineFrameExample2"
-                        title="Inline Frame Example"
-                        width="512"
-                        height="512"
-                        frameborder="0"
+                    </iframe>
+                </td>
+                <td>
+                    <iframe id="frameOpponent" title="Opponent Frame" width="320" height="320" frameborder="0"
                         src="/juego.html">
 
-                </iframe>
-            </td>
+                    </iframe>
+                </td>
 
-        </tr>
-    </table>
-</div>
+            </tr>
+        </table>
+    </div>
 </body>
 
 </html>

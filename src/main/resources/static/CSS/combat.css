@@ -1,23 +1,49 @@
+
+
 body {
-    -webkit-background-size: cover;
-    background-image: url(../images/Background/Background.png);
-    /*
-    width: 100%;
-    height: 100%;
-    */    
+    -webkit-background-size: cover;    
+    background-image: url(../images/Background/Background.png);       
     background-color: #0d1113;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /*font-family: Impact, Charcoal, sans-serif;*/
+    
+    font-family: Impact, Charcoal, sans-serif;
+
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+.center {
+    text-align: center;
+    margin: auto;
+    width: fit-content;
+    background-color: #00110f;
+    
+}
+
+#players {
+    
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    background-color: #7f0000;
+    margin: auto;
+    width: fit-content;
+
 }
 
 iframe {
-    border:0px;
-    width: 100%;
+    background-color: #b71c1c;
+    
 }
-
+/*
 .output {
     background: #eee;
 }
+*/
