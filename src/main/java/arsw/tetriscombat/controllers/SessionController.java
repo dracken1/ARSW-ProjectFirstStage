@@ -22,6 +22,7 @@ public class SessionController {
     public ResponseEntity<?> getAllSessions() {
         try {
             //! Dejar sin parametro el ConcurrentHashMap
+            //? <User, Session>
             ConcurrentHashMap<User, Session> chm = InMemorySessionPersistence.getSessions();
             return new ResponseEntity<>(chm, HttpStatus.ACCEPTED);
         } catch (Exception ex) {
