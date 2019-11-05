@@ -27,6 +27,7 @@ public class SocketController {
         JSONObject usuario = new JSONObject(username);
         SalasServicesImpl.unirUsuarioASala(usuario.getString("username"),salaId);
         msgt.convertAndSend("/topic/salas",SalasServicesImpl.listaSalas().toString());
+
     }
 
 }

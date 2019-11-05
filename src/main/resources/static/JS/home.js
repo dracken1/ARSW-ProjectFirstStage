@@ -103,7 +103,9 @@ var cargaPage = function () {
             stompClient.send("/app/unirseASala."+salaId, {},JSON.stringify(usuarioJSON));
             stompClient.subscribe('/topic/salas',function (eventbody) {
                 getSalas();
+                window.location.href = "combat.html?id="+salaId;
             });
+
 
         },
         createLobby: function () {
