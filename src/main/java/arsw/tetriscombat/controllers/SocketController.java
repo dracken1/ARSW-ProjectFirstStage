@@ -27,7 +27,13 @@ public class SocketController {
         JSONObject usuario = new JSONObject(username);
         SalasServicesImpl.unirUsuarioASala(usuario.getString("username"),salaId);
         msgt.convertAndSend("/topic/salas",SalasServicesImpl.listaSalas().toString());
-
     }
+
+    @MessageMapping("/usuariosEnSala.{salaId}") // quizas toque cambiar a string el salaId
+    public void usuariosEnSala(@DestinationVariable int salaId,String username) throws Exception {
+        JSONObject usuario = new JSONObject(username);
+        msgt.convertAndSend("/topic/salas",SalasServicesImpl.listaSalas().toString());
+    }
+
 
 }

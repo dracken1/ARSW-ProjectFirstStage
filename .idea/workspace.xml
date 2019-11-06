@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="3253c33d-2dbb-4229-807c-5cf636a67eec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/SocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/SocketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/impl/InMemorySalaPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/impl/InMemorySalaPersistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/impl/SalasServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/impl/SalasServicesImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/combat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/combat.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/combat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/combat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/combat.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/combat.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,6 +66,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../LAB_7_ARSW" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -149,7 +156,7 @@
       <workItem from="1572320779656" duration="18073000" />
       <workItem from="1572734860013" duration="224000" />
       <workItem from="1572735374037" duration="36625000" />
-      <workItem from="1572928154023" duration="12480000" />
+      <workItem from="1572928154023" duration="37878000" />
     </task>
     <servers />
   </component>

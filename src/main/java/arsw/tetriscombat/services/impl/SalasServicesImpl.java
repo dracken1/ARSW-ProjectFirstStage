@@ -43,6 +43,7 @@ public class SalasServicesImpl implements GameServices {
             JSONObject jo = new JSONObject();
             jo.append("descripcion",tempo.getIdSala());
             jo.append("cantidadJugadores",tempo.getUsuariosEnSala().size());
+            jo.append("jugadoresActuales",tempo.getUsuariosEnSala());
             arregloSalas.put(jo);
         }
         return arregloSalas;
@@ -56,6 +57,7 @@ public class SalasServicesImpl implements GameServices {
             JSONObject jo = new JSONObject();
             jo.append("descripcion",tempo.getIdSala());
             jo.append("cantidadJugadores",tempo.getUsuariosEnSala().size());
+            jo.append("jugadoresActuales",tempo.getUsuariosEnSala());
             arregloSalas.put(jo);
         }
         return arregloSalas;

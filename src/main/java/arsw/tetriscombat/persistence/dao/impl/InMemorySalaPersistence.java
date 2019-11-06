@@ -10,18 +10,15 @@ import java.util.ArrayList;
 
 @Service
 public class InMemorySalaPersistence implements SalasPersistence{
-
     private ArrayList<Room> Salas= new ArrayList<>();
 
     public InMemorySalaPersistence(){
-
         Room sala1 = new Room(Salas.size());
         Salas.add(sala1);
 
         Room sala2 = new Room(Salas.size());
         Salas.add(sala2);
     }
-
     @Override
     public void addSala() throws ProjectException {
         Room nueva = new Room(Salas.size());
