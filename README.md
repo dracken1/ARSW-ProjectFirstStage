@@ -1,4 +1,6 @@
-# Tetris-Combat (under construction)
+# Tetris-Combat | WebGame
+
+  ![Imagenes](img/Background/Background.gif)
 
 ## Integrantes
   ```
