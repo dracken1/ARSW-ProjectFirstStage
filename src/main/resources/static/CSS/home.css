@@ -10,7 +10,7 @@ body {
     font-family: Impact, Charcoal, sans-serif;
 }
 .headerbar {
-    background-color: #42403c;
+    background-color: #7f0000;
     width: 100%;
     height: 7vh;
     margin: 0 0 0 0;
@@ -19,7 +19,7 @@ body {
     margin: 0 0 0 0;
 }
 .htitle{
-    background: url(../images/BloodyMoneyTitleLogo.png) no-repeat;
+    background: url(../images/Logo/LogoName.png) no-repeat;
     background-size: 25.2% 100%;
 }
 .haccount{
@@ -152,10 +152,18 @@ body {
 }
 .leftsidebar{
     margin: 0;
-    background: #292826;
+    /*background: #292826;*/
     width: 100%;
     height: 100%;
     padding: 10px;
+
+    -webkit-background-size: cover;    
+    background-image: url(../images/Background/PlainBackground.png);       
+    background-color: #292826;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .leftbtncont{
     margin: 15px 0 0 0;
@@ -182,6 +190,15 @@ body {
     width: 100%;
     height: 100%;
     padding: 10px;
+    
+    -webkit-background-size: cover;    
+    background-image: url(../images/Background/WrinkledBackground.png);       
+    background-color: #292826;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
 }
 .genericbtn{
     border: none;
@@ -203,6 +220,14 @@ body {
 .mytable{
     z-index: 1;
     position: relative;
+}
+
+th {
+    background: #002171;
+}
+
+#tablaSalas {
+    /*background: #ff0000;*/
 }
 
 .accountdisplayable{

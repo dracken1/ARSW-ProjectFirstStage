@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>BloodyMoney</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Tetris-Combat</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/home.css">
-    <link rel="icon" type="image/x-icon" href="images/Logo/Favicon/favicon.ico"/>
+    <link rel="icon" type="image/x-icon" href="images/Logo/Favicon/favicon.ico" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
@@ -14,17 +16,19 @@
     <script src="JS/session.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-        cargaPage().actualizarTabla();
+            cargaPage().actualizarTabla();
         });
     </script>
 </head>
+
 <body>
     <div class="headerbar row">
         <div class="h htitle col-md-5">
         </div>
         <div class="h hspace col-md-6">
         </div>
-        <div class="h haccount col-md-1" id="haccountid" onmouseup="mouseReleased(this)" onmousedown="mousePressed(this)" onmouseover="mouseHover(this)" onmouseout="mouseLeave(this)">
+        <div class="h haccount col-md-1" id="haccountid" onmouseup="mouseReleased(this)"
+            onmousedown="mousePressed(this)" onmouseover="mouseHover(this)" onmouseout="mouseLeave(this)">
             <div class="userlogo" id="userlogoid">
                 <div class="licon">
 
@@ -38,10 +42,11 @@
                 <button class="genercibtnlft">Lobbys</button>
             </div>
             <div class="leftbtncont">
-                <button class="genercibtnlft" id="genercibtnlftid" onclick="cargaPage().createLobby()">Create Lobby</button>
+                <button class="genercibtnlft" id="genercibtnlftid" onclick="cargaPage().createLobby()">Create
+                    Lobby</button>
             </div>
+        </div>
 
-        </div >
         <div class="mainbar col-md-10">
             <div class="extendeduserlogo" id="extendeduserlogoid">
                 <div class="menuopts accopts" id="accoptsid">
@@ -76,11 +81,11 @@
             </div>
             <table class="mytable table table-hover table-dark" id="tablaSalas">
                 <thead>
-                <tr>
-                    <th scope="col">Description</th>
-                    <th scope="col">Players</th>
-                    <th scope="col">Join</th>
-                </tr>
+                    <tr>
+                        <th scope="col">Description</th>
+                        <th scope="col">Players</th>
+                        <th scope="col">Join</th>
+                    </tr>
                 </thead>
                 <tbody>
 
@@ -88,10 +93,12 @@
             </table>
         </div>
     </div>
+
     <div class="footerbar row">
 
     </div>
 </body>
 <script src="JS/LoginRegistry.js"></script>
 <script src="JS/home.js"></script>
+
 </html>
