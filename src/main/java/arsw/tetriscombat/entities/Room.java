@@ -3,7 +3,6 @@ package arsw.tetriscombat.entities;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-
 /**
  * Class Room that defines the
  * Rooms used by an User
@@ -24,6 +23,17 @@ public class Room implements Serializable{
 
     public int getIdSala() {
         return idSala;
+    }
+
+    public void deleteUsuario(String username){
+        for(int i=0;i<usuariosEnSala.size();i++){
+            if(usuariosEnSala.get(i).equals(username)){
+                usuariosEnSala.remove(i);
+                System.out.println("EL usuario "+username+" ha abandonado la sala");
+            }
+            System.out.println("Usuarios activos en sala...");
+            System.out.println(usuariosEnSala);
+        }
     }
 
     public ArrayList<String> getUsuariosEnSala() {

@@ -41,4 +41,7 @@ public class InMemorySalaPersistence implements SalasPersistence{
         return salaFake;
     }
 
+    public void abandonarSala(String username,int salaId){
+        Salas.get(salaId).deleteUsuario(username);
+    }
 }

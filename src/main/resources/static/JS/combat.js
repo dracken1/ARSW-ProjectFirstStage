@@ -27,11 +27,8 @@ var combatApp = function () {
             var username = getCookie("username");
             var usuarioJSON = {username: username};
             var salaId = salaDescripcion.descripcion;
-            //alert("id de sala = "+salaId);
             var cantidadJudadores = salaDescripcion.cantidadJugadores;
             var jugadoresActuales = salaDescripcion.jugadoresActuales;
-            //alert("jugadores = "+cantidadJudadores);
-            //alert("activosJogadores = "+ jugadoresActuales);
             jugadoresActuales.map(function (jugador){
                 if(cantidadJudadores==1){
                     document.getElementById("Player").innerHTML = "Local Player: "+jugador[0];
@@ -109,6 +106,17 @@ var combatApp = function () {
             stompClient.subscribe('/topic/salas',function (eventbody) {
                 getNombres(salaId);
             });
+        },
+        abandonarSala:function () {
+            var username = getCookie("username");
+            var usuarioJSON = {username: username};
+            let params = new URLSearchParams(location.search);
+            var salaId = params.get('id');
+            stompClient.send("/app/abandonarSala."+salaId,{},JSON.stringify(usuarioJSON));
+            stompClient.subscribe('/topic/salas',function (eventbody) {
+                window.location.href = "home.html";
+            });
+
         }
     }
 }

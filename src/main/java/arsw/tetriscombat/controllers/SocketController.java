@@ -31,9 +31,15 @@ public class SocketController {
 
     @MessageMapping("/usuariosEnSala.{salaId}") // quizas toque cambiar a string el salaId
     public void usuariosEnSala(@DestinationVariable int salaId,String username) throws Exception {
-        JSONObject usuario = new JSONObject(username);
+        //JSONObject usuario = new JSONObject(username);
         msgt.convertAndSend("/topic/salas",SalasServicesImpl.listaSalas().toString());
     }
 
+    @MessageMapping("/abandonarSala.{salaId}") // quizas toque cambiar a string el salaId
+    public void abandonarSala(@DestinationVariable int salaId,String username) throws Exception {
+        JSONObject usuario = new JSONObject(username);
+        SalasServicesImpl.usuarioAbandonarSala(usuario.getString("username"),salaId);
+        msgt.convertAndSend("/topic/salas",SalasServicesImpl.listaSalas().toString());
+    }
 
 }

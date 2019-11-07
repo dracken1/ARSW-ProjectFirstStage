@@ -66,4 +66,8 @@ public class SalasServicesImpl implements GameServices {
     public void unirUsuarioASala(String username, int salaId){
         sp.unirUsuarioASala(username,salaId);
     }
+
+    public void usuarioAbandonarSala(String username, int salaId){
+        sp.abandonarSala(username,salaId);
+    }
 }
