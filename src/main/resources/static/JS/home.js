@@ -5,6 +5,10 @@ $('.genericbtn').click(function(){
     window.location.href = "juego.html";
 });
 
+$('.practicebtn').click(function(){
+    window.location.href = "juego.html";
+});
+
 function mousePressed(obj) {
     obj.style.backgroundColor = "#ad8b36";
 }

@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3253c33d-2dbb-4229-807c-5cf636a67eec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/JS/combatfunctionality.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/GameBG/gamebg.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/versus.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/combat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/combat.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/combat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/combat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/combat.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/combat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/juego.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/juego.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -160,7 +156,7 @@
       <workItem from="1572928154023" duration="39087000" />
       <workItem from="1573152649100" duration="8712000" />
       <workItem from="1573165169804" duration="205000" />
-      <workItem from="1573322061763" duration="33900000" />
+      <workItem from="1573322061763" duration="35934000" />
     </task>
     <servers />
   </component>

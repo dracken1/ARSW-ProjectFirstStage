@@ -268,5 +268,23 @@ th {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
 }
+.practicebtn{
+    position: relative;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    top: 72vh;
+    width: 95%;
+    height: 5vh;
+    border: none;
+    border-bottom: 2px solid #000000;
+    border-radius: 1px;
+    transition: all 0.15s ease;
+    transition-property: width;
+}
+.practicebtn:hover{
+    background: #F9D342;
+    width: 96%;
+}
+
 
 

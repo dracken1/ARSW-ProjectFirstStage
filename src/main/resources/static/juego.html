@@ -3,19 +3,24 @@
 <head>
     <title>Javascript Tetris</title>
     <link rel="icon" type="image/x-icon" href="images/Logo/Favicon/favicon.ico"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <style>
         body{
             font-family: Helvetica, sans-serif;
             margin: 0 0 0 0;
+            background: url(../static/images/GameBG/gamebg.gif) no-repeat;
         }
         #tetris{
             margin: 0 0 0 0;
+            position: absolute;
+            top:2vh;
+            left: 25vw;
             padding: 1em;
             border: none;
             border-left: 2px solid #000000;
             border-right: 2px solid #000000;
             border-radius: 5px;
-            background: url(../static/images/GameBG/gamebg.gif) no-repeat center ;
+            background: rgba(167,167,167,0.4);
         }
         /**
         #stats{
@@ -131,6 +136,31 @@
             position: absolute;
             bottom: 0em;
             right: 1em;
+        }
+        .backbtncont{
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            top: 2vh;
+            left: 1vw;
+            height: 6vh;
+            width: 10vw;
+        }
+        .backbtn{
+            width: 100%;
+            height: 100%;
+            border: none;
+            font-size: large;
+            font-weight: bolder;
+            border-radius: 5px;
+            background: #7f0000;
+            transition: all 0.15s ease;
+            transition-property: background-color,height,width;
+        }
+        .backbtn:hover{
+            background: #e22b00;
+            height: 105%;
+            width: 105%;
         }
 
         @media screen and (min-width:0px) and (min-height:0px)  {
@@ -265,6 +295,9 @@
 </head>
 
 <body>
+<div class="backbtncont">
+    <button class="backbtn" id="backbtnid">HOME</button>
+</div>
 
 <div id="tetris">
     <div id="menu">
@@ -295,7 +328,9 @@
 
 <script src="JS/stats.js"></script>
 <script>
-
+    $('.backbtn').click(function(){
+        window.location.href = "home.html";
+    });
     //-------------------------------------------------------------------------
     // base helper methods
     //-------------------------------------------------------------------------
