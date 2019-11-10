@@ -10,51 +10,62 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
-    <script src="JS/combat.js"></script>
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
         $(document).ready(function () {
             combatApp().actualizarTetris();
         });
-    </script>
+    </script>-->
     <link rel="icon" type="image/x-icon" href="images/Logo/Favicon/favicon.ico" />
+
 </head>
 
 <body>
     <div class="center">
-        <table id="players">
-            <tr>
-                <td>
-                    <label id="Player"></label>
-                </td>
-                <td>
-                    <label id="Opponent"></label>
-                </td>
-            </tr>
-            <tr style="text-align: center">
-                <td style="vertical-align: middle">
-                    <iframe  id="framePlayer" title="Player Frame" width="550" height="510" frameborder="0"
-                        src="/juego.html">
-                    </iframe>
-                </td>
-                <td>
-                    <iframe id="frameOpponent" title="Opponent Frame" width="320" height="280" frameborder="0"
-                        src="/juego.html">
-                    </iframe>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button class="genericbtn" id="buttonP1" style="visibility: visible" onclick='combatApp().jugadorListo()'>Ready</button>
-                </td>
-                <td>
-                    <button class="genericbtn" id="buttonP2" style="visibility: visible" onclick='combatApp().jugadorListo()'>Ready</button>
-                </td>
-            </tr>
-            <tr>
-                <button class="genericbtn" id="exitButton" style="visibility: visible" onclick='combatApp().abandonarSala()'>Abandonar Sala</button>
-            </tr>
-        </table>
+        <div id="bothplayerscont">
+            <div id="mainplayer">
+                <canvas id="canvas">
+                    Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
+                </canvas>
+                <div id="menubar">
+                    <div id="upcomingcont">
+                        <span>Upcoming <br /> Tetromino</span>
+                        <canvas id="upcoming"></canvas>
+                    </div>
+                    <div id="mpstatscont">
+                        <div id="alertcont">
+                            <p id="start"><a href="javascript:play();">Press "space" to Play.</a></p>
+                        </div>
+                        <div id="scorecont">
+                            <p><b>SCORE:</b> <span id="score">00000</span></p>
+                        </div>
+                        <div id="rowscont">
+                            <p><b>ROWS:</b> <span id="rows">0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="vsimage">
+
+            </div>
+            <div id="secondplayer">
+                <div id="spmenubar">
+                    <div id="spstatcont">
+                        <div id="spscorecont">
+                            <p><b>SCORE:</b> <span id="spscore">00000</span></p>
+                        </div>
+                        <div id="sprowscont">
+                            <p><b>ROWS:</b> <span id="sprows">0</span></p>
+                        </div>
+                    </div>
+                </div>
+                <canvas id="secondplayercanvas">
+                    Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
+                </canvas>
+            </div>
+        </div>
     </div>
+    <script src="JS/stats.js"></script>
+    <script src="JS/combatfunctionality.js"></script>
 </body>
 
 </html>

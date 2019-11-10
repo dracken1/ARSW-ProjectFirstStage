@@ -10,7 +10,7 @@ var combatApp = function () {
 
         });
         return traerSalas;
-    }
+    };
 
     var getSalas = function (salaId) {
         var traerSalas = $.get("/Sala/getById."+salaId);
@@ -46,7 +46,7 @@ var combatApp = function () {
                 }
             })
         })
-    }
+    };
 
     var datosJugadores = function (tabla) {
         tabla.map(function (salaDescripcion){
@@ -75,7 +75,7 @@ var combatApp = function () {
             })
 
         })
-    }
+    };
 
     function getCookie(name) {
         var regexp = new RegExp("(?:^" + name + "|;\s*"+ name + ")=(.*?)(?:;|$)", "g");
@@ -119,4 +119,5 @@ var combatApp = function () {
 
         }
     }
-}
+};
+

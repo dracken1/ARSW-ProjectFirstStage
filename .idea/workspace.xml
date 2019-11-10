@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3253c33d-2dbb-4229-807c-5cf636a67eec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/JS/combatfunctionality.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/GameBG/gamebg.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/versus.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/combat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/combat.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/combat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/combat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/combat.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/combat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/juego.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/juego.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,16 +70,16 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\bucar\Downloads\ARSW-ProjectFirstStage\src\main\resources\static" />
-      <recent name="F:\Documentos\TRABAJOSU\ARSW\Proyecto\BloodyMoneyProject\src\main\resources\templates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\bucar\Downloads\ARSW-ProjectFirstStage\src\main\resources\static\JS" />
       <recent name="C:\Users\bucar\Documents\ARSW-ProjectFirstStage\src\main\java\com\bloody\app\bloodymoney" />
       <recent name="C:\Users\bucar\Documents\ARSW-ProjectFirstStage\src\main\java\com\bloody\app\bloodymoney\controllers" />
       <recent name="C:\Users\bucar\Documents\ARSW-ProjectFirstStage\src\main\java\com\bloody\app\bloodymoney\models" />
       <recent name="C:\Users\bucar\Documents\ARSW-ProjectFirstStage\src\main\java\com\bloody\app\bloodymoney\persistence\models" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bucar\Downloads\ARSW-ProjectFirstStage\src\main\resources\static" />
+      <recent name="F:\Documentos\TRABAJOSU\ARSW\Proyecto\BloodyMoneyProject\src\main\resources\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -152,6 +160,7 @@
       <workItem from="1572928154023" duration="39087000" />
       <workItem from="1573152649100" duration="8712000" />
       <workItem from="1573165169804" duration="205000" />
+      <workItem from="1573322061763" duration="33900000" />
     </task>
     <servers />
   </component>
