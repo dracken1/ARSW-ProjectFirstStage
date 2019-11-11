@@ -269,12 +269,14 @@ th {
     padding: 0 0 0 0;
 }
 .practicebtn{
-    position: relative;
+    position: absolute;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
-    top: 72vh;
-    width: 95%;
+    bottom: 10px;
+    width: 90%;
     height: 5vh;
+    min-height: 26px;
+    min-width: 151px;
     border: none;
     border-bottom: 2px solid #000000;
     border-radius: 1px;
@@ -283,7 +285,7 @@ th {
 }
 .practicebtn:hover{
     background: #F9D342;
-    width: 96%;
+    width: 91%;
 }
 
 

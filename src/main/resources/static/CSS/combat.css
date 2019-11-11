@@ -157,6 +157,14 @@ body {
     color: #f9fdff;
     border: 3px solid #0d1113;
 }
+#vsimage{
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    top: 30%;
+    left: 45%;
+    background: url("../images/versus.png");
+}
 
 
 /*@media screen and (min-width:0px) and (min-height:0px)  {
