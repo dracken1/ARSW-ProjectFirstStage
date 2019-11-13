@@ -1,6 +1,6 @@
 package arsw.tetriscombat.controllers;
 
-import netscape.javascript.JSObject;
+
 import org.json.JSONObject;
 import arsw.tetriscombat.services.impl.SalasServicesImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,5 +47,4 @@ public class SocketController {
     public void reproducirAccion(@DestinationVariable String salaId, JSONObject dir) throws Exception {
         msgt.convertAndSend("/topic/accion"+salaId,dir);
     }
-
 }
