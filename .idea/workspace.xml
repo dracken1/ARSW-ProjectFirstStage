@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3253c33d-2dbb-4229-807c-5cf636a67eec" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/combat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/combat.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/juego.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/juego.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/SocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/SocketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/entities/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/entities/Session.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/combatfunctionality.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/combatfunctionality.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/home.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,6 +30,23 @@
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="bloodymoneyDB" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="bloodymoneyDB" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="bloodymoneyDB" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="d10k8ftegbi3d1: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="bloodymoneyDB" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="d11131gglm3f03: database" type="162271b6:PgImplModel$Database" />
       </path>
     </expand>
     <select />
@@ -60,7 +79,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LAB_7_ARSW" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../LAB7/LAB7-ARSW" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -155,7 +174,7 @@
       <workItem from="1572928154023" duration="39087000" />
       <workItem from="1573152649100" duration="8712000" />
       <workItem from="1573165169804" duration="205000" />
-      <workItem from="1573322061763" duration="39707000" />
+      <workItem from="1573322061763" duration="60213000" />
     </task>
     <servers />
   </component>

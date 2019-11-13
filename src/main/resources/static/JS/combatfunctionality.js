@@ -1,3 +1,41 @@
+// ID sala
+var salaid;
+
+
+var p2canvas = get('secondplayercanvas');
+var p2canvasctx = p2canvas.getContext('2d');
+function getCookie(name) {
+    var regexp = new RegExp("(?:^" + name + "|;\s*"+ name + ")=(.*?)(?:;|$)", "g");
+    var result = regexp.exec(document.cookie);
+    return (result === null) ? null : result[1];
+}
+
+//Start STOMP socket before page loads
+(function(){
+    //alert("funca");
+    alert(getCookie("username"));
+    var urlString = window.location.href;
+    var url = new URL(urlString);
+    salaid = url.searchParams.get("id");
+    console.log("el id es: " + salaid);
+    console.info('Connecting to WS...');
+    var socket = new SockJS('/stompendpoint');
+    stompClient = Stomp.over(socket);
+    //subscribe to /topic/accionID when connections succeed
+    stompClient.connect({}, function (frame) {
+        console.log('Connected: ' + frame);
+        stompClient.subscribe('/topic/accion'+ salaid, function (eventbody) {
+            var extract = JSON.parse(eventbody.body);
+            if(!(extract.ignore === getCookie("username"))){
+                /*switch(extract.action) {
+                    case "start":   actions.push(DIR.LEFT);  handled = true; stompClient.send("/topic/accion"+salaid,{},JSON.stringify({action: "left",tetrotype: "l",ignore: getCookie("username")})); break;
+                }*/
+                alert("El jugador " + extract.ignore + " oprimio: " + extract.action);
+            }
+        });
+    });
+})();
+
 //-------------------------------------------------------------------------
 // base helper methods
 //-------------------------------------------------------------------------
@@ -186,11 +224,11 @@ function keydown(ev) {
     var handled = false;
     if (playing) {
         switch(ev.keyCode) {
-            case KEY.LEFT:   actions.push(DIR.LEFT);  handled = true; break;
-            case KEY.RIGHT:  actions.push(DIR.RIGHT); handled = true; break;
-            case KEY.UP:     actions.push(DIR.UP);    handled = true; break;
-            case KEY.DOWN:   actions.push(DIR.DOWN);  handled = true; break;
-            case KEY.ESC:    lose();                  handled = true; break;
+            case KEY.LEFT:   actions.push(DIR.LEFT);  handled = true; stompClient.send("/topic/accion"+salaid,{},JSON.stringify({action: "left",ignore: getCookie("username")})); break;
+            case KEY.RIGHT:  actions.push(DIR.RIGHT); handled = true; stompClient.send("/topic/accion"+salaid,{},JSON.stringify({action: "right",ignore: getCookie("username")})); break;
+            case KEY.UP:     actions.push(DIR.UP);    handled = true; stompClient.send("/topic/accion"+salaid,{},JSON.stringify({action: "up",ignore: getCookie("username")})); break;
+            case KEY.DOWN:   actions.push(DIR.DOWN);  handled = true; stompClient.send("/topic/accion"+salaid,{},JSON.stringify({action: "down",ignore: getCookie("username")})); break;
+            case KEY.ESC:    lose();                  handled = true; stompClient.send("/topic/accion"+salaid,{},JSON.stringify({action: "esc",ignore: getCookie("username")})); break;
         }
     }
     else if (ev.keyCode == KEY.SPACE) {

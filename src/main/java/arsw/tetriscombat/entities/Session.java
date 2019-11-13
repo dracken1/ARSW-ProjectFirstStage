@@ -13,7 +13,7 @@ public class Session {
         this.id = (int) Math.floor(Math.random()*2000 + 1000);
         this.user = user;
         this.initalTime = LocalDateTime.now();
-        if(initalTime.getMinute()+10 > 59){
+        if(initalTime.getMinute()+10 > 59 && initalTime.getHour()+1 <= 23){
             int newmin = initalTime.getMinute()+10 - 59;
             this.expireTime = LocalDateTime.of(initalTime.getYear(),initalTime.getMonth(),initalTime.getDayOfMonth(),initalTime.getHour()+1,newmin,initalTime.getSecond());
         } else {

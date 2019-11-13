@@ -1,5 +1,6 @@
 package arsw.tetriscombat.controllers;
 
+import netscape.javascript.JSObject;
 import org.json.JSONObject;
 import arsw.tetriscombat.services.impl.SalasServicesImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +41,11 @@ public class SocketController {
         JSONObject usuario = new JSONObject(username);
         SalasServicesImpl.usuarioAbandonarSala(usuario.getString("username"),salaId);
         msgt.convertAndSend("/topic/salas",SalasServicesImpl.listaSalas().toString());
+    }
+    //Recibe instrucciones/movimientos/jugadas de los jugadores, luego las reenvia.
+    @MessageMapping("/accion.{salaId}")
+    public void reproducirAccion(@DestinationVariable String salaId, JSONObject dir) throws Exception {
+        msgt.convertAndSend("/topic/accion"+salaId,dir);
     }
 
 }

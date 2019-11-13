@@ -103,6 +103,7 @@ var cargaPage = function () {
         },
         unirseASala: function (salaId) {
             var username = getCookie("username");
+
             var usuarioJSON = {username: username};
             stompClient.send("/app/unirseASala."+salaId, {},JSON.stringify(usuarioJSON));
             stompClient.subscribe('/topic/salas',function (eventbody) {
