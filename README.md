@@ -9,7 +9,7 @@
   - Pedro José Mayorga Navarrete
   ```
 ## Despliegue en Heroku
-https://bloodymoney-arsw.herokuapp.com
+http://tetris-combat.herokuapp.com/
 ## Resumen
 
 
