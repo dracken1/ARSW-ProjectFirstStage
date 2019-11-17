@@ -106,16 +106,6 @@ var datosDosJugadores = function (tabla) {
         stompClient.subscribe('/topic/salas',function (eventbody) {
             getJugadoresSala(salaid);
         });
-        stompClient.subscribe('/topic/accion'+ salaid, function (eventbody) {
-            //alert("accion");
-            var extract = JSON.parse(eventbody.body);
-            if(!(extract.ignore === getCookie("username"))){
-                /*switch(extract.action) {
-                    case "start":   actions.push(DIR.LEFT);  handled = true; stompClient.send("/topic/accion"+salaid,{},JSON.stringify({action: "left",tetrotype: "l",ignore: getCookie("username")})); break;
-                }*/
-                //alert("El jugador " + extract.ignore + " oprimio: " + extract.action);
-            }
-        });
         stompClient.subscribe('/topic/scorePlayer'+ salaid, function (eventbody) {
             //alert("score");
             var extract = JSON.parse(eventbody.body);
@@ -128,6 +118,12 @@ var datosDosJugadores = function (tabla) {
             if(!(extract.ignore === getCookie("username"))){
                 //alert(extract.rows);
                 document.getElementById("sprows").innerHTML = extract.rows;
+            }
+        });
+        stompClient.subscribe('/topic/drawPlayer'+ salaid, function (eventbody) {
+            var extract = JSON.parse(eventbody.body);
+            if(!(extract.ignore === getCookie("username"))){
+                drawOpponent(extract.type,extract.x,extract.y,extract.dir);
             }
         });
     });
@@ -179,6 +175,8 @@ var KEY = { ESC: 27, SPACE: 32, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 },
     ctx = canvas.getContext('2d'),
     ucanvas = get('upcoming'),
     uctx = ucanvas.getContext('2d'),
+    canvasopponent = get('secondplayercanvas'),
+    ctxopponent = canvasopponent.getContext('2d'),
     speed = { start: 0.6, decrement: 0.005, min: 0.1 }, // how long before piece drops by 1 row (seconds)
     nx = 10, // width of tetris court (in blocks)
     ny = 20, // height of tetris court (in blocks)
@@ -189,7 +187,8 @@ var KEY = { ESC: 27, SPACE: 32, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 },
 //-------------------------------------------------------------------------
 
 var dx, dy,        // pixel size of a single tetris block
-    blocks,        // 2 dimensional array (nx*ny) representing tetris court - either empty block or occupied by a 'piece'
+    dx_op, dy_op,        // pixel size of a single tetris block opponent
+    blocks,
     actions,       // queue of user actions (inputs)
     playing,       // true|false - game is in progress
     dt,            // time since starting this game
@@ -312,6 +311,10 @@ function resize(event) {
     ucanvas.height = ucanvas.clientHeight;
     dx = canvas.width  / nx; // pixel size of a single tetris block
     dy = canvas.height / ny; // (ditto)
+    canvasopponent.width   = canvasopponent.clientWidth;  // set canvas logical size equal to its physical size
+    canvasopponent.height  = canvasopponent.clientHeight; // (ditto)
+    dx_op = canvasopponent.width  / nx; // pixel size of a single tetris block
+    dy_op = canvasopponent.height / ny; // (ditto)
     invalidate();
     invalidateNext();
 }
@@ -320,11 +323,11 @@ function keydown(ev) {
     var handled = false;
     if (playing) {
         switch(ev.keyCode) {
-            case KEY.LEFT:   actions.push(DIR.LEFT);  handled = true; stompClient.send("/topic/accion"+salaid,{},JSON.stringify({action: "left",ignore: getCookie("username")})); break;
-            case KEY.RIGHT:  actions.push(DIR.RIGHT); handled = true; stompClient.send("/topic/accion"+salaid,{},JSON.stringify({action: "right",ignore: getCookie("username")})); break;
-            case KEY.UP:     actions.push(DIR.UP);    handled = true; stompClient.send("/topic/accion"+salaid,{},JSON.stringify({action: "up",ignore: getCookie("username")})); break;
-            case KEY.DOWN:   actions.push(DIR.DOWN);  handled = true; stompClient.send("/topic/accion"+salaid,{},JSON.stringify({action: "down",ignore: getCookie("username")})); break;
-            case KEY.ESC:    lose();                  handled = true; stompClient.send("/topic/accion"+salaid,{},JSON.stringify({action: "esc",ignore: getCookie("username")})); break;
+            case KEY.LEFT:   actions.push(DIR.LEFT);  handled = true; break;
+            case KEY.RIGHT:  actions.push(DIR.RIGHT); handled = true; break;
+            case KEY.UP:     actions.push(DIR.UP);    handled = true; break;
+            case KEY.DOWN:   actions.push(DIR.DOWN);  handled = true; break;
+            case KEY.ESC:    lose();                  handled = true; break;
         }
     }
     else if (ev.keyCode == KEY.SPACE) {
@@ -481,14 +484,36 @@ function draw() {
     drawNext();
     drawScore();
     drawRows();
+    if (playing) {
+        stompClient.send("/topic/drawPlayer" + salaid, {}, JSON.stringify({
+            x: current.x,
+            y: current.y,
+            type: current.type,
+            dir: current.dir,
+            ignore: getCookie("username")
+        }));
+    }
     ctx.restore();
+}
+
+function drawOpponent(type, px, py, dir) {
+    //ctxopponent.save();
+    //ctxopponent.lineWidth = 1;
+    //ctxopponent.translate(0.5, 0.5); // for crisp 1px black lines
+    drawCourtOpponent(type, px, py, dir);
+    //drawNext();
+    //drawScore();
+    //drawRows();
+    //ctxopponent.restore();
 }
 
 function drawCourt() {
     if (invalid.court) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         if (playing)
+        {
             drawPiece(ctx, current.type, current.x, current.y, current.dir);
+        }
         var x, y, block;
         for(y = 0 ; y < ny ; y++) {
             for (x = 0 ; x < nx ; x++) {
@@ -499,6 +524,19 @@ function drawCourt() {
         ctx.strokeRect(0, 0, nx*dx - 1, ny*dy - 1); // court boundary
         invalid.court = false;
     }
+}
+
+function drawCourtOpponent(type, px, py, dir) {
+        ctxopponent.clearRect(0, 0, canvasopponent.width, canvasopponent.height);
+        drawPiece(ctxopponent, type, px, py, dir);
+        var x,y,block;
+        for(y = 0 ; y < ny ; y++) {
+            for (x = 0 ; x < nx ; x++) {
+                //if (block = getBlock(x,y))
+                    drawBlock(ctxopponent, x, y, block.color);
+            }
+        }
+        ctxopponent.strokeRect(0, 0, nx*dx_op - 1, ny*dy_op - 1); // court boundary
 }
 
 function drawNext() {

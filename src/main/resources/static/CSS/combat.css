@@ -76,7 +76,6 @@ body {
     border-radius: 5px;
 }
 #secondplayercanvas{
-    background: wheat;
     position: absolute;
     top: 4vh;
     right: 2vw;

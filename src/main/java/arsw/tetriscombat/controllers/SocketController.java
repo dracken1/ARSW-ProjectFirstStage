@@ -42,11 +42,6 @@ public class SocketController {
         SalasServicesImpl.usuarioAbandonarSala(usuario.getString("username"),salaId);
         msgt.convertAndSend("/topic/salas",SalasServicesImpl.listaSalas().toString());
     }
-    //Recibe instrucciones/movimientos/jugadas de los jugadores, luego las reenvia.
-    @MessageMapping("/accion.{salaId}")
-    public void reproducirAccion(@DestinationVariable String salaId, JSONObject dir) throws Exception {
-        msgt.convertAndSend("/topic/accion"+salaId,dir);
-    }
 
     //Recibe score de los jugadores, luego las reenvia.
     @MessageMapping("/scorePlayer.{salaId}")
@@ -58,5 +53,11 @@ public class SocketController {
     @MessageMapping("/rowsPlayer.{salaId}")
     public void rowsPlayer(@DestinationVariable String salaId, JSONObject rows) throws Exception {
         msgt.convertAndSend("/topic/rowsPlayer"+salaId,rows);
+    }
+
+    //Recibe las fichas de los jugadores, luego las reenvia.
+    @MessageMapping("/drawPlayer.{salaId}")
+    public void drawPlayer(@DestinationVariable String salaId, JSONObject movePlayer) throws Exception {
+        msgt.convertAndSend("/topic/drawPlayer"+salaId,movePlayer);
     }
 }
