@@ -86,7 +86,7 @@ var datosDosJugadores = function (tabla) {
 //Start STOMP socket before page loads
 (function(){
     //alert("funca");
-    alert(getCookie("username"));
+    //alert(getCookie("username"));
     var urlString = window.location.href;
     var url = new URL(urlString);
     salaid = url.searchParams.get("id");
@@ -107,12 +107,27 @@ var datosDosJugadores = function (tabla) {
             getJugadoresSala(salaid);
         });
         stompClient.subscribe('/topic/accion'+ salaid, function (eventbody) {
+            //alert("accion");
             var extract = JSON.parse(eventbody.body);
             if(!(extract.ignore === getCookie("username"))){
                 /*switch(extract.action) {
                     case "start":   actions.push(DIR.LEFT);  handled = true; stompClient.send("/topic/accion"+salaid,{},JSON.stringify({action: "left",tetrotype: "l",ignore: getCookie("username")})); break;
                 }*/
-                alert("El jugador " + extract.ignore + " oprimio: " + extract.action);
+                //alert("El jugador " + extract.ignore + " oprimio: " + extract.action);
+            }
+        });
+        stompClient.subscribe('/topic/scorePlayer'+ salaid, function (eventbody) {
+            //alert("score");
+            var extract = JSON.parse(eventbody.body);
+            if(!(extract.ignore === getCookie("username"))){
+                document.getElementById("spscore").innerHTML = ("00000" + Math.floor(extract.score)).slice(-5);
+            }
+        });
+        stompClient.subscribe('/topic/rowsPlayer'+ salaid, function (eventbody) {
+            var extract = JSON.parse(eventbody.body);
+            if(!(extract.ignore === getCookie("username"))){
+                //alert(extract.rows);
+                document.getElementById("sprows").innerHTML = extract.rows;
             }
         });
     });
@@ -201,13 +216,13 @@ var dx, dy,        // pixel size of a single tetris block
 //
 //-------------------------------------------------------------------------
 
-var i = { size: 4, blocks: [0x0F00, 0x2222, 0x00F0, 0x4444], color: 'cyan'   };
-var j = { size: 3, blocks: [0x44C0, 0x8E00, 0x6440, 0x0E20], color: 'blue'   };
-var l = { size: 3, blocks: [0x4460, 0x0E80, 0xC440, 0x2E00], color: 'orange' };
-var o = { size: 2, blocks: [0xCC00, 0xCC00, 0xCC00, 0xCC00], color: 'yellow' };
-var s = { size: 3, blocks: [0x06C0, 0x8C40, 0x6C00, 0x4620], color: 'green'  };
-var t = { size: 3, blocks: [0x0E40, 0x4C40, 0x4E00, 0x4640], color: 'purple' };
-var z = { size: 3, blocks: [0x0C60, 0x4C80, 0xC600, 0x2640], color: 'red'    };
+var i = { size: 4, blocks: [0x0F00, 0x2222, 0x00F0, 0x4444], color: '#e8d441' };
+var j = { size: 3, blocks: [0x44C0, 0x8E00, 0x6440, 0x0E20], color: '#094BDA' };
+var l = { size: 3, blocks: [0x4460, 0x0E80, 0xC440, 0x2E00], color: '#1EBAE8' };
+var o = { size: 2, blocks: [0xCC00, 0xCC00, 0xCC00, 0xCC00], color: '#D60707' };
+var s = { size: 3, blocks: [0x06C0, 0x8C40, 0x6C00, 0x4620], color: '#5ADD34' };
+var t = { size: 3, blocks: [0x0E40, 0x4C40, 0x4E00, 0x4640], color: '#FF8000' };
+var z = { size: 3, blocks: [0x0C60, 0x4C80, 0xC600, 0x2640], color: '#217400' };
 
 //------------------------------------------------
 // do the bit manipulation and iterate through each
@@ -329,11 +344,11 @@ function lose() { show('start'); setVisualScore(); playing = false; }
 
 function setVisualScore(n)      { vscore = n || score; invalidateScore(); }
 function setScore(n)            { score = n; setVisualScore(n);  }
-function addScore(n)            { score = score + n;   }
+function addScore(n)            { score = score + n; stompClient.send("/topic/scorePlayer"+salaid,{},JSON.stringify({score : score,ignore: getCookie("username")})); }
 function clearScore()           { setScore(0); }
 function clearRows()            { setRows(0); }
 function setRows(n)             { rows = n; step = Math.max(speed.min, speed.start - (speed.decrement*rows)); invalidateRows(); }
-function addRows(n)             { setRows(rows + n); }
+function addRows(n)             { setRows(rows + n); stompClient.send("/topic/rowsPlayer"+salaid,{},JSON.stringify({rows : rows,ignore: getCookie("username")})); }
 function getBlock(x,y)          { return (blocks && blocks[x] ? blocks[x][y] : null); }
 function setBlock(x,y,type)     { blocks[x] = blocks[x] || []; blocks[x][y] = type; invalidate(); }
 function clearBlocks()          { blocks = []; invalidate(); }

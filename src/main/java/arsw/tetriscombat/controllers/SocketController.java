@@ -47,4 +47,16 @@ public class SocketController {
     public void reproducirAccion(@DestinationVariable String salaId, JSONObject dir) throws Exception {
         msgt.convertAndSend("/topic/accion"+salaId,dir);
     }
+
+    //Recibe score de los jugadores, luego las reenvia.
+    @MessageMapping("/scorePlayer.{salaId}")
+    public void scorePlayer(@DestinationVariable String salaId, JSONObject score) throws Exception {
+        msgt.convertAndSend("/topic/scorePlayer"+salaId,score);
+    }
+
+    //Recibe rows de los jugadores, luego las reenvia.
+    @MessageMapping("/rowsPlayer.{salaId}")
+    public void rowsPlayer(@DestinationVariable String salaId, JSONObject rows) throws Exception {
+        msgt.convertAndSend("/topic/rowsPlayer"+salaId,rows);
+    }
 }

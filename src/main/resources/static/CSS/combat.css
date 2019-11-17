@@ -44,7 +44,8 @@ body {
     height: calc(40vh + 20vw);
     min-width: 294px;
     min-height: 588px;
-    background: rgba(255,255,255,0.2)
+    background: rgba(0,0,0,0.8);
+    border: 3px solid #0d1113;
 }
 #upcoming{
     display: inline;
@@ -55,8 +56,9 @@ body {
     width: 71%;
     position: absolute;
     left: 15%;
-    top: 6%;
+    top: 10%;
     background: #292826;
+    border: 3px solid #0d1113;
 }
 #upcomingcont{
     color: #f9fdff;
@@ -65,59 +67,76 @@ body {
 #secondplayer{
     position: relative;
     float: right;
-    top: 3%;
     background: rgba(24,43,48,0.6);
-    width: 35vw;
-    height: 85vh;
-    min-width: 459px;
-    min-height: 649px;
-    border: 3px solid #0d1113;
+    width: 40vw;
+    height: 90vh;
+    min-width: 574px;
+    min-height: 693px;
+    border: 3px solid #000000;
     border-radius: 5px;
 }
 #secondplayercanvas{
     background: wheat;
     position: absolute;
-    top: 3vh;
-    right: 1.5vw;
-    width: calc((38vh + 18vw)/2);
-    height: calc(38vh + 18vw);
+    top: 4vh;
+    right: 2vw;
+    width: calc((40vh + 20vw)/2);
+    height: calc(40vh + 20vw);
+    min-width: 294px;
+    min-height: 588px;
+    background: rgba(56, 3, 6, 0.8)
 }
 #spmenubar{
-    background: #5eb313;
     position: absolute;
     top: 5%;
     left: 5%;
-    width: 30%;
-    height: 50%;
+    width: 35%;
+    min-height: 588px;
+    height: calc(40vh + 20vw);
+    border: 3px solid #0d1113;
 }
 #spscorecont{
-    background: #3c2492;
     position: relative;
     color: white;
-    height: 30%;
-    width: 100%;
-    border: 3px solid #000000;
-    border-radius: 5px;
-    margin-bottom: 5%;
+    left: 2%;
+    width: 95%;
+    height: 25%;
+    background: #3c2492;
+    text-align: center;
+    vertical-align: middle;
+    color: #f9fdff;
+    border: 3px solid #0d1113;
 }
 #sprowscont{
+    top: 5%;
     background: #3c2492;
     position: relative;
-    color: white;
-    height: 20%;
+    left: 2%;
+    width: 95%;
+    height: 25%;
+    background: #3c2492;
+    text-align: center;
+    vertical-align: middle;
+    color: #f9fdff;
+    border: 3px solid #0d1113;
+}
+#spstatcont{
+    top: 10%;
+    position: absolute;
     width: 100%;
-    border: 3px solid #000000;
-    border-radius: 5px;
+    height: 30%;
+    /*background: #42403c;*/
+    bottom: 0px;
 }
 #menubar{
     float: right;
     position: relative;
     width: 35%;
-    height: 95%;
+    height: calc(40vh + 20vw);
+    min-height: 588px;
     /*background: #3c2492;*/
     border: 3px solid #0d1113;
     right: 2%;
-    top: 2%;
 }
 #mpstatscont{
     position: absolute;
@@ -131,8 +150,6 @@ body {
     left: 25%;
 }
 #scorecont{
-    padding-top: 6%;
-    margin-bottom: 3%;
     float: right;
     position: relative;
     right: 2%;
@@ -145,7 +162,7 @@ body {
     border: 3px solid #0d1113;
 }
 #rowscont{
-    padding-top: 6%;
+    top: 5%;
     float: right;
     position: relative;
     right: 2%;
