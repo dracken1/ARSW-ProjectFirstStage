@@ -1,122 +1,7 @@
-var CombatApp = function(){
-    return {
-        abandonarSala: function () {
-            var username = getCookie("username");
-            var usuarioJSON = {username: username};
-            let params = new URLSearchParams(location.search);
-            var salaId = params.get('id');
-            stompClient.send("/app/abandonarSala." + salaId, {}, JSON.stringify(usuarioJSON));
-            stompClient.subscribe('/topic/salas', function (eventbody) {
-                window.location.href = "home.html";
-            });
-        }
-    }
-}
 
-// ID sala
-var salaid;
-
-var p2canvas = get('secondplayercanvas');
-var p2canvasctx = p2canvas.getContext('2d');
-function getCookie(name) {
-    var regexp = new RegExp("(?:^" + name + "|;\s*"+ name + ")=(.*?)(?:;|$)", "g");
-    var result = regexp.exec(document.cookie);
-    return (result === null) ? null : result[1];
-};
-
-var getJugadoresSala = function (salaId) {
-    var traerSalas = $.get("/Sala/getById."+salaId);
-    traerSalas.then(function(salas) {
-        datosDosJugadores(JSON.parse(salas));
-    },function () {
-
-    });
-    return traerSalas;
-}
-
-var getInformacionSala = function (salaId) {
-    var traerSalas = $.get("/Sala/getById."+salaId);
-    traerSalas.then(function(salas) {
-        cargaDatosSala(JSON.parse(salas));
-    },function () {
-
-    });
-    return traerSalas;
-};
-
-var cargaDatosSala = function (tabla) {
-    tabla.map(function (salaDescripcion){
-        var cantidadJudadores = salaDescripcion.cantidadJugadores;
-        var jugadoresActuales = salaDescripcion.jugadoresActuales;
-        jugadoresActuales.map(function (jugador){
-            if(cantidadJudadores==1){
-                document.getElementById("Player").innerHTML = "Local Player: "+jugador[0];
-                document.getElementById("Opponent").innerHTML = "Opponent: ";
-            }else{
-                document.getElementById("Player").innerHTML = "Local Player: "+ jugador[1];
-                document.getElementById("Opponent").innerHTML = "Opponent: ";
-            }
-        })
-    })
-};
-
-var datosDosJugadores = function (tabla) {
-    tabla.map(function (salaDescripcion){
-        var username = getCookie("username");
-        var usuarioJSON = {username: username};
-        //alert("id de sala = "+salaId);
-        var cantidadJudadores = salaDescripcion.cantidadJugadores;
-        var jugadoresActuales = salaDescripcion.jugadoresActuales;
-        //alert("jugadores = "+cantidadJudadores);
-        //alert("activosJogadores = "+ jugadoresActuales);
-        jugadoresActuales.map(function (jugador){
-            if(cantidadJudadores==2) {
-                if (jugador[0] == usuarioJSON.username) {
-                    document.getElementById("Player").innerHTML = "Local Player: "+jugador[0];
-                    document.getElementById("Opponent").innerHTML = "Opponent: "+jugador[1];
-                }else{
-                    document.getElementById("Player").innerHTML = "Local Player: "+jugador[1];
-                    document.getElementById("Opponent").innerHTML = "Opponent: "+jugador[0];
-                }
-            }
-        })
-
-    })
-};
-//Start STOMP socket before page loads
-(function(){
-    //alert("funca");
-    alert(getCookie("username"));
-    var urlString = window.location.href;
-    var url = new URL(urlString);
-    salaid = url.searchParams.get("id");
-    getInformacionSala(salaid);
-    getJugadoresSala(salaid);
-    console.log("el id es: " + salaid);
-    console.info('Connecting to WS...');
-
-    var username = getCookie("username");
-    var usuarioJSON = {username: username};
-    var socket = new SockJS('/stompendpoint');
-    stompClient = Stomp.over(socket);
-    //subscribe to /topic/accionID when connections succeed
-    stompClient.connect({}, function (frame) {
-        console.log('Connected: ' + frame);
-        stompClient.send("/app/usuariosEnSala."+salaid, {},JSON.stringify(usuarioJSON));
-        stompClient.subscribe('/topic/salas',function (eventbody) {
-            getJugadoresSala(salaid);
-        });
-        stompClient.subscribe('/topic/accion'+ salaid, function (eventbody) {
-            var extract = JSON.parse(eventbody.body);
-            if(!(extract.ignore === getCookie("username"))){
-                /*switch(extract.action) {
-                    case "start":   actions.push(DIR.LEFT);  handled = true; stompClient.send("/topic/accion"+salaid,{},JSON.stringify({action: "left",tetrotype: "l",ignore: getCookie("username")})); break;
-                }*/
-                alert("El jugador " + extract.ignore + " oprimio: " + extract.action);
-            }
-        });
-    });
-})();
+$('.backbtn').click(function(){
+    window.location.href = "home.html";
+});
 //-------------------------------------------------------------------------
 // base helper methods
 //-------------------------------------------------------------------------
@@ -305,11 +190,11 @@ function keydown(ev) {
     var handled = false;
     if (playing) {
         switch(ev.keyCode) {
-            case KEY.LEFT:   actions.push(DIR.LEFT);  handled = true; stompClient.send("/topic/accion"+salaid,{},JSON.stringify({action: "left",ignore: getCookie("username")})); break;
-            case KEY.RIGHT:  actions.push(DIR.RIGHT); handled = true; stompClient.send("/topic/accion"+salaid,{},JSON.stringify({action: "right",ignore: getCookie("username")})); break;
-            case KEY.UP:     actions.push(DIR.UP);    handled = true; stompClient.send("/topic/accion"+salaid,{},JSON.stringify({action: "up",ignore: getCookie("username")})); break;
-            case KEY.DOWN:   actions.push(DIR.DOWN);  handled = true; stompClient.send("/topic/accion"+salaid,{},JSON.stringify({action: "down",ignore: getCookie("username")})); break;
-            case KEY.ESC:    lose();                  handled = true; stompClient.send("/topic/accion"+salaid,{},JSON.stringify({action: "esc",ignore: getCookie("username")})); break;
+            case KEY.LEFT:   actions.push(DIR.LEFT);  handled = true; break;
+            case KEY.RIGHT:  actions.push(DIR.RIGHT); handled = true; break;
+            case KEY.UP:     actions.push(DIR.UP);    handled = true; break;
+            case KEY.DOWN:   actions.push(DIR.DOWN);  handled = true; break;
+            case KEY.ESC:    lose();                  handled = true; break;
         }
     }
     else if (ev.keyCode == KEY.SPACE) {
@@ -531,3 +416,4 @@ function drawBlock(ctx, x, y, color) {
 //-------------------------------------------------------------------------
 
 run();
+

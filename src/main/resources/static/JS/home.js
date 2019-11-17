@@ -2,11 +2,11 @@
 
 
 $('.genericbtn').click(function(){
-    window.location.href = "juego.html";
+    window.location.href = "practice.html";
 });
 
 $('.practicebtn').click(function(){
-    window.location.href = "juego.html";
+    window.location.href = "practice.html";
 });
 
 function mousePressed(obj) {

@@ -21,8 +21,14 @@
 
 <body>
     <div class="center">
+        <div>
+            <button class="genericbtn" id="exitButton" onclick="CombatApp().abandonarSala()">Exit Room</button>
+        </div>
         <div id="bothplayerscont">
             <div id="mainplayer">
+                <div>
+                    <label id="Player" style="color:white;"></label>
+                </div>
                 <canvas id="canvas">
                     Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
                 </canvas>
@@ -48,6 +54,9 @@
 
             </div>
             <div id="secondplayer">
+                <div>
+                    <label id="Opponent"  style="color:white;"></label>
+                </div>
                 <div id="spmenubar">
                     <div id="spstatcont">
                         <div id="spscorecont">
