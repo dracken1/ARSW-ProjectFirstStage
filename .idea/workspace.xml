@@ -3,50 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3253c33d-2dbb-4229-807c-5cf636a67eec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Background/Background.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Background/Background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Background/Background.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Background/PlainBackground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Background/PlainBackground.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Background/WrinkledBackground.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Background/WrinkledBackground.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Logo/Favicon/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Logo/Favicon/faviconThin.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Logo/FullLogo.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Logo/FullLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Logo/FullLogo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Logo/Logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Logo/Logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Logo/LogoName.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Logo/LogoName.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Squares/DarkBlue/DarkBlueSquare.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Squares/DarkBlue/DarkBlueSquare.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Squares/DarkBlue/DarkBlueSquare.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Squares/DarkGreen/DarkGreenSquare.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Squares/DarkGreen/DarkGreenSquare.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Squares/DarkGreen/DarkGreenSquare.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Squares/LightBlue/LightBlueSquare.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Squares/LightBlue/LightBlueSquare.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Squares/LightBlue/LightBlueSquare.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Squares/LightGreen/LightGreenSquare.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Squares/LightGreen/LightGreenSquare.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Squares/LightGreen/LightGreenSquare.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Squares/Orange/OrangeSquare.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Squares/Orange/OrangeSquare.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Squares/Orange/OrangeSquare.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Squares/Red/RedSquare.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Squares/Red/RedSquare.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Squares/Red/RedSquare.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Squares/Yellow/YellowSquare.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Squares/Yellow/YellowSquare.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/Squares/Yellow/YellowSquare.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/combat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/combat.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/combatfunctionality.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/combatfunctionality.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/practice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/practice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/Background/Background.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/Background/Background.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/BloodyMoneyTitleLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/blanco.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/gaming.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/home.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -219,6 +176,7 @@
       <workItem from="1573963330747" duration="40470000" />
       <workItem from="1574204445481" duration="25741000" />
       <workItem from="1574231679500" duration="67000" />
+      <workItem from="1574232045867" duration="207000" />
     </task>
     <servers />
   </component>
