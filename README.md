@@ -1,6 +1,6 @@
->>>>> # **Tetris-Combat | WebGame**
+# **Tetris-Combat | WebGame**
 
-![Imagenes](img/Logo/FullLogo.gif)
+![Imagenes](src/main/resources/static/images/Logo/FullLogo.gif)
 
 ## **Información**
 
@@ -28,7 +28,7 @@
 
 ## **Resumen**
 
-![Imagenes](img/Background/Background.gif)
+![Imagenes](src/main/resources/static/images/Background/Background.gif)
 **Tetris-Combat** es un juego **multijugador** en tiempo real basado en el juego original diseñado en `1984` por `Alekséi Pázhitnov`. El juego administra una base de usuarios que se registran para jugar en salas creadas por ellos mismos donde podrán encontrarse y jugar con amigos. Adicionalmente, cada usuario podrá consultar las estadísticas de su perfil, partidas jugadas y cuenta.
 
 ## **Descripción**
