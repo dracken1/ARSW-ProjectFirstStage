@@ -50,12 +50,12 @@ La interfaz gráfica del juego se encontra dividida en 2 partes diferenciales en
 
 - **Aplicación Web:**
 
-  ![Imagenes](img/Documentation/Functionalities/crearSala.png)
+  ![Imagenes](img/Documentation/Functionalities/crearSala.PNG)
   Basados en guías de desarrollo responsivo, se ha diseñado una interfaz amigable con el usuario, con una baja curva de aprendizaje que le permita reconocer fácilmente las funcionalidades de la aplicación en sus respectivos menús.
 
 - **Juego:**
 
-  ![Imagenes](img/Documentation/Functionalities/inicioPartida.png)
+  ![Imagenes](img/Documentation/Functionalities/inicioPartida.PNG)
   Al ser el juego multijugador, se decidió que la manera más amigable de realizar la visualización de una partida era con un máximo de 2 jugadores por sala, de manera que el juego consistiera en el enfrentamiento o `combate` entre dos jugadores para facilitar la competitividad y evitar problemas cómo distracciones excesivas en el desarrollo de una partida.
 
   Por esta razón la interfaz del juego cuenta con dos tableros funcionales, el primero (ubicado al costado izquierdo) muestra la partida del jugador local en un primer plano, mientras que a la derecha se muestra la partida de su `rival` un poco más pequeña, lo que permite darle prioridad a su juego actual sin dejar de estar al tanto de su oponente.
@@ -66,22 +66,22 @@ Actualmente el juego dispone de 2 modos de juego:
 
 - **Un Jugador:**
 
-  ![Imagenes](img/Documentation/Functionalities/practicar.png)
+  ![Imagenes](img/Documentation/Functionalities/practicar.PNG)
   En este modo de juego, el jugador no tendrá rival y jugará solo buscando conseguir la mayor cantidad de puntos sin que se se acabe el juego.
 
 - **Multijugador**
 
-  ![Imagenes](img/Documentation/Functionalities/inicioPartida.png)
+  ![Imagenes](img/Documentation/Functionalities/inicioPartida.PNG)
   En este modo de juego, el jugador competirá contra otro rival en una partida a `tiempo real` donde ganará el jugador que resista más tiempo en el tablero de juego sin perder.
 
 ### **Salas**
 
-![Imagenes](img/Documentation/Functionalities/crearSala.png)
+![Imagenes](img/Documentation/Functionalities/crearSala.PNG)
 Las Salas de juego componen el lugar de encuentro donde se crean y posteriormente se realizan las partidas multijugador entre dos jugadores. Implementadas mediante el uso de sockets, le permiten a cualquier jugador la opción de crear una de estas para poder inivitar y jugar con amigos, a la vez que ofrecen la posibilidad de unirse a una partida ya creada anteriormente por otro usuario.
 
 ### **Perfil**
 
-![Imagenes](img/Documentation/Functionalities/perfil.png)
+![Imagenes](img/Documentation/Functionalities/perfil.PNG)
 Cada jugador deberá registrarse en la Aplicación para poder empezar a jugar, de tal manera que pueda tener acceso a todas las funcionalidades del juego, además de las estadisticas y opciones de usuario que tendrá disponibles.
 
 ## **Reglas del Juego**
