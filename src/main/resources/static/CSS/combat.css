@@ -2,7 +2,7 @@
 
 body {
     -webkit-background-size: cover;    
-    background: url(../images/Background/Background.png)no-repeat fixed;
+    background: url(../images/Background/Background_lr.png)no-repeat fixed;
     font-family: Impact, Charcoal, sans-serif;
 }
 
@@ -60,7 +60,30 @@ body {
     background: #292826;
     border: 3px solid #0d1113;
 }
+#upcomingOpponent{
+    display: inline;
+    margin: 5px auto;
+    position: relative;
+    padding: 0 0 0 0;
+    height: 25%;
+    width: 71%;
+    position: absolute;
+    left: 15%;
+    bottom: 10%;
+    background: #292826;
+    border: 3px solid #0d1113;
+}
+#upcomingtextOpponent{
+    color: #f9fdff;
+    position: relative;
+    text-align: center;
+    top: 92%;
+}
 #upcomingcont{
+    color: #f9fdff;
+    text-align: center;
+}
+#upcomingcontOpponent{
     color: #f9fdff;
     text-align: center;
 }
@@ -83,7 +106,7 @@ body {
     height: calc(40vh + 20vw);
     min-width: 294px;
     min-height: 588px;
-    background: rgba(56, 3, 6, 0.8)
+    background: rgba(12, 0, 0, 0.8)
 }
 #spmenubar{
     position: absolute;
@@ -178,7 +201,7 @@ body {
     height: 240px;
     width: 240px;
     top: 30%;
-    left: 45%;
+    left: 42%;
     background: url("../images/versus.png");
 }
 
