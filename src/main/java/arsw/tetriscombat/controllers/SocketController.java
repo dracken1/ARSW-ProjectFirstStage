@@ -60,4 +60,16 @@ public class SocketController {
     public void drawPlayer(@DestinationVariable String salaId, JSONObject movePlayer) throws Exception {
         msgt.convertAndSend("/topic/drawPlayer"+salaId,movePlayer);
     }
+
+    //Recibe las fichas puestas de los jugadores, luego las reenvia.
+    @MessageMapping("/dropPlayer.{salaId}")
+    public void dropPlayer(@DestinationVariable String salaId, JSONObject dPlayer) throws Exception {
+        msgt.convertAndSend("/topic/dropPlayer"+salaId,dPlayer);
+    }
+
+    //Recibe las fichas puestas de los jugadores, luego las reenvia.
+    @MessageMapping("/drawNext.{salaId}")
+    public void drawNext(@DestinationVariable String salaId, JSONObject dNextPlayer) throws Exception {
+        msgt.convertAndSend("/topic/drawNext"+salaId,dNextPlayer);
+    }
 }
