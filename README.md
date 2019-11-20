@@ -35,7 +35,7 @@
 
 ### **Tetris**
 
-![Imagenes](img/Documentation/Sections/tetris.png)
+![Imagenes](img/Documentation/Sections/tetris.PNG)
 En el Tetris se juega con los tetrominós, que son figuras creadas por la combinación de 4 cuadrados de igual dimensión.
 
 Son 7 piezas las generadas por las combinaciones existentes de tetrominós y son estas las que comienzan a caer una por una en el tablero de juego mientras el jugador puede puede decidir la rotación de la pieza mientras cae (0°, 90°, 180°, 270°), así cómo en qué lugar debe caer.
