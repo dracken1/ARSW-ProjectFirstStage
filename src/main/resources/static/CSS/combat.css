@@ -2,7 +2,7 @@
 
 body {
     -webkit-background-size: cover;    
-    background: url(../images/Background/Background.png)no-repeat fixed;
+    background: url(../images/Background/Background_lr.png)no-repeat fixed;
     font-family: Impact, Charcoal, sans-serif;
 }
 
@@ -201,7 +201,7 @@ body {
     height: 240px;
     width: 240px;
     top: 30%;
-    left: 45%;
+    left: 42%;
     background: url("../images/versus.png");
 }
 
