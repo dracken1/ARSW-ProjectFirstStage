@@ -124,12 +124,12 @@ var datosDosJugadores = function (tabla) {
                 drawOpponent(extract.type,extract.x,extract.y,extract.dir);
             }
         });
-/*        stompClient.subscribe('/topic/dropPlayer'+ salaid, function (eventbody) {
+        stompClient.subscribe('/topic/dropPlayer'+ salaid, function (eventbody) {
             var extract = JSON.parse(eventbody.body);
             if(!(extract.ignore === getCookie("username"))){
                 dropOpponent(extract.type,extract.x,extract.y,extract.dir);
             }
-        });*/
+        });
         stompClient.subscribe('/topic/drawNext'+ salaid, function (eventbody) {
             var extract = JSON.parse(eventbody.body);
             if(!(extract.ignore === getCookie("username"))){
@@ -190,7 +190,7 @@ var KEY = { ESC: 27, SPACE: 32, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 },
     ctxopponent = canvasopponent.getContext('2d'),
     ucanvasopponent = get('upcomingOpponent'),
     uctxopponent = ucanvasopponent.getContext('2d');
-    speed = { start: 0.6, decrement: 0.005, min: 0.1 }, // how long before piece drops by 1 row (seconds)
+    speed = { start: 0.1, decrement: 0.005, min: 0.1 }, // how long before piece drops by 1 row (seconds)
     nx = 10, // width of tetris court (in blocks)
     ny = 20, // height of tetris court (in blocks)
     nu = 5;  // width/height of upcoming preview (in blocks)
@@ -202,6 +202,7 @@ var KEY = { ESC: 27, SPACE: 32, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 },
 var dx, dy,        // pixel size of a single tetris block
     dx_op, dy_op,        // pixel size of a single tetris block opponent
     blocks,
+    blocks_op,
     actions,       // queue of user actions (inputs)
     playing,       // true|false - game is in progress
     dt,            // time since starting this game
@@ -229,13 +230,13 @@ var dx, dy,        // pixel size of a single tetris block
 //
 //-------------------------------------------------------------------------
 
-var i = { size: 4, blocks: [0x0F00, 0x2222, 0x00F0, 0x4444], color: '#e8d441' };
-var j = { size: 3, blocks: [0x44C0, 0x8E00, 0x6440, 0x0E20], color: '#094BDA' };
-var l = { size: 3, blocks: [0x4460, 0x0E80, 0xC440, 0x2E00], color: '#1EBAE8' };
-var o = { size: 2, blocks: [0xCC00, 0xCC00, 0xCC00, 0xCC00], color: '#D60707' };
-var s = { size: 3, blocks: [0x06C0, 0x8C40, 0x6C00, 0x4620], color: '#5ADD34' };
-var t = { size: 3, blocks: [0x0E40, 0x4C40, 0x4E00, 0x4640], color: '#FF8000' };
-var z = { size: 3, blocks: [0x0C60, 0x4C80, 0xC600, 0x2640], color: '#217400' };
+var i = { size: 4, blocks: [0x0F00, 0x2222, 0x00F0, 0x4444], blocks_op: [0x0F00, 0x2222, 0x00F0, 0x4444], color: '#e8d441' };
+var j = { size: 3, blocks: [0x44C0, 0x8E00, 0x6440, 0x0E20], blocks_op: [0x44C0, 0x8E00, 0x6440, 0x0E20], color: '#094BDA' };
+var l = { size: 3, blocks: [0x4460, 0x0E80, 0xC440, 0x2E00], blocks_op: [0x4460, 0x0E80, 0xC440, 0x2E00], color: '#1EBAE8' };
+var o = { size: 2, blocks: [0xCC00, 0xCC00, 0xCC00, 0xCC00], blocks_op: [0xCC00, 0xCC00, 0xCC00, 0xCC00], color: '#D60707' };
+var s = { size: 3, blocks: [0x06C0, 0x8C40, 0x6C00, 0x4620], blocks_op: [0x06C0, 0x8C40, 0x6C00, 0x4620], color: '#5ADD34' };
+var t = { size: 3, blocks: [0x0E40, 0x4C40, 0x4E00, 0x4640], blocks_op: [0x0E40, 0x4C40, 0x4E00, 0x4640], color: '#FF8000' };
+var z = { size: 3, blocks: [0x0C60, 0x4C80, 0xC600, 0x2640], blocks_op: [0x0C60, 0x4C80, 0xC600, 0x2640], color: '#217400' };
 
 //------------------------------------------------
 // do the bit manipulation and iterate through each
@@ -255,7 +256,7 @@ function eachblock(type, x, y, dir, fn) {
 }
 
 function eachblockOpponent(type, x, y, dir, fn) {
-    var bit, result, row = 0, col = 0, blocks = type.blocks[dir];
+    var bit, result, row = 0, col = 0, blocks = type.blocks_op[dir];
     for(bit = 0x8000 ; bit > 0 ; bit = bit >> 1) {
         if (blocks & bit) {
             fn(x + col, y + row);
@@ -303,7 +304,6 @@ function randomPiece() {
     var type = pieces.splice(random(0, pieces.length-1), 1)[0];
     return { type: type, dir: DIR.UP, x: Math.round(random(0, nx - type.size)), y: 0 };
 }
-
 
 //-------------------------------------------------------------------------
 // GAME LOOP
@@ -396,10 +396,11 @@ function clearRows()            { setRows(0); }
 function setRows(n)             { rows = n; step = Math.max(speed.min, speed.start - (speed.decrement*rows)); invalidateRows(); }
 function addRows(n)             { setRows(rows + n); stompClient.send("/topic/rowsPlayer"+salaid,{},JSON.stringify({rows : rows,ignore: getCookie("username")})); }
 function getBlock(x,y)          { return (blocks && blocks[x] ? blocks[x][y] : null); }
-function getBlockOpponent(x,y)          { return (blocks && blocks[x] ? blocks[x][y] : null); }
+function getBlockOpponent(x,y)          { return (blocks_op && blocks_op[x] ? blocks_op[x][y] : null); }
 function setBlock(x,y,type)     { blocks[x] = blocks[x] || []; blocks[x][y] = type; invalidate(); }
-function setBlockOpponent(x,y,type)     { blocks[x] = blocks[x] || []; blocks[x][y] = type; invalidateOpponent();}
+function setBlockOpponent(x,y,type)     { blocks_op[x] = blocks_op[x] || []; blocks_op[x][y] = type; invalidateOpponent();}
 function clearBlocks()          { blocks = []; invalidate(); }
+function clearBlocks_op()          { blocks_op = []; invalidateOpponent(); }
 function clearActions()         { actions = []; }
 function setCurrentPiece(piece) { current = piece || randomPiece(); invalidate();     }
 function setNextPiece(piece)    { next    = piece || randomPiece(); invalidateNext(); }
@@ -408,6 +409,7 @@ function reset() {
     dt = 0;
     clearActions();
     clearBlocks();
+    clearBlocks_op();
     clearRows();
     clearScore();
     setCurrentPiece(next);
@@ -467,13 +469,13 @@ function drop() {
         addScore(10);
         dropPiece();
         if (playing) {
-/*            stompClient.send("/topic/dropPlayer" + salaid, {}, JSON.stringify({
+            stompClient.send("/topic/dropPlayer" + salaid, {}, JSON.stringify({
                 x: current.x,
                 y: current.y,
                 type: current.type,
                 dir: current.dir,
                 ignore: getCookie("username")
-            }));*/
+            }));
         }
         removeLines();
         setCurrentPiece(next);
@@ -486,17 +488,8 @@ function drop() {
 }
 
 function dropOpponent(type, px, py, dir) {
-    //if (!move(DIR.DOWN)) {
-        //addScore(10);
         dropPieceOpponent(type, px, py, dir);
         removeLinesOpponent();
-        //setCurrentPiece(next);
-        //setNextPiece(randomPiece());
-        //clearActionsOpponent();
-        if (occupiedOpponent(type, px, py, dir)) {
-            lose();
-        }
-    //}
 }
 
 function dropPiece() {
@@ -629,7 +622,7 @@ function drawCourtOpponent(type, px, py, dir) {
         for(y = 0 ; y < ny ; y++) {
             for (x = 0 ; x < nx ; x++) {
                 if (block = getBlockOpponent(x,y)){
-                    //drawBlockOpponent(ctxopponent, x, y, block.color);
+                    drawBlockOpponent(ctxopponent, x, y, block.color);
                 }
             }
         }
