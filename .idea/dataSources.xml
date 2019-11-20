@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="bloodymoneyDB" uuid="7088862a-d713-4b69-bb83-e4b88c750266">
+    <data-source source="LOCAL" name="TetrisCombatDB" uuid="0e98473e-fee1-4e10-8042-19086da944aa">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>

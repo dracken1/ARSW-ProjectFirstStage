@@ -1,5 +1,22 @@
 
-
+console.log(getCookie("username"));
+var user;
+var url = '/sessions/' + getCookie("username");
+fetch(url, {
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json'
+    }
+})
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        user = data.user;
+        console.log(user);
+        document.getElementById('acciconandbuttonsiconnameid').innerHTML = "" + user.username;
+        document.getElementById('accinfonameid').innerHTML = "Name: " + user.name + " " + user.lastname;
+        document.getElementById('accinfoemailid').innerHTML = "Email: " + user.email;
+    });
 
 $('.genericbtn').click(function(){
     window.location.href = "practice.html";
@@ -9,6 +26,35 @@ $('.practicebtn').click(function(){
     window.location.href = "practice.html";
 });
 
+$('.htitle').click(function(){
+    console.log(user);
+    if (document.getElementById('extendeduserlogoid').clientHeight > 0){
+        $("#extendeduserlogoid").animate({
+            height: "toggle"
+        },200);
+    }
+});
+$('.hspace').click(function(){
+    if (document.getElementById('extendeduserlogoid').clientHeight > 0){
+        $("#extendeduserlogoid").animate({
+            height: "toggle"
+        },200);
+    }
+});
+$('.middlebar').click(function(){
+    if (document.getElementById('extendeduserlogoid').clientHeight > 0){
+        $("#extendeduserlogoid").animate({
+            height: "toggle"
+        },200);
+    }
+});
+$('.footerbar').click(function(){
+    if (document.getElementById('extendeduserlogoid').clientHeight > 0){
+        $("#extendeduserlogoid").animate({
+            height: "toggle"
+        },200);
+    }
+});
 function mousePressed(obj) {
     obj.style.backgroundColor = "#ad8b36";
 }
@@ -30,7 +76,36 @@ $("#haccountid").click(function () {
         height: "toggle"
     },200);
 });
-
+$("#settoptsid").click(function () {
+    $("#settdisplayableid").animate({
+        height: "toggle"
+    },200);
+});
+$("#settexitbtnid").click(function(){
+    $("#settdisplayableid").animate({
+        height: "toggle"
+    },200);
+});
+$("#insoptsid").click(function () {
+    $("#instructdisplayableid").animate({
+        height: "toggle"
+    },200);
+});
+$("#instructexitbtnid").click(function(){
+    $("#instructdisplayableid").animate({
+        height: "toggle"
+    },200);
+});
+$("#abooptsid").click(function () {
+    $("#aboutdisplayableid").animate({
+        height: "toggle"
+    },200);
+});
+$("#aboutexitbtnid").click(function(){
+    $("#aboutdisplayableid").animate({
+        height: "toggle"
+    },200);
+});
 function getCookie(name) {
   var regexp = new RegExp("(?:^" + name + "|;\s*"+ name + ")=(.*?)(?:;|$)", "g");
   var result = regexp.exec(document.cookie);

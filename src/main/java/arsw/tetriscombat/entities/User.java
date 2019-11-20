@@ -24,7 +24,6 @@ public class User implements Serializable{
     private int wins;
     private boolean onlineStatus;
     private boolean ongameStatus;
-
     private Room room;
     //private List<Award> awards;
     

@@ -8,6 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class InMemorySessionPersistence implements SessionPersistence {
     static public ConcurrentHashMap<User, Session> sessions = new ConcurrentHashMap<>();
+    static public ConcurrentHashMap<String, Session> sessions2 = new ConcurrentHashMap<>();
 
     public InMemorySessionPersistence(){
     }
@@ -21,7 +22,7 @@ public class InMemorySessionPersistence implements SessionPersistence {
         sessions.put(user,session);
     }
 
-    public static ConcurrentHashMap<User, Session> getSessions() {
-        return sessions;
-    }
+    public static ConcurrentHashMap<User, Session> getSessions() {return sessions;}
+    public static Session getSessionByUser(User user){return sessions.get(user);}
+    public static Session getSessionByUsername(String user){return sessions2.get(user);}
 }

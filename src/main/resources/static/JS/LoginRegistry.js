@@ -10,7 +10,6 @@ $("#btntoggle").click(function () {
         paddingBottom: "toggle",
         opacity: "toggle"
     });
-
 });
 
 class User{
@@ -23,10 +22,8 @@ class User{
     }
 }
 
-
 var usuario = document.cookie;
-
-
+var usertodisplay;
 $("#btnlogin").click(function(){
        var user = document.getElementById('loginuser').value;
        var password = document.getElementById('loginpass').value;
@@ -40,16 +37,15 @@ $("#btnlogin").click(function(){
            .then(response => response.json())
            .then(data => {
                console.log(data);
-               if(data.name != null){
-                   usuario = new User(data.name, data.lastname, data.username, data.email, data.password);
-                   document.cookie = "username=" + data.username;
+               if(data.user.name != null){
+                   usuario = new User(data.user.name, data.user.lastname, data.user.username, data.user.email, data.user.password);
+                   document.cookie = "username=" + data.user.username;
                    window.location.href = "home.html";
                } else {
-                   alert("Incorrect username or password")
+                   alert("Incorrect username or password");
                }
            })
    });
-
 
 $("#btnregistry").click(function(){
    var firstname = document.getElementById('rfname').value;

@@ -1,4 +1,5 @@
 package arsw.tetriscombat.mappers;
+import arsw.tetriscombat.entities.Stats;
 import arsw.tetriscombat.entities.User;
 import java.sql.*;
 
@@ -94,6 +95,31 @@ public class Bridge{
         }
 
         return false;
+    }
+
+    public Stats getUserStatistics( String username){
+        String SQL = "SELECT fecha, experiencia,  puntaje, tipo FROM estadisticas WHERE user = ?";
+        Stats stats = new Stats();
+        try {
+            Connection conn = connection();
+            PreparedStatement pstmt = conn.prepareStatement(SQL);
+            pstmt.setString(1,username);
+            ResultSet rs = pstmt.executeQuery();
+            rs.next();
+            if(rs.absolute(1)){
+                stats.setDate(rs.getString("fecha"));
+                stats.setExp(rs.getString("experiencia"));
+                stats.setScore(rs.getInt("puntaje"));
+                stats.setType(rs.getString("tipo"));
+                conn.close();
+                pstmt.close();
+                rs.close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return stats;
     }
 
 }

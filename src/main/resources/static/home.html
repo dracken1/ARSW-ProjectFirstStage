@@ -31,7 +31,6 @@
             onmousedown="mousePressed(this)" onmouseover="mouseHover(this)" onmouseout="mouseLeave(this)">
             <div class="userlogo" id="userlogoid">
                 <div class="licon">
-
                 </div>
             </div>
         </div>
@@ -56,15 +55,15 @@
                     <div class="accoptstext">Account</div>
                     <div class="accoptsicon"></div>
                 </div>
-                <div class="menuopts settopts">
+                <div class="menuopts settopts" id="settoptsid">
                     <div class="settoptstext">Settings</div>
                     <div class="settoptsicon"></div>
                 </div>
-                <div class="menuopts insopts">
+                <div class="menuopts insopts" id="insoptsid">
                     <div class="insoptstext">Instructions</div>
                     <div class="insoptsicon"></div>
                 </div>
-                <div class="menuopts aboopts">
+                <div class="menuopts aboopts" id="abooptsid">
                     <div class="abooptstext">About</div>
                     <div class="abooptsicon"></div>
                 </div>
@@ -75,12 +74,102 @@
             </div>
             <div class="allsame accountdisplayable" id="accountdisplayableid">
                 <div class="allsame acciconandbuttons">
-
+                    <div class="allsame acciconandbuttonsicon" id="acciconandbuttonsiconid"></div>
+                    <div class=" acciconandbuttonsiconname" id="acciconandbuttonsiconnameid"></div>
                 </div>
                 <div class="allsame accinfo">
+                    <div class="accinfoname" id="accinfonameid"></div>
+                    <div class="accinfoemail" id="accinfoemailid"></div>
+                    <div class="accstats" id="accstatsid">Statistics</div>
+                    <div class="table-wrapper-scroll-y my-custom-scrollbar">
 
+                        <table class="table table-bordered table-striped mb-0">
+                            <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">6</th>
+                                <td>Larry</td>
+                                <td>the Bird</td>
+                                <td>@twitter</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
                 </div>
+
                 <button class="exitbtn" id="exitbtnid">X</button>
+            </div>
+            <div class="allsame accountdisplayable" id="settdisplayableid">
+                <div class="allsame accinfo">
+                    <div class="allsame accinfoinstruct" id="accinfosettid"></div>
+                </div>
+
+                <button class="exitbtn" id="settexitbtnid">X</button>
+            </div>
+            <div class="allsame accountdisplayable" id="instructdisplayableid">
+                <div class="allsame accinfoinstruct">
+                    <div class="allsame accinfoinstructimg" id="accinfoinstructid"></div>
+                    <div class="accinfoinstructinfo"><p>You have to make full horizontal lines with the different shaped blocks that fall into the game area. Full lines will then disappear and provide points. The more lines you make at the same time, the more points you earn.
+                        <br>
+                        <br>
+                        <br>
+                        Left arrow key:	move block to the left<br>
+                        Right arrow key:	move block to the right <br>
+                        Down arrow key:	move block down<br>
+                        Up arrow key:	rotate block clockwise</p></div>
+                </div>
+
+                <button class="exitbtn" id="instructexitbtnid">X</button>
+            </div>
+            <div class="allsame accountdisplayable" id="aboutdisplayableid">
+                <div class="allsame accinfoabout">
+                    <div class="accinfoinstructabout" id="accinfoaboutid">
+                        <p>Tetris is primarily composed of a field of play in which pieces of different geometric forms, called "tetrominos", descend from the top of the field. During this descent, the player can move the pieces laterally and rotate them until they touch the bottom of the field or land on a piece that had been placed before it.
+                        <br><br>
+                        On the other hand this version of the game implement a multiplayer mode, in this way two players can play at the same time to compete and see who is the best.
+                        <br><br>
+                        Finally and very important, this game was developed by three students of the Escuela Colombiana de Ingenieria Julio Garavito, Nicolas Cardenas, David Antonio Diaz and Pedro Mayorga.
+                        </p></div>
+                </div>
+                <button class="exitbtn" id="aboutexitbtnid">X</button>
             </div>
             <table class="mytable table table-hover table-dark" id="tablaSalas">
                 <thead>
