@@ -112,7 +112,7 @@ body {
     height: calc(40vh + 20vw);
     min-width: 294px;
     min-height: 588px;
-    background: rgba(12, 0, 0, 0.8)
+    background: rgba(12, 0, 0, 0.8);
     font-family: "Futura Bk BT";
 }
 #spmenubar{
