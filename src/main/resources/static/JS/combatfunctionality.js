@@ -108,8 +108,6 @@ var datosDosJugadores = function (tabla) {
 };
 //Start STOMP socket before page loads
 (function(){
-    //alert("funca");
-    //alert(getCookie("username"));
     var urlString = window.location.href;
     var url = new URL(urlString);
     salaid = url.searchParams.get("id");
@@ -130,7 +128,6 @@ var datosDosJugadores = function (tabla) {
             getJugadoresSala(salaid);
         });
         stompClient.subscribe('/topic/scorePlayer'+ salaid, function (eventbody) {
-            //alert("score");
             var extract = JSON.parse(eventbody.body);
             if(!(extract.ignore === getCookie("username"))){
                 document.getElementById("spscore").innerHTML = ("00000" + Math.floor(extract.score)).slice(-5);

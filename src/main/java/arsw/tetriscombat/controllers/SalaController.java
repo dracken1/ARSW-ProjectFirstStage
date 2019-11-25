@@ -19,7 +19,6 @@ public class SalaController{
     @Autowired
     SalasServicesImpl salasServices = new SalasServicesImpl();
 
-    //dsfsdfsdf
     int numero = 10;
     @RequestMapping(method = RequestMethod.POST , path = "/add")
     public ResponseEntity<?> addNewSala(){
