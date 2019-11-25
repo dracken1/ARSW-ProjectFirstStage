@@ -76,6 +76,31 @@ var datosDosJugadores = function (tabla) {
                     document.getElementById("Player").innerHTML = "Local Player: "+jugador[1];
                     document.getElementById("Opponent").innerHTML = "Opponent: "+jugador[0];
                 }
+                let timerInterval
+                Swal.fire({
+                    title: 'Get Ready!',
+                    html: 'The game will start in <b></b> seconds.',
+                    timer: 3000,
+                    timerProgressBar: true,
+                    onBeforeOpen: () => {
+                        Swal.showLoading()
+                        timerInterval = setInterval(() => {
+                            Swal.getContent().querySelector('b')
+                                .textContent = Swal.getTimerLeft()
+                        }, 1000)
+                    },
+                    onClose: () => {
+                        clearInterval(timerInterval),play()
+                    }
+                }).then((result) => {
+                    if (
+                        /* Read more about handling dismissals below */
+                        result.dismiss === Swal.DismissReason.timer
+                    ) {
+                        console.log('I was closed by the timer') // eslint-disable-line
+                    }
+                })
+
             }
         })
 
@@ -136,7 +161,12 @@ var datosDosJugadores = function (tabla) {
                 drawNextOpponent(extract.type,extract.padding,extract.dir);
             }
         });
-
+        stompClient.subscribe('/topic/drawPower'+ salaid, function (eventbody) {
+            var extract = JSON.parse(eventbody.body);
+            if(!(extract.ignore === getCookie("username"))){
+                execPower(extract.power);
+            }
+        });
     });
 })();
 //-------------------------------------------------------------------------
@@ -190,7 +220,7 @@ var KEY = { ESC: 27, SPACE: 32, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 },
     ctxopponent = canvasopponent.getContext('2d'),
     ucanvasopponent = get('upcomingOpponent'),
     uctxopponent = ucanvasopponent.getContext('2d');
-    speed = { start: 0.6, decrement: 0.05, min: 0.1 }, // how long before piece drops by 1 row (seconds)
+    speed = { start: 0.6, decrement: 0.02, min: 0.0 }, // how long before piece drops by 1 row (seconds)
     nx = 10, // width of tetris court (in blocks)
     ny = 20, // height of tetris court (in blocks)
     nu = 5;  // width/height of upcoming preview (in blocks)
@@ -367,14 +397,16 @@ function keydown(ev) {
             case KEY.UP:     actions.push(DIR.UP);    handled = true; break;
             case KEY.DOWN:   actions.push(DIR.DOWN);  handled = true; break;
             case KEY.ESC:    lose();                  handled = true; break;
+            case KEY.SPACE:  bajar();                 handled = true; break;
         }
     }
+    /**
     else if (ev.keyCode == KEY.SPACE) {
         //if (flag_lose!=true) {
             play();
         //}
         handled = true;
-    }
+    }*/
     if (handled)
         ev.preventDefault(); // prevent arrow keys from scrolling the page (supported in IE9+ and all other browsers)
 }
@@ -436,6 +468,19 @@ function clearBlocks_op()          { blocks_op = []; invalidateOpponent(); }
 function clearActions()         { actions = []; }
 function setCurrentPiece(piece) { current = piece || randomPiece(); invalidate();     }
 function setNextPiece(piece)    { next    = piece || randomPiece(); invalidateNext(); }
+
+function bajar(){
+var y;
+    for(y = current.y ; y<ny ; y++) {
+        if (unoccupied(current.type, current.x, y, current.dir)) {
+            current.y = y;
+        }
+        else {
+            invalidate();
+            break;
+        }
+    }
+}
 
 function reset() {
     dt = 0;
@@ -553,6 +598,12 @@ function removeLines() {
     if (n > 0) {
         addRows(n);
         addScore(100*Math.pow(2,n-1)); // 1: 100, 2: 200, 3: 400, 4: 800
+        if (playing) {
+            stompClient.send("/topic/drawPower" + salaid, {}, JSON.stringify({
+                power: n,
+                ignore: getCookie("username")
+            }));
+        }
     }
 }
 
@@ -579,6 +630,15 @@ function removeLine(n) {
             setBlock(x, y, (y == 0) ? null : getBlock(x, y-1));
     }
 }
+
+function execPower(n) {
+    switch(n) {
+        case 2: setCurrentPiece(randomPiece()); break; //Cambio la figura del oponente
+        case 3: bajar(); break; //Bajo la figura del oponente
+        case 4: addScore(score); //Duplico el score
+    }
+}
+
 
 function removeLineOpponent(n) {
     var x, y;

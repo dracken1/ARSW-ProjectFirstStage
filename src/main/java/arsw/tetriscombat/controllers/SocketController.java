@@ -72,4 +72,10 @@ public class SocketController {
     public void drawNext(@DestinationVariable String salaId, JSONObject dNextPlayer) throws Exception {
         msgt.convertAndSend("/topic/drawNext"+salaId,dNextPlayer);
     }
+
+    //Recibe el poder del oponente, luego las reenvia.
+    @MessageMapping("/drawPower.{salaId}")
+    public void drawPower(@DestinationVariable String salaId, JSONObject dPowerPlayer) throws Exception {
+        msgt.convertAndSend("/topic/drawPower"+salaId,dPowerPlayer);
+    }
 }
