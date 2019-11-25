@@ -92,7 +92,7 @@ var datosDosJugadores = function (tabla) {
                         }, 1000)
                     },
                     onClose: () => {
-                        clearInterval(timerInterval),play();
+                        clearInterval(timerInterval),play(),
                         document.getElementById("playerMusic").play();
                     }
                 }).then((result) => {
@@ -483,7 +483,7 @@ function getCookie(name) {
     return (result === null) ? null : result[1];
 }
 
-function play() { reset();          playing = true;  }
+function play() { reset(); playing = true;  }
 function lose() {
     //show('start');
     setVisualScore(); playing = false; flag_lose=true;
