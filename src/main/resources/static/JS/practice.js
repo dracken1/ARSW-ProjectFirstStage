@@ -208,9 +208,40 @@ function keydown(ev) {
 //-------------------------------------------------------------------------
 // GAME LOGIC
 //-------------------------------------------------------------------------
+class Stat{
+    constructor(date,exp,username,score,type){
+        this.date = date;
+        this.exp = exp;
+        this.username = username;
+        this.score = score;
+        this.type = type;
+    }
+}
+
+function addstat() {
+    var stattosend = new Stat(new Date(),100,getCookie("username"),score,"Practice");
+    var statsurl = '/stats/stat';
+    fetch(statsurl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body:JSON.stringify(stattosend)
+    })
+        .then(response => {
+            if(!(response.ok)) {
+                alert("Something went wrong updating your stats!");
+            }
+        })
+}
+function getCookie(name) {
+    var regexp = new RegExp("(?:^" + name + "|;\s*"+ name + ")=(.*?)(?:;|$)", "g");
+    var result = regexp.exec(document.cookie);
+    return (result === null) ? null : result[1];
+}
 
 function play() { hide('start'); reset();          playing = true;  }
-function lose() { show('start'); setVisualScore(); playing = false; }
+function lose() { show('start'); setVisualScore(); playing = false; addstat();}
 
 function setVisualScore(n)      { vscore = n || score; invalidateScore(); }
 function setScore(n)            { score = n; setVisualScore(n);  }

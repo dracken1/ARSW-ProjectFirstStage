@@ -1,7 +1,9 @@
 
 console.log(getCookie("username"));
 var user;
+var stats;
 var url = '/sessions/' + getCookie("username");
+var urlstats = '/stats/' + getCookie("username");
 fetch(url, {
     method: 'GET',
     headers: {
@@ -16,6 +18,40 @@ fetch(url, {
         document.getElementById('acciconandbuttonsiconnameid').innerHTML = "" + user.username;
         document.getElementById('accinfonameid').innerHTML = "Name: " + user.name + " " + user.lastname;
         document.getElementById('accinfoemailid').innerHTML = "Email: " + user.email;
+    });
+
+fetch(urlstats, {
+    method: 'GET',
+    headers: {
+        'Content-Type': 'application/json'
+    }
+})
+    .then(response => response.json())
+    .then(data => {
+        var tableToWrite = '<table class="table table-hover table-bordered table-striped mb-0" id="showedblueprints">' +
+            '<thead>' +
+            '<tr>' +
+            '<th>#</th>' +
+            '<th>Date</th>' +
+            '<th>Exp</th>' +
+            '<th>Score</th>' +
+            '<th>Type</th>' +
+            '</tr>' +
+            '</thead>' +
+            '<tbody>';
+        console.log(data);
+        console.log(data.length);
+        for (var i in data){
+            tableToWrite +='<tr><td class="name">'+ i +'</td>' +
+                            '<td class="name">'+ data[i].date +'</td>' +
+                            '<td class="name">'+ data[i].exp +'</td>' +
+                            '<td class="name">'+ data[i].score +'</td>' +
+                            '<td class="name">'+ data[i].type +'</td></tr>';
+        }
+        tableToWrite += '</tbody></table>';
+        console.log(tableToWrite);
+        var htmlstatstable = document.getElementById('statstablecontainerid');
+        htmlstatstable.innerHTML = tableToWrite;
     });
 
 $('.genericbtn').click(function(){

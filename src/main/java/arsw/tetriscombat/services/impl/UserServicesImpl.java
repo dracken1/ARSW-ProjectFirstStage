@@ -47,17 +47,12 @@ public class UserServicesImpl implements GameServices {
     public void createElement(Object objeto) {
         User user = (User) objeto;
         Bridge bg = new Bridge();
-        //TODO Añadir este return res
         
         Boolean res = bg.addUser(user.getName(),
                 user.getLastname(),
                 user.getUsername(),
                 user.getEmail(),
                 user.getPassword());
-
-        //! Change this
-        System.out.println("res: " + res);
-        //return res;        
     }
 
     @Override
