@@ -65,8 +65,6 @@ var datosDosJugadores = function (tabla) {
         //alert("id de sala = "+salaId);
         var cantidadJudadores = salaDescripcion.cantidadJugadores;
         var jugadoresActuales = salaDescripcion.jugadoresActuales;
-        //alert("jugadores = "+cantidadJudadores);
-        //alert("activosJogadores = "+ jugadoresActuales);
         jugadoresActuales.map(function (jugador){
             if(cantidadJudadores==2) {
                 if (jugador[0] == usuarioJSON.username) {
@@ -76,25 +74,30 @@ var datosDosJugadores = function (tabla) {
                     document.getElementById("Player").innerHTML = "Local Player: "+jugador[1];
                     document.getElementById("Opponent").innerHTML = "Opponent: "+jugador[0];
                 }
+
+
                 let timerInterval
+
                 Swal.fire({
                     title: 'Get Ready!',
-                    html: 'The game will start in <b></b> seconds.',
+                    html: 'The game will start in <b style="font-size: 24px; color:#60000d;"></b> seconds.',
                     timer: 3000,
                     timerProgressBar: true,
                     onBeforeOpen: () => {
+                        //var secs = timerInterval/1000;
                         Swal.showLoading()
                         timerInterval = setInterval(() => {
                             Swal.getContent().querySelector('b')
-                                .textContent = Swal.getTimerLeft()
+                                .textContent = Math.round(Swal.getTimerLeft()/1000)+1
                         }, 1000)
                     },
                     onClose: () => {
-                        clearInterval(timerInterval),play()
+                        clearInterval(timerInterval),play();
+                        document.getElementById("playerMusic").play();
                     }
                 }).then((result) => {
                     if (
-                        /* Read more about handling dismissals below */
+                         //Read more about handling dismissals below
                         result.dismiss === Swal.DismissReason.timer
                     ) {
                         console.log('I was closed by the timer') // eslint-disable-line
@@ -169,6 +172,43 @@ var datosDosJugadores = function (tabla) {
 //-------------------------------------------------------------------------
 // base helper methods
 //-------------------------------------------------------------------------
+
+function Sound(source, volume, loop)
+{
+    this.source = source;
+    this.volume = volume;
+    this.loop = loop;
+    var son;
+    this.son = son;
+    this.finish = false;
+    this.stop = function()
+    {
+        document.body.removeChild(this.son);
+    }
+    this.start = function()
+    {
+        if (this.finish) return false;
+        this.son = document.createElement("embed");
+        this.son.setAttribute("src", this.source);
+        this.son.setAttribute("hidden", "true");
+        this.son.setAttribute("volume", this.volume);
+        this.son.setAttribute("autostart", "true");
+        this.son.setAttribute("loop", this.loop);
+        document.body.appendChild(this.son);
+    }
+    this.remove=function()
+    {
+        document.body.removeChild(this.son);
+        this.finish = true;
+    }
+    this.init = function(volume, loop)
+    {
+        this.finish = false;
+        this.volume = volume;
+        this.loop = loop;
+    }
+}
+
 function get(id){
     return document.getElementById(id);
 }
@@ -443,7 +483,7 @@ function getCookie(name) {
     return (result === null) ? null : result[1];
 }
 
-function play() { hide('start'); reset();          playing = true;  }
+function play() { reset();          playing = true;  }
 function lose() {
     //show('start');
     setVisualScore(); playing = false; flag_lose=true;
