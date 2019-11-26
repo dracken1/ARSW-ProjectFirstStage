@@ -47,7 +47,7 @@ $("#btnlogin").click(function(){
            })
    });
 
-$("#btnregistry").click(function(){
+/*$("#btnregistry").click(function(){
    var firstname = document.getElementById('rfname').value;
    var lastname = document.getElementById('rlname').value;
    var username = document.getElementById('rusername').value;
@@ -69,9 +69,70 @@ $("#btnregistry").click(function(){
                alert("Something went wrong!");
            }
        })
-});
+});*/
 
+var signinfunction = function(){
+    return {
+        signin: function () {
+            var usernametocheck = document.getElementById('rusername').value;
+            var emailtocheck = document.getElementById('remail').value;
+            console.log(emailtocheck);
+            var url = '/session/' + usernametocheck;
+               fetch(url, {
+                   method: 'GET',
+                   headers: {
+                       'Content-Type': 'application/json'
+                   }
+               })
+               .then(response => response.json())
+               .then(data => {
+                   console.log("duplicated username: " + data);
+                   if(data === true){
+                        alert("Username already exists!");
+                   } else{
 
+                        var url2 = '/session/user/' + emailtocheck;
+                           fetch(url2, {
+                               method: 'GET',
+                               headers: {
+                                   'Content-Type': 'application/json'
+                               }
+                           })
+                           .then(response2 => response2.json())
+                           .then(data2 => {
+                               console.log("Used email: " + data2);
+                               if(data2 === true){
+                                    alert("Email already in use!");
+                               }else{
+                                    var firstname = document.getElementById('rfname').value;
+                                       var lastname = document.getElementById('rlname').value;
+                                       var username = document.getElementById('rusername').value;
+                                       var email = document.getElementById('remail').value;
+                                       var password = document.getElementById('rpassword').value;
+                                       var usertosend = new User(firstname,lastname,username,email,password);
+                                       var url3 = '/session/add';
+                                           fetch(url3, {
+                                               method: 'POST',
+                                               headers: {
+                                                   'Content-Type': 'application/json'
+                                               },
+                                               body:JSON.stringify(usertosend)
+                                           })
+                                           .then(response => {
+                                               if(response.ok){
+                                                    alert("You´ve succesfully created your account!")
+                                                   window.location.href = "home.html";
+                                               } else {
+                                                   alert("Something went wrong!");
+                                               }
+                                           })
+                               }
+                           })
+                   }
+               })
+        }
+    }
+}
 
 
 

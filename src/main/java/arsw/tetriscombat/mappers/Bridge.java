@@ -43,6 +43,45 @@ public class Bridge{
         }
         return user;
     }
+
+    public boolean checkForDuplicatedUsername(String username){
+        String SQL = "SELECT COUNT(*) AS total FROM usuario WHERE username = ?";
+        try {
+            Connection conn = connection();
+            PreparedStatement pstmt = conn.prepareStatement(SQL);
+            pstmt.setString(1, username);
+            ResultSet rs = pstmt.executeQuery();
+            rs.next();
+            boolean retorno = rs.getInt("total") >= 1;
+            conn.close();
+            pstmt.close();
+            rs.close();
+            return retorno;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean checkForUsedEmail(String email){
+        String SQL = "SELECT COUNT(*) AS total FROM usuario WHERE correo = ?";
+        try {
+            Connection conn = connection();
+            PreparedStatement pstmt = conn.prepareStatement(SQL);
+            pstmt.setString(1, email);
+            ResultSet rs = pstmt.executeQuery();
+            rs.next();
+            System.out.println("conteo: " + rs.getInt("total"));
+            boolean retorno = rs.getInt("total") >= 1;
+            conn.close();
+            pstmt.close();
+            rs.close();
+            return retorno;
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
     
     public User getUserByEmail(String username){
         String SQL = "SELECT nombre, apellido, username, correo, contraseña, rol, nivel FROM usuario WHERE username = ?";

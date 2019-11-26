@@ -43,6 +43,16 @@ public class UserServicesImpl implements GameServices {
         }
     }
 
+    public boolean checkduplicated(String user){
+        Bridge bg = new Bridge();
+        return bg.checkForDuplicatedUsername(user);
+    }
+
+    public  boolean checkUsedEmail(String email){
+        Bridge bg = new Bridge();
+        return bg.checkForUsedEmail(email);
+    }
+
     @Override
     public void createElement(Object objeto) {
         User user = (User) objeto;
