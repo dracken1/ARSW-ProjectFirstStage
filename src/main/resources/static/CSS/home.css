@@ -157,7 +157,7 @@ body {
     padding: 10px;
 
     -webkit-background-size: cover;    
-    background-image: url(../images/Background/PlainBackground.png);       
+    background-image: url(../images/Background/PlainBackground.jpg);       
     background-color: #292826;
     background-position: center;
     background-size: cover;
@@ -191,7 +191,7 @@ body {
     padding: 10px;
     
     -webkit-background-size: cover;    
-    background-image: url(../images/Background/WrinkledBackground.png);
+    background-image: url(../images/Background/WrinkledBackground.jpg);
     background-color: #292826;
     background-position: center;
     background-size: cover;

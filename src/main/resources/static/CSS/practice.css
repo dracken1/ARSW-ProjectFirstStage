@@ -24,13 +24,13 @@ body{
     float: right;
     display: inline-block;
     vertical-align: top;
-    background-image: url(/images/Background/WrinkledBackground.png);
+    background-image: url(/images/Background/WrinkledBackground.jpg);
     background-color: #0d1113;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /*background: url(images/Background/WrinkledBackground.png);*/
+    /*background: url(images/Background/WrinkledBackground.jpg);*/
     box-shadow: 7px 7px 7px #42403c;
     border: 2px solid #333;
     border-radius: 5px;

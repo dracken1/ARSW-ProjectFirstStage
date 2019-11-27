@@ -134,7 +134,7 @@ Igualmente, en la partida por tiempo, ganará quién al finalizar el tiempo de l
 
 ### **Tablero de Juego** (construyendo)
 
-![Imagenes](images/Documentation/Sections/tetris.png)
+![Imagenes](images/Documentation/Sections/tetris.PNG)
 
 El Tablero de Juego se compone de una region vacia donde las fichas van bajando a medida que el tiempo avanza, se muestran además estadisticas propias de la partida, como la puntuación, el nombre del jugador y el tiempo de juego restante de la partida.
 
