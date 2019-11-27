@@ -9,8 +9,8 @@ var CombatApp = function(){
             var urlString = window.location.href;
             var url = new URL(urlString);
             salaid = url.searchParams.get("id");
-            window.location.href = "home.html";
             stompClient.send("/app/abandonarSala." + salaid, {}, JSON.stringify(usuarioJSON));
+            window.location.href = "home.html";
         }
     }
 }
@@ -125,7 +125,8 @@ var datosDosJugadores = function (tabla) {
     stompClient.connect({}, function (frame) {
         console.log('Connected: ' + frame);
         stompClient.send("/app/usuariosEnSala."+salaid, {},JSON.stringify(usuarioJSON));
-        stompClient.subscribe('/topic/salas',function (eventbody) {
+
+        stompClient.subscribe('/topic/usuariosEnSala'+salaid,function (eventbody) {
             getJugadoresSala(salaid);
         });
         stompClient.subscribe('/topic/abandonarSala'+salaid, function (eventbody) {
