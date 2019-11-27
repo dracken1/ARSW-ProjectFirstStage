@@ -20,14 +20,14 @@ public class SocketController {
     @MessageMapping("/nuevaSala")
     public void nuevaSala() throws Exception {
         SalasServicesImpl.createElement(null);
-        msgt.convertAndSend("/topic/nuevaSala",SalasServicesImpl.listaSalas().toString());
+        msgt.convertAndSend("/topic/salas",SalasServicesImpl.listaSalas().toString());
     }
 
     @MessageMapping("/unirseASala.{salaId}") // quizas toque cambiar a string el salaId
     public void unirseASala(@DestinationVariable int salaId,String username) throws Exception {
         JSONObject usuario = new JSONObject(username);
         SalasServicesImpl.unirUsuarioASala(usuario.getString("username"),salaId);
-        msgt.convertAndSend("/topic/unirseASala"+salaId,SalasServicesImpl.listaSalas().toString());
+        msgt.convertAndSend("/topic/salas",SalasServicesImpl.listaSalas().toString());
     }
 
     @MessageMapping("/usuariosEnSala.{salaId}") // quizas toque cambiar a string el salaId
