@@ -1,20 +1,19 @@
+// ID sala
+var salaid;
+
 var CombatApp = function(){
     return {
         abandonarSala: function () {
             var username = getCookie("username");
             var usuarioJSON = {username: username};
-            let params = new URLSearchParams(location.search);
-            var salaId = params.get('id');
-            stompClient.send("/app/abandonarSala." + salaId, {}, JSON.stringify(usuarioJSON));
-            stompClient.subscribe('/topic/salas', function (eventbody) {
-                window.location.href = "home.html";
-            });
+            var urlString = window.location.href;
+            var url = new URL(urlString);
+            salaid = url.searchParams.get("id");
+            window.location.href = "home.html";
+            stompClient.send("/app/abandonarSala." + salaid, {}, JSON.stringify(usuarioJSON));
         }
     }
 }
-
-// ID sala
-var salaid;
 
 function getCookie(name) {
     var regexp = new RegExp("(?:^" + name + "|;\s*"+ name + ")=(.*?)(?:;|$)", "g");
@@ -75,7 +74,6 @@ var datosDosJugadores = function (tabla) {
                     document.getElementById("Opponent").innerHTML = "Opponent: "+jugador[0];
                 }
 
-
                 let timerInterval
 
                 Swal.fire({
@@ -129,6 +127,9 @@ var datosDosJugadores = function (tabla) {
         stompClient.send("/app/usuariosEnSala."+salaid, {},JSON.stringify(usuarioJSON));
         stompClient.subscribe('/topic/salas',function (eventbody) {
             getJugadoresSala(salaid);
+        });
+        stompClient.subscribe('/topic/abandonarSala'+salaid, function (eventbody) {
+            getInformacionSala(salaid);
         });
         stompClient.subscribe('/topic/scorePlayer'+ salaid, function (eventbody) {
             var extract = JSON.parse(eventbody.body);
