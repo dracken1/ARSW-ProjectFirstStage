@@ -2,6 +2,7 @@ package arsw.tetriscombat.mappers;
 import arsw.tetriscombat.entities.Stats;
 import arsw.tetriscombat.entities.User;
 import java.sql.*;
+import java.util.ArrayList;
 
 public class Bridge{
     private String username = "vtwxlbqlglihsp";
@@ -41,6 +42,45 @@ public class Bridge{
             e.printStackTrace();
         }
         return user;
+    }
+
+    public boolean checkForDuplicatedUsername(String username){
+        String SQL = "SELECT COUNT(*) AS total FROM usuario WHERE username = ?";
+        try {
+            Connection conn = connection();
+            PreparedStatement pstmt = conn.prepareStatement(SQL);
+            pstmt.setString(1, username);
+            ResultSet rs = pstmt.executeQuery();
+            rs.next();
+            boolean retorno = rs.getInt("total") >= 1;
+            conn.close();
+            pstmt.close();
+            rs.close();
+            return retorno;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean checkForUsedEmail(String email){
+        String SQL = "SELECT COUNT(*) AS total FROM usuario WHERE correo = ?";
+        try {
+            Connection conn = connection();
+            PreparedStatement pstmt = conn.prepareStatement(SQL);
+            pstmt.setString(1, email);
+            ResultSet rs = pstmt.executeQuery();
+            rs.next();
+            System.out.println("conteo: " + rs.getInt("total"));
+            boolean retorno = rs.getInt("total") >= 1;
+            conn.close();
+            pstmt.close();
+            rs.close();
+            return retorno;
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return false;
     }
     
     public User getUserByEmail(String username){
@@ -97,29 +137,57 @@ public class Bridge{
         return false;
     }
 
-    public Stats getUserStatistics( String username){
-        String SQL = "SELECT fecha, experiencia,  puntaje, tipo FROM estadisticas WHERE user = ?";
-        Stats stats = new Stats();
+    public ArrayList<Stats> getUserStatistics( String username){
+        String SQL = "SELECT fecha, experiencia,\"user\",  puntaje, tipo FROM estadisticas WHERE \"user\" = ?";
+        ArrayList<Stats> statslist = new ArrayList<>();
         try {
             Connection conn = connection();
             PreparedStatement pstmt = conn.prepareStatement(SQL);
             pstmt.setString(1,username);
             ResultSet rs = pstmt.executeQuery();
-            rs.next();
-            if(rs.absolute(1)){
+            while(rs.next()) {
+                Stats stats = new Stats();
                 stats.setDate(rs.getString("fecha"));
                 stats.setExp(rs.getString("experiencia"));
+                stats.setUsername(rs.getString("user"));
                 stats.setScore(rs.getInt("puntaje"));
                 stats.setType(rs.getString("tipo"));
+                statslist.add(stats);
+            }
+            conn.close();
+            pstmt.close();
+            rs.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return statslist;
+    }
+
+    public boolean addStat(Stats stat){
+        String SQL = "INSERT INTO estadisticas (fecha, experiencia, \"user\", puntaje, tipo,statsid) VALUES (?,?,?,?,?,?)";
+        String rows = "SELECT COUNT(*) AS total FROM estadisticas";
+        try {
+            Connection conn = connection();
+            PreparedStatement pstmt = conn.prepareStatement(SQL);
+            PreparedStatement pstmt2 = conn.prepareStatement(rows);
+            ResultSet rs = pstmt2.executeQuery();
+            pstmt.setString(1,stat.getDate());
+            pstmt.setString(2,stat.getExp());
+            pstmt.setString(3,stat.getUsername());
+            pstmt.setFloat(4,stat.getScore());
+            pstmt.setString(5,stat.getType());
+            rs.next();
+            pstmt.setFloat(6,rs.getInt("total")+1);
+            if(pstmt.executeUpdate() == 1){
                 conn.close();
                 pstmt.close();
-                rs.close();
+                return true;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return stats;
+        return false;
     }
 
 }

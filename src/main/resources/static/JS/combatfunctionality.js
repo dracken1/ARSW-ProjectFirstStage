@@ -1,20 +1,19 @@
+// ID sala
+var salaid;
+
 var CombatApp = function(){
     return {
         abandonarSala: function () {
             var username = getCookie("username");
             var usuarioJSON = {username: username};
-            let params = new URLSearchParams(location.search);
-            var salaId = params.get('id');
-            stompClient.send("/app/abandonarSala." + salaId, {}, JSON.stringify(usuarioJSON));
-            stompClient.subscribe('/topic/salas', function (eventbody) {
-                window.location.href = "home.html";
-            });
+            var urlString = window.location.href;
+            var url = new URL(urlString);
+            salaid = url.searchParams.get("id");
+            stompClient.send("/app/abandonarSala." + salaid, {}, JSON.stringify(usuarioJSON));
+            window.location.href = "home.html";
         }
     }
 }
-
-// ID sala
-var salaid;
 
 function getCookie(name) {
     var regexp = new RegExp("(?:^" + name + "|;\s*"+ name + ")=(.*?)(?:;|$)", "g");
@@ -65,8 +64,6 @@ var datosDosJugadores = function (tabla) {
         //alert("id de sala = "+salaId);
         var cantidadJudadores = salaDescripcion.cantidadJugadores;
         var jugadoresActuales = salaDescripcion.jugadoresActuales;
-        //alert("jugadores = "+cantidadJudadores);
-        //alert("activosJogadores = "+ jugadoresActuales);
         jugadoresActuales.map(function (jugador){
             if(cantidadJudadores==2) {
                 if (jugador[0] == usuarioJSON.username) {
@@ -76,6 +73,35 @@ var datosDosJugadores = function (tabla) {
                     document.getElementById("Player").innerHTML = "Local Player: "+jugador[1];
                     document.getElementById("Opponent").innerHTML = "Opponent: "+jugador[0];
                 }
+
+                let timerInterval
+
+                Swal.fire({
+                    title: 'Get Ready!',
+                    html: 'The game will start in <b style="font-size: 24px; color:#60000d;"></b> seconds.',
+                    timer: 3000,
+                    timerProgressBar: true,
+                    onBeforeOpen: () => {
+                        //var secs = timerInterval/1000;
+                        Swal.showLoading()
+                        timerInterval = setInterval(() => {
+                            Swal.getContent().querySelector('b')
+                                .textContent = Math.round(Swal.getTimerLeft()/1000)+1
+                        }, 1000)
+                    },
+                    onClose: () => {
+                        clearInterval(timerInterval),play(),
+                        document.getElementById("playerMusic").play();
+                    }
+                }).then((result) => {
+                    if (
+                         //Read more about handling dismissals below
+                        result.dismiss === Swal.DismissReason.timer
+                    ) {
+                        console.log('I was closed by the timer') // eslint-disable-line
+                    }
+                })
+
             }
         })
 
@@ -83,8 +109,6 @@ var datosDosJugadores = function (tabla) {
 };
 //Start STOMP socket before page loads
 (function(){
-    //alert("funca");
-    //alert(getCookie("username"));
     var urlString = window.location.href;
     var url = new URL(urlString);
     salaid = url.searchParams.get("id");
@@ -101,11 +125,14 @@ var datosDosJugadores = function (tabla) {
     stompClient.connect({}, function (frame) {
         console.log('Connected: ' + frame);
         stompClient.send("/app/usuariosEnSala."+salaid, {},JSON.stringify(usuarioJSON));
-        stompClient.subscribe('/topic/salas',function (eventbody) {
+
+        stompClient.subscribe('/topic/usuariosEnSala'+salaid,function (eventbody) {
             getJugadoresSala(salaid);
         });
+        stompClient.subscribe('/topic/abandonarSala'+salaid, function (eventbody) {
+            getInformacionSala(salaid);
+        });
         stompClient.subscribe('/topic/scorePlayer'+ salaid, function (eventbody) {
-            //alert("score");
             var extract = JSON.parse(eventbody.body);
             if(!(extract.ignore === getCookie("username"))){
                 document.getElementById("spscore").innerHTML = ("00000" + Math.floor(extract.score)).slice(-5);
@@ -136,12 +163,54 @@ var datosDosJugadores = function (tabla) {
                 drawNextOpponent(extract.type,extract.padding,extract.dir);
             }
         });
-
+        stompClient.subscribe('/topic/drawPower'+ salaid, function (eventbody) {
+            var extract = JSON.parse(eventbody.body);
+            if(!(extract.ignore === getCookie("username"))){
+                execPower(extract.power);
+            }
+        });
     });
 })();
 //-------------------------------------------------------------------------
 // base helper methods
 //-------------------------------------------------------------------------
+
+function Sound(source, volume, loop)
+{
+    this.source = source;
+    this.volume = volume;
+    this.loop = loop;
+    var son;
+    this.son = son;
+    this.finish = false;
+    this.stop = function()
+    {
+        document.body.removeChild(this.son);
+    }
+    this.start = function()
+    {
+        if (this.finish) return false;
+        this.son = document.createElement("embed");
+        this.son.setAttribute("src", this.source);
+        this.son.setAttribute("hidden", "true");
+        this.son.setAttribute("volume", this.volume);
+        this.son.setAttribute("autostart", "true");
+        this.son.setAttribute("loop", this.loop);
+        document.body.appendChild(this.son);
+    }
+    this.remove=function()
+    {
+        document.body.removeChild(this.son);
+        this.finish = true;
+    }
+    this.init = function(volume, loop)
+    {
+        this.finish = false;
+        this.volume = volume;
+        this.loop = loop;
+    }
+}
+
 function get(id){
     return document.getElementById(id);
 }
@@ -190,7 +259,7 @@ var KEY = { ESC: 27, SPACE: 32, LEFT: 37, UP: 38, RIGHT: 39, DOWN: 40 },
     ctxopponent = canvasopponent.getContext('2d'),
     ucanvasopponent = get('upcomingOpponent'),
     uctxopponent = ucanvasopponent.getContext('2d');
-    speed = { start: 0.6, decrement: 0.05, min: 0.1 }, // how long before piece drops by 1 row (seconds)
+    speed = { start: 0.6, decrement: 0.02, min: 0.0 }, // how long before piece drops by 1 row (seconds)
     nx = 10, // width of tetris court (in blocks)
     ny = 20, // height of tetris court (in blocks)
     nu = 5;  // width/height of upcoming preview (in blocks)
@@ -367,14 +436,16 @@ function keydown(ev) {
             case KEY.UP:     actions.push(DIR.UP);    handled = true; break;
             case KEY.DOWN:   actions.push(DIR.DOWN);  handled = true; break;
             case KEY.ESC:    lose();                  handled = true; break;
+            case KEY.SPACE:  bajar();                 handled = true; break;
         }
     }
+    /**
     else if (ev.keyCode == KEY.SPACE) {
         //if (flag_lose!=true) {
             play();
         //}
         handled = true;
-    }
+    }*/
     if (handled)
         ev.preventDefault(); // prevent arrow keys from scrolling the page (supported in IE9+ and all other browsers)
 }
@@ -382,11 +453,43 @@ function keydown(ev) {
 //-------------------------------------------------------------------------
 // GAME LOGIC
 //-------------------------------------------------------------------------
+class Stat{
+    constructor(date,exp,username,score,type){
+        this.date = date;
+        this.exp = exp;
+        this.username = username;
+        this.score = score;
+        this.type = type;
+    }
+}
 
-function play() { hide('start'); reset();          playing = true;  }
+function addstat() {
+    var stattosend = new Stat(new Date(),100,getCookie("username"),score,"Multiplayer");
+    var statsurl = '/stats/stat';
+    fetch(statsurl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body:JSON.stringify(stattosend)
+    })
+        .then(response => {
+            if(!(response.ok)) {
+                alert("Something went wrong updating your stats!");
+            }
+        })
+}
+function getCookie(name) {
+    var regexp = new RegExp("(?:^" + name + "|;\s*"+ name + ")=(.*?)(?:;|$)", "g");
+    var result = regexp.exec(document.cookie);
+    return (result === null) ? null : result[1];
+}
+
+function play() { reset(); playing = true;  }
 function lose() {
     //show('start');
     setVisualScore(); playing = false; flag_lose=true;
+    addstat();
 }
 function setVisualScore(n)      { vscore = n || score; invalidateScore(); }
 function setScore(n)            { score = n; setVisualScore(n);  }
@@ -404,6 +507,19 @@ function clearBlocks_op()          { blocks_op = []; invalidateOpponent(); }
 function clearActions()         { actions = []; }
 function setCurrentPiece(piece) { current = piece || randomPiece(); invalidate();     }
 function setNextPiece(piece)    { next    = piece || randomPiece(); invalidateNext(); }
+
+function bajar(){
+var y;
+    for(y = current.y ; y<ny ; y++) {
+        if (unoccupied(current.type, current.x, y, current.dir)) {
+            current.y = y;
+        }
+        else {
+            invalidate();
+            break;
+        }
+    }
+}
 
 function reset() {
     dt = 0;
@@ -521,6 +637,12 @@ function removeLines() {
     if (n > 0) {
         addRows(n);
         addScore(100*Math.pow(2,n-1)); // 1: 100, 2: 200, 3: 400, 4: 800
+        if (playing) {
+            stompClient.send("/topic/drawPower" + salaid, {}, JSON.stringify({
+                power: n,
+                ignore: getCookie("username")
+            }));
+        }
     }
 }
 
@@ -547,6 +669,15 @@ function removeLine(n) {
             setBlock(x, y, (y == 0) ? null : getBlock(x, y-1));
     }
 }
+
+function execPower(n) {
+    switch(n) {
+        case 2: setCurrentPiece(randomPiece()); break; //Cambio la figura del oponente
+        case 3: bajar(); break; //Bajo la figura del oponente
+        case 4: addScore(score); //Duplico el score
+    }
+}
+
 
 function removeLineOpponent(n) {
     var x, y;

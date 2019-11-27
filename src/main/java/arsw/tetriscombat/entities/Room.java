@@ -29,10 +29,10 @@ public class Room implements Serializable{
         for(int i=0;i<usuariosEnSala.size();i++){
             if(usuariosEnSala.get(i).equals(username)){
                 usuariosEnSala.remove(i);
-                System.out.println("EL usuario "+username+" ha abandonado la sala");
+                //System.out.println("EL usuario "+username+" ha abandonado la sala");
             }
-            System.out.println("Usuarios activos en sala...");
-            System.out.println(usuariosEnSala);
+            //System.out.println("Usuarios activos en sala...");
+            //System.out.println(usuariosEnSala);
         }
     }
 
@@ -47,16 +47,16 @@ public class Room implements Serializable{
     public void addUsuarios(String usuario){
         if(usuariosEnSala.size()<2){
             if(!usuariosEnSala.contains(usuario)){
-                System.out.println("El usuario se unió a la sala...");
+                //System.out.println("El usuario se unió a la sala...");
                 usuariosEnSala.add(usuario);
             }else{
-                System.out.println("El usuario ya se encuentra en la sala.");
+                //System.out.println("El usuario ya se encuentra en la sala.");
             }
 
         }else{
-            System.out.println("La sala está llena, lo sentimos! :(");
+           //System.out.println("La sala está llena, lo sentimos! :(");
         }
-        System.out.println(usuariosEnSala);
+        //System.out.println(usuariosEnSala);
 
 
     }

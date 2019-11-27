@@ -5,12 +5,14 @@ public class Stats {
     private String exp;
     private float score;
     private String type;
+    private String username;
 
     public Stats(){}
 
-    public Stats(String date, String exp, float score, String type){
+    public Stats(String date, String exp, float score, String type,String username){
         this.date = date;
         this.exp = exp;
+        this.username = username;
         this.score = score;
         this.type = type;
     }
@@ -45,5 +47,13 @@ public class Stats {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getUsername() {return username;}
+
+    public void setUsername(String username) {this.username = username;}
+
+    public  String toString(){
+        return "date: " + date + ", exp: " + exp + ", score: " + score + ", type: " + type;
     }
 }

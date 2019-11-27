@@ -165,7 +165,7 @@ img {
     transition: all 0.5s ease;
     transition-property: background-color, width ;
 }
-.form-container-sigin input[type="button"]{
+.form-container-sigin input[type="submit"]{
     border: none;
     background: #3c2492;
     width: 35%;
@@ -188,7 +188,7 @@ img {
     background: #304fef;
 }
 
-.form-container-sigin input[type="button"]:hover{
+.form-container-sigin input[type="submit"]:hover{
     border: none;
     width: 100%;
     border-radius: 5px;

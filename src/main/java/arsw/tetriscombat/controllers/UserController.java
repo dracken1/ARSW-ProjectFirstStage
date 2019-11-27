@@ -18,33 +18,29 @@ public class UserController {
 
     UserServicesImpl usi = new UserServicesImpl();
 
-    @RequestMapping(method = RequestMethod.GET, path="{prueba}")
-    public ResponseEntity<?> manejadorGetRecursoBlueprints() {
+    @RequestMapping(method = RequestMethod.GET, path = "{username}")
+    public ResponseEntity<?> verifyDuplicatedUsername(@PathVariable("username") String username) {
         try {
-            String res = "HELLO, WORLD!";
+            boolean res = usi.checkduplicated(username);
             return new ResponseEntity<>(res, HttpStatus.ACCEPTED);
         } catch (Exception ex) {
             Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
-            return new ResponseEntity<>("Error", HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>("ERROR 404", HttpStatus.NOT_FOUND);
         }
     }
 
-    // GET JUST USER, NOT HTTP CODE
-    @RequestMapping(method = RequestMethod.GET, path = "{user}")
-    public void getUserByEmail(@PathVariable("user") String user) {
+    @RequestMapping(method = RequestMethod.GET, path = "/user/{email}")
+    public ResponseEntity<?> verifyLinekdEmail(@PathVariable("email") String email) {
         try {
-            //! Revisar integracion de este con sesión
-            //Bridge bg = new Bridge();
-            //Boolean res = bg.authentication(user, password);
-            //return new ResponseEntity<>(res, HttpStatus.ACCEPTED);
-            
+            boolean res = usi.checkUsedEmail(email);
+            return new ResponseEntity<>(res, HttpStatus.ACCEPTED);
         } catch (Exception ex) {
             Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
-            //return new ResponseEntity<>("ERROR 404", HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>("ERROR 404", HttpStatus.NOT_FOUND);
         }
     }
-    
-    @RequestMapping(method = RequestMethod.GET)
+
+    /*@RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<?> verifySession(@PathVariable("user") String user) {
         try {
             Bridge bg = new Bridge();
@@ -59,7 +55,7 @@ public class UserController {
             Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>("ERROR 404", HttpStatus.NOT_FOUND);
         }
-    }
+    }*/
     // DAO TERMINA DE CONSULTAR ACA EN CONTROLLER
 
     @RequestMapping(method = RequestMethod.GET, path = "{user}/{password}")

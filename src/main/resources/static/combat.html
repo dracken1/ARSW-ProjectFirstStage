@@ -10,16 +10,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
-    <!--<script type="text/javascript">
-        $(document).ready(function () {
-            combatApp().actualizarTetris();
-        });
-    </script>-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
     <link rel="icon" type="image/x-icon" href="images/Logo/Favicon/favicon.ico" />
     <script src="JS/session.js"></script>
 </head>
 
 <body>
+    <audio id="playerMusic" src="./music/tetris.mp3" loop="loop"></audio>
     <div class="center">
         <div class="center">
             <button class="genericbtn" id="exitButton" onclick="CombatApp().abandonarSala()">Exit Room</button>
@@ -39,7 +37,6 @@
                     </div>
                     <div id="mpstatscont">
                         <div id="alertcont">
-                            <p id="start"><a href="javascript:play();">Press "space" to Play.</a></p>
                         </div>
                         <div id="scorecont">
                             <p><b>SCORE:</b> <span id="score">00000</span></p>
@@ -79,6 +76,7 @@
             </div>
         </div>
     </div>
+
     <script src="JS/stats.js"></script>
     <script src="JS/combatfunctionality.js"></script>
 </body>
