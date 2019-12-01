@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
     <link rel="icon" type="image/x-icon" href="images/Logo/Favicon/favicon.ico" />
-    <script src="JS/session.js"></script>
+    <!--<script src="JS/session.js"></script>-->
 </head>
 
 <body>
@@ -45,6 +45,13 @@
                             <p><b>ROWS:</b> <span id="rows">0</span></p>
                         </div>
                     </div>
+                    <div class="powerscontainer" id="powerscontainerid">
+
+                    </div>
+                    <!--<button onclick="showPlayerExecPower(2,1)">pruebita2</button>
+                    <button onclick="showPlayerExecPower(3,1)">pruebita3</button>
+                    <button onclick="showPlayerExecPower(4,1)">pruebita4</button>-->
+
                 </div>
             </div>
             <div id="vsimage">
@@ -69,12 +76,19 @@
                     <div id="upcomingtextOpponent">
                         <span class>Upcoming <br /> Tetromino</span>
                     </div>
+                    <div class="powerscontainer" id="sppowerscontainerid">
+
+                    </div>
+                   <!-- <button onclick="showPlayerExecPower(2,2)">pruebita2</button>
+                    <button onclick="showPlayerExecPower(3,2)">pruebita3</button>
+                    <button onclick="showPlayerExecPower(4,2)">pruebita4</button>-->
                 </div>
                 <canvas id="secondplayercanvas">
                     Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
                 </canvas>
             </div>
         </div>
+
     </div>
 
     <script src="JS/stats.js"></script>

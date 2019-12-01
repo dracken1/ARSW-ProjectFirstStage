@@ -134,6 +134,7 @@ var datosDosJugadores = function (tabla) {
         });
         stompClient.subscribe('/topic/scorePlayer'+ salaid, function (eventbody) {
             var extract = JSON.parse(eventbody.body);
+            console.log(extract);
             if(!(extract.ignore === getCookie("username"))){
                 document.getElementById("spscore").innerHTML = ("00000" + Math.floor(extract.score)).slice(-5);
             }
@@ -165,9 +166,12 @@ var datosDosJugadores = function (tabla) {
         });
         stompClient.subscribe('/topic/drawPower'+ salaid, function (eventbody) {
             var extract = JSON.parse(eventbody.body);
+            console.log(extract);
             if(!(extract.ignore === getCookie("username"))){
                 execPower(extract.power);
+                showPlayerExecPower(extract.power,2);
             }
+
         });
     });
 })();
@@ -642,6 +646,8 @@ function removeLines() {
                 power: n,
                 ignore: getCookie("username")
             }));
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+            showPlayerExecPower(n,1);
         }
     }
 }
@@ -675,6 +681,112 @@ function execPower(n) {
         case 2: setCurrentPiece(randomPiece()); break; //Cambio la figura del oponente
         case 3: bajar(); break; //Bajo la figura del oponente
         case 4: addScore(score); //Duplico el score
+    }
+}
+
+function showPlayerExecPower(n,player){
+    setExecPower(n,player);
+    animateExecPower(player);
+}
+
+function setExecPower(n, player) {
+    switch (player) {
+        case 1:
+            switch (n) {
+                case 2: document.getElementById('powerscontainerid').innerText = "Switch piece!"; break;
+                case 3: document.getElementById('powerscontainerid').innerText = "Instant drop!"; break;
+                case 4: document.getElementById('powerscontainerid').innerText = "Double score!"; break;
+            }
+            break;
+        case 2:
+            switch (n) {
+                case 2: document.getElementById('sppowerscontainerid').innerText = "Switch piece!"; break;
+                case 3: document.getElementById('sppowerscontainerid').innerText = "Instant drop!"; break;
+                case 4: document.getElementById('sppowerscontainerid').innerText = "Double score!"; break;
+            }
+            break;
+    }
+}
+
+function animateExecPower(player) {
+    switch (player) {
+        case 1:
+            /*$("#powerscontainerid").stop(true,true,true);*/
+            $("#powerscontainerid").animate({height:"toggle",
+                'padding-top': "toggle",
+                'padding-bottom': "toggle",
+                opacity: "toggle"
+            },10);
+            $("#powerscontainerid").animate({
+                borderTopRightRadius: '40px',
+                borderBottomRightRadius: '40px'
+            },100);
+            $("#powerscontainerid").animate({
+                borderTopRightRadius: '40px',
+                borderBottomRightRadius: '40px',
+                left: '32.5vw'
+            },300);
+            $("#powerscontainerid").animate({
+                top: '36%'
+            },50);
+            $("#powerscontainerid").animate({
+                top: '37%'
+            },50);
+            $("#powerscontainerid").animate({
+                top: '38%'
+            },50);
+            $("#powerscontainerid").animate({
+                top: '37%'
+            },50);
+            setTimeout(function () {
+                $("#powerscontainerid").animate({height:"toggle",
+                    'padding-top': "toggle",
+                    'padding-bottom': "toggle",
+                    opacity: "toggle",
+                    borderTopRightRadius: '0px',
+                    borderBottomRightRadius: '0px',
+                    left: "10%"
+                },1);
+            },1500);
+            break;
+        case 2:
+            $("#sppowerscontainerid").animate({height:"toggle",
+                'padding-top': "toggle",
+                'padding-bottom': "toggle",
+                opacity: "toggle"
+            },10);
+            $("#sppowerscontainerid").animate({
+                borderTopLeftRadius: '40px',
+                borderBottomLeftRadius: '40px'
+            },100);
+            $("#sppowerscontainerid").animate({
+                borderTopLeftRadius: '40px',
+                borderBottomLeftRadius: '40px',
+                left: '-215%'
+            },300);
+            $("#sppowerscontainerid").animate({
+                top: '51%'
+            },50);
+            $("#sppowerscontainerid").animate({
+                top: '50%'
+            },50);
+            $("#sppowerscontainerid").animate({
+                top: '49%'
+            },50);
+            $("#sppowerscontainerid").animate({
+                top: '50%'
+            },50);
+            setTimeout(function () {
+                $("#sppowerscontainerid").animate({height:"toggle",
+                    'padding-top': "toggle",
+                    'padding-bottom': "toggle",
+                    opacity: "toggle",
+                    borderTopLeftRadius: '0px',
+                    borderBottomLeftRadius: '0px',
+                    left: "10%"
+                },1);
+            },1500);
+            break;
     }
 }
 
