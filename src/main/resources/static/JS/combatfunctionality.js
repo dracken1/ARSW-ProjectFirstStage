@@ -646,6 +646,7 @@ function removeLines() {
                 power: n,
                 ignore: getCookie("username")
             }));
+
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
             showPlayerExecPower(n,1);
         }
@@ -680,13 +681,16 @@ function execPower(n) {
     switch(n) {
         case 2: setCurrentPiece(randomPiece()); break; //Cambio la figura del oponente
         case 3: bajar(); break; //Bajo la figura del oponente
-        case 4: addScore(score); //Duplico el score
+        case 4: addScore(score); break;//Duplico el score
     }
 }
 
 function showPlayerExecPower(n,player){
-    setExecPower(n,player);
-    animateExecPower(player);
+    if(n>1){
+        setExecPower(n,player);
+        animateExecPower(player);
+    }
+
 }
 
 function setExecPower(n, player) {
