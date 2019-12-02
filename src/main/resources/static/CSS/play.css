@@ -90,7 +90,7 @@ li a:hover:not(.active) {
     float: left;
     padding: 5px 10px 0px 0px;
     border-right: 3px solid #bbb;
-    color: yellow;
+    color: #bbb;
     font-size: 10px;
     text-align: right;
 }
@@ -224,7 +224,7 @@ footer {
     color: #FFF;
     box-sizing: border-box;
     overflow: hidden;
-    font-size: 11px;
+    font-size: 12px;
     /*line-height: 100%;*/
     padding: 0 0 0 0px;
     box-sizing: border-box;

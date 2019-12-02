@@ -7,8 +7,11 @@
 body {
     -webkit-background-size: cover;
     background-size: cover;
-    font-family: Impact, Charcoal, sans-serif;
+    font-family: 'Raleway', sans-serif;
+    /*font-family: 'Bebas Neue', cursive;*/
+    /*font-family: Impact, Charcoal, sans-serif;*/
 }
+
 .headerbar {
     background-color: #7f0000;
     width: 100%;
@@ -203,9 +206,12 @@ body {
     border: none;
     border-radius: 3px;
     width: 200px;
+    color: #444;
 }
 .genericbtn:hover{
     background: #F9D342;
+    color: #cf1111;
+    font-weight: bold;
 }
 .footerbar{
     position: absolute;
@@ -402,3 +408,295 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.backImage {
+    width: 100%;
+    height: auto;
+    background-color: #444;
+    /*
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    */
+}
+
+.menuImage {
+    max-width: 100%;
+    height: auto;
+    background-color: #444;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+/*
+li a:hover:not(.active) {
+    background-color: #db2526;
+    font-weight: bold;
+    color: white;
+}
+*/
+.active {
+    background-color: #850d0d;
+    color: white;
+}
+
+.topHeader {
+    margin: auto;
+    width: auto;
+}
+
+.topNavigation { 
+    font-family: 'Bebas Neue', cursive;
+    /*position: relative;*/   
+    position: sticky;
+    top: 0;
+
+    background-color: #333;
+    overflow: hidden;
+    
+    font-size: large;
+}
+
+.topNavigation li a:hover {
+    background-color: #db2526;
+    color: black;
+    font-weight: bold;
+}
+
+.topNavigation-Left {
+    float: left;
+}
+
+.topNavigation-Center {
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.topNavigation-Right {
+    float: right;
+    text-align: right;
+}
+
+.topNavigation-Right1 {
+    position: relative;
+    float: left;
+    padding: 5px 10px 0px 0px;
+    border-right: 3px solid #bbb;
+    color: #bbb;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+    text-align: right;
+}
+
+.topNavigation-Right2 {
+    position: relative;
+    float: right; 
+    padding: 0px 20px; 
+    color: white;
+    font-size: xx-large;
+    text-align: center;  
+   
+}
+
+.topMenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border: 1px solid #111;
+}
+
+.cornerOptions {
+    padding-top: 7px;
+}
+
+
+
+
+
+
+
+
+
+.functionalitiesMenu {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    background-color: rgb(10, 3, 48);
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    font-family: 'Bebas Neue', cursive;
+    /*
+    padding: 0 8px;
+    margin: 0 -16px;
+    */
+}
+
+.playBox {
+    background-color: #bbb;
+    float: left;
+    width: 30%;
+    height: auto;
+
+    padding: 8px 8px;
+    margin: 10px 5px 10px 20px;    
+    display: block;
+    border: 2px solid black;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.controlsBox {
+    background-color: #bbb;
+    float: initial;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: auto;
+    
+    padding: 8px 8px;
+    margin: 0px 0px;    
+    display: block;
+    border: 2px solid black;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.profileBox {
+    background-color: #bbb;
+    float: right;
+    width: 30%;
+    height: auto;
+
+    padding: 8px 8px;
+    margin: 10px 20px 10px 5px;    
+    display: block;
+    border: 2px solid black;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+/*
+#imgPlayBlox {
+    width: 100%;
+}
+
+#imgControlsBlox {
+    width: 100%;
+}
+
+#imgProfileBlox {
+    width: 100%;
+}
+*/
+.buttonPro {
+    background-color: #850d0d;
+    color: white;
+    width: 100%;    
+    border-radius: 5px;
+    border: 3px solid white;    
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+    padding: 0px 8px;
+    text-align: center;
+    display: inline-block;
+    font-size: 3vw;
+    
+}
+
+.buttonPro:hover {
+    transition-duration: 0.4s;
+    background-color: #db2526;
+    color: black;
+    font-weight: bold;
+}
+
+.buttonPro:active {
+    background-color: #db2526;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+footer {
+    font-family: 'Raleway', sans-serif;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-height: 150px;
+    /*height: min-content;*/
+    background: #900;
+    color: #FFF;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size: 12px;
+    /*line-height: 100%;*/
+    padding: 0 0 0 0px;
+    box-sizing: border-box;
+}
+
+footer span.programa {
+    position: relative;
+    width: 50%;
+    height: auto;
+    float: left;    
+    padding: 40px 15px;    
+    text-align: center;
+}
+
+footer span.direccion {
+    position: relative;
+    width: 50%;
+    height: auto;
+    float: right;
+    border-left: solid #fff 1px;
+    padding: 5px 35px;
+    text-align: left;
+}

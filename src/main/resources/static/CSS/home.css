@@ -1,8 +1,9 @@
 body {
     font-family: 'Raleway', sans-serif;
+    /*font-family: 'Bebas Neue', cursive;*/
     background-image: url("../images/Background/WrinkledBackground.jpg");
     background-color: rgb(10, 3, 48);
-    /*font-family: 'Bebas Neue', cursive;*/
+    
 }
 
 li {
@@ -88,7 +89,7 @@ li a:hover:not(.active) {
     float: left;
     padding: 5px 10px 0px 0px;
     border-right: 3px solid #bbb;
-    color: yellow;
+    color: #bbb;
     font-size: 10px;
     text-align: right;
 }
