@@ -19,6 +19,16 @@
             "mainClass": "arsw.tetriscombat.main.GameApplication",
             "projectName": "app",
             "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-GameApplication<TetrisCombat-WebGame>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "arsw.tetriscombat.main.GameApplication",
+            "projectName": "TetrisCombat-WebGame",
+            "args": ""
         }
     ]
 }

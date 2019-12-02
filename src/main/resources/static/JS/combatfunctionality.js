@@ -10,7 +10,7 @@ var CombatApp = function(){
             var url = new URL(urlString);
             salaid = url.searchParams.get("id");
             stompClient.send("/app/abandonarSala." + salaid, {}, JSON.stringify(usuarioJSON));
-            window.location.href = "home.html";
+            window.location.href = "lobby.html";
         }
     }
 }

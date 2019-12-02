@@ -68,6 +68,7 @@ li a:hover:not(.active) {
 
 .topNavigation-Left {
     float: left;
+    /*font-size: 1vw;*/
 }
 
 .topNavigation-Center {
@@ -76,6 +77,7 @@ li a:hover:not(.active) {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    /*font-size: 1vw;*/
 }
 
 .topNavigation-Right {
@@ -144,10 +146,10 @@ li a:hover:not(.active) {
     */
 }
 
-.playBox {
+.onePlayerBox {
     background-color: #bbb;
     float: left;
-    width: 30%;
+    width: 45%;
     height: auto;
 
     padding: 8px 8px;
@@ -157,27 +159,10 @@ li a:hover:not(.active) {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-.controlsBox {
-    background-color: #bbb;
-    float: initial;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30%;
-    height: auto;
-    
-    padding: 8px 8px;
-    margin: 0px 0px;    
-    display: block;
-    border: 2px solid black;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-.profileBox {
+.multiPlayerBox {
     background-color: #bbb;
     float: right;
-    width: 30%;
+    width: 45%;
     height: auto;
 
     padding: 8px 8px;
@@ -239,7 +224,7 @@ footer {
     color: #FFF;
     box-sizing: border-box;
     overflow: hidden;
-    font-size: 12px;
+    font-size: 11px;
     /*line-height: 100%;*/
     padding: 0 0 0 0px;
     box-sizing: border-box;
