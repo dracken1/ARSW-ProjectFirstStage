@@ -299,4 +299,3 @@ La Alta Concurrencia de la aplicación se encuentra explicita en las caracterist
 
 > [Taiga](https://tree.taiga.io/project/dracken1-arsw-project/backlog)
   
-https://stackoverflow.com/questions/11731377/servlet-returns-http-status-404-the-requested-resource-servlet-is-not-availa
