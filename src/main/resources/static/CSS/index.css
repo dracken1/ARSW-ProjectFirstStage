@@ -195,6 +195,28 @@ img {
     transition: all 0.5s ease;
     transition-property: background-color, width ;
 }
+
+.buttonPro {
+    border: none;
+    background: #850d0d;
+    width: 35%;
+    color: azure;
+    padding: 5px 0;
+    font-weight: bold;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+    letter-spacing: 3px;
+    /*
+    font-family: Impact, Charcoal, sans-serif;
+    letter-spacing: 1px;
+    font-size: 16px;
+    */
+    cursor: pointer;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+    transition-property: background-color, width ;
+}
+
 .form-container-sigin input[type="submit"]{
     border: none;
     background: #850d0d;

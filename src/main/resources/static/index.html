@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Tetris-Combat</title>
-    <link rel="stylesheet" href="CSS/index.css"/>
+    <link rel="stylesheet" href="CSS/index.css" />
     <link rel="icon" type="image/x-icon" href="images/Logo/Favicon/favicon.ico" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -25,9 +25,19 @@
         <div class="form-container-login" id="login">
             <h2>What are you waiting to play?</h2>
             <form>
-                <input type="text" placeholder="Username" id="loginuser" name="Lusername" required>
-                <input type="password" placeholder="Password" id="loginpass" name="Lpassword" required>
-                <input type="button" value="Log In" id="btnlogin">
+                <div>
+                    <input type="text" placeholder="Username" id="loginuser" name="Lusername" required>
+                    <span style="position:absolute; right:35px;top:95px;" class="glyphicon glyphicon-user "></span>
+                </div>
+                <div>
+                    <input type="password" placeholder="Password" id="loginpass" name="Lpassword" required>
+                    <span style="position:absolute; right:35px;top:145px;" class="glyphicon glyphicon-lock"></span>
+                </div>
+                    <input type="button" value="Log In" id="btnlogin">
+                
+                <!--<input type="button" value="Log In" id="btnlogin">-->
+                <!--<i class="glyphicon glyphicon-user"></i>-->
+                <!--<p><button class="buttonPro" onclick="window.location.href='play.html'">Play</button></p>-->
             </form>
         </div>
         <div class="form-container-sigin" id="sigin">
@@ -39,9 +49,11 @@
                 <input type="email" placeholder="Email" id="remail" name="Remail" required>
                 <input type="password" placeholder="Password" id="rpassword" name="Rpassword" required>
                 <input type="submit" value="Sign Up" id="btnregistry">
+
             </form>
         </div>
     </div>
 </body>
 <script src="JS/LoginRegistry.js"></script>
+
 </html>
