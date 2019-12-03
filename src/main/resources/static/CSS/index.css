@@ -16,14 +16,23 @@ body {
     background-size: cover;
     background-repeat: repeat;
     background-attachment: fixed;
-    font-family: Impact, Charcoal, sans-serif;
+    
+
+    
+    width: 100%;
+    height: auto;
+
 }
 
 #logo {
     text-align: center;
-    margin: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
     /*width: 15%;*/
-    width: 15em;
+
+    width: 20em;
 }
 
 img {
@@ -53,6 +62,12 @@ img {
     margin: 15px auto;
 }
 .form-container-big{
+    /*font-family: Impact, Charcoal, sans-serif;*/
+    /*font-family: 'Roboto', sans-serif;*/
+    /*font-family: 'Raleway', sans-serif;*/
+    /*font-family: 'Bebas Neue', cursive;
+    font-size: 15px;*/
+
     position: relative;
     background: rgba(108, 112, 114,.7);
     color: azure;
@@ -69,27 +84,33 @@ img {
     right: 7px;
     width: 100px;
     height: 30px;
-    font-size: 12px;
     line-height: 25px;
     text-align: center;
     border: none;
     border-radius: 5px;
-    border-bottom: 2px solid azure;
+    border-bottom: 2px solid black;
     transition: all 0.5s ease;
     transition-property: color, width, background-color;
     cursor: pointer;
+    background-color: #F9D342;
+    color: black;
+    padding: 3px 0px;
+    font-weight: bold;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    letter-spacing: 2px;
 }
 
 .toggle span{
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 .toggle:hover{
     border: 1px solid azure;
     border-radius: 7px;
     width: 150px;
-    background: #0d1113;
-    color: azure;
+    background: #db2526;
+    color: white;
 }
 
 .form-container-login h2{
@@ -97,6 +118,8 @@ img {
     font-size: 20px;
     font-weight: 400;
     line-height: 1;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 35px;
 }
 
 .form-container-sigin h2{
@@ -104,6 +127,8 @@ img {
     font-size: 20px;
     font-weight: 400;
     line-height: 1;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 35px;    
 }
 
 .form-container-login input[type="text"],
@@ -152,14 +177,19 @@ img {
 
 .form-container-login input[type="button"]{
     border: none;
-    background: #3c2492;
+    background: #850d0d;
     width: 35%;
     color: azure;
-    padding: 10px 0;
-    font-weight: bolder;
+    padding: 5px 0;
+    font-weight: bold;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+    letter-spacing: 3px;
+    /*
     font-family: Impact, Charcoal, sans-serif;
     letter-spacing: 1px;
     font-size: 16px;
+    */
     cursor: pointer;
     border-radius: 3px;
     transition: all 0.5s ease;
@@ -167,14 +197,14 @@ img {
 }
 .form-container-sigin input[type="submit"]{
     border: none;
-    background: #3c2492;
+    background: #850d0d;
     width: 35%;
     color: azure;
-    padding: 10px 0;
-    font-weight: bolder;
-    font-family: Impact, Charcoal, sans-serif;
-    letter-spacing: 1px;
-    font-size: 16px;
+    padding: 5px 0;
+    font-weight: bold;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+    letter-spacing: 3px;
     cursor: pointer;
     border-radius: 3px;
     transition: all 0.5s ease;
@@ -185,14 +215,16 @@ img {
     border: none;
     width: 100%;
     border-radius: 5px;
-    background: #304fef;
+    background: #db2526;
+    color: black;
 }
 
 .form-container-sigin input[type="submit"]:hover{
     border: none;
     width: 100%;
     border-radius: 5px;
-    background: #304fef;
+    background: #db2526;
+    color: black;
 }
 
 .form-container-sigin{
