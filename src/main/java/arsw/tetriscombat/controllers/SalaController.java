@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 @RestController
@@ -25,10 +27,12 @@ public class SalaController{
         try {
             salasServices.createElement(null);
             System.out.println("SALA CREADA");
+            return new ResponseEntity<>(HttpStatus.CREATED);
         }catch (Exception ex){
             System.out.println("ERROR, NO SE HA CREADO LA SALA");
+            Logger.getLogger(SalaController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>("ERROR 403", HttpStatus.FORBIDDEN);
         }
-        return null;
     }
 
     @RequestMapping(method = RequestMethod.GET , path = "/get")
@@ -37,7 +41,8 @@ public class SalaController{
             return new ResponseEntity<>(salasServices.listaSalas().toString(),HttpStatus.OK);
         }catch (Exception ex){
             System.out.println("ERROR, NO SE HA ENCONTRADO LA SALA");
-            return null;
+            Logger.getLogger(SalaController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>("ERROR 404", HttpStatus.NOT_FOUND);
         }
     }
 
@@ -47,7 +52,8 @@ public class SalaController{
             return new ResponseEntity<>(salasServices.datosSala(salaId).toString(),HttpStatus.OK);
         }catch (Exception ex){
             System.out.println("ERROR, NO SE HA ENCONTRADO LA SALA");
-            return null;
+            Logger.getLogger(SalaController.class.getName()).log(Level.SEVERE, null, ex);
+            return new ResponseEntity<>("ERROR 404", HttpStatus.NOT_FOUND);
         }
     }
 }

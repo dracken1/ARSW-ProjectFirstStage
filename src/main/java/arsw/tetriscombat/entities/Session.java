@@ -9,6 +9,8 @@ public class Session {
     private LocalDateTime expireTime;
     private LocalDateTime initalTime;
 
+    public Session(){}
+
     public Session(User user){
         this.id = (int) Math.floor(Math.random()*2000 + 1000);
         this.user = user;
@@ -29,4 +31,8 @@ public class Session {
     public void setExpireTime(LocalDateTime expireTime) {this.expireTime = expireTime;}
     public LocalDateTime getInitalTime() {return initalTime;}
     public void setInitalTime(LocalDateTime initalTime) {this.initalTime = initalTime;}
+    @Override
+    public String toString(){
+        return "session{ id= "+id +" user= "+user+" expire="+expireTime+" initated= "+ initalTime +" }";
+    }
 }

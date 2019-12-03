@@ -68,9 +68,13 @@ public class UserController {
             //New implementation
             User res2 = usi.checkLogin(username,password);
             Session session = new Session(res2);
-            InMemorySessionPersistence.sessions.put(res2,session);
-            InMemorySessionPersistence.sessions2.put(res2.getUsername(),session);
-            return new ResponseEntity<>(session, HttpStatus.ACCEPTED);
+            if(res2.getUsername() == null){
+                return new ResponseEntity<>(session, HttpStatus.ACCEPTED);
+            } else{
+                InMemorySessionPersistence.sessions.put(res2,session);
+                InMemorySessionPersistence.sessions2.put(res2.getUsername(),session);
+                return new ResponseEntity<>(session, HttpStatus.ACCEPTED);
+            }
         } catch (Exception ex) {
             Logger.getLogger(UserController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>("ERROR 404", HttpStatus.NOT_FOUND);
