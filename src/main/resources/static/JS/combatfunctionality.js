@@ -173,6 +173,33 @@ var datosDosJugadores = function (tabla) {
             }
 
         });
+        stompClient.subscribe('/topic/gameOver'+ salaid, function (eventbody) {
+            var extract = JSON.parse(eventbody.body);
+            console.log(extract);
+            if (!(playing===true)){
+                /*alert("entra 1er if subscribe playing, playing: "+ playing);*/
+                if (!(extract.ignore === getCookie("username"))) {
+                    if (extract.score > score) {
+                        /*alert("entra if subscribe perder, playing: "+ playing);*/
+                        document.getElementById('waitwinnerlosercontid').innerText = "YOU LOSE!";
+                    } else if (extract.score < score) {
+                        /*alert("entra if subscribe ganar, playing: "+ playing);*/
+                        document.getElementById('waitwinnerlosercontid').innerText = "YOU WIN!";
+                    } else {
+                        /*alert("entra else subscribe empate, playing: "+ playing);*/
+                        document.getElementById('waitwinnerlosercontid').innerText = "DRAW!";
+                    }
+                    document.getElementById('gameoverscorecontid').innerText = "SCORE: "+score;
+                    if (!(gameoveractive===true)){
+                        animateGameOver();
+                    }
+                }
+            } else {
+                /*alert("entra else subscribe playing, playing: "+ playing);*/
+                opponent_score = extract.score;
+                opponent_waiting = extract.waiting;
+            }
+        });
     });
 })();
 //-------------------------------------------------------------------------
@@ -285,7 +312,10 @@ var dx, dy,        // pixel size of a single tetris block
     vscore,        // the currently displayed score (it catches up to score in small chunks - like a spinning slot machine)
     rows,          // number of completed rows in the current game
     step,          // how long before current piece drops by 1 row
-    flag_lose;
+    flag_lose,
+    opponent_waiting,
+    opponent_score,
+    gameoveractive;
 
 //-------------------------------------------------------------------------
 // tetris pieces
@@ -488,11 +518,30 @@ function getCookie(name) {
     var result = regexp.exec(document.cookie);
     return (result === null) ? null : result[1];
 }
-
-function play() { reset(); playing = true;  }
+function animateGameOver() {
+    $("#gameovercontainerid").animate({height:"toggle",
+        'padding-top': "toggle",
+        'padding-bottom': "toggle",
+        opacity: "toggle"
+    },1000);
+}
+function play() { reset(); playing = true; }
 function lose() {
     //show('start');
+    gameoveractive = true;
     setVisualScore(); playing = false; flag_lose=true;
+    stompClient.send("/topic/gameOver"+salaid,{},JSON.stringify({score : score, waiting: true, ignore: getCookie("username")}));
+    document.getElementById('gameoverscorecontid').innerText = "SCORE: "+score;
+    animateGameOver();
+    if(opponent_waiting === true){
+        if(opponent_score > score){
+            document.getElementById('waitwinnerlosercontid').innerText = "YOU LOSE!";
+        } else if (opponent_score < score){
+            document.getElementById('waitwinnerlosercontid').innerText = "YOU WIN!";
+        } else{
+            document.getElementById('waitwinnerlosercontid').innerText = "DRAW!";
+        }
+    }
     addstat();
 }
 function setVisualScore(n)      { vscore = n || score; invalidateScore(); }
@@ -527,6 +576,8 @@ var y;
 
 function reset() {
     dt = 0;
+    opponent_waiting = false;
+    gameoveractive = false;
     clearActions();
     clearBlocks();
     clearBlocks_op();

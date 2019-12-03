@@ -19,6 +19,17 @@
 <body>
     <audio id="playerMusic" src="./music/tetris.mp3" loop="loop"></audio>
     <div class="center">
+        <div id="gameovercontainerid">
+            <div id="gameovertextcontid" class="gameoversubcont">
+                GAME OVER!
+            </div>
+            <div id="waitwinnerlosercontid" class="gameoversubcont">
+                WAITING OPPONENT...
+            </div>
+            <div id="gameoverscorecontid" class="gameoversubcont">
+                SCORE: 546564
+            </div>
+        </div>
         <div class="center">
             <button class="genericbtn" id="exitButton" onclick="CombatApp().abandonarSala()">Exit Room</button>
         </div>

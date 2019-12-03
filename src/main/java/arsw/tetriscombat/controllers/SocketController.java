@@ -83,4 +83,10 @@ public class SocketController {
     public void drawPower(@DestinationVariable String salaId, JSONObject dPowerPlayer) throws Exception {
         msgt.convertAndSend("/topic/drawPower"+salaId,dPowerPlayer);
     }
+
+    //Recibe el jugador que acaba de acabar su juego, luego lo reenvia.
+    @MessageMapping("/gameOver.{salaId}")
+    public void gameOver(@DestinationVariable String salaId, JSONObject player) throws Exception {
+        msgt.convertAndSend("/topic/gameOver"+salaId,player);
+    }
 }
