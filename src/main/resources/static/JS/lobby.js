@@ -184,6 +184,13 @@ $("#outoptsiconid").click(function () {
     window.location.href = "index.html"
 });
 
+$("#loggingOut").click(function () {
+    document.cookie = "username=; expires=Thu, 21 Aug 1970 20:00:00 UTC; path=/;"
+    document.cookie = "; expires=Thu, 21 Aug 1970 20:00:00 UTC; path=/;"
+    console.log(document.cookie);
+    window.location.href = "index.html"
+});
+
 var dibujarLobby = function (tabla) {
     //alert(tabla);
     $("#tablaSalas tbody").empty(); // limpiar tabla
