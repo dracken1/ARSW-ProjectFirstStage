@@ -1,6 +1,10 @@
 
-$('.backbtn').click(function(){
+$('.homebtn').click(function(){
     window.location.href = "home.html";
+});
+
+$('.backbtn').click(function(){
+    window.location.href = "play.html";
 });
 //-------------------------------------------------------------------------
 // base helper methods
