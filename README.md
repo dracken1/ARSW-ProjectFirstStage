@@ -40,7 +40,7 @@
 
 En el Tetris se juega con los tetrominós, que son figuras creadas por la combinación de 4 cuadrados de igual dimensión.
 
-Son 7 piezas las generadas por las combinaciones existentes de tetrominós y son estas las que comienzan a caer una por una en el tablero de juego mientras el jugador puede puede decidir la rotación de la pieza mientras cae (0°, 90°, 180°, 270°), así cómo en qué lugar debe caer.
+Son 7 figuras las generadas por las combinaciones existentes de tetrominós y son estas las que comienzan a caer una por una en el tablero de juego mientras el jugador puede puede decidir la rotación de la pieza mientras cae (0°, 90°, 180°, 270°), así cómo en qué lugar debe caer.
 
 Cuando una línea horizontal se completa, esa línea desaparece (generando una puntuación extra al jugador) y todas las piezas que están por encima descienden una posición, liberando espacio de juego y por tanto facilitando la tarea de situar nuevas piezas.
 
@@ -260,7 +260,7 @@ Igualmente, se buscaría tambien ofrecer publicidad dentro del juego tomando en 
 
 ![Imagenes](images/Documentation/Sections/realTime.png)
 
-La Orientación en tiempo real del juego se desarrolla principalmente en el modo multijugador qu ofrece donde encontramos una arquitectura basada en sockets permitiendonos la comunicación en tiempo real entre dos instancias de nuestra aplicación.
+La Orientación en tiempo real del juego se desarrolla principalmente en el modo multijugador que ofrece donde encontramos una arquitectura basada en sockets permitiendonos la comunicación en tiempo real entre dos instancias de nuestra aplicación.
 
 Esto nos permite realizar una conexión más que estable entre el jugador local y su oponente, de manera que el rendimiento del juego no se vea impactado por un número significativo de conexiónes al tiempo.
 

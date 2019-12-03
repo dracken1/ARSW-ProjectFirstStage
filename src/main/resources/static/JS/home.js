@@ -78,8 +78,8 @@ $('.genericbtn').click(function () {
 $('.practicebtn').click(function () {
     window.location.href = "practice.html";
 });
-
-$('.htitle').click(function () {
+/*
+$('.topHeader').click(function () {
     console.log(user);
     if (document.getElementById('extendeduserlogoid').clientHeight > 0) {
         $("#extendeduserlogoid").animate({
@@ -87,27 +87,37 @@ $('.htitle').click(function () {
         }, 200);
     }
 });
-$('.hspace').click(function () {
+$('.topNavigation').click(function () {
     if (document.getElementById('extendeduserlogoid').clientHeight > 0) {
         $("#extendeduserlogoid").animate({
             height: "toggle"
         }, 200);
     }
 });
-$('.middlebar').click(function () {
+$('.functionalitiesMenu').click(function () {
     if (document.getElementById('extendeduserlogoid').clientHeight > 0) {
         $("#extendeduserlogoid").animate({
             height: "toggle"
         }, 200);
     }
 });
-$('.footerbar').click(function () {
+$('footer').click(function () {
     if (document.getElementById('extendeduserlogoid').clientHeight > 0) {
         $("#extendeduserlogoid").animate({
             height: "toggle"
         }, 200);
     }
 });
+*/
+$('#mybody').click(function () {
+    console.log(user);
+    if (document.getElementById('extendeduserlogoid').clientHeight > 0) {
+        $("#extendeduserlogoid").animate({
+            height: "toggle"
+        }, 200);
+    }
+});
+
 function mousePressed(obj) {
     obj.style.backgroundColor = "#ad8b36";
 }
@@ -129,21 +139,31 @@ $("#haccountid").click(function () {
         height: "toggle"
     }, 200);
 });
-$("#settoptsid").click(function () {
-    $("#settdisplayableid").animate({
-        height: "toggle"
-    }, 200);
-});
-$("#settexitbtnid").click(function () {
-    $("#settdisplayableid").animate({
-        height: "toggle"
-    }, 200);
-});
+
 $("#insoptsid").click(function () {
     $("#instructdisplayableid").animate({
         height: "toggle"
     }, 200);
 });
+
+$("#profileTopBar").click(function () {
+    $("#accountdisplayableid").animate({
+        height: "toggle"
+    }, 200);
+});
+
+$("#controlsTopBar").click(function () {
+    $("#instructdisplayableid").animate({
+        height: "toggle"
+    }, 200);
+});
+
+$("#aboutTopBar").click(function () {
+    $("#aboutdisplayableid").animate({
+        height: "toggle"
+    }, 200);
+});
+
 $("#instructexitbtnid").click(function () {
     $("#instructdisplayableid").animate({
         height: "toggle"
