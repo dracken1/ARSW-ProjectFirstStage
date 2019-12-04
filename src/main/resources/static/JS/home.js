@@ -261,7 +261,6 @@ var getSalas = function () {
         stompClient.subscribe('/topic/salas', function (eventbody) {
             getSalas();
         });
-
     });
 })();
 
