@@ -259,7 +259,11 @@ function Sound(source, volume, loop)
         this.loop = loop;
     }
 }
-
+$('#pausebuttoncontid').click(function () {
+    alert("oprimido");
+    var audio = document.getElementById("playerMusic");
+    audio.pause();
+});
 function get(id){
     return document.getElementById(id);
 }
