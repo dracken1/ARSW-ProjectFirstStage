@@ -3,6 +3,29 @@ body {
     background: url(../images/Background/Background.jpg)no-repeat fixed;
     font-family: "Futura Bk BT", serif;
 }
+#pausebuttoncontid{
+    color: black;
+    padding: 0 0 0 0;
+    position: absolute;
+    height: 8vh;
+    width: 8vh;
+    min-width: 50px;
+    min-height: 50px;
+    top: 15%;
+    left: 47.5%;
+    background: #5eb313;
+    border: 2px solid black;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#pausebuttoncontid:hover{
+    background: #2f5f00;
+}
+.glyphicon-volume-off{
+    margin: 18% 0 0 23%;
+    position: relative;
+    font-size: 45px;
+}
 #gameovercontainerid{
     padding: 0 0 0 0;
     position: absolute;

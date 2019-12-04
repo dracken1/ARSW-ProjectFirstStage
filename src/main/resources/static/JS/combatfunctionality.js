@@ -4,6 +4,10 @@ var salaid;
 var CombatApp = function(){
     return {
         abandonarSala: function () {
+            ////////////////////
+            if(!(game_well_concluded && sp_game_well_concluded)){
+                stompClient.send("/topic/gameOver"+salaid,{},JSON.stringify({score : score, waiting: true, afk: true, ignore: getCookie("username")}));
+            }
             var username = getCookie("username");
             var usuarioJSON = {username: username};
             var urlString = window.location.href;
@@ -13,7 +17,7 @@ var CombatApp = function(){
             window.location.href = "lobby.html";
         }
     }
-}
+};
 
 function getCookie(name) {
     var regexp = new RegExp("(?:^" + name + "|;\s*"+ name + ")=(.*?)(?:;|$)", "g");
@@ -176,28 +180,42 @@ var datosDosJugadores = function (tabla) {
         stompClient.subscribe('/topic/gameOver'+ salaid, function (eventbody) {
             var extract = JSON.parse(eventbody.body);
             console.log(extract);
-            if (!(playing===true)){
-                /*alert("entra 1er if subscribe playing, playing: "+ playing);*/
-                if (!(extract.ignore === getCookie("username"))) {
-                    if (extract.score > score) {
-                        /*alert("entra if subscribe perder, playing: "+ playing);*/
-                        document.getElementById('waitwinnerlosercontid').innerText = "YOU LOSE!";
-                    } else if (extract.score < score) {
-                        /*alert("entra if subscribe ganar, playing: "+ playing);*/
-                        document.getElementById('waitwinnerlosercontid').innerText = "YOU WIN!";
+            if (!(extract.ignore === getCookie("username"))) {
+                sp_game_well_concluded = extract.gameover;
+                if (!(playing === true)) {
+                    if (extract.afk) {
+                        playing = false;
+                        document.getElementById('waitwinnerlosercontid').innerText = "OPPONENT LEFT, YOU WIN!";
+                        if (!(gameoveractive === true)) {
+                            animateGameOver();
+                        }
                     } else {
-                        /*alert("entra else subscribe empate, playing: "+ playing);*/
-                        document.getElementById('waitwinnerlosercontid').innerText = "DRAW!";
+
+                        if (extract.score > score) {
+                            document.getElementById('waitwinnerlosercontid').innerText = "YOU LOSE!";
+                        } else if (extract.score < score) {
+                            document.getElementById('waitwinnerlosercontid').innerText = "YOU WIN!";
+                        } else {
+                            document.getElementById('waitwinnerlosercontid').innerText = "DRAW!";
+                        }
+                        document.getElementById('gameoverscorecontid').innerText = "SCORE: " + score;
+                        if (!(gameoveractive === true)) {
+                            animateGameOver();
+                        }
                     }
-                    document.getElementById('gameoverscorecontid').innerText = "SCORE: "+score;
-                    if (!(gameoveractive===true)){
-                        animateGameOver();
+                } else {
+
+                    if (extract.afk) {
+                        playing = false;
+                        document.getElementById('waitwinnerlosercontid').innerText = "OPPONENT LEFT, YOU WIN!";
+                        if (!(gameoveractive === true)) {
+                            animateGameOver();
+                        }
+                    } else {
+                        opponent_score = extract.score;
+                        opponent_waiting = extract.waiting;
                     }
                 }
-            } else {
-                /*alert("entra else subscribe playing, playing: "+ playing);*/
-                opponent_score = extract.score;
-                opponent_waiting = extract.waiting;
             }
         });
     });
@@ -241,7 +259,11 @@ function Sound(source, volume, loop)
         this.loop = loop;
     }
 }
-
+$('#pausebuttoncontid').click(function () {
+    alert("oprimido");
+    var audio = document.getElementById("playerMusic");
+    audio.pause();
+});
 function get(id){
     return document.getElementById(id);
 }
@@ -315,7 +337,9 @@ var dx, dy,        // pixel size of a single tetris block
     flag_lose,
     opponent_waiting,
     opponent_score,
-    gameoveractive;
+    gameoveractive,
+    sp_game_well_concluded,
+    game_well_concluded;
 
 //-------------------------------------------------------------------------
 // tetris pieces
@@ -430,7 +454,6 @@ function run() {
     resize(); // setup all our sizing information
     reset();  // reset the per-game variables
     frame();  // start the first frame
-
 }
 
 function showStats() {
@@ -530,10 +553,11 @@ function lose() {
     //show('start');
     gameoveractive = true;
     setVisualScore(); playing = false; flag_lose=true;
-    stompClient.send("/topic/gameOver"+salaid,{},JSON.stringify({score : score, waiting: true, ignore: getCookie("username")}));
+    stompClient.send("/topic/gameOver"+salaid,{},JSON.stringify({score : score, waiting: true, afk: false,gameover: true, ignore: getCookie("username")}));
     document.getElementById('gameoverscorecontid').innerText = "SCORE: "+score;
     animateGameOver();
     if(opponent_waiting === true){
+        game_well_concluded = true;
         if(opponent_score > score){
             document.getElementById('waitwinnerlosercontid').innerText = "YOU LOSE!";
         } else if (opponent_score < score){
@@ -576,6 +600,8 @@ var y;
 
 function reset() {
     dt = 0;
+    sp_game_well_concluded = false;
+    game_well_concluded = false;
     opponent_waiting = false;
     gameoveractive = false;
     clearActions();

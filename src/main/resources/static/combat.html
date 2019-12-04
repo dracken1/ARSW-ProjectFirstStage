@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Tetris Combat</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/combat.css">
     <link rel="stylesheet" href="CSS/home.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -34,6 +35,9 @@
             <button class="genericbtn" id="exitButton" onclick="CombatApp().abandonarSala()">Exit Room</button>
         </div>
         <div id="bothplayerscont">
+            <div id="pausebuttoncontid">
+                <i class="glyphicon glyphicon-volume-off"></i>
+            </div>
             <div id="mainplayer">
                 <div>
                     <label id="Player" style="color:white;"></label>
