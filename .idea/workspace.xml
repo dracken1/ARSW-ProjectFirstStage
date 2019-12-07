@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3253c33d-2dbb-4229-807c-5cf636a67eec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/lobby.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/lobby.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/combatfunctionality.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/combatfunctionality.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/lobby.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/lobby.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/combat.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/combat.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lobby.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lobby.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,8 +87,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/JS/combatfunctionality.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="2" lean-forward="true" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="2" />
+            <state relative-caret-position="142">
+              <caret line="590" column="33" lean-forward="true" selection-start-line="590" selection-start-column="33" selection-end-line="590" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -156,6 +152,8 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>myta</find>
+      <find>score</find>
+      <find>setscore</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -379,6 +377,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -389,7 +388,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Run Dashboard" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.10725894" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.6706392" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -535,8 +534,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/JS/combatfunctionality.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="2" lean-forward="true" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="2" />
+        <state relative-caret-position="142">
+          <caret line="590" column="33" lean-forward="true" selection-start-line="590" selection-start-column="33" selection-end-line="590" selection-end-column="33" />
         </state>
       </provider>
     </entry>

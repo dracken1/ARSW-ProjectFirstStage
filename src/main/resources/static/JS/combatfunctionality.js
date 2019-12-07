@@ -198,45 +198,33 @@ var datosDosJugadores = function (tabla) {
             if (!(extract.ignore === getCookie("username"))) {
                 sp_game_well_concluded = extract.gameover;
                 if (!(playing)) {
-                console.log("if no esta jugando");
                     if (extract.afk) {
-                    console.log("if afk y no jugando");
                         playing = false;
                         document.getElementById('waitwinnerlosercontid').innerText = "OPPONENT LEFT, YOU WIN!";
                         if (!(gameoveractive)) {
-                        console.log("animacion inactiva y no jugando");
                             animateGameOver();
                         }
                     } else {
-                    console.log("si no afk y jugando");
                         if (extract.score > score) {
-                        console.log("1");
                             document.getElementById('waitwinnerlosercontid').innerText = "YOU LOSE!";
                         } else if (extract.score < score) {
-                        console.log("2");
                             document.getElementById('waitwinnerlosercontid').innerText = "YOU WIN!";
                         } else {
-                        console.log("3");
                             document.getElementById('waitwinnerlosercontid').innerText = "DRAW!";
                         }
                         document.getElementById('gameoverscorecontid').innerText = "SCORE: " + score;
                         if (!(gameoveractive)) {
-                        console.log("animacion inactiva y no afk y no jugando");
                             animateGameOver();
                         }
                     }
                 } else {
-                    console.log("else jugando");
                     if (extract.afk) {
-                    console.log("afk y jugando");
                         playing = false;
                         document.getElementById('waitwinnerlosercontid').innerText = "OPPONENT LEFT, YOU WIN!";
                         if (!(gameoveractive)) {
-                        console.log("jugando y afk y animacion inactiva");
                             animateGameOver();
                         }
                     } else {
-                    console.log("no afk y jugando");
                         opponent_score = extract.score;
                         opponent_waiting = extract.waiting;
                     }
@@ -245,6 +233,7 @@ var datosDosJugadores = function (tabla) {
         });
     });
 })();
+
 //-------------------------------------------------------------------------
 // base helper methods
 //-------------------------------------------------------------------------
@@ -599,7 +588,13 @@ function lose() {
 }
 function setVisualScore(n)      { vscore = n || score; invalidateScore(); }
 function setScore(n)            { score = n; setVisualScore(n);  }
-function addScore(n)            { score = score + n; stompClient.send("/topic/scorePlayer"+salaid,{},JSON.stringify({score : score,ignore: getCookie("username")})); }
+function addScore(n)            {
+    score = score + n;
+    stompClient.send("/topic/scorePlayer"+salaid,{},JSON.stringify({score : score,ignore: getCookie("username")}));
+    if(score > opponent_score && opponent_waiting){
+        lose();
+    }
+}
 function clearScore()           { setScore(0); }
 function clearRows()            { setRows(0); }
 function setRows(n)             { rows = n; step = Math.max(speed.min, speed.start - (speed.decrement*rows)); invalidateRows(); }
