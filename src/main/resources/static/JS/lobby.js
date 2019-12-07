@@ -78,37 +78,7 @@ $('.genericbtn').click(function () {
 $('.practicebtn').click(function () {
     window.location.href = "practice.html";
 });
-/*
-$('.topHeader').click(function () {
-    console.log(user);
-    if (document.getElementById('extendeduserlogoid').clientHeight > 0) {
-        $("#extendeduserlogoid").animate({
-            height: "toggle"
-        }, 200);
-    }
-});
-$('.topNavigation').click(function () {
-    if (document.getElementById('extendeduserlogoid').clientHeight > 0) {
-        $("#extendeduserlogoid").animate({
-            height: "toggle"
-        }, 200);
-    }
-});
-$('.functionalitiesMenu').click(function () {
-    if (document.getElementById('extendeduserlogoid').clientHeight > 0) {
-        $("#extendeduserlogoid").animate({
-            height: "toggle"
-        }, 200);
-    }
-});
-$('footer').click(function () {
-    if (document.getElementById('extendeduserlogoid').clientHeight > 0) {
-        $("#extendeduserlogoid").animate({
-            height: "toggle"
-        }, 200);
-    }
-});
-*/
+
 $('#mybody').click(function () {
     console.log(user);
     if (document.getElementById('extendeduserlogoid').clientHeight > 0) {
