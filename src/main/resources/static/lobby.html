@@ -6,7 +6,7 @@
     <title>Multi Player</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link rel="stylesheet" href="CSS/lobby.css">
     <!--<link rel="stylesheet" href="CSS/lobby.css">-->
@@ -24,136 +24,135 @@
 </head>
 
 <body id="mybody">
-    <div class="topHeader">
-        <img src="images/Tools/header/topHeaderImg.jpg" class="backImage" />
+<div class="topHeader">
+    <img src="images/Tools/header/topHeaderImg.jpg" class="backImage" />
+</div>
+<div class="topNavigation">
+    <div class="topNavigation-Left">
+        <ul class="topMenu">
+            <li class="active"><a href="home.html"><i style="font-size: 1vw;" class="glyphicon glyphicon-home"></i> Home</a></li>
+        </ul>
     </div>
-    <div class="topNavigation">
-        <div class="topNavigation-Left">
-            <ul class="topMenu">
-                <li class="active"><a href="home.html"><i style="font-size: 1vw;" class="glyphicon glyphicon-home"></i> Home</a></li>
-            </ul>
+    <div class="topNavigation-Center">
+        <ul class="topMenu">
+            <li ><a href="play.html"><i style="font-size: 1vw;" class="glyphicon glyphicon-play"></i> Play</a></li>
+            <li id="profileTopBar"><a><i style="font-size: 1vw;" class="glyphicon glyphicon-user"></i> Profile</a></li>
+            <li id="controlsTopBar"><a><i style="font-size: 1vw;" class="glyphicon glyphicon-move"></i> Controls</a></li>
+            <li id="aboutTopBar"><a><i style="font-size: 1vw;" class="glyphicon glyphicon-info-sign"></i> About</a></li>
+        </ul>
+    </div>
+    <div class="topNavigation-Right">
+        <div class="topNavigation-Right1">
+            <span id="userUsernameData"></span><br>
+            <span id="userNameData"></span><br>
+            <span id="userEmailData"></span><br>
         </div>
-        <div class="topNavigation-Center">
-            <ul class="topMenu">
+        <div class="topNavigation-Right2" id="haccountid" onmouseup="mouseReleased(this)"
+             onmousedown="mousePressed(this)" onmouseover="mouseHover(this)" onmouseout="mouseLeave(this)">
+            <i class="cornerOptions glyphicon glyphicon-menu-hamburger"></i>
 
-                <li ><a href="play.html"><i style="font-size: 1vw;" class="glyphicon glyphicon-play"></i> Play</a></li>
-                <li id="profileTopBar"><a><i style="font-size: 1vw;" class="glyphicon glyphicon-user"></i> Profile</a></li>
-                <li id="controlsTopBar"><a><i style="font-size: 1vw;" class="glyphicon glyphicon-move"></i> Controls</a></li>
-                <li id="aboutTopBar"><a><i style="font-size: 1vw;" class="glyphicon glyphicon-info-sign"></i> About</a></li>
-            </ul>
-        </div>
-        <div class="topNavigation-Right">
-            <div class="topNavigation-Right1">
-                <span id="userUsernameData"></span><br>
-                <span id="userNameData"></span><br>
-                <span id="userEmailData"></span><br>
-            </div>
-            <div class="topNavigation-Right2" id="haccountid" onmouseup="mouseReleased(this)"
-                onmousedown="mousePressed(this)" onmouseover="mouseHover(this)" onmouseout="mouseLeave(this)">
-                <i class="cornerOptions glyphicon glyphicon-menu-hamburger"></i>
-
-            </div>
         </div>
     </div>
+</div>
 
-    <!--toogleBox-->
-    <div class="toogleBox" id="extendeduserlogoid">
-        <div class="menuopts accopts" id="accoptsid">
-            <div class="accoptstext">Profile</div>
-            <div class="accoptsicon"></div>
-        </div>
+<!--toogleBox-->
+<div class="toogleBox" id="extendeduserlogoid">
+    <div class="menuopts accopts" id="accoptsid">
+        <div class="accoptstext">Profile</div>
+        <div class="accoptsicon"></div>
+    </div>
 
-        <div class="menuopts insopts" id="insoptsid">
-            <div class="insoptstext">Controls</div>
-            <div class="insoptsicon"></div>
-        </div>
-        <div class="menuopts aboopts" id="abooptsid">
-            <div class="abooptstext">About</div>
-            <div class="abooptsicon"></div>
-        </div>
-        <div class="menuopts outopts">
-            <div class="outoptstext">Log Out</div>
-            <div class="outoptsicon" id="outoptsiconid"></div>
+    <div class="menuopts insopts" id="insoptsid">
+        <div class="insoptstext">Controls</div>
+        <div class="insoptsicon"></div>
+    </div>
+    <div class="menuopts aboopts" id="abooptsid">
+        <div class="abooptstext">About</div>
+        <div class="abooptsicon"></div>
+    </div>
+    <div class="menuopts outopts">
+        <div class="outoptstext">Log Out</div>
+        <div class="outoptsicon" id="outoptsiconid"></div>
+    </div>
+</div>
+
+
+<div class="allsame accountdisplayable" id="accountdisplayableid">
+    <div class="acciconandbuttons">
+        <div class="acciconandbuttonsicon" id="acciconandbuttonsiconid"></div>
+        <div class=" acciconandbuttonsiconname" id="acciconandbuttonsiconnameid"></div>
+    </div>
+    <div class="accinfo">
+        <div class="accinfoname" id="accinfonameid"></div>
+        <div class="accinfoemail" id="accinfoemailid"></div>
+        <div class="accstats" id="accstatsid">Statistics</div>
+        <div id="statstablecontainerid" class="table-wrapper-scroll-y my-custom-scrollbar">
+
+            <table class="table table-bordered table-striped mb-0">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+                </tbody>
+            </table>
+
         </div>
     </div>
 
+    <button class="exitbtn" id="exitbtnid">X</button>
+</div>
 
-    <div class="allsame accountdisplayable" id="accountdisplayableid">
-        <div class="acciconandbuttons">
-            <div class="acciconandbuttonsicon" id="acciconandbuttonsiconid"></div>
-            <div class=" acciconandbuttonsiconname" id="acciconandbuttonsiconnameid"></div>
-        </div>
-        <div class="accinfo">
-            <div class="accinfoname" id="accinfonameid"></div>
-            <div class="accinfoemail" id="accinfoemailid"></div>
-            <div class="accstats" id="accstatsid">Statistics</div>
-            <div id="statstablecontainerid" class="table-wrapper-scroll-y my-custom-scrollbar">
-
-                <table class="table table-bordered table-striped mb-0">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">6</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-            </div>
-        </div>
-
-        <button class="exitbtn" id="exitbtnid">X</button>
+<div class="allsame accountdisplayable" id="instructdisplayableid">
+    <div class="accinfoinstruct">
     </div>
 
-    <div class="allsame accountdisplayable" id="instructdisplayableid">
-        <div class="accinfoinstruct">
-        </div>
+    <button class="exitbtn" id="instructexitbtnid">X</button>
+</div>
 
-        <button class="exitbtn" id="instructexitbtnid">X</button>
-    </div>
-
-    <div class="allsame accountdisplayable" id="aboutdisplayableid">
-        <div class="accinfoabout">
-            <div class="accinfoinstructabout" id="accinfoaboutid">
+<div class="allsame accountdisplayable" id="aboutdisplayableid">
+    <div class="accinfoabout">
+        <div class="accinfoinstructabout" id="accinfoaboutid">
 
                 <span>
                     <strong>Tetris-Combat</strong> is a real-time <strong>multiplayer</strong> game based on the
@@ -163,7 +162,7 @@
                     account.
 
                 </span>
-                <span class="oneColumn">
+            <span class="oneColumn">
                     <strong>General Idea</strong><br>
                     Played with 7 randomly generated figures, these begin to fall one by one while the player must
                     decide the rotation of the piece while it falls, as well as where it should fall. When a horizontal
@@ -180,7 +179,7 @@
                     Escuela Colombiana de Ingeniería Julio Garavito<br>
                     2019 ©
                 </span>
-                <span class="twoColumn">
+            <span class="twoColumn">
                     <br><br>
                     <strong>Business Idea</strong><br>
                     The business idea of the game is to be able in the future to offer microtransaction services within
@@ -200,83 +199,74 @@
                     www.escuelaing.edu.co<br>
                     Bogota, D.C. - Colombia<br>
                 </span>
-            </div>
-        </div>
-        <button class="exitbtn" id="aboutexitbtnid">X</button>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--
-    <div class="headerbar row">
-        <div class="h htitle col-md-5">
-        </div>
-        <div class="h hspace col-md-6">
-        </div>
-        <div class="h haccount col-md-1" id="haccountid" onmouseup="mouseReleased(this)"
-            onmousedown="mousePressed(this)" onmouseover="mouseHover(this)" onmouseout="mouseLeave(this)">
-            <div class="userlogo" id="userlogoid">
-                <div class="licon">
-                </div>
-            </div>
         </div>
     </div>
-    -->
+    <button class="exitbtn" id="aboutexitbtnid">X</button>
+</div>
 
-    <div class="middlebar row">
-        <div class="leftsidebar col-md-2">
-            
-            <div class="leftbtncont">
 
-                <button class="genericbtnlft" id="genercibtnlftid" onclick="cargaPage().createLobby()">Create Lobby</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div class="headerbar row">
+    <div class="h htitle col-md-5">
+    </div>
+    <div class="h hspace col-md-6">
+    </div>
+    <div class="h haccount col-md-1" id="haccountid" onmouseup="mouseReleased(this)"
+        onmousedown="mousePressed(this)" onmouseover="mouseHover(this)" onmouseout="mouseLeave(this)">
+        <div class="userlogo" id="userlogoid">
+            <div class="licon">
             </div>
-            <div id="practicebtncontid" class="leftbtncont">
-                <button class="practicebtn">Practice</button>
-            </div>
-        </div>
-
-        <div class="mainbar col-md-10">
-
-            <table class="mytable table table-hover table-dark" id="tablaSalas">
-                <thead>
-                    <tr>
-                        <th scope="col">DESCRIPTION</th>
-                        <th scope="col">PLAYERS</th>
-                        <th scope="col">JOIN</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-                </table>
-            </div>
-
-                </thead>
-                
-                <tbody>
-
-                </tbody>
-                
-            </table>
         </div>
     </div>
+</div>
+-->
+
+<div class="middlebar row">
+    <div class="leftsidebar col-md-2">
+
+        <div class="leftbtncont">
+            <button class="genericbtnlft" id="genercibtnlftid" onclick="cargaPage().createLobby()">Create
+                Lobby</button>
+        </div>
+        <div id="practicebtncontid" class="leftbtncont">
+            <button class="practicebtn">Practice</button>
+        </div>
+    </div>
+
+    <div class="mainbar col-md-10">
+        <table class="mytable table table-hover table-dark" id="tablaSalas">
+            <thead>
+            <tr>
+                <th scope="col">DESCRIPTION</th>
+                <th scope="col">PLAYERS</th>
+                <th scope="col">JOIN</th>
+            </tr>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+
+        </table>
+    </div>
+</div>
 </body>
 
 <script src="JS/LoginRegistry.js"></script>
 <script src="JS/lobby.js"></script>
-<script src="JS/home.js"></script>
 
 <!--
 <footer>

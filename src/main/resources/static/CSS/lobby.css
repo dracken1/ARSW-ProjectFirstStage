@@ -8,7 +8,7 @@ body {
     background-size: cover;
     z-index: 10;
 
- 
+
     /*3*/
 }
 
@@ -60,7 +60,7 @@ li a:hover:not(.active) {
     z-index: 12;
 }
 
-.topNavigation { 
+.topNavigation {
     font-family: 'Bebas Neue', cursive;
     position: sticky;
     overflow: hidden;
@@ -68,15 +68,15 @@ li a:hover:not(.active) {
     width: 100%;
     z-index: 15;
     background-color: #333;
-    
-    
+
+
     /*font-size: x-large;*/
     font-size: 1.2vw;
 }
 
 .topMenu {
     list-style-type: none;
-    
+
     margin: 0;
     /*
     padding: 0;
@@ -135,17 +135,17 @@ li a:hover:not(.active) {
 
 .topNavigation-Right2 {
     position: relative;
-    float: right; 
-    padding: 0px 20px; 
+    float: right;
+    padding: 0px 20px;
     color: white;
     background-color: #850d0d;
     font-size: 2vw;
-    text-align: center;  
-    cursor: pointer;   
+    text-align: center;
+    cursor: pointer;
 }
 
 .topNavigation-Right2:hover {
-    color: black; 
+    color: black;
 }
 
 .cornerOptions {
@@ -156,7 +156,6 @@ li a:hover:not(.active) {
     padding-top: 7px;
     /*color: black;*/
 }
-
 
 .functionalitiesMenu {
     padding: 0 2%;
@@ -189,7 +188,7 @@ li a:hover:not(.active) {
     height: auto;
 
     padding: 8px 8px;
-    margin: 10px 5px 10px 20px;    
+    margin: 10px 5px 10px 20px;
     display: block;
     border: 2px solid black;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -204,9 +203,9 @@ li a:hover:not(.active) {
     transform: translate(-50%, -50%);
     width: 30%;
     height: auto;
-    
+
     padding: 8px 8px;
-    margin: 0px 0px;    
+    margin: 0px 0px;
     display: block;
     border: 2px solid black;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -219,7 +218,7 @@ li a:hover:not(.active) {
     height: auto;
 
     padding: 8px 8px;
-    margin: 10px 20px 10px 5px;    
+    margin: 10px 20px 10px 5px;
     display: block;
     border: 2px solid black;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -229,16 +228,16 @@ li a:hover:not(.active) {
     background-color: #850d0d;
     /*7f0000*/
     color: white;
-    width: 100%;    
+    width: 100%;
     border-radius: 5px;
-    border: 3px solid white;    
+    border: 3px solid white;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    
+
     padding: 0px 8px;
     text-align: center;
     display: inline-block;
     font-size: 3vw;
-    
+
 }
 
 .buttonPro:hover {
@@ -268,7 +267,7 @@ footer {
     height: auto;
 
     box-sizing: border-box;
-    overflow: hidden;    
+    overflow: hidden;
     padding: 0 0 0 0px;
 }
 
@@ -276,8 +275,8 @@ footer span.programa {
     position: relative;
     width: 50%;
     height: auto;
-    float: left;    
-    padding: 2vh 0vw;    
+    float: left;
+    padding: 2vh 0vw;
     text-align: center;
 }
 
@@ -295,151 +294,14 @@ span.oneColumn {
     position: relative;
     width: 50%;
     height: auto;
-    float: left;    
-    padding: 40px 15px;    
+    float: left;
+    padding: 40px 15px;
     text-align: justify;
 }
 
 span.twoColumn {
     position: relative;
     width: 50%;
-<<<<<<< HEAD
-    left: 50%;
-}
-.accinfoinstructabout{
-    padding: 5% 5% 5% 5%;
-    position: absolute;
-    top: 7%;
-    left: 5%;
-    width: 90%;
-    height: 85%;
-    background: white;
-    font-size: larger;
-}
-.accinfo{
-    position: absolute;
-    height: 65vh;
-    width: 45vw;
-    top: 8%;
-    left: 35%;
-    background: #f9fdff;
-}
-.allsame{
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-}
-.acciconandbuttonsicon{
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    width: 90%;
-    height: 50%;
-    border: 2px solid black;
-    background: url(../images/usericon.png) no-repeat center;
-    background-size: 80% 100%;
-}
-.acciconandbuttonsiconname{
-    padding-top: 1%;
-    border: 2px solid black;
-    position: absolute;
-    color: white;
-    background: #42403c;
-    width: 90%;
-    height: 10%;
-    left: 5%;
-    top: 60%;
-    font-size: 200%;
-    text-align: center;
-    vertical-align: middle;
-}
-.accinfoname{
-    padding-top: 1%;
-    position: absolute;
-    color: white;
-    background: #42403c;
-    border: 2px solid black;
-    height: 10%;
-    width: 90%;
-    top: 5%;
-    left: 5%;
-    font-size: 150%;
-    vertical-align: middle;
-}
-.accinfoemail{
-    padding-top: 1%;
-    position: absolute;
-    color: white;
-    background: #42403c;
-    border: 2px solid black;
-    height: 10%;
-    width: 90%;
-    top: 20%;
-    left: 5%;
-    font-size: 120%;
-    vertical-align: middle;
-}
-.accstats{
-    padding-top: 1%;
-    position: absolute;
-    color: white;
-    background: #42403c;
-    border: 2px solid black;
-    height: 10%;
-    width: 33%;
-    left: 33%;
-    top: 35%;
-    font-size: 150%;
-    text-align: center;
-    vertical-align: middle;
-}
-.mystatstable{
-    top: 50%;
-    left: 5%;
-    height: 47%;
-    width: 90%;
-}
-.my-custom-scrollbar {
-    position: absolute;
-    overflow: auto;
-}
-.table-wrapper-scroll-y {
-    display: block;
-}
-.salastable{
-    width: 90%;
-    max-height: 55%;
-}
-.practicebtn{
-    position: absolute;
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
-    bottom: 10px;
-    width: 100%;
-    height: 5vh;
-    min-height: 26px;
-    min-width: 151px;
-    border: none;
-    border-bottom: 2px solid #000000;
-    border-radius: 1px;
-    transition: all 0.15s ease;
-    transition-property: width;
-}
-.practicebtn:hover{
-    background: #F9D342;
-    width: 91%;
-}
-li {
-    float: left;
-}
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-.backImage {
-=======
     height: auto;
     float: right;
     border-left: solid #fff 1px;
@@ -603,7 +465,6 @@ li a {
 }
 
 /*
-
 */
 .accopts{
     top: 2%;
@@ -650,14 +511,14 @@ li a {
 .middlebar{
     background: #555;
 
-    position: absolute;   
+    position: absolute;
     width: 100%;
     height: auto;
     bottom: 0;
     top: 26.5%;
     left: 0;
 
-    margin: 0; 
+    margin: 0;
     z-index: -1;
     overflow: auto;
 
@@ -674,10 +535,9 @@ li a {
     width: 100%;
     height: auto;
     */
-    
+
     position: absolute;
     margin: 0;
->>>>>>> 4308f96212cb34a6cbba159ceb600b4b18852268
     width: 100%;
     height: auto;
     /*
@@ -685,25 +545,20 @@ li a {
     left: 0;
     */
     padding: 10px;
-    
-    -webkit-background-size: cover;    
-    background-image: url(../images/Background/PlainBackground.jpg);       
+
+    -webkit-background-size: cover;
+    background-image: url(../images/Background/PlainBackground.jpg);
     background-color: #292826;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-<<<<<<< HEAD
-.menuImage {
-    max-width: 100%;
-=======
 .leftbtncont{
     margin: 15px 0 0 0;
     padding: 0 0 0 0;
     bottom: 0;
     width: 100%;
->>>>>>> 4308f96212cb34a6cbba159ceb600b4b18852268
     height: auto;
 }
 .genericbtnlft{
@@ -723,12 +578,12 @@ li a {
 
     margin: 0 0 0 0;
     border: none;
-    border-radius: 5px;    
+    border-radius: 5px;
     border-bottom: 2px solid white;
     border-radius: 1px;
     transition: all 0.15s ease;
     transition-property: width;
-    cursor: pointer; 
+    cursor: pointer;
 
 
     /*
@@ -758,14 +613,14 @@ li a {
     height: auto;
 
 
-    padding: 10px;    
-    -webkit-background-size: cover;    
+    padding: 10px;
+    -webkit-background-size: cover;
     background-image: url(../images/Background/WrinkledBackground.jpg);
     background-color: #292826;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;    
+    background-attachment: fixed;
 }
 .genericbtn{
     border: none;
@@ -830,7 +685,7 @@ li a {
 .acciconandbuttons{
     position: relative;
     float: left;
-    
+
     top: 3%;
     bottom: 3%;
     left: 3%;
@@ -844,19 +699,19 @@ li a {
     width: 20vw;
     */
 
-    
+
     background: #f9fdff;
 }
-.accinfoinstruct{    
+.accinfoinstruct{
     position: relative;
-    
+
     top: 3%;
     bottom: 3%;
     left: 3%;
-    
+
     height: 94%;
     width: 94%;
-    
+
 
     /*
     position: absolute;
@@ -869,24 +724,24 @@ li a {
     background: white;
     */
     background: url("../images/Tools/howPlay.jpg") no-repeat center;
-    
+
 }
 .accinfoinstructimg{
     top: 3%;
     left: 3%;
     position: relative;
-    
-    
+
+
 
     background: white;
     background-size: 100% 100%;
 }
 .accinfoinstructinfo{
     font-size: large;
-    position: absolute;    
+    position: absolute;
     top: 3%;
     bottom: 3%;
-    left: 50%;    
+    left: 50%;
     height: 50%;
     width: 50%;
 }
@@ -905,14 +760,14 @@ li a {
 .accinfo{
     position: relative;
     float: right;
-    
+
     top: 3%;
     bottom: 3%;
     right: 3%;
-    
+
     height: 94%;
     width: 63%;
-    
+
     /*
     top: -77.5%;
     right: 35%;
@@ -1039,30 +894,16 @@ li a {
 
     margin: 0 0 0 0;
     border: none;
-    border-radius: 5px;    
+    border-radius: 5px;
     border-bottom: 2px solid white;
     border-radius: 1px;
     transition: all 0.15s ease;
     transition-property: width;
-    cursor: pointer; 
+    cursor: pointer;
 }
 
-<<<<<<< HEAD
-footer span.direccion {
-    position: relative;
-    width: 50%;
-    height: auto;
-    float: right;
-    border-left: solid #fff 1px;
-    padding: 5px 35px;
-    text-align: left;
-}
-.row{
-    margin: 0 0 0 0;
-=======
 .practicebtn:hover{
     background: #F9D342;
     color: black;
     width: 78%;
->>>>>>> 4308f96212cb34a6cbba159ceb600b4b18852268
 }

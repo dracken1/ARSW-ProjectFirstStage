@@ -1,8 +1,6 @@
 // ID sala
 var salaid;
 
-
-
 var CombatApp = function(){
     return {
         abandonarSala: function () {
