@@ -199,6 +199,8 @@ function keydown(ev) {
             case KEY.UP:     actions.push(DIR.UP);    handled = true; break;
             case KEY.DOWN:   actions.push(DIR.DOWN);  handled = true; break;
             case KEY.ESC:    lose();                  handled = true; break;
+            case KEY.SPACE:  bajar();                 handled = true; break;
+
         }
     }
     else if (ev.keyCode == KEY.SPACE) {
@@ -290,6 +292,19 @@ function handle(action) {
         case DIR.RIGHT: move(DIR.RIGHT); break;
         case DIR.UP:    rotate();        break;
         case DIR.DOWN:  drop();          break;
+    }
+}
+
+function bajar(){
+    var y;
+    for(y = current.y ; y<ny ; y++) {
+        if (unoccupied(current.type, current.x, y, current.dir)) {
+            current.y = y;
+        }
+        else {
+            invalidate();
+            break;
+        }
     }
 }
 
