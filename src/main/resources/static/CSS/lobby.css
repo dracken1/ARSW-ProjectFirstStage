@@ -1,15 +1,362 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    /*font-family: 'Bebas Neue', cursive;*/
+    background-image: url("../images/Background/PlainBackground.jpg");
+    background-color: rgb(10, 3, 48);
+
+    -webkit-background-size: cover;
+    background-size: cover;
+    z-index: 10;
+
+ 
+    /*3*/
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.backImage {
+    width: 100%;
+    height: auto;
+    background-color: #444;
+    /*
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    */
+}
+
+.menuImage {
+    max-width: 100%;
+    height: auto;
+    background-color: #444;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/*
+li a:hover:not(.active) {
+    background-color: #db2526;
+    font-weight: bold;
+    color: white;
+}
+*/
+.active {
+    background-color: #850d0d;
+    color: white;
+}
+
+.topHeader {
+    margin: auto;
+    width: auto;
+    z-index: 12;
+}
+
+.topNavigation { 
+    font-family: 'Bebas Neue', cursive;
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    z-index: 15;
+    background-color: #333;
+    
+    
+    /*font-size: x-large;*/
+    font-size: 1.2vw;
+}
+
+.topMenu {
+    list-style-type: none;
+    
+    margin: 0;
+    /*
+    padding: 0;
+    */
+    overflow: hidden;
+    background-color: #333;
+    /*
+    border: 1px solid #111;
+    */
+    color: white;
+    padding: 0px 0px;
+}
+
+.topNavigation li:hover {
+    background-color: #db2526;
+    color: black;
+    font-weight: bold;
+}
+
+.topNavigation li a:hover {
+    background-color: #db2526;
+    color: black;
+    font-weight: bold;
+}
+
+.topNavigation-Left {
+    float: left;
+}
+
+.topNavigation-Center {
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.topNavigation-Right {
+    float: right;
+    text-align: right;
+}
+
+.topNavigation-Right1 {
+    position: relative;
+    float: left;
+    padding: 5px 10px 0px 0px;
+    border-right: 3px solid #bbb;
+    color: #bbb;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    /*font-size: 10px;*/
+    font-size: 0.7vw;
+    text-align: right;
+}
+
+.topNavigation-Right2 {
+    position: relative;
+    float: right; 
+    padding: 0px 20px; 
+    color: white;
+    background-color: #850d0d;
+    font-size: 2vw;
+    text-align: center;  
+    cursor: pointer;   
+}
+
+.topNavigation-Right2:hover {
+    color: black; 
+}
+
+.cornerOptions {
+    padding-top: 7px;
+}
+
+.cornerOptions:hover {
+    padding-top: 7px;
+    /*color: black;*/
+}
+
+.functionalitiesMenu {
+    padding: 0 2%;
+
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -33%);
+    transform: translate(-50%, -33%);
+    z-index: -1;
+
+    text-align: center;
+    background-color: rgb(10, 3, 48);
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    font-family: 'Bebas Neue', cursive;
+    background: url("../images/Background/PlainBackground.jpg");
+    /*
+    padding: 0 8px;
+    margin: 0 -16px;
+    */
+}
+
+.playBox {
+    background-color: #bbb;
+    float: left;
+    width: 30%;
+    height: auto;
+
+    padding: 8px 8px;
+    margin: 10px 5px 10px 20px;    
+    display: block;
+    border: 2px solid black;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.controlsBox {
+    background-color: #bbb;
+    float: initial;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    height: auto;
+    
+    padding: 8px 8px;
+    margin: 0px 0px;    
+    display: block;
+    border: 2px solid black;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.profileBox {
+    background-color: #bbb;
+    float: right;
+    width: 30%;
+    height: auto;
+
+    padding: 8px 8px;
+    margin: 10px 20px 10px 5px;    
+    display: block;
+    border: 2px solid black;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.buttonPro {
+    background-color: #850d0d;
+    /*7f0000*/
+    color: white;
+    width: 100%;    
+    border-radius: 5px;
+    border: 3px solid white;    
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+    padding: 0px 8px;
+    text-align: center;
+    display: inline-block;
+    font-size: 3vw;
+    
+}
+
+.buttonPro:hover {
+    transition-duration: 0.4s;
+    background-color: #db2526;
+    color: black;
+    font-weight: bold;
+}
+
+.buttonPro:active {
+    background-color: #db2526;
+    box-shadow: 0 5px #666;
+    transform: translateY(50px);
+}
+
+footer {
+    font-family: 'Raleway', sans-serif;
+    color: #FFF;
+    background: #900;
+    font-size: 0.65vw;
+    z-index: -2;
+    /*6*/
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+
+    box-sizing: border-box;
+    overflow: hidden;    
+    padding: 0 0 0 0px;
+}
+
+footer span.programa {
+    position: relative;
+    width: 50%;
+    height: auto;
+    float: left;    
+    padding: 2vh 0vw;    
+    text-align: center;
+}
+
+footer span.direccion {
+    position: relative;
+    width: 50%;
+    height: auto;
+    float: right;
+    border-left: solid #fff 1px;
+    padding: 0.5vh 5vw;
+    text-align: left;
+}
+
+span.oneColumn {
+    position: relative;
+    width: 50%;
+    height: auto;
+    float: left;    
+    padding: 40px 15px;    
+    text-align: justify;
+}
+
+span.twoColumn {
+    position: relative;
+    width: 50%;
+    height: auto;
+    float: right;
+    border-left: solid #fff 1px;
+    padding: 5px 35px;
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * {
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-}
-body {
-    -webkit-background-size: cover;
-    background-size: cover;
-    font-family: 'Raleway', sans-serif;
-    /*font-family: 'Bebas Neue', cursive;*/
-    /*font-family: Impact, Charcoal, sans-serif;*/
 }
 
 .headerbar {
@@ -35,7 +382,7 @@ body {
     width: 100%;
     height: 100%;
 }
-.accopts,.settopts,.insopts,.aboopts,.outopts{
+.accopts,.insopts,.aboopts,.outopts {
     position: absolute;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
@@ -51,16 +398,21 @@ body {
     top: 5%;
     left: 33%;
 }
-.extendeduserlogo{
-    position: absolute;
-    margin: 0 0 0 0;
+.toogleBox {
+    font-family: 'Bebas Neue', cursive;
+    position: relative;
+    float: right;
+    margin: 5px 10px 0 0;
     padding: 0 0 0 5px;
+/*
+    right: 10px;
+    margin: 5px 0px 0 0;
+    padding: 0 0 0 5px;
+*/
     width: 15vw;
     height: 20vw;
-    background-color: #292826;
-    top: 5px;
-    left: 68vw;
-    z-index: 10;
+    background-color: #2c2c2b;
+    z-index: 9;
     border: none;
     border-left: 1px solid #ab8541;
     border-bottom: 1px solid #ab8541;
@@ -76,7 +428,7 @@ body {
     border: none;
     border-bottom: 1px solid #0d1113;
     border-radius: 2px;
-    height: 17%;
+    height: 21%;
     width: 94%;
     left: 3%;
     text-align: center;
@@ -89,20 +441,21 @@ body {
     margin-bottom: 2%;
     margin-top: 0.5%;
     width: 93%;
-    height: 16.4%;
+    height: 18.8%;
     padding-top: 10px;
     border-left: 5px solid #0d1113;
     left: 2%;
     cursor: pointer;
     border-radius: 3px;
 }
-.accoptstext, .settoptstext, .insoptstext, .abooptstext, .outoptstext{
+.accoptstext, .insoptstext, .abooptstext, .outoptstext{
     position: absolute;
     left: 50%;
-    top: 25%;
-    font-size: calc(1vh + 0.5vw);
+    top: 15%;
+    /*font-size: calc(1vh + 0.5vw);*/
+    font-size: 2vw;
 }
-.accoptsicon, .settoptsicon, .insoptsicon, .abooptsicon, .outoptsicon{
+.accoptsicon, .insoptsicon, .abooptsicon, .outoptsicon{
     position: absolute;
     left: 15%;
     top: 20%;
@@ -110,30 +463,40 @@ body {
     width: 42%;
     height: 60%;
 }
+
+/*
+
+*/
 .accopts{
     top: 2%;
 }
+/*
 .settopts{
     top: 20%;
 }
+*/
 .insopts{
-    top: 38%;
+    top: 25%;
 }
 .aboopts{
-    top: 56%;
+    top: 48%;
 }
 .outopts{
-    border-top: 4px solid #0d1113;
-    top: 79%;
+    border-top: 4px solid #db2526;
+    top: 77%;
 }
+
+
 .accoptsicon{
     background: url(../images/usericon.png) no-repeat;
     background-size: 40% 100%;
 }
+/*
 .settoptsicon{
     background: url(../images/gear.png) no-repeat;
     background-size: 40% 100%;
 }
+*/
 .insoptsicon{
     background: url(../images/instructions.png) no-repeat;
     background-size: 40% 100%;
@@ -147,18 +510,43 @@ body {
     background-size: 40% 100%;
 }
 .middlebar{
-    margin: 0;
-    background: #ab8541;
-    width: 100%;
-    height: 88vh;
-}
-.leftsidebar{
-    margin: 0;
-    /*background: #292826;*/
-    width: 100%;
-    height: 100%;
-    padding: 10px;
+    background: #555;
 
+    position: absolute;   
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    top: 26.5%;
+    left: 0;
+
+    margin: 0; 
+    z-index: -1;
+    overflow: auto;
+
+}
+
+.leftsidebar{
+    /*
+    margin: 0;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    -ms-transform: translate(100%, 100%);
+    transform: translate(100%, 100%);
+    width: 100%;
+    height: auto;
+    */
+    
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: auto;
+    /*
+    bottom: 0;
+    left: 0;
+    */
+    padding: 10px;
+    
     -webkit-background-size: cover;    
     background-image: url(../images/Background/PlainBackground.jpg);       
     background-color: #292826;
@@ -170,8 +558,36 @@ body {
 .leftbtncont{
     margin: 15px 0 0 0;
     padding: 0 0 0 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
 }
-.genercibtnlft{
+.genericbtnlft{
+    font-family: 'Bebas Neue', cursive;
+    font-size: xx-large;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: white;
+    background-color: #850d0d;
+
+    position: relative;
+    left: 8%;
+    right: 0%;
+    top: 3%;
+    width: 80%;
+    height: 7vh;
+
+    margin: 0 0 0 0;
+    border: none;
+    border-radius: 5px;    
+    border-bottom: 2px solid white;
+    border-radius: 1px;
+    transition: all 0.15s ease;
+    transition-property: width;
+    cursor: pointer; 
+
+
+    /*
     position: relative;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
@@ -182,24 +598,30 @@ body {
     border-radius: 1px;
     transition: all 0.15s ease;
     transition-property: width;
+    */
 }
-.genercibtnlft:hover{
+.genericbtnlft:hover{
     background: #F9D342;
-    width: 96%;
+    width: 87%;
+    color: black;
 }
 .mainbar{
+    position: absolute;
+    overflow: initial;
+
     margin: 0;
     width: 100%;
-    height: 100%;
-    padding: 10px;
+    height: auto;
+
+
+    padding: 10px;    
     -webkit-background-size: cover;    
     background-image: url(../images/Background/WrinkledBackground.jpg);
     background-color: #292826;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    
+    background-attachment: fixed;    
 }
 .genericbtn{
     border: none;
@@ -212,6 +634,7 @@ body {
     color: #cf1111;
     font-weight: bold;
 }
+
 .footerbar{
     position: absolute;
     margin: 0 0 0 0;
@@ -222,26 +645,28 @@ body {
     /*border: 1px solid #0d1113;*/
 }
 .mytable{
-    z-index: 1;
+    z-index: 5;
     position: relative;
 }
 .mytable th {
-    background: #002171;
+    background: #db2526;
+    /*background: #002171;*/
 }
 .accountdisplayable{
-    position: absolute;
+    position: relative;
+    float: initial;
+
     background: rgba(66, 64, 60, 0.9);
-    height: 76vh;
-    width: 80vw;
-    top: 4vh;
-    left: 1.5vw;
-    float: right;
-    z-index: 2;
+    /*background: #ff0000;*/
+
+    z-index: 7;
     display: none;
 }
 .exitbtn{
     position: absolute;
-    background: #7f0000;
+    background: #db2526;
+    color: white;
+    font-size: large;
     font-weight: bolder;
     border: none;
     border-radius: 5px;
@@ -253,72 +678,140 @@ body {
     transition-property: background-color,height,width;
 }
 .exitbtn:hover{
-    background: #e22b00;
+    background: #7f0000;
     height: 4.2%;
     width: 4.2%;
+    color: black;
 }
 .acciconandbuttons{
-    position: absolute;
+    position: relative;
+    float: left;
+    
+    top: 3%;
+    bottom: 3%;
+    left: 3%;
+
+    height: 94%;
+    width: 27%;
+    /*
+    top: 8%;
+    left: 57%;
     height: 65vh;
     width: 20vw;
-    top: 8%;
-    left: 7%;
+    */
+
+    
     background: #f9fdff;
 }
-.accinfoinstruct{
+.accinfoinstruct{    
+    position: relative;
+    
+    top: 3%;
+    bottom: 3%;
+    left: 3%;
+    
+    height: 94%;
+    width: 94%;
+    
+
+    /*
     position: absolute;
     top: 7%;
     left: 5%;
     width: 90%;
     height: 85%;
+    */
+    /*
     background: white;
+    */
+    background: url("../images/Tools/howPlay.jpg") no-repeat center;
+    
 }
 .accinfoinstructimg{
-    position: absolute;
-    height: 100%;
-    width: 50%;
-    background: url(../images/arrowkeys.png) no-repeat center;
-    background-size: 85% 85%;
+    top: 3%;
+    left: 3%;
+    position: relative;
+    
+    
+
+    background: white;
+    background-size: 100% 100%;
 }
 .accinfoinstructinfo{
     font-size: large;
-    position: absolute;
-    padding: 10% 5% 5% 5%;
-    height: 100%;
+    position: absolute;    
+    top: 3%;
+    bottom: 3%;
+    left: 50%;    
+    height: 50%;
     width: 50%;
-    left: 50%;
 }
+
 .accinfoinstructabout{
-    padding: 5% 5% 5% 5%;
+    padding: 1% 1%;
     position: absolute;
-    top: 7%;
-    left: 5%;
-    width: 90%;
-    height: 85%;
+    top: 3%;
+    left: 3%;
+    width: 94%;
+    height: 94%;
     background: white;
-    font-size: larger;
+    font-size: medium;
+    text-align: left;
 }
 .accinfo{
-    position: absolute;
+    position: relative;
+    float: right;
+    
+    top: 3%;
+    bottom: 3%;
+    right: 3%;
+    
+    height: 94%;
+    width: 63%;
+    
+    /*
+    top: -77.5%;
+    right: 35%;
     height: 65vh;
     width: 45vw;
-    top: 8%;
-    left: 35%;
+    padding: 200px 200px 0px 0px;
+    margin: 200px 200px 0px 0px;
+    */
+
     background: #f9fdff;
 }
 .allsame{
-    margin: 0 0 0 0;
-    padding: 0 0 0 0;
+    position: absolute;
+    z-index: 8;
+    /*top: 2vh;
+    bottom: 2vh;
+    left: 5vw;
+    right: 5vw;*/
+    height: 68vh;
+    width: 90vw;
+    /*
+    top: 3%;
+    bottom: 3%;
+    left: 3%;
+    right: 3%;
+    */
+    /*
+    top: 2vh;
+    left: 9.5vw;
+    */
+
+    margin: 2vh 5vw 2vh 5vw;
+    padding: 0vh 0vw 0vh 0vw;
 }
 .acciconandbuttonsicon{
     position: absolute;
     top: 5%;
     left: 5%;
     width: 90%;
-    height: 50%;
+    height: 70%;
     border: 2px solid black;
-    background: url(../images/usericon.png) no-repeat center;
-    background-size: 80% 100%;
+    background: url(../images/Tools/ProfileMenu.jpg) no-repeat center;
+    background-size: 100% 100%;
 }
 .acciconandbuttonsiconname{
     padding-top: 1%;
@@ -329,7 +822,7 @@ body {
     width: 90%;
     height: 10%;
     left: 5%;
-    top: 60%;
+    top: 80%;
     font-size: 200%;
     text-align: center;
     vertical-align: middle;
@@ -386,316 +879,32 @@ body {
     display: block;
 }
 .practicebtn{
+    font-family: 'Bebas Neue', cursive;
+    font-size: xx-large;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: white;
+    background-color: #850d0d;
+
     position: absolute;
+    left: 12%;
+    right: 0%;
+    bottom: 3%;
+    width: 70%;
+    height: 7%;
+
     margin: 0 0 0 0;
-    padding: 0 0 0 0;
-    bottom: 10px;
-    width: 90%;
-    height: 5vh;
-    min-height: 26px;
-    min-width: 151px;
     border: none;
-    border-bottom: 2px solid #000000;
+    border-radius: 5px;    
+    border-bottom: 2px solid white;
     border-radius: 1px;
     transition: all 0.15s ease;
     transition-property: width;
+    cursor: pointer; 
 }
+
 .practicebtn:hover{
     background: #F9D342;
-    width: 91%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.backImage {
-    width: 100%;
-    height: auto;
-    background-color: #444;
-    /*
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    */
-}
-
-.menuImage {
-    max-width: 100%;
-    height: auto;
-    background-color: #444;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-/*
-li a:hover:not(.active) {
-    background-color: #db2526;
-    font-weight: bold;
-    color: white;
-}
-*/
-.active {
-    background-color: #850d0d;
-    color: white;
-}
-
-.topHeader {
-    margin: auto;
-    width: auto;
-}
-
-.topNavigation { 
-    font-family: 'Bebas Neue', cursive;
-    /*position: relative;*/   
-    position: sticky;
-    top: 0;
-
-    background-color: #333;
-    overflow: hidden;
-    
-    font-size: large;
-}
-
-.topNavigation li a:hover {
-    background-color: #db2526;
     color: black;
-    font-weight: bold;
-}
-
-.topNavigation-Left {
-    float: left;
-}
-
-.topNavigation-Center {
-    float: left;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.topNavigation-Right {
-    float: right;
-    text-align: right;
-}
-
-.topNavigation-Right1 {
-    position: relative;
-    float: left;
-    padding: 5px 10px 0px 0px;
-    border-right: 3px solid #bbb;
-    color: #bbb;
-    font-family: 'Raleway', sans-serif;
-    font-weight: bold;
-    font-size: 10px;
-    text-align: right;
-}
-
-.topNavigation-Right2 {
-    position: relative;
-    float: right; 
-    padding: 0px 20px; 
-    color: white;
-    font-size: xx-large;
-    text-align: center;  
-   
-}
-
-.topMenu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    border: 1px solid #111;
-}
-
-.cornerOptions {
-    padding-top: 7px;
-}
-
-
-
-
-
-
-
-
-
-.functionalitiesMenu {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-
-    text-align: center;
-    background-color: rgb(10, 3, 48);
-    overflow: hidden;
-    width: 100%;
-    height: auto;
-    font-family: 'Bebas Neue', cursive;
-    /*
-    padding: 0 8px;
-    margin: 0 -16px;
-    */
-}
-
-.playBox {
-    background-color: #bbb;
-    float: left;
-    width: 30%;
-    height: auto;
-
-    padding: 8px 8px;
-    margin: 10px 5px 10px 20px;    
-    display: block;
-    border: 2px solid black;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-.controlsBox {
-    background-color: #bbb;
-    float: initial;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30%;
-    height: auto;
-    
-    padding: 8px 8px;
-    margin: 0px 0px;    
-    display: block;
-    border: 2px solid black;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-.profileBox {
-    background-color: #bbb;
-    float: right;
-    width: 30%;
-    height: auto;
-
-    padding: 8px 8px;
-    margin: 10px 20px 10px 5px;    
-    display: block;
-    border: 2px solid black;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-/*
-#imgPlayBlox {
-    width: 100%;
-}
-
-#imgControlsBlox {
-    width: 100%;
-}
-
-#imgProfileBlox {
-    width: 100%;
-}
-*/
-.buttonPro {
-    background-color: #850d0d;
-    color: white;
-    width: 100%;    
-    border-radius: 5px;
-    border: 3px solid white;    
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    
-    padding: 0px 8px;
-    text-align: center;
-    display: inline-block;
-    font-size: 3vw;
-    
-}
-
-.buttonPro:hover {
-    transition-duration: 0.4s;
-    background-color: #db2526;
-    color: black;
-    font-weight: bold;
-}
-
-.buttonPro:active {
-    background-color: #db2526;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
-
-footer {
-    font-family: 'Raleway', sans-serif;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    max-height: 150px;
-    /*height: min-content;*/
-    background: #900;
-    color: #FFF;
-    box-sizing: border-box;
-    overflow: hidden;
-    font-size: 12px;
-    /*line-height: 100%;*/
-    padding: 0 0 0 0px;
-    box-sizing: border-box;
-}
-
-footer span.programa {
-    position: relative;
-    width: 50%;
-    height: auto;
-    float: left;    
-    padding: 40px 15px;    
-    text-align: center;
-}
-
-footer span.direccion {
-    position: relative;
-    width: 50%;
-    height: auto;
-    float: right;
-    border-left: solid #fff 1px;
-    padding: 5px 35px;
-    text-align: left;
+    width: 78%;
 }

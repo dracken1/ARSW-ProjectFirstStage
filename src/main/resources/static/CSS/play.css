@@ -1,8 +1,14 @@
+
 body {
     font-family: 'Raleway', sans-serif;
+    /*font-family: 'Bebas Neue', cursive;*/
     background-image: url("../images/Background/WrinkledBackground.jpg");
     background-color: rgb(10, 3, 48);
-    /*font-family: 'Bebas Neue', cursive;*/
+
+    -webkit-background-size: cover;
+    background-size: cover;
+    z-index: 10;
+    /*3*/
 }
 
 li {
@@ -34,6 +40,7 @@ li a {
     background-color: #444;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
+
 /*
 li a:hover:not(.active) {
     background-color: #db2526;
@@ -49,15 +56,42 @@ li a:hover:not(.active) {
 .topHeader {
     margin: auto;
     width: auto;
+    z-index: 12;
 }
 
 .topNavigation { 
+    font-family: 'Bebas Neue', cursive;
     /*position: relative;*/   
     position: sticky;
     top: 0;
-
+    z-index: 15;
     background-color: #333;
     overflow: hidden;
+    
+    /*font-size: x-large;*/
+    font-size: 1.2vw;
+}
+
+.topMenu {
+    list-style-type: none;
+    
+    margin: 0;
+    /*
+    padding: 0;
+    */
+    overflow: hidden;
+    background-color: #333;
+    /*
+    border: 1px solid #111;
+    */
+    color: white;
+    padding: 0px 0px;
+}
+
+.topNavigation li:hover {
+    background-color: #db2526;
+    color: black;
+    font-weight: bold;
 }
 
 .topNavigation li a:hover {
@@ -68,7 +102,6 @@ li a:hover:not(.active) {
 
 .topNavigation-Left {
     float: left;
-    /*font-size: 1vw;*/
 }
 
 .topNavigation-Center {
@@ -77,7 +110,7 @@ li a:hover:not(.active) {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /*font-size: 1vw;*/
+    cursor: pointer;
 }
 
 .topNavigation-Right {
@@ -91,7 +124,10 @@ li a:hover:not(.active) {
     padding: 5px 10px 0px 0px;
     border-right: 3px solid #bbb;
     color: #bbb;
-    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    /*font-size: 10px;*/
+    font-size: 0.7vw;
     text-align: right;
 }
 
@@ -100,39 +136,35 @@ li a:hover:not(.active) {
     float: right; 
     padding: 0px 20px; 
     color: white;
-    font-size: xx-large;
+    background-color: #850d0d;
+    font-size: 2vw;
     text-align: center;  
-   
+    cursor: pointer;   
 }
 
-.topMenu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    border: 1px solid #111;
+.topNavigation-Right2:hover {
+    color: black; 
 }
 
 .cornerOptions {
     padding-top: 7px;
 }
 
-
-
-
-
-
-
-
+.cornerOptions:hover {
+    padding-top: 7px;
+    /*color: black;*/
+}
 
 .functionalitiesMenu {
-    margin: 0;
+    padding: 0 5%;
+
+    margin: 0px;
     position: absolute;
     top: 50%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -33%);
+    transform: translate(-50%, -33%);
+    z-index: -1;
 
     text-align: center;
     background-color: rgb(10, 3, 48);
@@ -140,6 +172,7 @@ li a:hover:not(.active) {
     width: 100%;
     height: auto;
     font-family: 'Bebas Neue', cursive;
+    background: url("../images/Background/PlainBackground.jpg");
     /*
     padding: 0 8px;
     margin: 0 -16px;
@@ -171,21 +204,10 @@ li a:hover:not(.active) {
     border: 2px solid black;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-/*
-#imgPlayBlox {
-    width: 100%;
-}
 
-#imgControlsBlox {
-    width: 100%;
-}
-
-#imgProfileBlox {
-    width: 100%;
-}
-*/
 .buttonPro {
     background-color: #850d0d;
+    /*7f0000*/
     color: white;
     width: 100%;    
     border-radius: 5px;
@@ -209,25 +231,25 @@ li a:hover:not(.active) {
 .buttonPro:active {
     background-color: #db2526;
     box-shadow: 0 5px #666;
-    transform: translateY(4px);
+    transform: translateY(50px);
 }
 
 footer {
     font-family: 'Raleway', sans-serif;
+    color: #FFF;
+    background: #900;
+    font-size: 0.65vw;
+    z-index: -2;
+    /*6*/
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    max-height: 150px;
-    /*height: min-content;*/
-    background: #900;
-    color: #FFF;
+    height: auto;
+
     box-sizing: border-box;
-    overflow: hidden;
-    font-size: 12px;
-    /*line-height: 100%;*/
+    overflow: hidden;    
     padding: 0 0 0 0px;
-    box-sizing: border-box;
 }
 
 footer span.programa {
@@ -235,7 +257,7 @@ footer span.programa {
     width: 50%;
     height: auto;
     float: left;    
-    padding: 40px 15px;    
+    padding: 2vh 0vw;    
     text-align: center;
 }
 
@@ -245,6 +267,557 @@ footer span.direccion {
     height: auto;
     float: right;
     border-left: solid #fff 1px;
-    padding: 5px 35px;
+    padding: 0.5vh 5vw;
     text-align: left;
+}
+
+span.oneColumn {
+    position: relative;
+    width: 50%;
+    height: auto;
+    float: left;    
+    padding: 40px 15px;    
+    text-align: justify;
+}
+
+span.twoColumn {
+    position: relative;
+    width: 50%;
+    height: auto;
+    float: right;
+    border-left: solid #fff 1px;
+    padding: 5px 35px;
+    text-align: justify;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.headerbar {
+    background-color: #7f0000;
+    width: 100%;
+    height: 7vh;
+    margin: 0 0 0 0;
+}
+.h{
+    margin: 0 0 0 0;
+}
+.htitle{
+    background: url(../images/Logo/LogoName.png) no-repeat;
+    background-size: 25.2% 100%;
+}
+.haccount{
+    padding: 0 0 0 0;
+}
+.userlogo{
+    position: absolute;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    width: 100%;
+    height: 100%;
+}
+.accopts,.insopts,.aboopts,.outopts {
+    position: absolute;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    float: right;
+}
+.licon{
+    position: absolute;
+    margin: 0 0 0 0;
+    background: url(../images/3bars.png) center no-repeat;
+    background-size: 65% 80%;
+    width: 40%;
+    height: 90%;
+    top: 5%;
+    left: 33%;
+}
+.toogleBox {
+    font-family: 'Bebas Neue', cursive;
+    position: relative;
+    float: right;
+    margin: 5px 10px 0 0;
+    padding: 0 0 0 5px;
+/*
+    right: 10px;
+    margin: 5px 0px 0 0;
+    padding: 0 0 0 5px;
+*/
+    width: 15vw;
+    height: 20vw;
+    background-color: #2c2c2b;
+    z-index: 9;
+    border: none;
+    border-left: 1px solid #ab8541;
+    border-bottom: 1px solid #ab8541;
+    border-right: 1px solid #ab8541;
+    border-radius: 3px;
+    display: none;
+}
+.menuopts{
+    position: absolute;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    background: #f9fdff;
+    border: none;
+    border-bottom: 1px solid #0d1113;
+    border-radius: 2px;
+    height: 21%;
+    width: 94%;
+    left: 3%;
+    text-align: center;
+
+    transition: all 0.2s ease;
+    transition-property: width,height,background-color,top,left,padding-top,margin-bottom;
+}
+.menuopts:hover{
+    background: #5eb313;
+    margin-bottom: 2%;
+    margin-top: 0.5%;
+    width: 93%;
+    height: 18.8%;
+    padding-top: 10px;
+    border-left: 5px solid #0d1113;
+    left: 2%;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.accoptstext, .insoptstext, .abooptstext, .outoptstext{
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    /*font-size: calc(1vh + 0.5vw);*/
+    font-size: 2vw;
+}
+.accoptsicon, .insoptsicon, .abooptsicon, .outoptsicon{
+    position: absolute;
+    left: 15%;
+    top: 20%;
+    margin: 0 0 0 0;
+    width: 42%;
+    height: 60%;
+}
+
+/*
+
+*/
+.accopts{
+    top: 2%;
+}
+/*
+.settopts{
+    top: 20%;
+}
+*/
+.insopts{
+    top: 25%;
+}
+.aboopts{
+    top: 48%;
+}
+.outopts{
+    border-top: 4px solid #db2526;
+    top: 77%;
+}
+
+
+.accoptsicon{
+    background: url(../images/usericon.png) no-repeat;
+    background-size: 40% 100%;
+}
+/*
+.settoptsicon{
+    background: url(../images/gear.png) no-repeat;
+    background-size: 40% 100%;
+}
+*/
+.insoptsicon{
+    background: url(../images/instructions.png) no-repeat;
+    background-size: 40% 100%;
+}
+.abooptsicon{
+    background: url(../images/about.png) no-repeat;
+    background-size: 40% 100%;
+}
+.outoptsicon{
+    background: url(../images/logout.png) no-repeat;
+    background-size: 40% 100%;
+}
+.middlebar{
+    margin: 0;
+    background: #ab8541;
+    width: 100%;
+    height: 88vh;
+}
+.leftsidebar{
+    margin: 0;
+    /*background: #292826;*/
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+
+    -webkit-background-size: cover;    
+    background-image: url(../images/Background/PlainBackground.jpg);       
+    background-color: #292826;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.leftbtncont{
+    margin: 15px 0 0 0;
+    padding: 0 0 0 0;
+}
+.genercibtnlft{
+    position: relative;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    top: 5vh;
+    width: 95%;
+    border: none;
+    border-bottom: 2px solid #000000;
+    border-radius: 1px;
+    transition: all 0.15s ease;
+    transition-property: width;
+}
+.genercibtnlft:hover{
+    background: #F9D342;
+    width: 96%;
+}
+.mainbar{
+
+
+
+
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    
+    -webkit-background-size: cover;    
+    background-image: url(../images/Background/WrinkledBackground.jpg);
+    background-color: #292826;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+.genericbtn{
+    border: none;
+    border-radius: 3px;
+    width: 200px;
+    color: #444;
+}
+.genericbtn:hover{
+    background: #F9D342;
+    color: #cf1111;
+    font-weight: bold;
+}
+.footerbar{
+    position: absolute;
+    margin: 0 0 0 0;
+    width: 100%;
+    height: 5vh;
+    background: #42403c;
+    top: calc(95vh);
+    /*border: 1px solid #0d1113;*/
+}
+.mytable{
+    z-index: 5;
+    position: relative;
+}
+.mytable th {
+    background: #002171;
+}
+.accountdisplayable{
+    position: relative;
+    float: initial;
+
+
+    background: rgba(66, 64, 60, 0.9);
+    z-index: 7;
+    display: none;
+}
+.exitbtn{
+    position: absolute;
+    background: #db2526;
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+    border: none;
+    border-radius: 5px;
+    top: 1%;
+    left: 95.5%;
+    width: 4%;
+    height: 4%;
+    transition: all 0.15s ease;
+    transition-property: background-color,height,width;
+}
+.exitbtn:hover{
+    background: #7f0000;
+    height: 4.2%;
+    width: 4.2%;
+    color: black;
+}
+.acciconandbuttons{
+    position: relative;
+    float: left;
+    
+    top: 3%;
+    bottom: 3%;
+    left: 3%;
+
+    height: 94%;
+    width: 27%;
+    /*
+    top: 8%;
+    left: 57%;
+    height: 65vh;
+    width: 20vw;
+    */
+
+    
+    background: #f9fdff;
+}
+.accinfoinstruct{    
+    position: relative;
+    
+    top: 3%;
+    bottom: 3%;
+    left: 3%;
+    
+    height: 94%;
+    width: 94%;
+    
+
+    /*
+    position: absolute;
+    top: 7%;
+    left: 5%;
+    width: 90%;
+    height: 85%;
+    */
+    /*
+    background: white;
+    */
+    background: url("../images/Tools/howPlay.jpg") no-repeat center;
+    
+}
+.accinfoinstructimg{
+    top: 3%;
+    left: 3%;
+    position: relative;
+    
+    
+
+    background: white;
+    background-size: 100% 100%;
+}
+.accinfoinstructinfo{
+    font-size: large;
+    position: absolute;    
+    top: 3%;
+    bottom: 3%;
+    left: 50%;    
+    height: 50%;
+    width: 50%;
+}
+
+.accinfoinstructabout{
+    padding: 1% 1%;
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    width: 94%;
+    height: 94%;
+    background: white;
+    font-size: medium;
+    text-align: left;
+}
+.accinfo{
+    position: relative;
+    float: right;
+    
+    top: 3%;
+    bottom: 3%;
+    right: 3%;
+    
+    height: 94%;
+    width: 63%;
+    
+    /*
+    top: -77.5%;
+    right: 35%;
+    height: 65vh;
+    width: 45vw;
+    padding: 200px 200px 0px 0px;
+    margin: 200px 200px 0px 0px;
+    */
+
+    background: #f9fdff;
+}
+.allsame{
+    position: absolute;
+    z-index: 8;
+    /*top: 2vh;
+    bottom: 2vh;
+    left: 5vw;
+    right: 5vw;*/
+    height: 68vh;
+    width: 90vw;
+    /*
+    top: 3%;
+    bottom: 3%;
+    left: 3%;
+    right: 3%;
+    */
+    /*
+    top: 2vh;
+    left: 9.5vw;
+    */
+
+    margin: 2vh 5vw 2vh 5vw;
+    padding: 0vh 0vw 0vh 0vw;
+}
+.acciconandbuttonsicon{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 70%;
+    border: 2px solid black;
+    background: url(../images/Tools/ProfileMenu.jpg) no-repeat center;
+    background-size: 100% 100%;
+}
+.acciconandbuttonsiconname{
+    padding-top: 1%;
+    border: 2px solid black;
+    position: absolute;
+    color: white;
+    background: #42403c;
+    width: 90%;
+    height: 10%;
+    left: 5%;
+    top: 80%;
+    font-size: 200%;
+    text-align: center;
+    vertical-align: middle;
+}
+.accinfoname{
+    padding-top: 1%;
+    position: absolute;
+    color: white;
+    background: #42403c;
+    border: 2px solid black;
+    height: 10%;
+    width: 90%;
+    top: 5%;
+    left: 5%;
+    font-size: 150%;
+    vertical-align: middle;
+}
+.accinfoemail{
+    padding-top: 1%;
+    position: absolute;
+    color: white;
+    background: #42403c;
+    border: 2px solid black;
+    height: 10%;
+    width: 90%;
+    top: 20%;
+    left: 5%;
+    font-size: 120%;
+    vertical-align: middle;
+}
+.accstats{
+    padding-top: 1%;
+    position: absolute;
+    color: white;
+    background: #42403c;
+    border: 2px solid black;
+    height: 10%;
+    width: 33%;
+    left: 33%;
+    top: 35%;
+    font-size: 150%;
+    text-align: center;
+    vertical-align: middle;
+}
+.my-custom-scrollbar {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    height: 47%;
+    width: 90%;
+    overflow: auto;
+}
+.table-wrapper-scroll-y {
+    display: block;
+}
+.practicebtn{
+    position: absolute;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    bottom: 10px;
+    width: 90%;
+    height: 5vh;
+    min-height: 26px;
+    min-width: 151px;
+    border: none;
+    border-bottom: 2px solid #000000;
+    border-radius: 1px;
+    transition: all 0.15s ease;
+    transition-property: width;
+}
+.practicebtn:hover{
+    background: #F9D342;
+    width: 91%;
 }
