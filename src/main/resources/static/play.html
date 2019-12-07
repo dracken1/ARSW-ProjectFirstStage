@@ -32,10 +32,9 @@
         </div>
         <div class="topNavigation-Center">
             <ul class="topMenu">
-                <li><a href="profile.html"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
-                <li><a href="controls.html"><i class="glyphicon glyphicon-move"></i> Controls</a></li>
-                <li><a href="about.html"><i class="glyphicon glyphicon-info-sign"></i> About</a></li>
-                <li><a href="contact.html"><i class="glyphicon glyphicon-earphone"></i> Contact</a></li>
+                <li id="profileTopBar"><a><i class="glyphicon glyphicon-user"></i> Profile</a></li>
+                <li id="controlsTopBar"><a><i class="glyphicon glyphicon-move"></i> Controls</a></li>
+                <li id="aboutTopBar"><a><i class="glyphicon glyphicon-info-sign"></i> About</a></li>
             </ul>
         </div>
         <div class="topNavigation-Right">
@@ -65,6 +64,132 @@
             <img class="menuImage" src="images/Tools/MultiPlayerMenu.jpg">
             <p><button class="buttonPro" onclick="window.location.href='lobby.html'">Multi Player</button></p>
         </div>
+    </div>
+    <div class="allsame accountdisplayable" id="accountdisplayableid">
+        <div class="acciconandbuttons">
+            <div class="acciconandbuttonsicon" id="acciconandbuttonsiconid"></div>
+            <div class=" acciconandbuttonsiconname" id="acciconandbuttonsiconnameid"></div>
+        </div>
+        <div class="accinfo">
+            <div class="accinfoname" id="accinfonameid"></div>
+            <div class="accinfoemail" id="accinfoemailid"></div>
+            <div class="accstats" id="accstatsid">Statistics</div>
+            <div id="statstablecontainerid" class="table-wrapper-scroll-y my-custom-scrollbar">
+
+                <table class="table table-bordered table-striped mb-0">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <button class="exitbtn" id="exitbtnid">X</button>
+    </div>
+
+    <div class="allsame accountdisplayable" id="instructdisplayableid">
+        <div class="accinfoinstruct">
+        </div>
+
+        <button class="exitbtn" id="instructexitbtnid">X</button>
+    </div>
+
+    <div class="allsame accountdisplayable" id="aboutdisplayableid">
+        <div class="accinfoabout">
+            <div class="accinfoinstructabout" id="accinfoaboutid">
+
+                <span>
+                    <strong>Tetris-Combat</strong> is a real-time <strong>multiplayer</strong> game based on the
+                    original game designed in <em></em>1984</em></em> by <em>Alekséi Pázhitnov</em>. The game manages a
+                    user base that registers to play in rooms created by themselves where they can meet and play with
+                    friends. Additionally, each user can consult the statistics of their profile, games played and
+                    account.
+
+                </span>
+                <span class="oneColumn">
+                    <strong>General Idea</strong><br>
+                    Played with 7 randomly generated figures, these begin to fall one by one while the player must
+                    decide the rotation of the piece while it falls, as well as where it should fall. When a horizontal
+                    line is completed, that line disappears (generating an score to the player) and all the pieces above
+                    descend one position. The fall of the pieces accelerates progressively, the game ends when the
+                    pieces are piled up to the top.
+                    <br><br>
+                    <strong>Real-Time Orientation</strong><br>
+                    Developed mainly in the multiplayer mode that offers where we find an architecture based on sockets
+                    allowing real-time communication between two instances of our application.
+                    <br><br><br><br><br><br><br>
+                    <strong>Looper Inc.</strong><br>
+                    Arquitectura de Software - ARSW<br>
+                    Escuela Colombiana de Ingeniería Julio Garavito<br>
+                    2019 ©
+                </span>
+                <span class="twoColumn">
+                    <br><br>
+                    <strong>Business Idea</strong><br>
+                    The business idea of the game is to be able in the future to offer microtransaction services within
+                    the game that can fully customize the experience for each user, giving the game a unique personality
+                    per user, without this going to influence the direct performance of the game. player in the game.
+                    <br><br>
+                    <strong>High Concurrence</strong><br>
+                    It is explicit in the characteristics that the game has, such as its multiplayer game mode, the time
+                    count while playing, the score and other functionalities of movement of objects within the game.
+                    <br><br><br><br><br><br>
+                    <strong>Nicolas Cardenas</strong><br>
+                    <strong>David Diaz</strong><br>
+                    <strong>Pedro Mayorga</strong><br>
+                    <br>
+                    <strong>Cellphone:</strong> +57 301 3664994<br>
+                    <strong>Email:</strong> pedrojmayorga@gmail.com<br>
+                    www.escuelaing.edu.co<br>
+                    Bogota, D.C. - Colombia<br>
+                </span>
+            </div>
+        </div>
+        <button class="exitbtn" id="aboutexitbtnid">X</button>
     </div>
 </body>
 <script src="JS/lobby.js"></script>

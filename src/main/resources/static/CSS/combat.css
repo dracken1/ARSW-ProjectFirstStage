@@ -1,7 +1,7 @@
 body {
     -webkit-background-size: cover;    
     background: url(../images/Background/Background.jpg)no-repeat fixed;
-    font-family: "Futura Bk BT", serif;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #pausebuttoncontid{
     color: black;
@@ -84,7 +84,6 @@ body {
     height: 90vh;
     min-width: 574px;
     min-height: 693px;
-    font-family: "Futura Bk BT";
     z-index: 2;
 }
 #canvas{
@@ -98,7 +97,6 @@ body {
     min-height: 588px;
     background: rgba(0,0,0,0.8);
     border: 3px solid #0d1113;
-    font-family: "Futura Bk BT";
 }
 #upcoming{
     display: inline;
@@ -112,7 +110,6 @@ body {
     top: 10%;
     background: #292826;
     border: 3px solid #0d1113;
-    font-family: "Futura Bk BT";
 }
 #upcomingOpponent{
     display: inline;
@@ -126,14 +123,12 @@ body {
     bottom: 10%;
     background: #292826;
     border: 3px solid #0d1113;
-    font-family: "Futura Bk BT";
 }
 #upcomingtextOpponent{
     color: #f9fdff;
     position: relative;
     text-align: center;
     top: 92%;
-    font-family: "Futura Bk BT";
 }
 #upcomingcont{
     color: #f9fdff;
@@ -153,7 +148,6 @@ body {
     min-height: 693px;
     border: 3px solid #000000;
     border-radius: 5px;
-    font-family: "Futura Bk BT";
     z-index: 2;
 }
 #secondplayercanvas{
@@ -165,7 +159,6 @@ body {
     min-width: 294px;
     min-height: 588px;
     background: rgba(12, 0, 0, 0.8);
-    font-family: "Futura Bk BT";
 }
 #spmenubar{
     position: absolute;
@@ -188,7 +181,6 @@ body {
     color: #f9fdff;
     border: 3px solid #0d1113;
     font-size: 22px;
-    font-family: "Futura Bk BT";
 }
 #sprowscont{
     top: 5%;
@@ -202,7 +194,6 @@ body {
     color: #f9fdff;
     border: 3px solid #0d1113;
     font-size: 22px;
-    font-family: "Futura Bk BT";
 }
 #spstatcont{
     top: 10%;
@@ -245,7 +236,6 @@ body {
     color: #f9fdff;
     border: 3px solid #0d1113;
     font-size: 22px;
-    font-family: "Futura Bk BT";
 }
 #rowscont{
     top: 5%;
@@ -260,7 +250,6 @@ body {
     color: #f9fdff;
     border: 3px solid #0d1113;
     font-size: 22px;
-    font-family: "Futura Bk BT";
 }
 #vsimage{
     position: absolute;

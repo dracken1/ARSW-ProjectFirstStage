@@ -1,6 +1,8 @@
 // ID sala
 var salaid;
 
+
+
 var CombatApp = function(){
     return {
         abandonarSala: function () {
@@ -259,10 +261,14 @@ function Sound(source, volume, loop)
         this.loop = loop;
     }
 }
+
 $('#pausebuttoncontid').click(function () {
-    alert("oprimido");
     var audio = document.getElementById("playerMusic");
-    audio.pause();
+    if(audio.paused){
+        audio.play();
+    } else{
+        audio.pause();
+    }
 });
 function get(id){
     return document.getElementById(id);

@@ -4,9 +4,15 @@
     <list default="true" id="3253c33d-2dbb-4229-807c-5cf636a67eec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/combat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/combat.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/lobby.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/lobby.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/play.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/play.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/combatfunctionality.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/combatfunctionality.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/combat.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/combat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lobby.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lobby.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/play.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/play.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +158,8 @@
       <workItem from="1575239084649" duration="183000" />
       <workItem from="1575241839280" duration="1276000" />
       <workItem from="1575331027590" duration="16138000" />
-      <workItem from="1575388082362" duration="24528000" />
+      <workItem from="1575388082362" duration="35472000" />
+      <workItem from="1575659257762" duration="6603000" />
     </task>
     <servers />
   </component>

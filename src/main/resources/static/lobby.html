@@ -33,10 +33,9 @@
         </div>
         <div class="topNavigation-Center">
             <ul class="topMenu">
-                <li><a href="profile.html"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
-                <li><a href="controls.html"><i class="glyphicon glyphicon-move"></i> Controls</a></li>
-                <li><a href="about.html"><i class="glyphicon glyphicon-info-sign"></i> About</a></li>
-                <li><a href="contact.html"><i class="glyphicon glyphicon-earphone"></i> Contact</a></li>
+                <li id="profileTopBar"><a><i class="glyphicon glyphicon-user"></i> Profile</a></li>
+                <li id="controlsTopBar"><a><i class="glyphicon glyphicon-move"></i> Controls</a></li>
+                <li id="aboutTopBar"><a><i class="glyphicon glyphicon-info-sign"></i> About</a></li>
             </ul>
         </div>
         <div class="topNavigation-Right">
@@ -67,9 +66,6 @@
     </div>
     <div class="middlebar row">
         <div class="leftsidebar col-md-2">
-            <div class="leftbtncont">
-                <button class="genercibtnlft">Start Random Game</button>
-            </div>
             <div class="leftbtncont">
                 <button class="genercibtnlft" id="genercibtnlftid" onclick="cargaPage().createLobby()">Create
                     Lobby</button>
@@ -111,7 +107,7 @@
                     <div class="accinfoname" id="accinfonameid"></div>
                     <div class="accinfoemail" id="accinfoemailid"></div>
                     <div class="accstats" id="accstatsid">Statistics</div>
-                    <div id="statstablecontainerid" class="table-wrapper-scroll-y my-custom-scrollbar">
+                    <div id="statstablecontainerid" class="mystatstable table-wrapper-scroll-y my-custom-scrollbar">
 
                         <table class="table table-bordered table-striped mb-0">
                             <thead>
@@ -212,23 +208,26 @@
                 </div>
                 <button class="exitbtn" id="aboutexitbtnid">X</button>
             </div>
-            <table class="mytable table table-hover table-dark" id="tablaSalas">
-                <thead>
+            <div class="salastable table-wrapper-scroll-y my-custom-scrollbar">
+                <table class="mytable table table-hover table-dark table-bordered table-striped mb-0" id="tablaSalas">
+                    <thead>
                     <tr>
                         <th scope="col">Description</th>
                         <th scope="col">Players</th>
                         <th scope="col">Join</th>
                     </tr>
-                </thead>
-                <tbody>
+                    </thead>
+                    <tbody>
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 </body>
 <script src="JS/LoginRegistry.js"></script>
 <script src="JS/lobby.js"></script>
+<script src="JS/home.js"></script>
 
 <footer>
     <span class="programa">

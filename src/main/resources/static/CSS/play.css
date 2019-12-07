@@ -118,12 +118,15 @@ li a:hover:not(.active) {
     padding-top: 7px;
 }
 
-
-
-
-
-
-
+#profileTopBar{
+    cursor: pointer;
+}
+#aboutTopBar{
+    cursor: pointer;
+}
+#controlsTopBar{
+    cursor: pointer;
+}
 
 
 .functionalitiesMenu {
