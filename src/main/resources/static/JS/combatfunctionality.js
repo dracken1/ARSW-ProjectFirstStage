@@ -75,7 +75,9 @@ var cargaDatosSala = function (tabla) {
         })
     })
 };
+(function(){
 
+})();
 var datosDosJugadores = function (tabla) {
     tabla.map(function (salaDescripcion){
         var username = getCookie("username");
@@ -94,7 +96,7 @@ var datosDosJugadores = function (tabla) {
                 }
 
                 let timerInterval
-
+                $("#waitingplayercontainerid").hide("fast");
                 Swal.fire({
                     title: 'Get Ready!',
                     html: 'The game will start in <b style="font-size: 24px; color:#60000d;"></b> seconds.',
@@ -201,6 +203,7 @@ var datosDosJugadores = function (tabla) {
                     if (extract.afk) {
                         playing = false;
                         document.getElementById('waitwinnerlosercontid').innerText = "OPPONENT LEFT, YOU WIN!";
+                        document.getElementById('gameoverscorecontid').innerText = "SCORE: " + score;
                         if (!(gameoveractive)) {
                             animateGameOver();
                         }
@@ -221,6 +224,7 @@ var datosDosJugadores = function (tabla) {
                     if (extract.afk) {
                         playing = false;
                         document.getElementById('waitwinnerlosercontid').innerText = "OPPONENT LEFT, YOU WIN!";
+                        document.getElementById('gameoverscorecontid').innerText = "SCORE: " + score;
                         if (!(gameoveractive)) {
                             animateGameOver();
                         }

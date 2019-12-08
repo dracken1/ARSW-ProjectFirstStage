@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3253c33d-2dbb-4229-807c-5cf636a67eec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/practice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/practice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/combatfunctionality.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/combatfunctionality.js" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,21 +43,8 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>myta</find>
-      <find>score</find>
-      <find>setscore</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="260" />
-    <option name="y" value="20" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
   </component>
   <component name="ProjectId" id="1Rd92e1fBD2xSUYYfpx2BzdN7F0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -100,6 +88,16 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="GameApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -109,18 +107,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -165,6 +151,7 @@
       <workItem from="1575331027590" duration="16138000" />
       <workItem from="1575388082362" duration="35472000" />
       <workItem from="1575659257762" duration="6603000" />
+      <workItem from="1575832259018" duration="5668000" />
     </task>
     <servers />
   </component>

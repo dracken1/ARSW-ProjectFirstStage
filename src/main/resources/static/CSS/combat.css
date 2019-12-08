@@ -29,7 +29,24 @@ body {
     background: #f9a825;
     color: black;
 }
-
+#waitingplayercontainerid{
+    position: absolute;
+    height: 25vh;
+    width: 50vw;
+    top: 37vh;
+    left: 25vw;
+    text-align: center;
+    padding: 8vh 0 0 0;
+    background: wheat;
+    color: black;
+    font-size: 6vh;
+    font-weight: bolder;
+    z-index: 15;
+    border: none;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    border-radius: 5px;
+}
 /*
 #pausebuttoncontid:visited {
     background: green;
