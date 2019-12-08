@@ -1,6 +1,10 @@
 body {
     -webkit-background-size: cover;    
+    /*
     background: url(../images/Background/Background.jpg)no-repeat fixed;
+    */
+    background: url("../images/Background/Background.jpg") no-repeat;
+    background-size: cover;
     font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #pausebuttoncontid{
@@ -135,7 +139,8 @@ body {
     position: absolute;
     top: 5vh;
     left: 3vw;
-    height: 90vh;
+    height: 90%;
+    /*height: 90vh;*/
     width: 94vw;
     min-height: 693px;
     min-width: 1169px;
@@ -150,7 +155,8 @@ body {
     border: 3px solid #000000;
     border-radius: 5px;
     width: 40vw;
-    height: 89vh;
+    height: 100%;
+    /*height: 89vh;*/
     min-width: 574px;
     min-height: 693px;
     z-index: 2;
@@ -171,7 +177,7 @@ body {
 
     position: relative;
     float: left;
-    left: 5px;
+    left: 10%;
     top: 5px;
     width: 40%;
     height: 3vh;
@@ -196,8 +202,8 @@ body {
     text-align: center;
 
     position: relative;
-    float: left;
-    left: 5px;
+    float: right;
+    right: 10%;
     top: 5px;
     width: 40%;
     height: 3vh;
@@ -210,10 +216,14 @@ body {
 #canvas{
     position: absolute;
     margin-right: 3%;
-    top: 4vh;
+    top: 5%;
+    /*top: 4vh;*/
+    bottom: 5%;
     left: 2vw;
-    width: calc((40vh + 20vw)/2);
-    height: calc(40vh + 20vw);
+    width: 50%;
+    /*width: calc((40vh + 20vw)/2);*/
+    height: 90%;
+    /*height: calc(40vh + 20vw);*/
     min-width: 294px;
     min-height: 588px;
 
@@ -321,7 +331,8 @@ body {
     background: #bbbbbb95;
     /*background: rgba(24,43,48,0.6);*/
     width: 40vw;
-    height: 89vh;
+    height: 100%;
+    /*height: 89vh;*/
     min-width: 574px;
     min-height: 693px;
     border: 3px solid #000000;
@@ -330,10 +341,14 @@ body {
 }
 #secondplayercanvas{
     position: absolute;
-    top: 4vh;
+    top: 5%;
+    /*top: 4vh;*/
+    bottom: 5%;
     right: 2vw;
-    width: calc((40vh + 20vw)/2);
-    height: calc(40vh + 20vw);
+    width: 50%;
+    /*width: calc((40vh + 20vw)/2);*/
+    height: 90%;
+    /*height: calc(40vh + 20vw);*/
     min-width: 294px;
     min-height: 588px;
 
@@ -345,12 +360,14 @@ body {
 #spmenubar{
     position: absolute;
     top: 5%;
+    bottom: 5%;
     left: 5%;
     width: 35%;
+    height: 90%;
+    /*height: calc(40vh + 20vw);*/
     min-height: 588px;
 
     background: rgba(24, 43, 48, 0.767);
-    height: calc(40vh + 20vw);
     background: rgba(24, 43, 48, 0.767);
     border: 3px solid #bbb;
     box-shadow: 10px 10px 8px 3px #333;
@@ -394,9 +411,11 @@ body {
     float: right;
     position: absolute;
     top: 5%;
+    bottom: 5%;
     right: 5%;
     width: 35%;
-    height: calc(40vh + 20vw);
+    height: 90%;
+    /*height: calc(40vh + 20vw);*/
     min-height: 588px;
     
 
