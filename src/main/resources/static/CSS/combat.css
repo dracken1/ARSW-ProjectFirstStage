@@ -77,8 +77,9 @@ body {
 
     position: relative;
     float: left;
-    left: 5px;
-    top: 5px;
+    left: 1vh;
+    /*top: 5px;*/
+    top: 1vh;
     width: 20%;
     height: 4vh;
 
@@ -168,7 +169,7 @@ body {
     margin: 0 0 0 0;
     padding: 0 0 0 0;
     position: absolute;
-    top: 5vh;
+    top: 6vh;
     left: 3vw;
     height: 90%;
     /*height: 90vh;*/
