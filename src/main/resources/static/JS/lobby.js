@@ -195,9 +195,9 @@ var dibujarLobby = function (tabla) {
         var salaId = salaDescripcion.descripcion;
         var cantidadJudadores = salaDescripcion.cantidadJugadores;
         if (cantidadJudadores == 2) {
-            $("#tablaSalas tbody").append("<tr><td>Lobby " + salaId + "</td><td>" + cantidadJudadores + "</td><td> <button style='background-color: darkred; color: white' class=\"genericbtn\" id=\"gnrbtnlft\">GAME FULL</button></td></tr>");
+            $("#tablaSalas tbody").append("<tr><td>Lobby " + salaId + "</td><td>" + cantidadJudadores + "</td><td> <button style='background-color: darkred; color: white' class=\"genericbtn\" id=\"gnrbtnlft\">FULL&nbsp&nbspGAME</button></td></tr>");
         } else {
-            $("#tablaSalas tbody").append("<tr><td>Lobby " + salaId + "</td><td>" + cantidadJudadores + "</td><td> <button onclick='cargaPage().unirseASala(" + salaId + ")' class=\"genericbtn\" id=\"gnrbtnlft\">JOIN GAME</button></td></tr>");
+            $("#tablaSalas tbody").append("<tr><td>Lobby " + salaId + "</td><td>" + cantidadJudadores + "</td><td> <button onclick='cargaPage().unirseASala(" + salaId + ")' class=\"genericbtn\" id=\"gnrbtnlft\">JOIN&nbsp&nbspGAME</button></td></tr>");
         }
     })
 

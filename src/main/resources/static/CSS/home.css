@@ -676,6 +676,7 @@ span.twoColumn {
     background: white;
     */
     background: url("../images/Tools/howPlay.jpg") no-repeat center;
+    background-size: contain;
     
 }
 .accinfoinstructimg{
@@ -708,6 +709,8 @@ span.twoColumn {
     background: white;
     font-size: medium;
     text-align: left;
+
+    overflow: hidden;
 }
 .accinfo{
     position: relative;

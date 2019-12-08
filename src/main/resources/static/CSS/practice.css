@@ -56,8 +56,10 @@ body{
 #upcoming {
     display: inline;
     margin: 0 auto;
-    background-color: rgba(251, 249, 255, 0.99);
-    /*border: 3px solid #999999;*/
+    /*background-color: rgba(251, 249, 255, 0.99);*/
+    /*background-color: red;*/
+    background:url("../images/Background/PlainBackground.jpg");
+    border: 3px solid #999999;
     border-radius: 5px;
 }
 #score{
@@ -109,8 +111,8 @@ body{
 #upcomingcont{
     position: absolute;
     padding: 1vh 0.5vh 0 0.5vh;
-    color: white;
-    background: #373737;
+    color: black;
+    background: #bbb;
     width: 52%;
     left: 20%;
     top: 2.5%;
