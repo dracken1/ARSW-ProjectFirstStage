@@ -133,6 +133,56 @@ body {
     min-height: 693px;
     z-index: 2;
 }
+
+
+.mainplayerlabel {
+    background: #0cb45a;
+    color: white;
+    font-weight: bold;
+
+
+
+
+    font-family: 'Raleway', sans-serif;
+    font-size: large;
+    font-weight: bold;
+
+    position: relative;
+    float: left;
+    left: 5px;
+    top: 5px;
+    width: 40%;
+    height: 3vh;
+
+    border: 2px solid black;
+    box-shadow: 10px 10px 8px 3px #333;
+    border-radius: 5px;
+}
+
+.secplayerlabel {
+    background: #db2526;
+    color: white;
+    font-weight: bold;
+
+
+
+
+    font-family: 'Raleway', sans-serif;
+    font-size: large;
+    font-weight: bold;
+
+    position: relative;
+    float: left;
+    left: 5px;
+    top: 5px;
+    width: 40%;
+    height: 3vh;
+
+    border: 2px solid black;
+    box-shadow: 10px 10px 8px 3px #333;
+    border-radius: 5px;
+}
+
 #canvas{
     position: absolute;
     margin-right: 3%;
@@ -144,7 +194,7 @@ body {
     min-height: 588px;
 
     background:url("../images/Background/WrinkledBackground.jpg");
-    border: 5px solid #057138;
+    border: 5px solid #0cb45a;
     box-shadow: 10px 10px 8px 3px #333;
     border-radius: 10px;
 }
@@ -261,7 +311,7 @@ body {
     min-height: 588px;
 
     background:url("../images/Background/WrinkledBackground.jpg");
-    border: 5px solid #60000d;
+    border: 5px solid #db2526;
     box-shadow: 10px 10px 8px 3px #333;
     border-radius: 10px;
 }
