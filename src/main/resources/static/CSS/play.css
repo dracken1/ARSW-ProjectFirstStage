@@ -289,6 +289,16 @@ span.twoColumn {
     text-align: justify;
 }
 
+.status {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 4px;
+
+    border-radius: 5px;
+    background-color: #60D156;
+  }
+
 
 
 

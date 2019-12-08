@@ -3,18 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Tetris Combat</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Tetris-Combat</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <link rel="stylesheet" href="CSS/combat.css">
-    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="icon" type="image/x-icon" href="images/Logo/Favicon/favicon.ico" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,500&display=swap" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
-    <link rel="icon" type="image/x-icon" href="images/Logo/Favicon/favicon.ico" />
-    <!--<script src="JS/session.js"></script>-->
+    <script src="JS/sessssssssssssssion.js"></script>
     <script>
         $(function () {
             $(window).on('beforeunload',function () {
@@ -55,7 +60,7 @@
                 </canvas>
                 <div id="menubar">
                     <div id="upcomingcont">
-                        <span>Upcoming <br /> Tetromino</span>
+                        <span>Upcoming <br /> Figure</span>
                         <canvas id="upcoming"></canvas>
                     </div>
                     <div id="mpstatscont">
@@ -93,12 +98,26 @@
                             <p><b>ROWS:</b> <span id="sprows">0</span></p>
                         </div>
                     </div>
+
+
+
+                    <div id="upcomingcontOpponent">
+                        <canvas id="upcomingOpponent"></canvas>
+                        <span>Upcoming <br /> Figure</span>
+                    </div>
+
+
+
+                    <!--
                     <div id="upcomingcontOpponent">
                         <canvas id="upcomingOpponent"></canvas>
                     </div>
                     <div id="upcomingtextOpponent">
-                        <span class>Upcoming <br /> Tetromino</span>
+                        <span class>Upcoming <br /> Figure</span>
                     </div>
+                    -->
+
+
                     <div class="powerscontainer" id="sppowerscontainerid">
 
                     </div>
