@@ -203,6 +203,7 @@ var datosDosJugadores = function (tabla) {
                     if (extract.afk) {
                         playing = false;
                         document.getElementById('waitwinnerlosercontid').innerText = "OPPONENT LEFT, YOU WIN!";
+                        document.getElementById('gameoverscorecontid').innerText = "SCORE: " + score;
                         if (!(gameoveractive)) {
                             animateGameOver();
                         }
@@ -223,6 +224,7 @@ var datosDosJugadores = function (tabla) {
                     if (extract.afk) {
                         playing = false;
                         document.getElementById('waitwinnerlosercontid').innerText = "OPPONENT LEFT, YOU WIN!";
+                        document.getElementById('gameoverscorecontid').innerText = "SCORE: " + score;
                         if (!(gameoveractive)) {
                             animateGameOver();
                         }
