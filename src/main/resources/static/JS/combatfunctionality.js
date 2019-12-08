@@ -203,6 +203,8 @@ var datosDosJugadores = function (tabla) {
                     if (extract.afk) {
                         playing = false;
                         document.getElementById('waitwinnerlosercontid').innerText = "OPPONENT LEFT, YOU WIN!";
+                        document.getElementById('waitwinnerlosercontid').style.backgroundColor = "#0cb45a";
+                        document.getElementById('waitwinnerlosercontid').style.color = "white";
                         document.getElementById('gameoverscorecontid').innerText = "SCORE: " + score;
                         if (!(gameoveractive)) {
                             animateGameOver();
@@ -210,10 +212,16 @@ var datosDosJugadores = function (tabla) {
                     } else {
                         if (extract.score > score) {
                             document.getElementById('waitwinnerlosercontid').innerText = "YOU LOSE!";
+                            document.getElementById('waitwinnerlosercontid').style.backgroundColor = "#db2526";
+                            document.getElementById('waitwinnerlosercontid').style.color = "white";
                         } else if (extract.score < score) {
                             document.getElementById('waitwinnerlosercontid').innerText = "YOU WIN!";
+                            document.getElementById('waitwinnerlosercontid').style.backgroundColor = "#0cb45a";
+                            document.getElementById('waitwinnerlosercontid').style.color = "white";
                         } else {
                             document.getElementById('waitwinnerlosercontid').innerText = "DRAW!";
+                            document.getElementById('waitwinnerlosercontid').style.backgroundColor = "#bbb";
+                            document.getElementById('waitwinnerlosercontid').style.color = "white";
                         }
                         document.getElementById('gameoverscorecontid').innerText = "SCORE: " + score;
                         if (!(gameoveractive)) {
@@ -224,6 +232,8 @@ var datosDosJugadores = function (tabla) {
                     if (extract.afk) {
                         playing = false;
                         document.getElementById('waitwinnerlosercontid').innerText = "OPPONENT LEFT, YOU WIN!";
+                        document.getElementById('waitwinnerlosercontid').style.backgroundColor = "#0cb45a";
+                        document.getElementById('waitwinnerlosercontid').style.color = "white";
                         document.getElementById('gameoverscorecontid').innerText = "SCORE: " + score;
                         if (!(gameoveractive)) {
                             animateGameOver();
@@ -582,10 +592,16 @@ function lose() {
         game_well_concluded = true;
         if(opponent_score > score){
             document.getElementById('waitwinnerlosercontid').innerText = "YOU LOSE!";
+            document.getElementById('waitwinnerlosercontid').style.backgroundColor = "#db2526";
+            document.getElementById('waitwinnerlosercontid').style.color = "white";
         } else if (opponent_score < score){
             document.getElementById('waitwinnerlosercontid').innerText = "YOU WIN!";
+            document.getElementById('waitwinnerlosercontid').style.backgroundColor = "#0cb45a";
+            document.getElementById('waitwinnerlosercontid').style.color = "white";
         } else{
             document.getElementById('waitwinnerlosercontid').innerText = "DRAW!";
+            document.getElementById('waitwinnerlosercontid').style.backgroundColor = "#bbb";
+            document.getElementById('waitwinnerlosercontid').style.color = "white";
         }
     }
     addstat();

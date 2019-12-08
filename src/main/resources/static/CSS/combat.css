@@ -32,20 +32,22 @@ body {
 #waitingplayercontainerid{
     position: absolute;
     height: 25vh;
-    width: 50vw;
+    width: 60vw;
     top: 37vh;
-    left: 25vw;
+    left: 20vw;
     text-align: center;
     padding: 8vh 0 0 0;
-    background: wheat;
+    background: #F9D342;
     color: black;
     font-size: 6vh;
     font-weight: bolder;
     z-index: 15;
+
+
     border: none;
-    border-bottom: 3px solid black;
-    border-top: 3px solid black;
-    border-radius: 5px;
+    border: 3px solid black;
+    box-shadow: 10px 10px 3px 5px #000;
+    border-radius: 10px;
 }
 /*
 #pausebuttoncontid:visited {
@@ -109,10 +111,13 @@ body {
     min-width: 360px;
     left: 25vw;
     top: 25vh;
-    background: wheat;
     z-index: 10;
-    border-radius: 5px;
     display: none;
+
+    background: url("../images/Background/PlainBackground.jpg");
+    border: 5px solid #bbb;
+    box-shadow: 0px 0px 15px 15px #fff;
+    border-radius: 10px;
 }
 .gameovertextcontid{
     font-weight: bolder;
@@ -121,14 +126,23 @@ body {
     margin:5% 0 0 0;
     padding: 1% 0 0 0;
     position: relative;
-    background: black;
     height: 20%;
     width: 80%;
     left: 10%;
-    color: #666666;
     font-family: Impact, serif;
     text-align: center;
     letter-spacing: 3px;
+
+    background: #F9D342;
+    color: black;
+
+    border: 3px solid black;
+    box-shadow: 10px 10px 3px 5px #000;
+    border-radius: 10px;
+}
+
+#waitwinnerlosercontid {
+
 }
 
 .gameoversubcontlose{
