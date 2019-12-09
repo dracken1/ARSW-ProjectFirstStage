@@ -272,13 +272,19 @@ La Alta Concurrencia de la aplicación se encuentra explicita en las caracterist
 
 ## Performance
 
+Se realizo una prueba con 20 jugadores simultáneos para probar el rendimiento cuando la demanda es alta, los resultados se pueden ver en las siguientes graficas.
+
 ### Memoria
 
 ![Imagenes](images/Documentation/usoMemoria.PNG)
 
+La memoria se mantuvo casi constante durante toda la prueba.
+
 ### Tiempo de respuesta
 
 ![Imagenes](images/Documentation/tiempoRespuesta.PNG)
+
+Los tiempos de respuesta son menores a 1 segundo en la mayoría de los casos dependiendo de la velocidad de internet de cada uno de los usuarios.
 
 ## **Casos de uso**
 
