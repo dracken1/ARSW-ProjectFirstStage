@@ -261,7 +261,7 @@ La funcionalidad de `Cerrar Sesión` le permite a un usuario desloggearse y sali
 - Artefacto: Frontend, backend 
 - Ambiente: Condiciones de alta demanda
 
-![Imagenes](images/Documentation/nopagado.PNG)
+![Imagenes](images/Documentation/nopago.PNG)
 
 ![Imagenes](images/Documentation/pagado.PNG)
 
