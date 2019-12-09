@@ -212,12 +212,6 @@ La funcionalidad de `Menu de Opciones` le permite a un usuario acceder a otras f
 
 La funcionalidad de `Perfil de Usuario` le permite a un usuario acceder a un resumen de su Perfil, que incluye estadísticas de su uso de la aplicación.
 
-### **Configuración** (en construcción)
-
-![Imagenes](images/Documentation/Functionalities/configuracion.PNG)
-
-La funcionalidad de `Configuración` le permite a un usuario acceder a configuraciones de la aplicación.
-
 ### **Instrucciones**
 
 ![Imagenes](images/Documentation/Functionalities/instrucciones.PNG)
