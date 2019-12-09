@@ -274,10 +274,10 @@ La Alta Concurrencia de la aplicación se encuentra explicita en las caracterist
 
 ### Memoria
 
-![Imagenes](images/Documentation/usoMemoria.jpeg)
+![Imagenes](images/Documentation/usoMemoria.png)
 ### Tiempo de respuesta
 
-![Imagenes](images/Documentation/tiempoRespuesta.jpeg)
+![Imagenes](images/Documentation/tiempoRespuesta.png)
 
 ## **Casos de uso**
 
