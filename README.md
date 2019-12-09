@@ -290,13 +290,6 @@ Los tiempos de respuesta son menores a 1 segundo en la mayoría de los casos dep
 
 ![Imagenes](model/1stUseCaseDiagram.png)
 
-![Imagenes](model/2ndUseCaseDiagram.png)
-
-![Imagenes](model/3rdUseCaseDiagram.png)
-
-![Imagenes](model/4thUseCaseDiagram.png)
-
-![Imagenes](model/5thUseCaseDiagram.png)
 
 ## **Diagrama de componentes**
 
