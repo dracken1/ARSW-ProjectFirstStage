@@ -24,7 +24,7 @@ body {
     border-radius: 6px;
     cursor: pointer;
 
-    /*z-index: -10;*/
+    z-index: 11;
 }
 
 #pausebuttoncontid:hover {
@@ -126,7 +126,7 @@ body {
     min-width: 360px;
     left: 25vw;
     top: 25vh;
-    z-index: 10;
+    z-index: 13;
     display: none;
 
     background: url("../images/Background/PlainBackground.jpg");
@@ -189,7 +189,7 @@ body {
     /*background: #5eb313;*/
 
 
-    z-index: -10;
+    z-index: 9;
 }
 #mainplayer{
     position: absolute;
@@ -205,7 +205,6 @@ body {
     min-width: 574px;
     min-height: 693px;
 
-    /*z-index: -5;*/
 }
 
 
@@ -384,7 +383,6 @@ body {
     border: 3px solid #000000;
     border-radius: 5px;
 
-    /*z-index: -5;*/
 }
 #secondplayercanvas{
     position: absolute;
@@ -535,17 +533,17 @@ body {
     text-align: center;
     display: none;
 
-    z-index: 25;
+    z-index: 12;
 }
 #powerscontainerid{
     background: #0cb45a;
     top: 37%;
-    z-index: 25;
+    z-index: 12;
 }
 #sppowerscontainerid{
     background: #db2526;
     top: 50%;
-    z-index: 25;
+    z-index: 12;
 }
 
 
