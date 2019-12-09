@@ -236,46 +236,55 @@ La funcionalidad de `Acerca De` le muestra a los usuarios información sobre la 
 
 La funcionalidad de `Cerrar Sesión` le permite a un usuario desloggearse y salir exitosamente de la aplicación.
 
-## Atributos no funcionales 
-
+# Atributos no funcionales 
+## Escenarios 
 ### Usabilidad
 1.Escenario de juego (Jugadas oponente)
-- Estimulo:
-- Fuente:
-- Estimulo:
-- Ambiente:
+- Estimulo: Durante la partida
+- Fuente: Usuarios
+- Artefacto: Frontend, backend
+- Ambiente: Condiciones normales de ejecución 
+- Tiempo de respuesta:  Respuestas de menos de un segundo
 
 2. Abandono de partidas (Control de abandono)
-- Estimulo:
-- Fuente:
-- Estimulo:
-- Ambiente:
+- Estimulo: Abandono de partida mediante botón de salida, o cierre de navegador
+- Fuente: Usuarios
+- Artefacto: Frontend, backend
+- Ambiente: Condiciones normales de ejecución.
+- Tiempo de respuesta:  Respuestas de menos de un segundo
+
 
 ### Escalabilidad
 1. Vertical
-- Estimulo:
-- Fuente:
-- Estimulo:
-- Ambiente:
+- Estimulo: Al momento de jugar 
+- Fuente: Usuarios
+- Artefacto: Frontend, backend 
+- Ambiente: Condiciones de alta demanda
+![Imagenes](images/Documentation/nopagado.PNG)
+
+![Imagenes](images/Documentation/pagado.PNG)
 
 2.Horizontal 
-- Estimulo:
-- Fuente:
-- Estimulo:
-- Ambiente:
+- Estimulo: Al momento de jugar
+- Fuente: Usuarios
+- Artefacto: Backend
+- Ambiente: Sobrecarga de usuarios
+![Imagenes](images/Documentation/heroku.PNG)
 
 ### Performance 
 1. Real-time
-- Estimulo:
-- Fuente:
-- Estimulo:
-- Ambiente:
+- Estimulo: Creacion de lobbys, inicio de partidas, juego, cierre de partidas
+- Fuente: Usuarios
+- Artefacto: Frontend
+- Ambiente: Condiciones normales de ejecución
+- Tiempo de respuesta:  Respuestas de menos de un segundo
 
 2.Tiempos de respuesta 
-- Estimulo:
-- Fuente:
-- Estimulo:
-- Ambiente:
+- Estimulo: Clic en diferentes botones alrededor del juego
+- Fuente: Usuarios
+- Artefacto: Backend 
+- Ambiente: Condiciones normales de ejecución
+- Tiempo de respuesta:  Respuestas de menos de un segundo
 
 ![Imagenes](images/Documentation/tiempoRespuesta.PNG)
 
