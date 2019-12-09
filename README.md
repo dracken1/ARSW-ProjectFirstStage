@@ -236,6 +236,52 @@ La funcionalidad de `Acerca De` le muestra a los usuarios información sobre la 
 
 La funcionalidad de `Cerrar Sesión` le permite a un usuario desloggearse y salir exitosamente de la aplicación.
 
+## Atributos no funcionales 
+
+### Usabilidad
+1.Escenario de juego (Jugadas oponente)
+- Estimulo:
+- Fuente:
+- Estimulo:
+- Ambiente:
+
+2. Abandono de partidas (Control de abandono)
+- Estimulo:
+- Fuente:
+- Estimulo:
+- Ambiente:
+
+### Escalabilidad
+1. Vertical
+- Estimulo:
+- Fuente:
+- Estimulo:
+- Ambiente:
+
+2.Horizontal 
+- Estimulo:
+- Fuente:
+- Estimulo:
+- Ambiente:
+
+### Performance 
+1. Real-time
+- Estimulo:
+- Fuente:
+- Estimulo:
+- Ambiente:
+
+2.Tiempos de respuesta 
+- Estimulo:
+- Fuente:
+- Estimulo:
+- Ambiente:
+
+![Imagenes](images/Documentation/tiempoRespuesta.PNG)
+
+![Imagenes](images/Documentation/usoMemoria.PNG)
+
+
 ## **Requerimientos**
 
 ### **Idea General**
@@ -270,9 +316,6 @@ Esto nos permite realizar una conexión más que estable entre el jugador local 
 
 La Alta Concurrencia de la aplicación se encuentra explicita en las caracteristicas que tiene el juego, como su modo de juego multijugador, el conteo del tiempo mientras se juega, la puntuación y demás funcionalidades de movimiento de objetos dentro del juego.
 
-## Performance
-
-Se realizo una prueba con 20 jugadores simultáneos para probar el rendimiento cuando la demanda es alta, los resultados se pueden ver en las siguientes graficas.
 
 ### Memoria
 
