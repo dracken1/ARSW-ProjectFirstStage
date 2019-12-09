@@ -71,7 +71,7 @@ public class Bridge{
             pstmt.setString(1, email);
             ResultSet rs = pstmt.executeQuery();
             rs.next();
-            System.out.println("conteo: " + rs.getInt("total"));
+            //System.out.println("conteo: " + rs.getInt("total"));
             boolean retorno = rs.getInt("total") >= 1;
             conn.close();
             pstmt.close();

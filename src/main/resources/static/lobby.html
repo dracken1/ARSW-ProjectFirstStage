@@ -87,7 +87,7 @@
         <div class="accstats" id="accstatsid">Statistics</div>
         <div id="statstablecontainerid" class="table-wrapper-scroll-y my-custom-scrollbar">
 
-            <table class="table table-bordered table-striped mb-0">
+            <table class="table table-bordered table-striped mb-0" id="statsTable">
                 <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -152,14 +152,12 @@
 <div class="allsame accountdisplayable" id="aboutdisplayableid">
     <div class="accinfoabout">
         <div class="accinfoinstructabout" id="accinfoaboutid">
-
-                <span>
+            <span>
                     <strong>Tetris-Combat</strong> is a real-time <strong>multiplayer</strong> game based on the
                     original game designed in <em></em>1984</em></em> by <em>Alekséi Pázhitnov</em>. The game manages a
                     user base that registers to play in rooms created by themselves where they can meet and play with
                     friends. Additionally, each user can consult the statistics of their profile, games played and
                     account.
-
                 </span>
             <span class="oneColumn">
                     <strong>General Idea</strong><br>
@@ -172,11 +170,14 @@
                     <strong>Real-Time Orientation</strong><br>
                     Developed mainly in the multiplayer mode that offers where we find an architecture based on sockets
                     allowing real-time communication between two instances of our application.
-                    <br><br><br><br><br><br><br>
+                    <br><br><br><br><br>
                     <strong>Looper Inc.</strong><br>
                     Arquitectura de Software - ARSW<br>
                     Escuela Colombiana de Ingeniería Julio Garavito<br>
                     2019 ©
+                    <br><br>
+                    Single player mode taken from <a href="https://github.com/jakesgordon/javascript-tetris/" target="_blank">https://github.com/jakesgordon/javascript-tetris/</a>
+
                 </span>
             <span class="twoColumn">
                     <br><br>
@@ -188,9 +189,9 @@
                     <strong>High Concurrence</strong><br>
                     It is explicit in the characteristics that the game has, such as its multiplayer game mode, the time
                     count while playing, the score and other functionalities of movement of objects within the game.
-                    <br><br><br><br><br><br>
-                    <strong>Nicolas Cardenas</strong><br>
-                    <strong>David Diaz</strong><br>
+                    <br><br><br><br>
+                    <strong>Nicolas Cárdenas</strong><br>
+                    <strong>David Díaz</strong><br>
                     <strong>Pedro Mayorga</strong><br>
                     <br>
                     <strong>Cellphone:</strong> +57 301 3664994<br>
@@ -202,20 +203,6 @@
     </div>
     <button class="exitbtn" id="aboutexitbtnid">X</button>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!--
 <div class="headerbar row">

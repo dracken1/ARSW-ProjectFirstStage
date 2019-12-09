@@ -44,7 +44,10 @@ $("#btnlogin").click(function () {
                 document.cookie = "username=" + data.user.username;
                 window.location.href = "home.html";
             } else {
-                alert("Incorrect Username or Password");
+                Swal.fire(
+                    'Sorry!',
+                    '"Incorrect Username or Password"',
+                    'error')
             }
         })
 });
@@ -62,29 +65,7 @@ document.getElementById("login").addEventListener("keypress", function (event) {
     }
 });
 
-/*$("#btnregistry").click(function(){
-   var firstname = document.getElementById('rfname').value;
-   var lastname = document.getElementById('rlname').value;
-   var username = document.getElementById('rusername').value;
-   var email = document.getElementById('remail').value;
-   var password = document.getElementById('rpassword').value;
-   var usertosend = new User(firstname,lastname,username,email,password);
-   var url = '/session/add';
-       fetch(url, {
-           method: 'POST',
-           headers: {
-               'Content-Type': 'application/json'
-           },
-           body:JSON.stringify(usertosend)
-       })
-       .then(response => {
-           if(response.ok){
-               window.location.href = "home.html";
-           } else {
-               alert("Something went wrong!");
-           }
-       })
-});*/
+
 
 var signinfunction = function () {
     return {
@@ -103,7 +84,10 @@ var signinfunction = function () {
                 .then(data => {
                     console.log("duplicated username: " + data);
                     if (data === true) {
-                        alert("Username already exists!");
+                        Swal.fire(
+                            'Sorry!',
+                            'Username already exists!',
+                            'error')
                     } else {
 
                         var url2 = '/session/user/' + emailtocheck;
@@ -117,7 +101,10 @@ var signinfunction = function () {
                             .then(data2 => {
                                 console.log("Used email: " + data2);
                                 if (data2 === true) {
-                                    alert("Email already in use!");
+                                    Swal.fire(
+                                        'Sorry!',
+                                        'Email already in use!',
+                                        'error')
                                 } else {
                                     var firstname = document.getElementById('rfname').value;
                                     var lastname = document.getElementById('rlname').value;
@@ -135,11 +122,22 @@ var signinfunction = function () {
                                     })
                                         .then(response => {
                                             if (response.ok) {
-                                                alert("You´ve succesfully created your account!")
-                                                window.location.href = "home.html";
+                                                Swal.fire(
+                                                    'Successfully created!',
+                                                    'You have been registered!',
+                                                    'success'
+                                                ).then((result) => {
+                                                    if (result.value) {
+                                                        window.location.href = "index.html";
+                                                    }})
+
                                             } else {
-                                                alert("Something went wrong!");
+                                                Swal.fire(
+                                                    'Sorry!',
+                                                    'Please verify your data!',
+                                                    'error')
                                             }
+
                                         })
                                 }
                             })

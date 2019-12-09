@@ -26,10 +26,10 @@ public class SalaController{
     public ResponseEntity<?> addNewSala(){
         try {
             salasServices.createElement(null);
-            System.out.println("SALA CREADA");
+            //System.out.println("SALA CREADA");
             return new ResponseEntity<>(HttpStatus.CREATED);
         }catch (Exception ex){
-            System.out.println("ERROR, NO SE HA CREADO LA SALA");
+            //System.out.println("ERROR, NO SE HA CREADO LA SALA");
             Logger.getLogger(SalaController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>("ERROR 403", HttpStatus.FORBIDDEN);
         }
@@ -40,7 +40,7 @@ public class SalaController{
         try {
             return new ResponseEntity<>(salasServices.listaSalas().toString(),HttpStatus.OK);
         }catch (Exception ex){
-            System.out.println("ERROR, NO SE HA ENCONTRADO LA SALA");
+            //System.out.println("ERROR, NO SE HA ENCONTRADO LA SALA");
             Logger.getLogger(SalaController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>("ERROR 404", HttpStatus.NOT_FOUND);
         }
@@ -51,7 +51,7 @@ public class SalaController{
         try {
             return new ResponseEntity<>(salasServices.datosSala(salaId).toString(),HttpStatus.OK);
         }catch (Exception ex){
-            System.out.println("ERROR, NO SE HA ENCONTRADO LA SALA");
+            //System.out.println("ERROR, NO SE HA ENCONTRADO LA SALA");
             Logger.getLogger(SalaController.class.getName()).log(Level.SEVERE, null, ex);
             return new ResponseEntity<>("ERROR 404", HttpStatus.NOT_FOUND);
         }

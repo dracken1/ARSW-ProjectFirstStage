@@ -370,6 +370,9 @@ function removeLines() {
     }
     if (n > 0) {
         addRows(n);
+        if(n==4){
+            addScore(score); // duplica y luego suma los 400x4 lineas
+        }
         addScore(100*Math.pow(2,n-1)); // 1: 100, 2: 200, 3: 400, 4: 800
     }
 }
