@@ -818,16 +818,16 @@ function setExecPower(n, player) {
     switch (player) {
         case 1:
             switch (n) {
-                case 2: document.getElementById('powerscontainerid').innerText = "Switch piece!"; break;
-                case 3: document.getElementById('powerscontainerid').innerText = "Instant drop!"; break;
-                case 4: document.getElementById('powerscontainerid').innerText = "Double score!"; break;
+                case 2: document.getElementById('powerscontainerid').innerText = "Switch Piece!"; break;
+                case 3: document.getElementById('powerscontainerid').innerText = "Instant Drop!"; break;
+                case 4: document.getElementById('powerscontainerid').innerText = "Double Score!"; break;
             }
             break;
         case 2:
             switch (n) {
-                case 2: document.getElementById('sppowerscontainerid').innerText = "Switch piece!"; break;
-                case 3: document.getElementById('sppowerscontainerid').innerText = "Instant drop!"; break;
-                case 4: document.getElementById('sppowerscontainerid').innerText = "Double score!"; break;
+                case 2: document.getElementById('sppowerscontainerid').innerText = "Switch Piece!"; break;
+                case 3: document.getElementById('sppowerscontainerid').innerText = "Instant Drop!"; break;
+                case 4: document.getElementById('sppowerscontainerid').innerText = "Double Score!"; break;
             }
             break;
     }
@@ -850,7 +850,7 @@ function animateExecPower(player) {
                 borderTopRightRadius: '40px',
                 borderBottomRightRadius: '40px',
                 left: '32.5vw'
-            },300);
+            },1000);
             $("#powerscontainerid").animate({
                 top: '36%'
             },50);
@@ -872,7 +872,7 @@ function animateExecPower(player) {
                     borderBottomRightRadius: '0px',
                     left: "10%"
                 },1);
-            },1500);
+            },5000);
             break;
         case 2:
             $("#sppowerscontainerid").animate({height:"toggle",
@@ -888,7 +888,7 @@ function animateExecPower(player) {
                 borderTopLeftRadius: '40px',
                 borderBottomLeftRadius: '40px',
                 left: '-215%'
-            },300);
+            },1000);
             $("#sppowerscontainerid").animate({
                 top: '51%'
             },50);
@@ -910,7 +910,7 @@ function animateExecPower(player) {
                     borderBottomLeftRadius: '0px',
                     left: "10%"
                 },1);
-            },1500);
+            },5000);
             break;
     }
 }
