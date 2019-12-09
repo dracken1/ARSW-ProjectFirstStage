@@ -19,26 +19,14 @@ var CombatApp = function(){
 };
 
 function verifyExitGame(){
-    Swal.fire({
-      title: 'Are you sure?',
-      text: "You won't be able to revert this!",
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, delete it!'
-    }).then((result) => {
-      if (result.value) {
-        window.location.href = "lobby.html";
-      }
-    })
-};
+    window.location.href = "lobby.html";
+}
 
 function getCookie(name) {
     var regexp = new RegExp("(?:^" + name + "|;\s*"+ name + ")=(.*?)(?:;|$)", "g");
     var result = regexp.exec(document.cookie);
     return (result === null) ? null : result[1];
-};
+}
 
 var getJugadoresSala = function (salaId) {
     var traerSalas = $.get("/Sala/getById."+salaId);
