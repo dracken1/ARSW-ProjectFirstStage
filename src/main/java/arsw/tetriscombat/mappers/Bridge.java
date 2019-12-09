@@ -165,7 +165,7 @@ public class Bridge{
 
     public boolean addStat(Stats stat){
         String SQL = "INSERT INTO estadisticas (fecha, experiencia, \"user\", puntaje, tipo,statsid) VALUES (?,?,?,?,?,?)";
-        String rows = "SELECT COUNT(*) AS total FROM estadisticas";
+        String rows = "SELECT statsid AS total FROM estadisticas ORDER BY statsid DESC LIMIT 1";
         try {
             Connection conn = connection();
             PreparedStatement pstmt = conn.prepareStatement(SQL);
