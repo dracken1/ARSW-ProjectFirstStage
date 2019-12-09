@@ -270,6 +270,15 @@ Esto nos permite realizar una conexión más que estable entre el jugador local 
 
 La Alta Concurrencia de la aplicación se encuentra explicita en las caracteristicas que tiene el juego, como su modo de juego multijugador, el conteo del tiempo mientras se juega, la puntuación y demás funcionalidades de movimiento de objetos dentro del juego.
 
+## Performance
+
+### Memoria
+
+![Imagenes](images/Documentation/usoMemoria.jpeg)
+### Tiempo de respuesta
+
+![Imagenes](images/Documentation/tiempoRespuesta.jpeg)
+
 ## **Casos de uso**
 
 ![Imagenes](model/1stUseCaseDiagram.png)
