@@ -349,9 +349,5 @@ Los tiempos de respuesta son menores a 1 segundo en la mayoría de los casos dep
 ## **Diagrama Entidad-Relación**
 
 ![Imagenes](model/ModelDiagram.png)
-### **Requerimientos No Colaborativos**
 
-#### **Historias de usuario**
 
-> [Taiga](https://tree.taiga.io/project/dracken1-arsw-project/backlog)
-  
