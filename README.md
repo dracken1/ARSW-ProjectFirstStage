@@ -20,6 +20,10 @@
 >- Pedro José Mayorga Navarrete
 >```
 
+## Trailer
+
+https://www.youtube.com/watch?v=zS63gjg1Yzs
+
 ## **Despliegue en Heroku**
 
 [![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](http://tetris-combat.herokuapp.com/)
