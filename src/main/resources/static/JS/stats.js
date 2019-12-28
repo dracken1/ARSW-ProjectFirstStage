@@ -1,3 +1,4 @@
+// stats.js r6 - http://github.com/mrdoob/stats.js
 
 var Stats=function(){
     function s(a,g,d){

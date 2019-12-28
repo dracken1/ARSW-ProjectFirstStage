@@ -9,14 +9,13 @@ public class Stats {
 
     public Stats(){}
 
-    /**
     public Stats(String date, String exp, float score, String type,String username){
         this.date = date;
         this.exp = exp;
         this.username = username;
         this.score = score;
         this.type = type;
-    }*/
+    }
 
     public String getDate() {
         return date;

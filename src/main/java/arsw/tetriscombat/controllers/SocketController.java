@@ -17,7 +17,8 @@ public class SocketController {
     @Autowired
     private SalasServicesImpl SalasServicesImpl;
 
-    @MessageMapping("/salas")
+
+    @MessageMapping("/salas") // quizas toque cambiar a string el salaId
     public void salas(String username) throws Exception {
         msgt.convertAndSend("/topic/salas",SalasServicesImpl.listaSalas().toString());
     }
@@ -28,19 +29,19 @@ public class SocketController {
         msgt.convertAndSend("/topic/nuevaSala",SalasServicesImpl.listaSalas().toString());
     }
 
-    @MessageMapping("/unirseASala.{salaId}")
+    @MessageMapping("/unirseASala.{salaId}") // quizas toque cambiar a string el salaId
     public void unirseASala(@DestinationVariable int salaId,String username) throws Exception {
         JSONObject usuario = new JSONObject(username);
         SalasServicesImpl.unirUsuarioASala(usuario.getString("username"),salaId);
         msgt.convertAndSend("/topic/unirseASala"+salaId,SalasServicesImpl.listaSalas().toString());
     }
 
-    @MessageMapping("/usuariosEnSala.{salaId}")
+    @MessageMapping("/usuariosEnSala.{salaId}") // quizas toque cambiar a string el salaId
     public void usuariosEnSala(@DestinationVariable int salaId,String username) throws Exception {
         msgt.convertAndSend("/topic/usuariosEnSala"+salaId,SalasServicesImpl.listaSalas().toString());
     }
 
-    @MessageMapping("/abandonarSala.{salaId}")
+    @MessageMapping("/abandonarSala.{salaId}") // quizas toque cambiar a string el salaId
     public void abandonarSala(@DestinationVariable int salaId,String username) throws Exception {
         JSONObject usuario = new JSONObject(username);
         SalasServicesImpl.usuarioAbandonarSala(usuario.getString("username"),salaId);

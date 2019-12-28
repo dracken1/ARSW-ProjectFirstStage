@@ -30,6 +30,35 @@ body {
     background: #f9a825;
     color: black;
 }
+
+/*
+#pausebuttoncontid:hover {
+    background: #f9a825;
+    color: black;
+}
+
+#pausebuttoncontid:focus {
+    background: blue;
+    color: white;
+}
+
+#pausebuttoncontid:visited {
+    background: green;
+    color: white;
+}
+
+#pausebuttoncontid:focus {
+    background: #db2526;
+    color: white;
+}
+
+#pausebuttoncontid:active {
+    background: purple;
+    color: blue;
+}
+*/
+
+
 #waitingplayercontainerid{
     position: absolute;
     height: 16vh;
@@ -43,6 +72,8 @@ body {
     font-size: 4vh;
     font-weight: bolder;
     z-index: 15;
+
+
     border: none;
     border: 3px solid black;
     box-shadow: 10px 10px 3px 5px #000;
@@ -56,12 +87,15 @@ body {
     letter-spacing: 2px;
     color: white;
     background-color: #850d0d;
+
     position: relative;
     float: left;
     left: 1vh;
+    /*top: 5px;*/
     top: 1vh;
     width: 20%;
     height: 4vh;
+
     border: none;
     border-radius: 5px;
     border-bottom: 2px solid white;
@@ -159,11 +193,14 @@ body {
 #mainplayer{
     position: absolute;
     margin-right: 19vw;
+    
     background: #bbbbbb95;
+    /*background: rgba(24,43,48,0.6);*/
     border: 3px solid #000000;
     border-radius: 5px;
     width: 40vw;
     height: 100%;
+    /*height: 89vh;*/
     min-width: 574px;
     min-height: 693px;
 
@@ -266,7 +303,9 @@ body {
     left: 2.5%;
     right: 0%;
     bottom: 5%;
+
     background:url("../images/Background/PlainBackground.jpg");
+    /*background: #292826;*/
     border: 3px solid #0d1113;
 }
 #upcomingtextOpponent{
@@ -295,6 +334,12 @@ body {
     font-weight: bold;
     horiz-align: center;
 
+
+
+    /*
+    color: #f9fdff;
+    text-align: center;
+    */
 }
 #upcomingcontOpponent{
     
@@ -318,13 +363,20 @@ body {
     horiz-align: center;
 
 
+
+    /*
+    color: #f9fdff;
+    text-align: center;
+    */
 }
 #secondplayer{
     position: relative;
     float: right;
     background: #bbbbbb95;
+    /*background: rgba(24,43,48,0.6);*/
     width: 40vw;
     height: 100%;
+    /*height: 89vh;*/
     min-width: 574px;
     min-height: 693px;
     border: 3px solid #000000;
@@ -334,10 +386,13 @@ body {
 #secondplayercanvas{
     position: absolute;
     top: 5%;
+    /*top: 4vh;*/
     bottom: 5%;
     right: 2vw;
     width: 50%;
+    /*width: calc((40vh + 20vw)/2);*/
     height: 90%;
+    /*height: calc(40vh + 20vw);*/
     min-width: 294px;
     min-height: 588px;
 
@@ -353,6 +408,7 @@ body {
     left: 5%;
     width: 35%;
     height: 90%;
+    /*height: calc(40vh + 20vw);*/
     min-height: 588px;
 
     
@@ -407,6 +463,7 @@ body {
     right: 5%;
     width: 35%;
     height: 90%;
+    /*height: calc(40vh + 20vw);*/
     min-height: 588px;
     
 
@@ -419,6 +476,7 @@ body {
     position: absolute;
     width: 100%;
     height: 30%;
+    /*background: #42403c;*/
     bottom: 0px;
 }
 #alertcont{
