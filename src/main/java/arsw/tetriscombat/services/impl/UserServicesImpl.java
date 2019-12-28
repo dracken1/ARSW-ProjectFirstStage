@@ -43,18 +43,4 @@ public class UserServicesImpl implements GameServices {
                 user.getEmail(),
                 user.getPassword());
     }
-
-    @Override
-    public Object Read() {
-        return null;
-    }
-
-    @Override
-    public Object Update() {
-        return null;
-    }
-
-    @Override
-    public void Delete() {
-    }
 }

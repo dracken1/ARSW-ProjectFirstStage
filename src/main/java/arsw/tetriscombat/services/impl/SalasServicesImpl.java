@@ -20,19 +20,6 @@ public class SalasServicesImpl implements GameServices {
     public void createElement(Object elemento) throws ProjectException {
         sp.addSala();
     }
-    @Override
-    public Object Read() {
-        return null;
-    }
-
-    @Override
-    public Object Update() {
-        return null;
-    }
-
-    @Override
-    public void Delete() {
-    }
 
     public JSONArray listaSalas(){
         JSONArray arregloSalas = new JSONArray();
