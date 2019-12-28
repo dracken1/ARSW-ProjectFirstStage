@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -22,8 +21,6 @@ public class SessionController {
     @RequestMapping(method = RequestMethod.GET)
     public ResponseEntity<?> getAllSessions() {
         try {
-            //! Dejar sin parametro el ConcurrentHashMap
-            //? <User, Session>
             ConcurrentHashMap<User, Session> chm = InMemorySessionPersistence.getSessions();
             return new ResponseEntity<>(chm, HttpStatus.ACCEPTED);
         } catch (Exception ex) {

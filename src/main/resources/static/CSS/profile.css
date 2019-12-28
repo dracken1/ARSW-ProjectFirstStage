@@ -1,9 +1,7 @@
 body {
     font-family: 'Raleway', sans-serif;
-    /*font-family: 'Bebas Neue', cursive;*/
     background-image: url("../images/Background/WrinkledBackground.jpg");
     background-color: rgb(10, 3, 48);
-    
 }
 
 li {
@@ -22,11 +20,6 @@ li a {
     width: 100%;
     height: auto;
     background-color: #444;
-    /*
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    */
 }
 
 .menuImage {
@@ -35,13 +28,6 @@ li a {
     background-color: #444;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-/*
-li a:hover:not(.active) {
-    background-color: #db2526;
-    font-weight: bold;
-    color: white;
-}
-*/
 .active {
     background-color: #850d0d;
     color: white;
@@ -52,8 +38,7 @@ li a:hover:not(.active) {
     width: auto;
 }
 
-.topNavigation { 
-    /*position: relative;*/   
+.topNavigation {
     position: sticky;
     top: 0;
 
@@ -117,14 +102,6 @@ li a:hover:not(.active) {
     padding-top: 7px;
 }
 
-
-
-
-
-
-
-
-
 .profileMenu {
     margin: 0;
     position: absolute;
@@ -139,10 +116,6 @@ li a:hover:not(.active) {
     width: 100%;
     height: auto;
     font-family: 'Bebas Neue', cursive;
-    /*
-    padding: 0 8px;
-    margin: 0 -16px;
-    */
 }
 
 .playBox {
@@ -150,7 +123,6 @@ li a:hover:not(.active) {
     float: left;
     width: 30%;
     height: auto;
-
     padding: 8px 8px;
     margin: 10px 5px 10px 20px;    
     display: block;
@@ -167,7 +139,6 @@ li a:hover:not(.active) {
     transform: translate(-50%, -50%);
     width: 30%;
     height: auto;
-    
     padding: 8px 8px;
     margin: 0px 0px;    
     display: block;
@@ -180,26 +151,13 @@ li a:hover:not(.active) {
     float: right;
     width: 30%;
     height: auto;
-
     padding: 8px 8px;
     margin: 10px 20px 10px 5px;    
     display: block;
     border: 2px solid black;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-/*
-#imgPlayBlox {
-    width: 100%;
-}
 
-#imgControlsBlox {
-    width: 100%;
-}
-
-#imgProfileBlox {
-    width: 100%;
-}
-*/
 .buttonPro {
     background-color: #850d0d;
     color: white;
@@ -235,13 +193,11 @@ footer {
     bottom: 0;
     width: 100%;
     max-height: 150px;
-    /*height: min-content;*/
     background: #900;
     color: #FFF;
     box-sizing: border-box;
     overflow: hidden;
     font-size: 12px;
-    /*line-height: 100%;*/
     padding: 0 0 0 0px;
     box-sizing: border-box;
 }

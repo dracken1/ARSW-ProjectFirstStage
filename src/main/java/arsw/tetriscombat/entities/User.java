@@ -1,15 +1,7 @@
 package arsw.tetriscombat.entities;
 
 import java.io.Serializable;
-//import java.util.List;
 
-/**
- * Class User that defines the
- * User used to play the Game
- * @author Pedro Mayorga - PeNav
- * @version 1.0
- * @since 2019-09-23
- */
 public class User implements Serializable{
 
     private static final long serialVersionUID = 1L;
@@ -24,8 +16,7 @@ public class User implements Serializable{
     private int wins;
     private boolean onlineStatus;
     private boolean ongameStatus;
-    private Room room;
-    //private List<Award> awards;
+    private Sala room;
     
     //Constructors
 
@@ -64,108 +55,81 @@ public class User implements Serializable{
         this.role = role;
         this.level = level;
     }
-    
-    
-    //Getters and Setters
 
+    //Getters and Setters
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
-
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public String getLastname() {
         return lastname;
     }
-
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
-
     public String getUsername() {
         return username;
     }
-
     public void setUsername(String username) {
         this.username = username;
     }
-
     public String getEmail() {
         return email;
     }
-
     public void setEmail(String email) {
         this.email = email;
     }
-
     public String getPassword() {
         return password;
     }
-
     public void setPassword(String password) {
         this.password = password;
     }
-
-    public String getRole() {
-        return role;
-    }
-
     public void setRole(String role) {
         this.role = role;
+    }
+    public void setLevel(int level) {
+        this.level = level;
     }
 
     public int getLevel() {
         return level;
     }
-
-    public void setLevel(int level) {
-        this.level = level;
+    public String getRole() {
+        return role;
     }
-
     public int getWins() {
         return wins;
     }
-
     public void setWins(int wins) {
         this.wins = wins;
     }
-
     public boolean isOnlineStatus() {
         return onlineStatus;
     }
-
     public void setOnlineStatus(boolean onlineStatus) {
         this.onlineStatus = onlineStatus;
     }
-
     public boolean isOngameStatus() {
         return ongameStatus;
     }
-
     public void setOngameStatus(boolean ongameStatus) {
         this.ongameStatus = ongameStatus;
     }
-
-    public Room getRoom() {
+    public Sala getRoom() {
         return room;
     }
-
-    public void setRoom(Room room) {
+    public void setRoom(Sala room) {
         this.room = room;
     }
-    
-    
-    //To String
 
     @Override
     public String toString() {
