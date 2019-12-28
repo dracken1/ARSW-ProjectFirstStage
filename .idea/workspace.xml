@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3253c33d-2dbb-4229-807c-5cf636a67eec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/SalaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/SalaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/mappers/Bridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/mappers/Bridge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/combat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/combat.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/lobby.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/lobby.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/LoginRegistry.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/LoginRegistry.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/combatfunctionality.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/combatfunctionality.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/practice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/practice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lobby.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lobby.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/play.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/play.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,6 +153,7 @@
       <workItem from="1575659257762" duration="6603000" />
       <workItem from="1575832259018" duration="5668000" />
       <workItem from="1575855319621" duration="12001000" />
+      <workItem from="1577551258460" duration="835000" />
     </task>
     <servers />
   </component>
