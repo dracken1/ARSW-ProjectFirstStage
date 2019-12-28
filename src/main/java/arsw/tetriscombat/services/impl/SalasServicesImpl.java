@@ -1,7 +1,7 @@
 package arsw.tetriscombat.services.impl;
 
 
-import arsw.tetriscombat.entities.Room;
+import arsw.tetriscombat.entities.Sala;
 import arsw.tetriscombat.exceptions.ProjectException;
 import arsw.tetriscombat.persistence.dao.impl.InMemorySalaPersistence;
 import arsw.tetriscombat.services.GameServices;
@@ -32,14 +32,13 @@ public class SalasServicesImpl implements GameServices {
 
     @Override
     public void Delete() {
-
     }
 
     public JSONArray listaSalas(){
         JSONArray arregloSalas = new JSONArray();
-        ArrayList <Room> salasGeneral = sp.getSalas();
+        ArrayList <Sala> salasGeneral = sp.getSalas();
         for(Object sala: salasGeneral){
-            Room tempo = (Room) sala;
+            Sala tempo = (Sala) sala;
             JSONObject jo = new JSONObject();
             jo.append("descripcion",tempo.getIdSala());
             jo.append("cantidadJugadores",tempo.getUsuariosEnSala().size());
@@ -51,9 +50,9 @@ public class SalasServicesImpl implements GameServices {
 
     public JSONArray datosSala(int salaId){
         JSONArray arregloSalas = new JSONArray();
-        ArrayList <Room> salasGeneral = sp.getSalaById(salaId);
+        ArrayList <Sala> salasGeneral = sp.getSalaById(salaId);
         for(Object sala: salasGeneral){
-            Room tempo = (Room) sala;
+            Sala tempo = (Sala) sala;
             JSONObject jo = new JSONObject();
             jo.append("descripcion",tempo.getIdSala());
             jo.append("cantidadJugadores",tempo.getUsuariosEnSala().size());

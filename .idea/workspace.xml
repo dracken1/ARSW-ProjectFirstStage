@@ -2,20 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3253c33d-2dbb-4229-807c-5cf636a67eec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/SalaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/SalaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/SessionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/SessionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/SocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/SocketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/StatsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/StatsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/controllers/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/entities/Map.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/entities/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/entities/Sala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/entities/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/entities/Session.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/entities/Stats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/entities/Stats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/exceptions/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/exceptions/ResourceNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/mappers/Bridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/mappers/Bridge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/SalasPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/SalasPersistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/SessionPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/SessionPersistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/impl/InMemorySalaPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/impl/InMemorySalaPersistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/impl/MapDAOImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/impl/RoomDAOImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/impl/SessionDAOImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/persistence/dao/impl/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/GameServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/GameServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/impl/InMemorySessionPersistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/impl/InMemorySessionPersistence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/impl/MapServicesImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/impl/SalasServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/impl/SalasServicesImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/impl/UserServicesImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/arsw/tetriscombat/services/impl/UserServicesImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/combat.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/combat.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/lobby.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/lobby.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/LoginRegistry.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/LoginRegistry.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/combatfunctionality.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/combatfunctionality.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/practice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/practice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/lobby.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/lobby.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/play.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/play.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/play.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/play.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/practice.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/practice.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/CSS/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/CSS/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/JS/stats.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/JS/stats.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,9 +230,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="531" y="252" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.728@0.0.1366.728" timestamp="1575869868698" />
-    <state x="661" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1575241844676">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1577473683372">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="0" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1577473683372" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1577501189078">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1577501189078" />
+    <state x="470" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1577548828851">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="470" y="240" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1577548828851" />
     <state x="661" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1575241844676" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1575869764224">
       <screen x="0" y="0" width="1366" height="728" />

@@ -3,21 +3,14 @@ package arsw.tetriscombat.entities;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-/**
- * Class Room that defines the
- * Rooms used by an User
- * @author Pedro Mayorga - PeNav
- * @version 1.0
- * @since 2019-09-23
- */
-public class Room implements Serializable{
+public class Sala implements Serializable{
     
     private static final long serialVersionUID = 1L;
     private int idSala;
     private ArrayList<String> usuariosEnSala= new ArrayList<>();
 
     //Constructors
-    public Room(int idSala) {
+    public Sala(int idSala) {
         this.idSala =  idSala;
     }
 
@@ -29,10 +22,7 @@ public class Room implements Serializable{
         for(int i=0;i<usuariosEnSala.size();i++){
             if(usuariosEnSala.get(i).equals(username)){
                 usuariosEnSala.remove(i);
-                //System.out.println("EL usuario "+username+" ha abandonado la sala");
             }
-            //System.out.println("Usuarios activos en sala...");
-            //System.out.println(usuariosEnSala);
         }
     }
 
@@ -40,24 +30,13 @@ public class Room implements Serializable{
         return usuariosEnSala;
     }
 
-    public void setUsuariosEnSala(ArrayList<String> usuariosEnSala) {
-        this.usuariosEnSala = usuariosEnSala;
-    }
+    //public void setUsuariosEnSala(ArrayList<String> usuariosEnSala) { this.usuariosEnSala = usuariosEnSala; }
 
     public void addUsuarios(String usuario){
         if(usuariosEnSala.size()<2){
             if(!usuariosEnSala.contains(usuario)){
-                //System.out.println("El usuario se unió a la sala...");
                 usuariosEnSala.add(usuario);
-            }else{
-                //System.out.println("El usuario ya se encuentra en la sala.");
             }
-
-        }else{
-           //System.out.println("La sala está llena, lo sentimos! :(");
         }
-        //System.out.println(usuariosEnSala);
-
-
     }
 }

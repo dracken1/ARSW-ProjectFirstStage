@@ -9,11 +9,9 @@ public class Bridge{
     private String password = "c7417adea0612f8a11250304210e2857de3b29535b5b0b9532b6319e963bc7c6";
     private String url = "jdbc:postgresql://ec2-23-21-115-109.compute-1.amazonaws.com:5432/d68j9ui4h73s36";
 
-
     private Connection connection() throws SQLException {
         return DriverManager.getConnection(url,username,password);
     }
-
 
     public User authentication(String username, String password){
         String SQL = "SELECT nombre, apellido, username, correo, contraseña, rol, nivel FROM usuario WHERE username = ? AND contraseña = ?";
@@ -83,7 +81,7 @@ public class Bridge{
         return false;
     }
     
-    public User getUserByEmail(String username){
+    /**public User getUserByEmail(String username){
         String SQL = "SELECT nombre, apellido, username, correo, contraseña, rol, nivel FROM usuario WHERE username = ?";
         User user = new User();
         try {
@@ -109,9 +107,7 @@ public class Bridge{
             e.printStackTrace();
         }
         return user;
-    }
-    
-
+    }*/
 
     public boolean addUser(String nombre, String apellido, String username, String correo, String contraseña){
         String SQL = "INSERT INTO usuario (nombre, apellido, username, correo, contraseña,rol,nivel) VALUES (?,?,?,?,?,?,?)";
@@ -133,7 +129,6 @@ public class Bridge{
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return false;
     }
 
@@ -186,10 +181,8 @@ public class Bridge{
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return false;
     }
-
 }
 
         /*HOST:

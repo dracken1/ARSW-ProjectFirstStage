@@ -23,6 +23,6 @@ public class InMemorySessionPersistence implements SessionPersistence {
     }
 
     public static ConcurrentHashMap<User, Session> getSessions() {return sessions;}
-    public static Session getSessionByUser(User user){return sessions.get(user);}
+    //public static Session getSessionByUser(User user){return sessions.get(user);}
     public static Session getSessionByUsername(String user){return sessions2.get(user);}
 }
